@@ -1,0 +1,16 @@
+cron:
+  - url: /collect/germany
+    schedule: every day 6:00
+    timezone: Europe/Berlin
+
+  - url: /collect/states
+    schedule: every day 6:00
+    timezone: Europe/Berlin
+
+  - url: /collect/districts
+    schedule: every day 6:00
+    timezone: Europe/Berlin
+
+  - url: /collect/vaccination
+    schedule: every day 9:00
+    timezone: Europe/Berlin

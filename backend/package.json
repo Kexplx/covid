@@ -1,0 +1,22 @@
+{
+  "name": "inzidenz-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "gcloud app deploy --project inzidenz-332309 -v 1 --quiet",
+    "deploy:cron": "gcloud app deploy cron.yaml --project inzidenz-332309 --quiet"
+  },
+  "keywords": [],
+  "author": "Oscar Rosner <oscar.rosner@web.de>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.4",
+    "xlsx": "^0.17.4"
+  }
+}
