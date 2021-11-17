@@ -1,0 +1,53 @@
+:root {
+  --red: #e74c3c;
+  --blue: #3498db;
+  --green: #2ecc71;
+  --orange: #f39c12;
+  --turkise: #1abc9c;
+  --dark: #34495e;
+  --gray: rgb(170, 170, 170);
+  --lightGray: rgb(240, 240, 240);
+}
+
+.container {
+  max-width: 700px;
+  padding: 20px 10px;
+  margin: auto;
+}
+
+.pt-1 {
+  padding-top: 10px;
+}
+
+.pt-2 {
+  padding-top: 20px;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.table-label {
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}

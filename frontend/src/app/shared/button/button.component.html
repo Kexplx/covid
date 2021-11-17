@@ -1,0 +1,16 @@
+<button
+  (click)="onClick()"
+  [class.disabled]="disabled"
+  *ngIf="icon; else noIcon"
+>
+  <div class="btn-content">
+    <img [src]="'assets/icons/' + icon + '.svg'" />
+    {{ text }}
+  </div>
+</button>
+
+<ng-template #noIcon>
+  <button (click)="onClick()" [disabled]="disabled">
+    {{ text }}
+  </button>
+</ng-template>

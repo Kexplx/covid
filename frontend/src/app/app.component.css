@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+  border-radius: 20px;
+
+  border-radius: 3px;
+}
+
+td {
+  /* border: 1px solid black; */
+}
+
+td {
+  padding: 8px;
+  font-size: 0.8rem;
+  border: 1px solid rgb(150, 150, 150);
+}
+
+tr:nth-child(even) {
+  background-color: rgb(245, 245, 245);
+}

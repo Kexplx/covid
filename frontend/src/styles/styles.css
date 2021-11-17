@@ -1,0 +1,21 @@
+@import url(reset.css);
+@import url(utils.css);
+
+body * {
+  font-family: "Segoe UI", sans-serif;
+}
+
+strong,
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+small {
+  font-size: 0.8rem;
+}

@@ -8,6 +8,17 @@ const getVaccination = require('../collect/vaccination');
 
 const mongoDb = new MongoDB();
 
+router.get('/joke-of-the-day', async (_, res) => {
+  res.end();
+
+  try {
+    await mongoDb.incrementJokeOfTheDayCount();
+  } catch (error) {
+    console.log('Error while incrementing joke of the day count.');
+    console.log(error);
+  }
+});
+
 router.get('/germany', async (_, res) => {
   res.end();
 

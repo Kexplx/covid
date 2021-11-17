@@ -6,6 +6,8 @@ const COLLECTION_VACCINATION = 'vaccination';
 const COLLECTION_GERMANY = 'germany';
 const COLLECTION_STATES = 'states';
 const COLLECTION_DISTRICTS = 'districts';
+const COLLECTION_JOKES = 'jokes';
+const COLLECTION_JOKE_OF_THE_DAY_COUNT = 'joke-day-count';
 
 class MongoDB {
   async insertGermany(germany) {
@@ -70,6 +72,57 @@ class MongoDB {
     close();
 
     return vaccinationHistory;
+  }
+
+  async insertJokes(jokes) {
+    const [collection, close] = await this._connect(COLLECTION_JOKES);
+
+    await collection.insertMany(jokes);
+
+    close();
+  }
+
+  async countJokes() {
+    const [collection, close] = await this._connect(COLLECTION_JOKES);
+
+    const count = await collection.countDocuments();
+    close();
+
+    return count;
+  }
+
+  async getJokeOfTheDay() {
+    const count = await this.getJokeofTheDayCount();
+    const [collection, close] = await this._connect(COLLECTION_JOKES);
+
+    const jokeOfTheDays = await collection.find().toArray();
+    close();
+
+    return jokeOfTheDays[count];
+  }
+
+  async getJokeofTheDayCount() {
+    const [collection, close] = await this._connect(COLLECTION_JOKE_OF_THE_DAY_COUNT);
+
+    const { count } = await collection.findOne();
+    await close();
+
+    return count;
+  }
+
+  async incrementJokeOfTheDayCount() {
+    const [collection, close] = await this._connect(COLLECTION_JOKE_OF_THE_DAY_COUNT);
+
+    const counter = await collection.findOne();
+
+    let newCount = counter.count + 1;
+
+    if (newCount + 1 > (await this.countJokes())) {
+      newCount = 0;
+    }
+
+    await collection.updateOne({ _id: counter._id }, { $set: { count: newCount } });
+    close();
   }
 
   /**
