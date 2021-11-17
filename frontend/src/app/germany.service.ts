@@ -31,7 +31,6 @@ export class GermanyService {
 
     this.http
       .get<Germany[]>(url, { params })
-      .pipe(tap((r) => console.log(r)))
       .subscribe((germanyHistory) =>
         this.germanyHistorySubject.next(germanyHistory)
       );

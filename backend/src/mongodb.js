@@ -41,7 +41,11 @@ class MongoDB {
   async getDistrictHistory(code, limit) {
     const [collection, close] = await this._connect(COLLECTION_DISTRICTS);
 
-    const districtHistory = await collection.find({ code }).sort({ _id: -1 }).limit(Number(limit)).toArray();
+    const districtHistory = await collection
+      .find({ code: Number(code) })
+      .sort({ _id: -1 })
+      .limit(Number(limit))
+      .toArray();
     close();
 
     return districtHistory;

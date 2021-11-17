@@ -21,15 +21,15 @@ export class IncidenceTagComponent implements OnInit {
     if (incidence <= 100) {
       return "rgb(46, 204, 113)";
     } else if (incidence <= 200) {
-      return "rgb(241, 196, 15)";
+      return "rgb(255, 195, 18)";
     } else if (incidence <= 300) {
-      return "rgb(243, 156, 18)";
+      return "rgb(247, 159, 31)";
     } else if (incidence <= 400) {
-      return "rgb(211, 84, 0)";
+      return "rgb(238, 90, 36)";
     } else if (incidence <= 500) {
-      return "rgb(231, 76, 60)";
+      return "rgb(234, 32, 39)";
     } else {
-      return "rgb(192, 57, 43)";
+      return "rgb(212, 20, 27)";
     }
   }
 }

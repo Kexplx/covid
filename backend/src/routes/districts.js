@@ -5,11 +5,19 @@ const MongoDB = require('../mongodb');
 const mongoDb = new MongoDB();
 
 router.get('/', async (req, res) => {
-  const { code, limit } = req.query;
+  const { codes, limit } = req.query;
 
-  const districtHistory = await mongoDb.getDistrictHistory(code, limit);
+  const codesArr = codes.split(',');
 
-  res.send(districtHistory);
+  const responses = [];
+
+  for (const code of codesArr) {
+    responses.push(mongoDb.getDistrictHistory(code, limit));
+  }
+
+  const listOfDistrictHitories = await Promise.all(responses);
+
+  res.send(listOfDistrictHitories);
 });
 
 module.exports = router;

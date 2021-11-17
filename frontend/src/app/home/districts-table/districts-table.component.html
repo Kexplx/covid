@@ -1,0 +1,37 @@
+<ng-container *ngIf="districts$ | async as districts; else loadingData">
+  <p class="table-label">
+    <span>
+      Städte & Landkreise
+      <span class="fw-4"
+        >(Stand:
+        {{ districts[0].lastUpdated.replace(", 00:00 Uhr", "") }})</span
+      >
+    </span>
+
+    <app-button
+      (appClick)="onUpdateClick()"
+      icon="sync-solid"
+      text="Laden"
+    ></app-button>
+  </p>
+  <table>
+    <tr class="col-header">
+      <td>Name</td>
+      <td>Inzidenz</td>
+      <td>Fälle insges.</td>
+      <td>Tote insges.</td>
+    </tr>
+    <tr *ngFor="let district of districts">
+      <td>{{ district.name }}</td>
+      <td>
+        <app-incidence-tag [incidence]="district.incidence"></app-incidence-tag>
+      </td>
+      <td>{{ district.totalCases | thousandPoint }}</td>
+      <td>{{ district.totalDeaths | thousandPoint }}</td>
+    </tr>
+  </table>
+</ng-container>
+
+<ng-template #loadingData>
+  <app-spinner></app-spinner>
+</ng-template>

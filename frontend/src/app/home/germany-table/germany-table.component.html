@@ -30,6 +30,29 @@
         <strong>{{ germany.totalDeaths | thousandPoint }}</strong>
       </td>
     </tr>
+    <ng-container *ngIf="vaccination$ | async as vaccination">
+      <tr>
+        <td>Anzahl Erstgeimpfte</td>
+        <td class="ta-center">
+          <strong
+            >{{
+              vaccination.numberOfPeopleAtLeastOnceVaccinated | thousandPoint
+            }}
+            ({{ vaccination.percentAtLeastOnceVaccinated }}%)</strong
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Anzahl vollst. Geimpfte</td>
+        <td class="ta-center">
+          <strong
+            >{{ vaccination.numberOfPeopleFullyVaccinated | thousandPoint }} ({{
+              vaccination.percentFullyVaccinated
+            }}%)</strong
+          >
+        </td>
+      </tr>
+    </ng-container>
   </table>
 </ng-container>
 
