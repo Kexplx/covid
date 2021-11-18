@@ -9,7 +9,7 @@ import { TabIndex } from "./shared/tab-set/tab-set.component";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  tabIndex = 2;
+  tabIndex = 0;
 
   data$ = this.dataService.data$.pipe(
     tap((d) => {
