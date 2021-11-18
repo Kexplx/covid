@@ -7,6 +7,7 @@ import { GermanDatePipe } from "./german-date.pipe";
 import { IncidenceTagComponent } from "./incidence-tag/incidence-tag.component";
 import { RoundPipe } from "./round.pipe";
 import { ThousandPointPipe } from "./thousand-point.pipe";
+import { SelectComponent } from "./select/select.component";
 
 @NgModule({
   declarations: [
@@ -17,10 +18,12 @@ import { ThousandPointPipe } from "./thousand-point.pipe";
     IncidenceTagComponent,
     RoundPipe,
     ThousandPointPipe,
+    SelectComponent,
   ],
   imports: [CommonModule],
   exports: [
     ButtonComponent,
+    SelectComponent,
     GermanDatePipe,
     TabSetComponent,
     ThousandPointPipe,

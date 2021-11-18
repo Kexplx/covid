@@ -1,0 +1,14 @@
+<header>
+  <div>
+    <p class="table-label">Städte & Landkreise</p>
+    <small class="subheader">Stand: {{ lastUpdated }}</small>
+  </div>
+
+  <app-select
+    (appSelect)="onSelect($event)"
+    [options]="options"
+    [initialValue]="initialValue"
+  ></app-select>
+</header>
+
+<app-line-chart [rawData]="rawData" [labels]="labels"></app-line-chart>

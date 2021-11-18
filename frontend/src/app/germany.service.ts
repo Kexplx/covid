@@ -20,7 +20,7 @@ export class GermanyService {
     const url = `${environment.api}/germany`;
 
     let params = new HttpParams();
-    params = params.set("limit", 1);
+    params = params.set("limit", 8);
 
     return this.http.get<Germany[]>(url, { params });
   }

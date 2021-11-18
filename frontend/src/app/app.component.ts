@@ -9,7 +9,7 @@ import { TabIndex } from "./shared/tab-set/tab-set.component";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  tabIndex = 0;
+  tabIndex = 2;
 
   data$ = this.dataService.data$.pipe(
     tap((d) => {
@@ -20,6 +20,12 @@ export class AppComponent {
   );
 
   isLoading = true;
+
+  options = [
+    { name: "Regensburg", value: 1 },
+    { name: "München", value: 2 },
+    { name: "Berlin", value: 3 },
+  ];
 
   constructor(private dataService: DataService) {}
 

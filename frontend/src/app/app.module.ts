@@ -9,9 +9,12 @@ import { BavariaTableComponent } from './home/bavaria-table/bavaria-table.compon
 import { DistrictsTableComponent } from './home/districts-table/districts-table.component';
 import { JokeOfTheDayComponent } from './joke/joke-of-the-day/joke-of-the-day.component';
 import { DistrictsPipe } from './home/districts-table/districts.pipe';
+import { GermanyHistoryComponent } from './history/germany-history/germany-history.component';
+import { LineChartComponent } from './history/line-chart/line-chart.component';
+import { DistrictHistoryComponent } from './history/district-history/district-history.component';
 
 @NgModule({
-  declarations: [AppComponent, GermanyTableComponent, BavariaTableComponent, DistrictsTableComponent, JokeOfTheDayComponent, DistrictsPipe],
+  declarations: [AppComponent, GermanyTableComponent, BavariaTableComponent, DistrictsTableComponent, JokeOfTheDayComponent, DistrictsPipe, GermanyHistoryComponent, LineChartComponent, DistrictHistoryComponent],
   imports: [BrowserModule, SharedModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

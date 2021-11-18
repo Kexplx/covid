@@ -41,7 +41,7 @@ export class DistrictService {
     const url = `${environment.api}/districts`;
 
     let params = new HttpParams();
-    params = params.set("limit", 1);
+    params = params.set("limit", 8);
     params = params.set("codes", districtCodesQuery);
 
     return this.http.get<District[][]>(url, { params });

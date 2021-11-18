@@ -1,0 +1,19 @@
+<div style="width: 190px">
+  <button
+    [class.open]="isOpen"
+    (click)="isOpen = !isOpen"
+    style="width: inherit"
+  >
+    <div class="btn-content">
+      <span>{{ selected.name }}</span>
+      <img *ngIf="isOpen" src="assets/icons/caret-down-solid.svg" alt="" />
+      <img *ngIf="!isOpen" src="assets/icons/caret-left-solid.svg" alt="" />
+    </div>
+  </button>
+
+  <ul *ngIf="isOpen">
+    <li (click)="onSelect(option)" *ngFor="let option of optionsToDisplay">
+      {{ option.name }}
+    </li>
+  </ul>
+</div>
