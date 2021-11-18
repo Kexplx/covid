@@ -20,7 +20,7 @@ jobs:
         working-directory: ${{env.working-directory}}
 
       - name: Build for production
-        run: npm run build
+        run: npm run build:ci
         working-directory: ${{env.working-directory}}
 
       - name: Deploy to GitHub Pages
