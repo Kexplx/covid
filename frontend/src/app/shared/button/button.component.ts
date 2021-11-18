@@ -9,6 +9,7 @@ export class ButtonComponent {
   @Input() text = "Default Text";
   @Input() icon?: string;
   @Input() disabled = false;
+  @Input() shadow = false;
 
   @Output() appClick = new EventEmitter();
 

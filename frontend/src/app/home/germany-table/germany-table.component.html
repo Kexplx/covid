@@ -1,61 +1,47 @@
-<ng-container *ngIf="germany$ | async as germany; else loadingData">
-  <p class="table-label">
-    <span>
-      Deutschland
-      <span class="fw-4">(Stand: {{ germany.lastUpdated | germanDate }})</span>
-    </span>
-
-    <app-button
-      (appClick)="onUpdateClick()"
-      icon="sync-solid"
-      text="Laden"
-    ></app-button>
-  </p>
-  <table>
-    <tr>
-      <td>7-Tage-Inzidenz</td>
-      <td class="ta-center">
-        <app-incidence-tag [incidence]="germany.incidence"></app-incidence-tag>
-      </td>
-    </tr>
-    <tr>
-      <td>Fälle insgesamt</td>
-      <td class="ta-center">
-        <strong>{{ germany.totalCases | thousandPoint }}</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>Tote insgesamt</td>
-      <td class="ta-center">
-        <strong>{{ germany.totalDeaths | thousandPoint }}</strong>
-      </td>
-    </tr>
-    <ng-container *ngIf="vaccination$ | async as vaccination">
-      <tr>
-        <td>Anzahl Erstgeimpfte</td>
-        <td class="ta-center">
-          <strong
-            >{{
-              vaccination.numberOfPeopleAtLeastOnceVaccinated | thousandPoint
-            }}
-            ({{ vaccination.percentAtLeastOnceVaccinated }}%)</strong
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>Anzahl vollst. Geimpfte</td>
-        <td class="ta-center">
-          <strong
-            >{{ vaccination.numberOfPeopleFullyVaccinated | thousandPoint }} ({{
-              vaccination.percentFullyVaccinated
-            }}%)</strong
-          >
-        </td>
-      </tr>
-    </ng-container>
-  </table>
-</ng-container>
-
-<ng-template #loadingData>
-  <app-spinner></app-spinner>
-</ng-template>
+<p class="table-label">
+  <span>
+    Deutschland
+    <span class="fw-4">(Stand: {{ germany.lastUpdated | germanDate }})</span>
+  </span>
+</p>
+<table>
+  <tr>
+    <td>7-Tage-Inzidenz</td>
+    <td class="ta-center">
+      <app-incidence-tag [incidence]="germany.incidence"></app-incidence-tag>
+    </td>
+  </tr>
+  <tr>
+    <td>Fälle insgesamt</td>
+    <td class="ta-center">
+      <strong>{{ germany.totalCases | thousandPoint }}</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>Tote insgesamt</td>
+    <td class="ta-center">
+      <strong>{{ germany.totalDeaths | thousandPoint }}</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>Anzahl Erstgeimpfte</td>
+    <td class="ta-center">
+      <strong
+        >{{
+          vaccination.numberOfPeopleAtLeastOnceVaccinated | thousandPoint
+        }}
+        ({{ vaccination.percentAtLeastOnceVaccinated }}%)</strong
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Anzahl vollst. Geimpfte</td>
+    <td class="ta-center">
+      <strong
+        >{{ vaccination.numberOfPeopleFullyVaccinated | thousandPoint }} ({{
+          vaccination.percentFullyVaccinated
+        }}%)</strong
+      >
+    </td>
+  </tr>
+</table>

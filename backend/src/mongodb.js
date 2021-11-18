@@ -86,26 +86,7 @@ class MongoDB {
     close();
   }
 
-  async countJokes() {
-    const [collection, close] = await this._connect(COLLECTION_JOKES);
-
-    const count = await collection.countDocuments();
-    close();
-
-    return count;
-  }
-
-  async getJokeOfTheDay() {
-    const count = await this.getJokeofTheDayCount();
-    const [collection, close] = await this._connect(COLLECTION_JOKES);
-
-    const jokeOfTheDays = await collection.find().toArray();
-    close();
-
-    return jokeOfTheDays[count];
-  }
-
-  async getJokeofTheDayCount() {
+  async getJokeOfTheDayCount() {
     const [collection, close] = await this._connect(COLLECTION_JOKE_OF_THE_DAY_COUNT);
 
     const { count } = await collection.findOne();
@@ -119,13 +100,7 @@ class MongoDB {
 
     const counter = await collection.findOne();
 
-    let newCount = counter.count + 1;
-
-    if (newCount + 1 > (await this.countJokes())) {
-      newCount = 0;
-    }
-
-    await collection.updateOne({ _id: counter._id }, { $set: { count: newCount } });
+    await collection.updateOne({ _id: counter._id }, { $set: { count: counter.count + 1 } });
     close();
   }
 

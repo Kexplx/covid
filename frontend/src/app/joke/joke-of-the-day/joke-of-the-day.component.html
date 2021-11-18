@@ -1,19 +1,6 @@
 <h1>Joke of the Day</h1>
-<div class="header">
-  <h2 class="mt-1" style="color: gray">17.11.20201</h2>
-  <app-button
-    (appClick)="onUpdateClick()"
-    icon="sync-solid"
-    text="Laden"
-  ></app-button>
-</div>
+<h2 class="mt-1" style="color: gray">17.11.20201</h2>
 
-<ng-container *ngIf="joke$ | async as joke; else dataLoading">
-  <p class="mt-1">{{ joke.text }}</p>
+<p class="mt-1">{{ jokeOfTheDay.text }}</p>
 
-  <img class="img-center mt-2" src="assets/icons/bat.png" alt="" />
-</ng-container>
-
-<ng-template #dataLoading>
-  <app-spinner></app-spinner>
-</ng-template>
+<img class="img-center mt-2" src="assets/icons/bat.png" alt="" />

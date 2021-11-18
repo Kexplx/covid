@@ -1,21 +1,49 @@
 <div class="container">
   <app-tab-set (tabChange)="onTabChange($event)"></app-tab-set>
-
-  <div *ngIf="tabIndex === 0" class="pt-2">
-    <app-germany-table></app-germany-table>
-
-    <div class="mt-2"></div>
-
-    <app-bavaria-table></app-bavaria-table>
-
-    <div class="mt-2"></div>
-
-    <app-districts-table></app-districts-table>
+  <div class="mt-2" style="text-align: right">
+    <app-button
+      [disabled]="isLoading"
+      (appClick)="onUpdateClick()"
+      icon="sync-solid"
+      [shadow]="true"
+      text="Aktualisieren"
+    ></app-button>
   </div>
+  <ng-container *ngIf="data$ | async as data; else noData">
+    <!-- Home -->
+    <section *ngIf="tabIndex === 0" class="pt-1">
+      <app-germany-table
+        [germany]="data.germanyHistory[0]"
+        [vaccination]="data.vaccination"
+      ></app-germany-table>
 
-  <div *ngIf="tabIndex === 1" class="pt-1"></div>
+      <div class="mt-2"></div>
 
-  <div *ngIf="tabIndex === 2" class="pt-1">
-    <app-joke-of-the-day></app-joke-of-the-day>
-  </div>
+      <app-bavaria-table
+        [bavaria]="data.bavaria"
+        [vaccination]="data.vaccination"
+      ></app-bavaria-table>
+
+      <div class="mt-2"></div>
+
+      <app-districts-table
+        [districts]="data.listOfDistrictHistories | districts"
+      ></app-districts-table>
+    </section>
+
+    <!-- History & Charts -->
+    <section *ngIf="tabIndex === 1" class="pt-1"></section>
+
+    <!-- Joke of the Day -->
+    <section *ngIf="tabIndex === 2" class="pt-1">
+      <app-joke-of-the-day
+        [jokeOfTheDay]="data.jokeOfTheDay"
+      ></app-joke-of-the-day>
+    </section>
+  </ng-container>
+
+  <ng-template #noData>
+    <div style="margin-top: 150px"></div>
+    <app-spinner></app-spinner>
+  </ng-template>
 </div>

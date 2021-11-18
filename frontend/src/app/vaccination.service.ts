@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, map, Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 
 export interface Vaccination {
@@ -20,25 +20,16 @@ export interface Vaccination {
   providedIn: "root",
 })
 export class VaccinationService {
-  private vaccinationHistorySubject = new BehaviorSubject<Vaccination[] | null>(
-    null
-  );
-  vaccinationHistory$ = this.vaccinationHistorySubject.asObservable();
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) {
-    this.loadVaccinationHistory();
-  }
-
-  loadVaccinationHistory() {
+  getVaccination(): Observable<Vaccination> {
     const url = `${environment.api}/vaccination`;
 
     let params = new HttpParams();
     params = params.set("limit", 1);
 
-    this.http
+    return this.http
       .get<Vaccination[]>(url, { params })
-      .subscribe((vaccinationHistory) =>
-        this.vaccinationHistorySubject.next(vaccinationHistory)
-      );
+      .pipe(map((vaccinationHistory) => vaccinationHistory[0]));
   }
 }

@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { JokeService } from "src/app/joke.service";
+import { Component, Input } from "@angular/core";
+import { Joke } from "src/app/joke.service";
 
 @Component({
   selector: "app-joke-of-the-day",
@@ -7,11 +7,5 @@ import { JokeService } from "src/app/joke.service";
   styleUrls: ["./joke-of-the-day.component.css"],
 })
 export class JokeOfTheDayComponent {
-  joke$ = this.jokeService.jokeOfTheDay$;
-
-  constructor(private jokeService: JokeService) {}
-
-  onUpdateClick() {
-    this.jokeService.loadJokeOfTheDay();
-  }
+  @Input() jokeOfTheDay!: Joke;
 }

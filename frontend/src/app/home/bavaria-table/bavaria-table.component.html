@@ -1,63 +1,49 @@
-<ng-container *ngIf="bavaria$ | async as bavaria; else loadingData">
-  <p class="table-label">
-    <span>
-      Bayern
-      <span class="fw-4">(Stand: {{ bavaria.lastUpdated | germanDate }})</span>
-    </span>
-
-    <app-button
-      (appClick)="onUpdateClick()"
-      icon="sync-solid"
-      text="Laden"
-    ></app-button>
-  </p>
-  <table>
-    <tr>
-      <td>7-Tage-Inzidenz</td>
-      <td class="ta-center">
-        <app-incidence-tag [incidence]="bavaria.incidence"></app-incidence-tag>
-      </td>
-    </tr>
-    <tr>
-      <td>Fälle insgesamt</td>
-      <td class="ta-center">
-        <strong>{{ bavaria.totalCases | thousandPoint }}</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>Tote insgesamt</td>
-      <td class="ta-center">
-        <strong>{{ bavaria.totalDeaths | thousandPoint }}</strong>
-      </td>
-    </tr>
-    <ng-container *ngIf="vaccination$ | async as vaccination">
-      <tr>
-        <td>Anzahl Erstgeimpfte</td>
-        <td class="ta-center">
-          <strong
-            >{{
-              vaccination.bavaria_numberOfPeopleAtLeastOnceVaccinated
-                | thousandPoint
-            }}
-            ({{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%)</strong
-          >
-        </td>
-      </tr>
-      <tr>
-        <td>Anzahl vollst. Geimpfte</td>
-        <td class="ta-center">
-          <strong
-            >{{
-              vaccination.bavaria_numberOfPeopleFullyVaccinated | thousandPoint
-            }}
-            ({{ vaccination.bavaria_percentFullyVaccinated }}%)</strong
-          >
-        </td>
-      </tr>
-    </ng-container>
-  </table>
-</ng-container>
-
-<ng-template #loadingData>
-  <app-spinner></app-spinner>
-</ng-template>
+<p class="table-label">
+  <span>
+    Bayern
+    <span class="fw-4">(Stand: {{ bavaria.lastUpdated | germanDate }})</span>
+  </span>
+</p>
+<table>
+  <tr>
+    <td>7-Tage-Inzidenz</td>
+    <td class="ta-center">
+      <app-incidence-tag [incidence]="bavaria.incidence"></app-incidence-tag>
+    </td>
+  </tr>
+  <tr>
+    <td>Fälle insgesamt</td>
+    <td class="ta-center">
+      <strong>{{ bavaria.totalCases | thousandPoint }}</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>Tote insgesamt</td>
+    <td class="ta-center">
+      <strong>{{ bavaria.totalDeaths | thousandPoint }}</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>Anzahl Erstgeimpfte</td>
+    <td class="ta-center">
+      <strong
+        >{{
+          vaccination.bavaria_numberOfPeopleAtLeastOnceVaccinated
+            | thousandPoint
+        }}
+        ({{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%)</strong
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>Anzahl vollst. Geimpfte</td>
+    <td class="ta-center">
+      <strong
+        >{{
+          vaccination.bavaria_numberOfPeopleFullyVaccinated | thousandPoint
+        }}
+        ({{ vaccination.bavaria_percentFullyVaccinated }}%)</strong
+      >
+    </td>
+  </tr>
+</table>

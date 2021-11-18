@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, forkJoin, Observable, tap } from "rxjs";
+import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 
 export interface District {
@@ -35,26 +35,15 @@ const districtCodesQuery = districtCodes
   providedIn: "root",
 })
 export class DistrictService {
-  private districtSubject = new BehaviorSubject<District[][] | null>(null);
-  listOfDistrictHistories$ = this.districtSubject.asObservable();
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) {
-    this.loadListOfDistrictHistories();
-  }
-
-  loadListOfDistrictHistories(): void {
-    this.districtSubject.next(null);
-
+  getListOfDistrictHistories(): Observable<District[][]> {
     const url = `${environment.api}/districts`;
 
     let params = new HttpParams();
     params = params.set("limit", 1);
     params = params.set("codes", districtCodesQuery);
 
-    this.http
-      .get<District[][]>(url, { params })
-      .subscribe((listOfDistrictHistories) =>
-        this.districtSubject.next(listOfDistrictHistories)
-      );
+    return this.http.get<District[][]>(url, { params });
   }
 }

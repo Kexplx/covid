@@ -1,4 +1,5 @@
 <button
+  [class.shadow]="shadow"
   (click)="onClick()"
   [class.disabled]="disabled"
   *ngIf="icon; else noIcon"

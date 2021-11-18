@@ -1,6 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { map } from "rxjs";
-import { DistrictService } from "src/app/district.service";
+import { Component, Input, OnInit } from "@angular/core";
+import { District } from "src/app/district.service";
 
 @Component({
   selector: "app-districts-table",
@@ -8,23 +7,10 @@ import { DistrictService } from "src/app/district.service";
   styleUrls: ["./districts-table.component.css"],
 })
 export class DistrictsTableComponent implements OnInit {
-  districts$ = this.districtService.listOfDistrictHistories$.pipe(
-    map((districtHistory) => {
-      if (!districtHistory) {
-        return null;
-      }
+  @Input() districts!: District[];
 
-      return districtHistory
-        .map((dh) => dh[0])
-        .sort((a, b) => a.incidence - b.incidence);
-    })
-  );
-
-  constructor(private districtService: DistrictService) {}
-
-  ngOnInit(): void {}
-
-  onUpdateClick() {
-    this.districtService.loadListOfDistrictHistories();
+  ngOnInit() {
+    // Sort ascending by incidence.
+    this.districts = this.districts.sort((a, b) => a.incidence - b.incidence);
   }
 }
