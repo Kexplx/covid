@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1637305379518,
+  "timestamp": 1637361934062,
   "index": "https://kexplx.github.io/covid/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "https://kexplx.github.io/covid/favicon.ico",
         "https://kexplx.github.io/covid/index.html",
-        "https://kexplx.github.io/covid/main.cf4d76569b00d778.js",
+        "https://kexplx.github.io/covid/main.27a6c1bc6013982a.js",
         "https://kexplx.github.io/covid/manifest.webmanifest",
         "https://kexplx.github.io/covid/polyfills.ef2977d9166cdda0.js",
         "https://kexplx.github.io/covid/runtime.8f1e28869995fb2b.js",
-        "https://kexplx.github.io/covid/styles.ddaca7d9ea666056.css"
+        "https://kexplx.github.io/covid/styles.cbb688fc4c269c7e.css"
       ],
       "patterns": []
     },
@@ -31,14 +31,17 @@
       "urls": [
         "https://kexplx.github.io/covid/assets/icons/bat-1.png",
         "https://kexplx.github.io/covid/assets/icons/caret-down-solid.svg",
-        "https://kexplx.github.io/covid/assets/icons/caret-left-solid.svg",
         "https://kexplx.github.io/covid/assets/icons/chart-line-solid.svg",
+        "https://kexplx.github.io/covid/assets/icons/check-solid.svg",
+        "https://kexplx.github.io/covid/assets/icons/envelope-regular.svg",
         "https://kexplx.github.io/covid/assets/icons/favicon.svg",
         "https://kexplx.github.io/covid/assets/icons/github-brands.svg",
         "https://kexplx.github.io/covid/assets/icons/home-solid.svg",
         "https://kexplx.github.io/covid/assets/icons/laugh-solid.svg",
         "https://kexplx.github.io/covid/assets/icons/paper-plane-regular.svg",
-        "https://kexplx.github.io/covid/assets/icons/sync-solid.svg"
+        "https://kexplx.github.io/covid/assets/icons/save-regular.svg",
+        "https://kexplx.github.io/covid/assets/icons/sync-solid.svg",
+        "https://kexplx.github.io/covid/assets/icons/user-cog-solid.svg"
       ],
       "patterns": []
     }
@@ -47,21 +50,24 @@
   "hashTable": {
     "https://kexplx.github.io/covid/assets/icons/bat-1.png": "a675cb5c69f120decc9857756df5606c6a315cf2",
     "https://kexplx.github.io/covid/assets/icons/caret-down-solid.svg": "a901df54beeb2b984cf6385e04f86de645db1ed0",
-    "https://kexplx.github.io/covid/assets/icons/caret-left-solid.svg": "78a14d8792e7d639e750d930f8041839040fc885",
     "https://kexplx.github.io/covid/assets/icons/chart-line-solid.svg": "a3268329bc9371efe5ce3327a73418c5b0784b47",
+    "https://kexplx.github.io/covid/assets/icons/check-solid.svg": "65448487b0a2f0f32526e31093d738769af14bd0",
+    "https://kexplx.github.io/covid/assets/icons/envelope-regular.svg": "833431b399ce73b2d9ffe0000b6e3e60653ccb9a",
     "https://kexplx.github.io/covid/assets/icons/favicon.svg": "4869e815fccf6754bc386024b529ebdf55209fc6",
     "https://kexplx.github.io/covid/assets/icons/github-brands.svg": "ea1f30a50f1241c2f69902ec1a427a368efd2223",
     "https://kexplx.github.io/covid/assets/icons/home-solid.svg": "b4775ee23a5f67d3dd6ac539ef3c44e0caf0776d",
     "https://kexplx.github.io/covid/assets/icons/laugh-solid.svg": "d5d6c64954b8e101c43cfbc0e48f5bfe78e9c6f2",
     "https://kexplx.github.io/covid/assets/icons/paper-plane-regular.svg": "b0e2ba232415e7b4e8e1e2f35f1f82b2cc60b246",
+    "https://kexplx.github.io/covid/assets/icons/save-regular.svg": "217131dcc803669a5c4a8f65c69f4be478a0faf1",
     "https://kexplx.github.io/covid/assets/icons/sync-solid.svg": "1f825c01a643f35c2666c7d4c9f4346a9a636142",
+    "https://kexplx.github.io/covid/assets/icons/user-cog-solid.svg": "3b4689823ddab5b745bf44e6019a1e34244b082f",
     "https://kexplx.github.io/covid/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://kexplx.github.io/covid/index.html": "2c5bbf00a896220a533f5f62a345db50ebb85b3f",
-    "https://kexplx.github.io/covid/main.cf4d76569b00d778.js": "2a6afe1c4ad56037f6f9e0958a57768e2db84e58",
+    "https://kexplx.github.io/covid/index.html": "0765c3fc08de26bcd4f25fa2e58e4864368f8761",
+    "https://kexplx.github.io/covid/main.27a6c1bc6013982a.js": "f90eef698fa626d734bf0f594b1f535bf59c25e8",
     "https://kexplx.github.io/covid/manifest.webmanifest": "b8d51860353b5e1b35688c928e8226ca3da4f878",
     "https://kexplx.github.io/covid/polyfills.ef2977d9166cdda0.js": "4d491ef351704038d96206fc2b7e8820a636bd11",
     "https://kexplx.github.io/covid/runtime.8f1e28869995fb2b.js": "38f843cb3e1cad69c0558ae2df249cf276950375",
-    "https://kexplx.github.io/covid/styles.ddaca7d9ea666056.css": "fff03d15d52a319055c3f6437aa608de72a3eafc"
+    "https://kexplx.github.io/covid/styles.cbb688fc4c269c7e.css": "cd1bbd08e4dadc7ce19f1ad91aad27b72a8860ae"
   },
   "navigationUrls": [
     {
