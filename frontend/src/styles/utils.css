@@ -43,6 +43,10 @@
   text-align: center;
 }
 
+.ta-right {
+  text-align: right;
+}
+
 .fw-4 {
   font-weight: 400;
 }

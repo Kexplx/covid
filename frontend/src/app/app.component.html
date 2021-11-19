@@ -1,54 +1,39 @@
 <div class="container">
   <app-tab-set (tabChange)="onTabChange($event)"></app-tab-set>
   <div class="mt-2" style="text-align: right">
-    <app-button
-      [disabled]="isLoading"
-      (appClick)="onUpdateClick()"
-      icon="sync-solid"
-      [shadow]="true"
-      text="Aktualisieren"
-    ></app-button>
+    <app-button [disabled]="isLoading" (appClick)="onUpdateClick()" icon="sync-solid" [shadow]="true" text="Aktualisieren"></app-button>
   </div>
   <ng-container *ngIf="data$ | async as data; else noData">
     <!-- Home -->
     <section *ngIf="tabIndex === 0">
-      <app-germany-table
-        [germany]="data.germanyHistory[0]"
-        [vaccination]="data.vaccination"
-      ></app-germany-table>
+      <app-germany-table [germany]="data.germanyHistory[0]" [vaccination]="data.vaccination"></app-germany-table>
 
       <div class="mt-2"></div>
 
-      <app-bavaria-table
-        [bavaria]="data.bavaria"
-        [vaccination]="data.vaccination"
-      ></app-bavaria-table>
+      <app-bavaria-table [bavaria]="data.bavaria" [vaccination]="data.vaccination"></app-bavaria-table>
 
       <div class="mt-2"></div>
 
-      <app-districts-table
-        [districts]="data.listOfDistrictHistories | districts"
-      ></app-districts-table>
+      <app-districts-table [districts]="data.listOfDistrictHistories | districts"></app-districts-table>
     </section>
 
     <!-- History & Charts -->
     <section *ngIf="tabIndex === 1">
       <h1 class="mb-1">COVID-19 Historie</h1>
-      <app-germany-history
-        [germanyHistory]="data.germanyHistory"
-      ></app-germany-history>
+      <app-germany-history [germanyHistory]="data.germanyHistory"></app-germany-history>
 
       <div class="mt-1"></div>
-      <app-district-history
-        [listOfDistrictHistories]="data.listOfDistrictHistories"
-      ></app-district-history>
+      <app-district-history [listOfDistrictHistories]="data.listOfDistrictHistories"></app-district-history>
     </section>
 
     <!-- Joke of the Day -->
     <section *ngIf="tabIndex === 2">
-      <app-joke-of-the-day
-        [jokeOfTheDay]="data.jokeOfTheDay"
-      ></app-joke-of-the-day>
+      <app-joke-of-the-day [jokeOfTheDay]="data.jokeOfTheDay"></app-joke-of-the-day>
+    </section>
+
+    <!-- Contact -->
+    <section *ngIf="tabIndex === 3">
+      <app-contact-form></app-contact-form>
     </section>
   </ng-container>
 

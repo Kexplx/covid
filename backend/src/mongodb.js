@@ -7,6 +7,7 @@ const COLLECTION_GERMANY = 'germany';
 const COLLECTION_STATES = 'states';
 const COLLECTION_DISTRICTS = 'districts';
 const COLLECTION_JOKES = 'jokes';
+const COLLECTION_FEEDBACK = 'feedback';
 const COLLECTION_JOKE_OF_THE_DAY_COUNT = 'joke-day-count';
 
 class MongoDB {
@@ -35,6 +36,13 @@ class MongoDB {
     const [collection, close] = await this._connect(COLLECTION_STATES);
 
     await collection.insertMany(states);
+    close();
+  }
+
+  async insertFeedback(feedback) {
+    const [collection, close] = await this._connect(COLLECTION_FEEDBACK);
+
+    await collection.insertOne(feedback);
     close();
   }
 

@@ -1,22 +1,15 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Input,
-  OnChanges,
-  ViewChild,
-} from "@angular/core";
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
 
-import { Chart, ChartConfiguration, ChartData, registerables } from "chart.js";
-import ChartDataLabels from "chartjs-plugin-datalabels";
+import { Chart, ChartConfiguration, ChartData, registerables } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 @Component({
-  selector: "app-line-chart",
-  templateUrl: "./line-chart.component.html",
-  styleUrls: ["./line-chart.component.css"],
+  selector: 'app-line-chart',
+  templateUrl: './line-chart.component.html',
+  styleUrls: ['./line-chart.component.css'],
 })
 export class LineChartComponent implements OnChanges, AfterViewInit {
-  @ViewChild("canvas") canvas!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;
 
   @Input() rawData!: number[];
   @Input() labels!: string[];
@@ -41,26 +34,29 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
       labels: this.labels,
       datasets: [
         {
-          datalabels: { color: "black", align: "top", padding: 5 },
+          datalabels: { color: 'black', align: 'top', padding: 5 },
           pointRadius: 4,
           borderWidth: 2,
-          pointBorderWidth: 1,
-
-          borderColor: "black",
+          pointBorderWidth: 2,
+          borderColor: '#ff7979',
           data: this.rawData,
-          tension: 0.2,
+          tension: 0.4,
         },
       ],
     };
 
     const config: ChartConfiguration = {
-      type: "line",
+      type: 'line',
       data: data,
       plugins: [ChartDataLabels],
       options: {
         plugins: { legend: { display: false } },
         scales: {
-          y: { display: false },
+          y: {
+            display: false,
+            suggestedMax: Math.max(...this.rawData) + 20,
+            suggestedMin: Math.min(...this.rawData) - 20,
+          },
           x: {
             display: true,
             grid: { display: true, drawBorder: true, drawTicks: true },
@@ -68,8 +64,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
         },
         elements: {
           point: {
-            backgroundColor: (ctx: any) =>
-              ctx.dataIndex === 1 ? "#e74c3c" : "black",
+            backgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? '#30336b' : 'white'),
           },
         },
         layout: {

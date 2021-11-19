@@ -28,6 +28,8 @@ button.open {
 ul {
   width: inherit;
   position: absolute;
+  height: 122px;
+  overflow: auto;
 }
 
 li {

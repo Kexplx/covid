@@ -1,17 +1,18 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { District } from "src/app/district.service";
-import { SelectOption } from "src/app/shared/select/select.component";
+import { Component, Input, OnInit } from '@angular/core';
+import { District } from 'src/app/district.service';
+import { DistrictNamePipe } from 'src/app/shared/district-name.pipe';
+import { SelectOption } from 'src/app/shared/select/select.component';
 
 @Component({
-  selector: "app-district-history",
-  templateUrl: "./district-history.component.html",
-  styleUrls: ["./district-history.component.css"],
+  selector: 'app-district-history',
+  templateUrl: './district-history.component.html',
+  styleUrls: ['./district-history.component.css'],
 })
 export class DistrictHistoryComponent implements OnInit {
   @Input() listOfDistrictHistories!: District[][];
   options: SelectOption[] = [];
 
-  lastUpdated = "";
+  lastUpdated = '';
 
   // Regensburg
   initialValue = 9362;
@@ -19,13 +20,13 @@ export class DistrictHistoryComponent implements OnInit {
   rawData: number[] = [];
   labels: string[] = [];
 
-  constructor() {}
+  constructor(private districtNamePipe: DistrictNamePipe) {}
 
   ngOnInit(): void {
-    this.options = this.listOfDistrictHistories.map((history) => {
+    this.options = this.listOfDistrictHistories.map(history => {
       const district = history[0];
 
-      return { name: district.name, value: district.code };
+      return { name: this.districtNamePipe.transform(district), value: district.code };
     });
 
     this.prepareChartData(this.initialValue);
@@ -36,25 +37,18 @@ export class DistrictHistoryComponent implements OnInit {
   }
 
   private prepareChartData(districtCode: number) {
-    const historyToDisplay = this.listOfDistrictHistories.find(
-      (h) => h[0].code === districtCode
-    ) as District[];
+    const historyToDisplay = this.listOfDistrictHistories.find(h => h[0].code === districtCode) as District[];
 
-    this.rawData = historyToDisplay!
-      .map((germany) => Math.round(germany.incidence))
-      .reverse();
+    this.rawData = historyToDisplay!.map(germany => Math.round(germany.incidence)).reverse();
 
     this.labels = historyToDisplay
-      .map((district) => {
+      .map(district => {
         const pattern = /(\d+\.\d+).*/;
 
         return pattern.exec(district.lastUpdated)![1];
       })
       .reverse();
 
-    this.lastUpdated = historyToDisplay[0].lastUpdated.replace(
-      /, 00:00 Uhr/,
-      ""
-    );
+    this.lastUpdated = historyToDisplay[0].lastUpdated.replace(/, 00:00 Uhr/, '');
   }
 }

@@ -1,11 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Output } from '@angular/core';
 
-export type TabIndex = 0 | 1 | 2;
+export type TabIndex = 0 | 1 | 2 | 3;
 
 @Component({
-  selector: "app-tab-set",
-  templateUrl: "./tab-set.component.html",
-  styleUrls: ["./tab-set.component.css"],
+  selector: 'app-tab-set',
+  templateUrl: './tab-set.component.html',
+  styleUrls: ['./tab-set.component.css'],
 })
 export class TabSetComponent {
   @Output() tabChange = new EventEmitter<TabIndex>();

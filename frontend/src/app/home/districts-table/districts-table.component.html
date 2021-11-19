@@ -1,9 +1,7 @@
 <p class="table-label">
   <span>
     Städte & Landkreise
-    <span class="fw-4"
-      >(Stand: {{ districts[0].lastUpdated.replace(", 00:00 Uhr", "") }})</span
-    >
+    <span class="fw-4">(Stand: {{ districts[0].lastUpdated.replace(', 00:00 Uhr', '') }})</span>
   </span>
 </p>
 <table>
@@ -14,7 +12,7 @@
     <td>Tote insges.</td>
   </tr>
   <tr *ngFor="let district of districts">
-    <td>{{ district.name }}</td>
+    <td>{{ district | districtName }}</td>
     <td>
       <app-incidence-tag [incidence]="district.incidence"></app-incidence-tag>
     </td>

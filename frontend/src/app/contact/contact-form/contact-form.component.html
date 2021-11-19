@@ -1,0 +1,13 @@
+<h1 class="mb-1">Kontakt</h1>
+
+<p><small> Haben Sie Feedback zur App, einen Feature-Wunsch oder generelle Anmerkungen? Über dieses Formular können Sie uns erreichen.</small></p>
+
+<div class="mt-1">
+  <textarea [(ngModel)]="feedback" placeholder="Ihre Anmerkungen hier..."></textarea>
+</div>
+
+<div class="mt-1 ta-right">
+  <app-button (appClick)="onSend()" [disabled]="!!!feedback" icon="paper-plane-regular" text="Absenden"></app-button>
+</div>
+
+<p *ngIf="showSuccess" class="mt-1 ta-center fw-5"><small>Ihre Anmerkungen wurden erfolgreich übertragen ✔️</small></p>
