@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  api: 'https://inzidenz-332309.appspot.com',
+  api: 'http://localhost:3000',
 };

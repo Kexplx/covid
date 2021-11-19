@@ -1,14 +1,30 @@
 const express = require('express');
 const router = express.Router();
-const MongoDB = require('../mongodb');
-
-const mongoDb = new MongoDB();
+const nodemailer = require('nodemailer');
 
 router.post('/', async (req, res) => {
   res.end();
 
   const feedback = req.body;
-  await mongoDb.insertFeedback(feedback);
+  sendMail(feedback.text);
 });
+
+function sendMail(body) {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.GMAIL_USERNAME,
+      pass: process.env.GMAIL_PASSWORD,
+    },
+  });
+
+  const options = {
+    to: 'oscar.rosner@web.de',
+    subject: 'Covid App - Feedback',
+    text: body,
+  };
+
+  transporter.sendMail(options);
+}
 
 module.exports = router;
