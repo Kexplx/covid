@@ -35,6 +35,11 @@
     <section *ngIf="tabIndex === 3">
       <app-contact-form></app-contact-form>
     </section>
+
+    <!-- Settings -->
+    <section *ngIf="tabIndex === 4">
+      <app-settings [listOfDistrictHistories]="data.listOfDistrictHistories"></app-settings>
+    </section>
   </ng-container>
 
   <ng-template #noData>

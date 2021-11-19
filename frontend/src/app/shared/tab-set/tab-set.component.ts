@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
-export type TabIndex = 0 | 1 | 2 | 3;
+export type TabIndex = number;
 
 @Component({
   selector: 'app-tab-set',

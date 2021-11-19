@@ -11,7 +11,7 @@
     <td>Fälle insges.</td>
     <td>Tote insges.</td>
   </tr>
-  <tr *ngFor="let district of districts">
+  <tr [class.highlight]="district.code === favoriteDistrictCode" *ngFor="let district of districts">
     <td>{{ district | districtName }}</td>
     <td>
       <app-incidence-tag [incidence]="district.incidence"></app-incidence-tag>

@@ -13,9 +13,10 @@ import { GermanyHistoryComponent } from './history/germany-history/germany-histo
 import { LineChartComponent } from './history/line-chart/line-chart.component';
 import { DistrictHistoryComponent } from './history/district-history/district-history.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SettingsComponent } from './settings/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,21 @@ import { environment } from '../environments/environment';
     LineChartComponent,
     DistrictHistoryComponent,
     ContactFormComponent,
+    SettingsComponent,
   ],
-  imports: [BrowserModule, FormsModule, SharedModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', {
-  enabled: environment.production,
-  // Register the ServiceWorker as soon as the app is stable
-  // or after 30 seconds (whichever comes first).
-  registrationStrategy: 'registerWhenStable:30000'
-})],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    SharedModule,
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

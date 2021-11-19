@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface SelectOption {
   value: any;
@@ -6,19 +6,20 @@ export interface SelectOption {
 }
 
 @Component({
-  selector: "app-select",
-  templateUrl: "./select.component.html",
-  styleUrls: ["./select.component.css"],
+  selector: 'app-select',
+  templateUrl: './select.component.html',
+  styleUrls: ['./select.component.css'],
 })
 export class SelectComponent implements OnInit {
   @Input() options!: SelectOption[];
   @Input() initialValue: any;
+  @Input() width = '190px';
 
   @Output() appSelect = new EventEmitter<SelectOption>();
 
   optionsToDisplay: SelectOption[] = [];
 
-  selected: SelectOption = { name: "", value: "" };
+  selected: SelectOption = { name: '', value: '' };
   isOpen = false;
 
   constructor() {}
@@ -26,7 +27,7 @@ export class SelectComponent implements OnInit {
   ngOnInit(): void {
     this.optionsToDisplay = [...this.options];
     if (this.initialValue) {
-      this.selected = this.options.find((o) => o.value === this.initialValue)!;
+      this.selected = this.options.find(o => o.value === this.initialValue)!;
       this.removeSelectedFromOptions();
     }
   }

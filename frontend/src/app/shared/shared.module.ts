@@ -9,6 +9,7 @@ import { RoundPipe } from './round.pipe';
 import { ThousandPointPipe } from './thousand-point.pipe';
 import { SelectComponent } from './select/select.component';
 import { DistrictNamePipe } from './district-name.pipe';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DistrictNamePipe } from './district-name.pipe';
     ThousandPointPipe,
     SelectComponent,
     DistrictNamePipe,
+    AlertComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -28,6 +30,7 @@ import { DistrictNamePipe } from './district-name.pipe';
     SelectComponent,
     GermanDatePipe,
     TabSetComponent,
+    AlertComponent,
     DistrictNamePipe,
     ThousandPointPipe,
     SpinnerComponent,

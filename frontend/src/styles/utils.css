@@ -23,6 +23,14 @@
   padding-top: 20px;
 }
 
+.mt-05 {
+  margin-top: 5px;
+}
+
+.mt-08 {
+  margin-top: 8px;
+}
+
 .mt-1 {
   margin-top: 10px;
 }
@@ -35,8 +43,16 @@
   margin-top: 30px;
 }
 
+.mr-05 {
+  margin-right: 5px;
+}
+
 .mb-1 {
   margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
 }
 
 .ta-center {
@@ -64,4 +80,14 @@
 .subheader {
   color: rgb(150, 150, 150);
   size: 0.8rem;
+}
+
+.hint {
+  color: rgb(150, 150, 150);
+  size: 0.8rem;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--red);
 }

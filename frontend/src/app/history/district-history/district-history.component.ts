@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { District } from 'src/app/district.service';
+import { SettingsService } from 'src/app/settings.service';
 import { DistrictNamePipe } from 'src/app/shared/district-name.pipe';
 import { SelectOption } from 'src/app/shared/select/select.component';
 
@@ -15,12 +16,12 @@ export class DistrictHistoryComponent implements OnInit {
   lastUpdated = '';
 
   // Regensburg
-  initialValue = 9362;
+  initialValue = this.settingsService.settings.favoriteDistrictCode;
 
   rawData: number[] = [];
   labels: string[] = [];
 
-  constructor(private districtNamePipe: DistrictNamePipe) {}
+  constructor(private districtNamePipe: DistrictNamePipe, private settingsService: SettingsService) {}
 
   ngOnInit(): void {
     this.options = this.listOfDistrictHistories.map(history => {

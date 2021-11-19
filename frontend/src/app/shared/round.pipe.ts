@@ -1,12 +1,14 @@
-import { Pipe, PipeTransform } from "@angular/core";
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: "round",
+  name: 'round',
 })
 export class RoundPipe implements PipeTransform {
-  transform(value: number): string {
-    const rounded = Math.round(value * 100) / 100;
+  transform(value: number, decimalPoints = 0): string {
+    const multiplyer = Math.pow(10, decimalPoints);
 
-    return rounded.toString().replace(".", ",");
+    const rounded = Math.round(value * multiplyer) / multiplyer;
+
+    return rounded.toString().replace('.', ',');
   }
 }

@@ -1,0 +1,30 @@
+<h1>Einstellungen</h1>
+
+<div class="mt-2">
+  <label>
+    Nachkommastellen:
+
+    <div class="input-container mt-05">
+      <input (focus)="$any($event.target).select()" [formControl]="decimalPointsControl" type="number" />
+      <span>
+        78,29198 ~
+        <app-incidence-tag [decimalPoints]="decimalPointsControl.value" [incidence]="78.29198"></app-incidence-tag>
+      </span>
+    </div>
+    <div *ngIf="decimalPointsControl.errors?.['required']" class="error mt-05">Bitte Wert eingeben.</div>
+    <div *ngIf="decimalPointsControl.errors?.['max'] || decimalPointsControl.errors?.['min']" class="error mt-05">Wert muss zwischen 0 - 10 liegen.</div>
+  </label>
+</div>
+
+<div class="mt-2">
+  <label> Mein Landkreis: </label>
+  <div class="mt-05">
+    <app-select width="100%" [initialValue]="selectedDistrictCode" (appSelect)="onSelect($event)" [options]="options"></app-select>
+  </div>
+</div>
+
+<div class="ta-right mt-2 mb-1">
+  <app-button [disabled]="decimalPointsControl.invalid" (appClick)="onSave()" icon="save-regular" text="Speichern"></app-button>
+</div>
+
+<app-alert *ngIf="isSuccessAlertVisible" text="Einstellungen gespeichert"></app-alert>
