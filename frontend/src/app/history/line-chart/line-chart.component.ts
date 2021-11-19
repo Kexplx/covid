@@ -35,8 +35,8 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
       datasets: [
         {
           datalabels: { color: 'black', align: 'top', padding: 5 },
-          pointRadius: 4,
           borderWidth: 2,
+          pointRadius: 4,
           pointBorderWidth: 2,
           borderColor: '#ff7979',
           data: this.rawData,
@@ -64,7 +64,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
         },
         elements: {
           point: {
-            backgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? '#30336b' : 'white'),
+            backgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : '#ff7979'),
           },
         },
         layout: {

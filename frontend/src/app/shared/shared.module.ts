@@ -33,6 +33,6 @@ import { DistrictNamePipe } from './district-name.pipe';
     SpinnerComponent,
     IncidenceTagComponent,
   ],
-  providers: [DistrictNamePipe],
+  providers: [DistrictNamePipe, GermanDatePipe],
 })
 export class SharedModule {}

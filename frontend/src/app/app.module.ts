@@ -14,6 +14,8 @@ import { LineChartComponent } from './history/line-chart/line-chart.component';
 import { DistrictHistoryComponent } from './history/district-history/district-history.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,12 @@ import { FormsModule } from '@angular/forms';
     DistrictHistoryComponent,
     ContactFormComponent,
   ],
-  imports: [BrowserModule, FormsModule, SharedModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, SharedModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: environment.production,
+  // Register the ServiceWorker as soon as the app is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+})],
   providers: [],
   bootstrap: [AppComponent],
 })
