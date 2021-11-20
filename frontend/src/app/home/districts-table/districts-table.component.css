@@ -13,14 +13,10 @@ td {
   vertical-align: middle;
 }
 
-tr:nth-child(even) {
+tr.col-header td {
   background-color: rgb(250, 250, 250);
 }
 
-tr.col-header td {
-  font-weight: 500;
-}
-
 .highlight {
-  border-left: 2px solid #9b59b6;
+  border-left: 2px solid #0082ff;
 }

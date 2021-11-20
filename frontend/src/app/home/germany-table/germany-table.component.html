@@ -1,44 +1,38 @@
 <p class="table-label">
-  <span>
-    Deutschland
-    <span class="fw-4">(Stand: {{ germany.lastUpdated | germanDate }})</span>
-  </span>
+  Deutschland
+  <span class="fw-4">(Stand: {{ germany.lastUpdated | germanDate }})</span>
 </p>
-<table>
+<table class="mt-05">
   <tr>
-    <td>7-Tage-Inzidenz</td>
-    <td class="ta-center">
+    <td>7T Inzidenz</td>
+    <td>
       <app-incidence-tag [incidence]="germany.incidence"></app-incidence-tag>
     </td>
   </tr>
   <tr>
-    <td>7-Tage-Hospitalisierung Inzidenz</td>
-    <td class="ta-center">
+    <td>7T Hospitalisierungs-Inzidenz</td>
+    <td>
       <app-incidence-tag [hospitalization]="true" [decimalPoints]="2" [incidence]="germany.hospitalizationIncidence"></app-incidence-tag>
     </td>
   </tr>
   <tr>
     <td>Fälle insgesamt</td>
-    <td class="ta-center">
-      <strong>{{ germany.totalCases | thousandPoint }}</strong>
+    <td>
+      {{ germany.totalCases | thousandPoint }}
     </td>
   </tr>
   <tr>
     <td>Tote insgesamt</td>
-    <td class="ta-center">
-      <strong>{{ germany.totalDeaths | thousandPoint }}</strong>
+    <td>
+      {{ germany.totalDeaths | thousandPoint }}
     </td>
   </tr>
   <tr>
-    <td>Anzahl Erstgeimpfte</td>
-    <td class="ta-center">
-      <strong>{{ vaccination.numberOfPeopleAtLeastOnceVaccinated | thousandPoint }} ({{ vaccination.percentAtLeastOnceVaccinated }}%)</strong>
-    </td>
+    <td>Erstgeimpfte</td>
+    <td>{{ vaccination.numberOfPeopleAtLeastOnceVaccinated | thousandPoint }} ({{ vaccination.percentAtLeastOnceVaccinated }}%)</td>
   </tr>
   <tr>
-    <td>Anzahl vollst. Geimpfte</td>
-    <td class="ta-center">
-      <strong>{{ vaccination.numberOfPeopleFullyVaccinated | thousandPoint }} ({{ vaccination.percentFullyVaccinated }}%)</strong>
-    </td>
+    <td>Vollsändig Geimpfte</td>
+    <td>{{ vaccination.numberOfPeopleFullyVaccinated | thousandPoint }} ({{ vaccination.percentFullyVaccinated }}%)</td>
   </tr>
 </table>

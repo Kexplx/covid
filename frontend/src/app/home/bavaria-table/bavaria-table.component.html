@@ -1,44 +1,38 @@
 <p class="table-label">
-  <span>
-    Bayern
-    <span class="fw-4">(Stand: {{ bavaria.lastUpdated | germanDate }})</span>
-  </span>
+  Bayern
+  <span class="fw-4">(Stand: {{ bavaria.lastUpdated | germanDate }})</span>
 </p>
-<table>
+<table class="mt-05">
   <tr>
-    <td>7-Tage-Inzidenz</td>
-    <td class="ta-center">
+    <td>7T Inzidenz</td>
+    <td>
       <app-incidence-tag [incidence]="bavaria.incidence"></app-incidence-tag>
     </td>
   </tr>
   <tr>
-    <td>7-Tage-Hospitalisierung Inzidenz</td>
-    <td class="ta-center">
+    <td>7T Hospitalisierungs-Inzidenz</td>
+    <td>
       <app-incidence-tag [hospitalization]="true" [decimalPoints]="2" [incidence]="bavaria.hospitalizationIncidence"></app-incidence-tag>
     </td>
   </tr>
   <tr>
     <td>Fälle insgesamt</td>
-    <td class="ta-center">
-      <strong>{{ bavaria.totalCases | thousandPoint }}</strong>
+    <td>
+      {{ bavaria.totalCases | thousandPoint }}
     </td>
   </tr>
   <tr>
     <td>Tote insgesamt</td>
-    <td class="ta-center">
-      <strong>{{ bavaria.totalDeaths | thousandPoint }}</strong>
+    <td>
+      {{ bavaria.totalDeaths | thousandPoint }}
     </td>
   </tr>
   <tr>
-    <td>Anzahl Erstgeimpfte</td>
-    <td class="ta-center">
-      <strong>{{ vaccination.bavaria_numberOfPeopleAtLeastOnceVaccinated | thousandPoint }} ({{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%)</strong>
-    </td>
+    <td>Erstgeimpfte</td>
+    <td>{{ vaccination.bavaria_numberOfPeopleAtLeastOnceVaccinated | thousandPoint }} ({{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%)</td>
   </tr>
   <tr>
-    <td>Anzahl vollst. Geimpfte</td>
-    <td class="ta-center">
-      <strong>{{ vaccination.bavaria_numberOfPeopleFullyVaccinated | thousandPoint }} ({{ vaccination.bavaria_percentFullyVaccinated }}%)</strong>
-    </td>
+    <td>Vollständig Geimpfte</td>
+    <td>{{ vaccination.bavaria_numberOfPeopleFullyVaccinated | thousandPoint }} ({{ vaccination.bavaria_percentFullyVaccinated }}%)</td>
   </tr>
 </table>
