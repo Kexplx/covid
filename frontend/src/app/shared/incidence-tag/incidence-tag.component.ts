@@ -31,7 +31,7 @@ export class IncidenceTagComponent implements OnInit {
     if (incidence < 100) {
       return 'rgb(46, 204, 113)';
     } else if (incidence < 200) {
-      return 'rgb(255, 195, 18)';
+      return 'rgb(221 165 0)';
     } else if (incidence < 300) {
       return 'rgb(247, 159, 31)';
     } else if (incidence < 400) {
@@ -47,7 +47,7 @@ export class IncidenceTagComponent implements OnInit {
     if (incidence < 3) {
       return 'rgb(46, 204, 113)';
     } else if (incidence < 6) {
-      return 'rgb(255, 195, 18)';
+      return 'rgb(221, 165, 0)';
     } else if (incidence < 9) {
       return 'rgb(247, 159, 31)';
     } else {

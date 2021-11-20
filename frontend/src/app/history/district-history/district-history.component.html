@@ -4,11 +4,7 @@
     <small class="subheader">Stand: {{ lastUpdated }}</small>
   </div>
 
-  <app-select
-    (appSelect)="onSelect($event)"
-    [options]="options"
-    [initialValue]="initialValue"
-  ></app-select>
+  <app-select width="175px" (appSelect)="onSelect($event)" [options]="options" [initialValue]="initialValue"></app-select>
 </header>
 
 <app-line-chart [rawData]="rawData" [labels]="labels"></app-line-chart>
