@@ -1,3 +1,4 @@
+const getHospitalization = require('./hospitalization');
 const getStates = require('./states');
 
 async function getGermany() {
@@ -15,9 +16,13 @@ async function getGermany() {
   // Calculate total deaths.
   const totalDeaths = states.reduce((acc, curr) => (acc += curr.totalDeaths), 0);
 
+  // Add hospitalization
+  const [germanyHospitalizationIncidence] = await getHospitalization();
+
   return {
     lastUpdated: new Date(states[0].lastUpdated),
     incidence,
+    hospitalizationIncidence: germanyHospitalizationIncidence,
     totalCases,
     totalDeaths,
   };

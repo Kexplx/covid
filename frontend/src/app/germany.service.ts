@@ -1,17 +1,18 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { environment } from "src/environments/environment";
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 export interface Germany {
   lastUpdated: string;
   incidence: number;
   totalCases: number;
   totalDeaths: number;
+  hospitalizationIncidence: number;
 }
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class GermanyService {
   constructor(private http: HttpClient) {}
@@ -20,7 +21,7 @@ export class GermanyService {
     const url = `${environment.api}/germany`;
 
     let params = new HttpParams();
-    params = params.set("limit", 8);
+    params = params.set('limit', 8);
 
     return this.http.get<Germany[]>(url, { params });
   }

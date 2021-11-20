@@ -1,7 +1,7 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { environment } from "src/environments/environment";
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 export interface District {
   code: number;
@@ -27,12 +27,10 @@ const districtCodes = [
   14713, // Leipzig
 ];
 
-const districtCodesQuery = districtCodes
-  .reduce((acc, curr) => (acc += curr.toString() + ","), "")
-  .replace(/,$/, "");
+const districtCodesQuery = districtCodes.reduce((acc, curr) => (acc += curr.toString() + ','), '').replace(/,$/, '');
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class DistrictService {
   constructor(private http: HttpClient) {}
@@ -41,8 +39,8 @@ export class DistrictService {
     const url = `${environment.api}/districts`;
 
     let params = new HttpParams();
-    params = params.set("limit", 8);
-    params = params.set("codes", districtCodesQuery);
+    params = params.set('limit', 8);
+    params = params.set('codes', districtCodesQuery);
 
     return this.http.get<District[][]>(url, { params });
   }

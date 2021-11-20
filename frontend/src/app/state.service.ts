@@ -1,10 +1,10 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { environment } from "src/environments/environment";
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 export enum StateNames {
-  Bavaria = "Bayern",
+  Bavaria = 'Bayern',
 }
 
 export interface State {
@@ -15,10 +15,11 @@ export interface State {
   casesInLast7Days: number;
   totalDeaths: number;
   incidence: number;
+  hospitalizationIncidence: number;
 }
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class StateService {
   constructor(private http: HttpClient) {}
@@ -27,8 +28,8 @@ export class StateService {
     const url = `${environment.api}/states`;
 
     let params = new HttpParams();
-    params = params.set("name", name);
-    params = params.set("limit", 1);
+    params = params.set('name', name);
+    params = params.set('limit', 1);
 
     return this.http.get<State[]>(url, { params });
   }

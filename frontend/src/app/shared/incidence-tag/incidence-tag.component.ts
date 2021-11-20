@@ -9,13 +9,17 @@ import { SettingsService } from 'src/app/settings.service';
 export class IncidenceTagComponent implements OnInit {
   @Input() incidence = 100;
   @Input() decimalPoints: number | undefined;
+  @Input() hospitalization = false;
   fontColor = '';
   backgroundColor = '';
 
   constructor(private settingsService: SettingsService) {}
 
   ngOnInit() {
-    this.fontColor = this.getColorByIncidence(this.incidence);
+    this.fontColor = this.hospitalization
+      ? this.getColorByHospitalizationIncidence(this.incidence)
+      : this.getColorByIncidence(this.incidence);
+
     this.backgroundColor = this.fontColor.replace(')', ',0.1)').replace('rgb', 'rgba');
 
     if (!this.decimalPoints) {
@@ -34,6 +38,18 @@ export class IncidenceTagComponent implements OnInit {
       return 'rgb(238, 90, 36)';
     } else if (incidence < 500) {
       return 'rgb(234, 32, 39)';
+    } else {
+      return 'rgb(212, 20, 27)';
+    }
+  }
+
+  getColorByHospitalizationIncidence(incidence: number): string {
+    if (incidence < 3) {
+      return 'rgb(46, 204, 113)';
+    } else if (incidence < 6) {
+      return 'rgb(255, 195, 18)';
+    } else if (incidence < 9) {
+      return 'rgb(247, 159, 31)';
     } else {
       return 'rgb(212, 20, 27)';
     }
