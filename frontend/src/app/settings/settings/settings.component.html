@@ -19,11 +19,11 @@
 <div class="mt-2">
   <label> Mein Landkreis: </label>
   <div class="mt-05">
-    <app-select width="100%" [initialValue]="selectedDistrictCode" (appSelect)="onSelect($event)" [options]="options"></app-select>
+    <app-select width="190px" [initialValue]="selectedDistrictCode" (appSelect)="onSelect($event)" [options]="options"></app-select>
   </div>
 </div>
 
-<div class="ta-right mt-2 mb-1">
+<div class="mt-2 mb-1">
   <app-button [disabled]="decimalPointsControl.invalid" (appClick)="onSave()" icon="save-regular" text="Speichern"></app-button>
 </div>
 

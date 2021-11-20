@@ -22,8 +22,6 @@ export class SelectComponent implements OnInit {
   selected: SelectOption = { name: '', value: '' };
   isOpen = false;
 
-  constructor() {}
-
   ngOnInit(): void {
     this.optionsToDisplay = [...this.options];
     if (this.initialValue) {

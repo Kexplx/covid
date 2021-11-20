@@ -1,5 +1,5 @@
 button {
-  padding: 4px 14px 4px 9px;
+  padding: 5px 14px 5px 9px;
   text-align: left;
   font-size: 0.8rem;
   border: 1px solid rgb(230, 230, 230);
@@ -22,8 +22,8 @@ button.open {
 }
 
 .btn-content img {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 
 ul {

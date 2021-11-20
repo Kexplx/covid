@@ -42,14 +42,11 @@ export class SettingsComponent implements OnInit {
       favoriteDistrictCode: this.selectedDistrictCode,
     };
 
-    console.log(settings);
-
     this.settingsService.setSettings(settings);
     this.isSuccessAlertVisible = true;
   }
 
   onSelect(option: SelectOption) {
     this.selectedDistrictCode = option.value;
-    console.log('sd');
   }
 }
