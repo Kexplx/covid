@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1637364690250,
+  "timestamp": 1637388246417,
   "index": "https://kexplx.github.io/covid/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://kexplx.github.io/covid/favicon.ico",
         "https://kexplx.github.io/covid/index.html",
-        "https://kexplx.github.io/covid/main.27a6c1bc6013982a.js",
+        "https://kexplx.github.io/covid/main.c1951fd1a231fad8.js",
         "https://kexplx.github.io/covid/manifest.webmanifest",
         "https://kexplx.github.io/covid/polyfills.ef2977d9166cdda0.js",
         "https://kexplx.github.io/covid/runtime.8f1e28869995fb2b.js",
@@ -62,8 +62,8 @@
     "https://kexplx.github.io/covid/assets/icons/sync-solid.svg": "1f825c01a643f35c2666c7d4c9f4346a9a636142",
     "https://kexplx.github.io/covid/assets/icons/user-cog-solid.svg": "3b4689823ddab5b745bf44e6019a1e34244b082f",
     "https://kexplx.github.io/covid/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://kexplx.github.io/covid/index.html": "0765c3fc08de26bcd4f25fa2e58e4864368f8761",
-    "https://kexplx.github.io/covid/main.27a6c1bc6013982a.js": "f90eef698fa626d734bf0f594b1f535bf59c25e8",
+    "https://kexplx.github.io/covid/index.html": "25b883f8aa62874c830eb167d7564264cb427e91",
+    "https://kexplx.github.io/covid/main.c1951fd1a231fad8.js": "34bf8aa6921616f8aa65dbc4703d400327404662",
     "https://kexplx.github.io/covid/manifest.webmanifest": "b8d51860353b5e1b35688c928e8226ca3da4f878",
     "https://kexplx.github.io/covid/polyfills.ef2977d9166cdda0.js": "4d491ef351704038d96206fc2b7e8820a636bd11",
     "https://kexplx.github.io/covid/runtime.8f1e28869995fb2b.js": "38f843cb3e1cad69c0558ae2df249cf276950375",
