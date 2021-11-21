@@ -36,20 +36,20 @@ export class LineChartTwoComponent implements OnChanges, AfterViewInit {
       labels: this.labels,
       datasets: [
         {
-          datalabels: { color: 'black', align: 'top', padding: 5 },
+          datalabels: { color: 'black', align: 'top', padding: 3, font: { size: 11, weight: 500, family: 'Segoe UI' } },
           borderWidth: 2,
-          pointRadius: 4,
+          pointRadius: 3,
           pointBorderWidth: 2,
-          borderColor: CHART_COLORS.grey,
-          pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : CHART_COLORS.grey),
+          borderColor: CHART_COLORS.purple,
+          pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : CHART_COLORS.purple),
           data: this.rawData1,
           tension: 0.4,
           label: 'Deutschland',
         },
         {
-          datalabels: { color: 'black', align: 'top', padding: 5 },
+          datalabels: { color: 'black', align: 'top', padding: 3, font: { size: 11, weight: 500, family: 'Segoe UI' } },
           borderWidth: 2,
-          pointRadius: 4,
+          pointRadius: 3,
           pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : CHART_COLORS.blue),
           pointBorderWidth: 2,
           borderColor: CHART_COLORS.blue,
@@ -65,7 +65,13 @@ export class LineChartTwoComponent implements OnChanges, AfterViewInit {
       data: data,
       plugins: [ChartDataLabels],
       options: {
-        plugins: { legend: { display: true } },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+            labels: { pointStyle: 'circle', boxHeight: 5, boxWidth: 5, usePointStyle: true },
+          },
+        },
         scales: {
           y: {
             display: false,
@@ -77,15 +83,6 @@ export class LineChartTwoComponent implements OnChanges, AfterViewInit {
             grid: { display: true, drawBorder: true, drawTicks: true },
           },
         },
-        elements: {
-          point: {
-            backgroundColor: (ctx: any) => {
-              console.log(ctx);
-              return 'white';
-            },
-          },
-        },
-        animation: false,
       },
     };
 

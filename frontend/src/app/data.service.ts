@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, forkJoin } from 'rxjs';
+import { BehaviorSubject, delay, forkJoin } from 'rxjs';
 import { District, DistrictService } from './district.service';
 import { Germany, GermanyService } from './germany.service';
 import { Joke, JokeService } from './joke.service';
 import { State, StateNames, StateService } from './state.service';
 import { Vaccination, VaccinationService } from './vaccination.service';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 export interface AppData {
   vaccination: Vaccination;
@@ -22,6 +24,7 @@ export class DataService {
   data$ = this.dataSubject.asObservable();
 
   constructor(
+    private http: HttpClient,
     private districtService: DistrictService,
     private stateService: StateService,
     private vaccinationService: VaccinationService,
@@ -34,6 +37,14 @@ export class DataService {
   loadData() {
     this.dataSubject.next(null);
 
+    if (environment.production) {
+      this.loadProductionData();
+    } else {
+      this.loadDummyData();
+    }
+  }
+
+  private loadProductionData() {
     const responses = [
       this.districtService.getListOfDistrictHistories(),
       this.germanyService.getGermanyHistory(),
@@ -51,5 +62,13 @@ export class DataService {
         jokeOfTheDay: data[4] as Joke,
       });
     });
+  }
+
+  private loadDummyData() {
+    // Wait 500ms to simulate network.
+    this.http
+      .get<AppData>('/assets/data.json')
+      .pipe(delay(500))
+      .subscribe(d => this.dataSubject.next(d));
   }
 }
