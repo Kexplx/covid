@@ -35,9 +35,9 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
       labels: this.labels,
       datasets: [
         {
-          datalabels: { color: 'black', align: 'top', padding: 5 },
+          datalabels: { color: 'black', align: 'top', padding: 3, font: { size: 11, weight: 500, family: 'Segoe UI' } },
           borderWidth: 2,
-          pointRadius: 4,
+          pointRadius: 3,
           pointBorderWidth: 2,
           borderColor: CHART_COLORS.red,
           data: this.rawData,
@@ -56,7 +56,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
           y: {
             display: false,
             suggestedMax: Math.max(...this.rawData) + 20,
-            suggestedMin: Math.min(...this.rawData) - 20,
+            suggestedMin: Math.min(...this.rawData) - 10,
           },
           x: {
             display: true,
@@ -69,9 +69,8 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
           },
         },
         layout: {
-          padding: { top: 25, bottom: 10 },
+          padding: { top: 0, bottom: 0 },
         },
-        animation: false,
       },
     };
 
