@@ -1,8 +1,5 @@
 table {
   width: 100%;
-  border-radius: 20px;
-
-  border-radius: 3px;
 }
 
 td {
@@ -19,4 +16,22 @@ tr td:nth-child(1) {
 
 tr td:nth-child(2) {
   text-align: center;
+}
+
+.hospitalization-desc {
+  position: relative;
+}
+
+.hospitalization-desc span {
+  position: absolute;
+  left: 7px;
+}
+
+.hospitalization-desc span img {
+  width: 8px;
+}
+
+.hospitalization-desc p {
+  font-size: 0.78rem;
+  color: rgb(102, 102, 102);
 }

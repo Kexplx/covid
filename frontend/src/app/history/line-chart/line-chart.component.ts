@@ -2,7 +2,12 @@ import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } fro
 
 import { Chart, ChartConfiguration, ChartData, registerables } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { CHART_COLORS } from '../chart-colors';
+
+export interface Dataset {
+  label?: string;
+  data: number[];
+  color: string;
+}
 
 @Component({
   selector: 'app-line-chart',
@@ -14,6 +19,11 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
 
   @Input() rawData!: number[];
   @Input() labels!: string[];
+
+  @Input() showLegend = false;
+  @Input() datasets!: Dataset[];
+  @Input() paddingTop = 0;
+  @Input() paddingBot = 0;
 
   chart?: Chart;
 
@@ -33,17 +43,17 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
 
     const data: ChartData = {
       labels: this.labels,
-      datasets: [
-        {
-          datalabels: { color: 'black', align: 'top', padding: 3, font: { size: 11, weight: 500, family: 'Segoe UI' } },
-          borderWidth: 2,
-          pointRadius: 3,
-          pointBorderWidth: 2,
-          borderColor: CHART_COLORS.red,
-          data: this.rawData,
-          tension: 0.4,
-        },
-      ],
+      datasets: this.datasets.map(d => ({
+        datalabels: { color: 'black', align: 'top', padding: 3, font: { size: 11, weight: 500, family: 'Segoe UI' } },
+        borderWidth: 2,
+        pointRadius: 3,
+        pointBorderWidth: 2,
+        tension: 0.4,
+        borderColor: d.color,
+        pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : d.color),
+        data: d.data,
+        label: d.label,
+      })),
     };
 
     const config: ChartConfiguration = {
@@ -51,21 +61,22 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
       data: data,
       plugins: [ChartDataLabels],
       options: {
-        plugins: { legend: { display: false } },
+        plugins: {
+          legend: {
+            display: this.showLegend,
+            position: 'bottom',
+            labels: { pointStyle: 'circle', boxHeight: 5, boxWidth: 5, usePointStyle: true },
+          },
+        },
         scales: {
           y: {
             display: false,
-            suggestedMax: Math.max(...this.rawData) + 20,
-            suggestedMin: Math.min(...this.rawData) - 10,
+            suggestedMax: Math.max(...this.datasets.map(d => d.data).flat()) + this.paddingTop,
+            suggestedMin: Math.min(...this.datasets.map(d => d.data).flat()) - this.paddingBot,
           },
           x: {
             display: true,
             grid: { display: true, drawBorder: true, drawTicks: true },
-          },
-        },
-        elements: {
-          point: {
-            backgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : CHART_COLORS.red),
           },
         },
         layout: {

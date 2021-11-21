@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Germany } from 'src/app/germany.service';
 import { State } from 'src/app/state.service';
+import { CHART_COLORS } from '../chart-colors';
+import { Dataset } from '../line-chart/line-chart.component';
 
 @Component({
   selector: 'app-hospitalization-incidence-history',
@@ -13,20 +15,22 @@ export class HospitalizationIncidenceHistoryComponent implements OnInit {
 
   lastUpdated: string = '';
   labels: string[] = [];
-  germanyValuesRaw: number[] = [];
-  bavariaValuesRaw: number[] = [];
+  datasets: Dataset[] = [];
 
   ngOnInit(): void {
     const entriesWithIncidence = this.germanyHistory.filter(g => g.hospitalizationIncidence !== undefined).length;
 
-    this.germanyValuesRaw = this.germanyHistory
+    const germanyValuesRaw = this.germanyHistory
       .slice(0, entriesWithIncidence)
       .map(g => g.hospitalizationIncidence)
       .reverse();
-    this.bavariaValuesRaw = this.bavariaHistory
+    this.datasets.push({ data: germanyValuesRaw, color: CHART_COLORS.blue, label: 'Deutschland' });
+
+    const bavariaValuesRaw = this.bavariaHistory
       .slice(0, entriesWithIncidence)
       .map(b => b.hospitalizationIncidence)
       .reverse();
+    this.datasets.push({ data: bavariaValuesRaw, color: CHART_COLORS.purple, label: 'Bayern' });
 
     this.labels = this.germanyHistory
       .slice(0, entriesWithIncidence)

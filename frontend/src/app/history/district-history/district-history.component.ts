@@ -3,6 +3,7 @@ import { District } from 'src/app/district.service';
 import { SettingsService } from 'src/app/settings.service';
 import { DistrictNamePipe } from 'src/app/shared/district-name.pipe';
 import { SelectOption } from 'src/app/shared/select/select.component';
+import { CHART_COLORS } from '../chart-colors';
 
 @Component({
   selector: 'app-district-history',
@@ -15,10 +16,9 @@ export class DistrictHistoryComponent implements OnInit {
 
   lastUpdated = '';
 
-  // Regensburg
   initialValue = this.settingsService.settings.favoriteDistrictCode;
 
-  rawData: number[] = [];
+  dataset: { data: number[]; color: string } = { data: [], color: CHART_COLORS.red };
   labels: string[] = [];
 
   constructor(private districtNamePipe: DistrictNamePipe, private settingsService: SettingsService) {}
@@ -40,7 +40,7 @@ export class DistrictHistoryComponent implements OnInit {
   private prepareChartData(districtCode: number) {
     const historyToDisplay = this.listOfDistrictHistories.find(h => h[0].code === districtCode) as District[];
 
-    this.rawData = historyToDisplay!.map(germany => Math.round(germany.incidence)).reverse();
+    this.dataset.data = historyToDisplay!.map(germany => Math.round(germany.incidence)).reverse();
 
     this.labels = historyToDisplay
       .map(district => {

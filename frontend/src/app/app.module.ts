@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { GermanyTableComponent } from './home/germany-table/germany-table.component';
 import { BavariaTableComponent } from './home/bavaria-table/bavaria-table.component';
 import { DistrictsTableComponent } from './home/districts-table/districts-table.component';
@@ -16,7 +16,6 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SettingsComponent } from './settings/settings/settings.component';
 import { HospitalizationIncidenceHistoryComponent } from './history/hospitalization-incidence-history/hospitalization-incidence-history.component';
-import { LineChartTwoComponent } from './history/line-chart-two/line-chart-two.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,6 @@ import { LineChartTwoComponent } from './history/line-chart-two/line-chart-two.c
     ContactFormComponent,
     SettingsComponent,
     HospitalizationIncidenceHistoryComponent,
-    LineChartTwoComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
   bootstrap: [AppComponent],

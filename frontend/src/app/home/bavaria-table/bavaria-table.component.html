@@ -10,7 +10,14 @@
     </td>
   </tr>
   <tr>
-    <td>7T Hospitalisierungsinzidenz</td>
+    <td class="hospitalization-desc" (click)="isHospitalizationIncidenceDescriptionVisible = !isHospitalizationIncidenceDescriptionVisible" style="position: relative">
+      <span>
+        <img *ngIf="!isHospitalizationIncidenceDescriptionVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-solid.svg" alt="" />
+        <img *ngIf="isHospitalizationIncidenceDescriptionVisible" src="assets/icons/caret-down-solid.svg" alt="" />
+      </span>
+      7T Hospitalisierungsinzidenz
+      <p *ngIf="isHospitalizationIncidenceDescriptionVisible" class="mt-1">Die Hospitalisierungsinzidenz liegt nur auf Bundeslandebene vor und nicht auf Kreisebene.</p>
+    </td>
     <td>
       <app-incidence-tag [hospitalization]="true" [decimalPoints]="2" [incidence]="bavaria.hospitalizationIncidence"></app-incidence-tag>
     </td>

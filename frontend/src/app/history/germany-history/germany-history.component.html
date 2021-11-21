@@ -2,4 +2,4 @@
 
 <small class="subheader">Stand: {{ lastUpdated | germanDate }}</small>
 
-<app-line-chart [rawData]="rawData" [labels]="labels"></app-line-chart>
+<app-line-chart [datasets]="[dataset]" [paddingTop]="20" [paddingBot]="10" [labels]="labels"></app-line-chart>

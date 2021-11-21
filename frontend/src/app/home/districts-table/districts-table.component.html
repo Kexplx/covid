@@ -9,8 +9,11 @@
     <td>Fälle insges.</td>
     <td>Tote insges.</td>
   </tr>
-  <tr [class.highlight]="district.code === favoriteDistrictCode" *ngFor="let district of districts">
-    <td>{{ district | districtName }}</td>
+  <tr *ngFor="let district of districts">
+    <td style="position: relative">
+      <div *ngIf="district.code === favoriteDistrictCode" class="hightlight-div"></div>
+      {{ district | districtName }}
+    </td>
     <td>
       <app-incidence-tag [incidence]="district.incidence"></app-incidence-tag>
     </td>
