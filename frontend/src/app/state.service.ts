@@ -29,7 +29,7 @@ export class StateService {
 
     let params = new HttpParams();
     params = params.set('name', name);
-    params = params.set('limit', 1);
+    params = params.set('limit', 8);
 
     return this.http.get<State[]>(url, { params });
   }

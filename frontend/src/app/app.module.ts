@@ -15,6 +15,8 @@ import { DistrictHistoryComponent } from './history/district-history/district-hi
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SettingsComponent } from './settings/settings/settings.component';
+import { HospitalizationIncidenceHistoryComponent } from './history/hospitalization-incidence-history/hospitalization-incidence-history.component';
+import { LineChartTwoComponent } from './history/line-chart-two/line-chart-two.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { SettingsComponent } from './settings/settings/settings.component';
     DistrictHistoryComponent,
     ContactFormComponent,
     SettingsComponent,
+    HospitalizationIncidenceHistoryComponent,
+    LineChartTwoComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
   providers: [],

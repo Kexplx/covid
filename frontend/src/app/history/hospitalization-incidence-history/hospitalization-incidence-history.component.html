@@ -1,0 +1,5 @@
+<h2 class="mb-1">7T Hospitalisierungsinzidenz</h2>
+
+<small class="subheader">Stand: {{ lastUpdated | germanDate }}</small>
+
+<app-line-chart-two [rawData1]="germanyValuesRaw" [rawData2]="bavariaValuesRaw" [labels]="labels"></app-line-chart-two>

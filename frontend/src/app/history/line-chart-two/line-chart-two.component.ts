@@ -5,14 +5,15 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { CHART_COLORS } from '../chart-colors';
 
 @Component({
-  selector: 'app-line-chart',
-  templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.css'],
+  selector: 'app-line-chart-two',
+  templateUrl: './line-chart-two.component.html',
+  styleUrls: ['./line-chart-two.component.css'],
 })
-export class LineChartComponent implements OnChanges, AfterViewInit {
+export class LineChartTwoComponent implements OnChanges, AfterViewInit {
   @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;
 
-  @Input() rawData!: number[];
+  @Input() rawData1!: number[];
+  @Input() rawData2!: number[];
   @Input() labels!: string[];
 
   chart?: Chart;
@@ -39,9 +40,22 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
           borderWidth: 2,
           pointRadius: 4,
           pointBorderWidth: 2,
-          borderColor: CHART_COLORS.red,
-          data: this.rawData,
+          borderColor: CHART_COLORS.grey,
+          pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : CHART_COLORS.grey),
+          data: this.rawData1,
           tension: 0.4,
+          label: 'Deutschland',
+        },
+        {
+          datalabels: { color: 'black', align: 'top', padding: 5 },
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : CHART_COLORS.blue),
+          pointBorderWidth: 2,
+          borderColor: CHART_COLORS.blue,
+          data: this.rawData2,
+          tension: 0.4,
+          label: 'Bayern',
         },
       ],
     };
@@ -51,12 +65,12 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
       data: data,
       plugins: [ChartDataLabels],
       options: {
-        plugins: { legend: { display: false } },
+        plugins: { legend: { display: true } },
         scales: {
           y: {
             display: false,
-            suggestedMax: Math.max(...this.rawData) + 20,
-            suggestedMin: Math.min(...this.rawData) - 20,
+            suggestedMax: Math.max(...this.rawData1, ...this.rawData2) + 1,
+            suggestedMin: Math.min(...this.rawData1, ...this.rawData1),
           },
           x: {
             display: true,
@@ -65,11 +79,11 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
         },
         elements: {
           point: {
-            backgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : CHART_COLORS.red),
+            backgroundColor: (ctx: any) => {
+              console.log(ctx);
+              return 'white';
+            },
           },
-        },
-        layout: {
-          padding: { top: 25, bottom: 10 },
         },
         animation: false,
       },

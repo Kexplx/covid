@@ -1,21 +1,21 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject, forkJoin } from "rxjs";
-import { District, DistrictService } from "./district.service";
-import { Germany, GermanyService } from "./germany.service";
-import { Joke, JokeService } from "./joke.service";
-import { State, StateNames, StateService } from "./state.service";
-import { Vaccination, VaccinationService } from "./vaccination.service";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, forkJoin } from 'rxjs';
+import { District, DistrictService } from './district.service';
+import { Germany, GermanyService } from './germany.service';
+import { Joke, JokeService } from './joke.service';
+import { State, StateNames, StateService } from './state.service';
+import { Vaccination, VaccinationService } from './vaccination.service';
 
 export interface AppData {
   vaccination: Vaccination;
   germanyHistory: Germany[];
-  bavaria: State;
+  bavariaHistory: State[];
   listOfDistrictHistories: District[][];
   jokeOfTheDay: Joke;
 }
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class DataService {
   private dataSubject = new BehaviorSubject<AppData | null>(null);
@@ -26,7 +26,7 @@ export class DataService {
     private stateService: StateService,
     private vaccinationService: VaccinationService,
     private germanyService: GermanyService,
-    private jokeService: JokeService
+    private jokeService: JokeService,
   ) {
     this.loadData();
   }
@@ -42,12 +42,12 @@ export class DataService {
       this.jokeService.getJokeOfTheDay(),
     ];
 
-    forkJoin(responses).subscribe((data) => {
+    forkJoin(responses).subscribe(data => {
       this.dataSubject.next({
         listOfDistrictHistories: data[0] as District[][],
         germanyHistory: data[1] as Germany[],
         vaccination: data[2] as Vaccination,
-        bavaria: (data[3] as State[])[0],
+        bavariaHistory: data[3] as State[],
         jokeOfTheDay: data[4] as Joke,
       });
     });
