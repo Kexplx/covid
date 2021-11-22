@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { DataService } from './data.service';
-import { TabIndex } from './shared/tab-set/tab-set.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   tabIndex = 0;
 
   data$ = this.dataService.data$.pipe(
@@ -21,20 +20,27 @@ export class AppComponent {
 
   isLoading = true;
 
-  options = [
-    { name: 'Regensburg', value: 1 },
-    { name: 'München', value: 2 },
-    { name: 'Berlin', value: 3 },
-  ];
-
   constructor(private dataService: DataService) {}
 
-  onTabChange(tabIndex: TabIndex): void {
+  ngOnInit() {
+    const queryParams = new URLSearchParams(window.location.search);
+    if (queryParams.has('t')) {
+      this.tabIndex = Number(queryParams.get('t'));
+    }
+  }
+
+  onTabChange(tabIndex: number): void {
     this.tabIndex = tabIndex;
+    this.updateCurrentTabIndexInUrl(tabIndex);
   }
 
   onUpdateClick() {
     this.isLoading = true;
     this.dataService.loadData();
+  }
+
+  updateCurrentTabIndexInUrl(tabIndex: number) {
+    const newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?t=${tabIndex}`;
+    window.history.pushState({ path: newurl }, '', newurl);
   }
 }

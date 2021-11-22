@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-
-export type TabIndex = number;
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tab-set',
@@ -8,11 +6,10 @@ export type TabIndex = number;
   styleUrls: ['./tab-set.component.css'],
 })
 export class TabSetComponent {
-  @Output() tabChange = new EventEmitter<TabIndex>();
+  @Output() tabChange = new EventEmitter<number>();
+  @Input() index = 0;
 
-  index: TabIndex = 0;
-
-  onChange(i: TabIndex): void {
+  onChange(i: number): void {
     if (this.index === i) {
       // Ignore.
       return;

@@ -1,6 +1,6 @@
 <div class="container">
-  <app-tab-set (tabChange)="onTabChange($event)"></app-tab-set>
-  <div class="mt-2" style="text-align: right">
+  <app-tab-set [index]="tabIndex" (tabChange)="onTabChange($event)"></app-tab-set>
+  <div class="mt-2 ta-right">
     <app-button [disabled]="isLoading" (appClick)="onUpdateClick()" icon="sync-solid" [shadow]="true" text="Aktualisieren"></app-button>
   </div>
   <ng-container *ngIf="data$ | async as data; else noData">

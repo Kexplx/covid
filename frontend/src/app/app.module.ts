@@ -18,6 +18,7 @@ import { SettingsComponent } from './settings/settings/settings.component';
 import { HospitalizationIncidenceHistoryComponent } from './history/hospitalization-incidence-history/hospitalization-incidence-history.component';
 import { TopDistrictsComponent } from './top-districts/top-districts/top-districts.component';
 import { DistrictCardComponent } from './top-districts/district-card/district-card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { DistrictCardComponent } from './top-districts/district-card/district-ca
     TopDistrictsComponent,
     DistrictCardComponent,
   ],
-  imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
+  imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot([]), FormsModule, SharedModule, HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
