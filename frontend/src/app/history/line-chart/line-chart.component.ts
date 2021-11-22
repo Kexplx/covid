@@ -82,6 +82,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
         layout: {
           padding: { top: 0, bottom: 0 },
         },
+        animation: false,
       },
     };
 
