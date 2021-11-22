@@ -1,24 +1,24 @@
 cron:
-  - url: /collect/top-districts?auth=
+  - url: /collect/top-districts
     schedule: every day 6:00
     timezone: Europe/Berlin
 
-  - url: /collect/joke-of-the-day?auth=
+  - url: /collect/joke-of-the-day
     schedule: every day 0:00
     timezone: Europe/Berlin
 
-  - url: /collect/germany?auth=
+  - url: /collect/germany
     schedule: every day 6:00
     timezone: Europe/Berlin
 
-  - url: /collect/states?auth=
+  - url: /collect/states
     schedule: every day 6:00
     timezone: Europe/Berlin
 
-  - url: /collect/districts?auth=
+  - url: /collect/districts
     schedule: every day 6:00
     timezone: Europe/Berlin
 
-  - url: /collect/vaccination?auth=
+  - url: /collect/vaccination
     schedule: every day 13:00
     timezone: Europe/Berlin

@@ -9,7 +9,7 @@ const getTopDistricts = require('../collect/top-districts');
 
 const mongoDb = new MongoDB();
 
-router.get('/top-top', async (_, res) => {
+router.get('/top-districts', async (_, res) => {
   res.end();
 
   try {
