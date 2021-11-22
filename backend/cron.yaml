@@ -1,4 +1,8 @@
 cron:
+  - url: /collect/top-districts
+    schedule: every day 6:00
+    timezone: Europe/Berlin
+
   - url: /collect/joke-of-the-day
     schedule: every day 0:00
     timezone: Europe/Berlin

@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 export interface District {
@@ -11,6 +11,7 @@ export interface District {
   type: string;
   state: string;
   totalCases: number;
+  population?: number;
   totalDeaths: number;
 }
 
@@ -43,5 +44,13 @@ export class DistrictService {
     params = params.set('codes', districtCodesQuery);
 
     return this.http.get<District[][]>(url, { params });
+  }
+
+  getTopDistricts(): Observable<{ lastUpdated: string; districts: District[] }> {
+    const url = `${environment.api}/top-districts`;
+
+    const params = new HttpParams({ fromObject: { limit: 10 } });
+
+    return this.http.get<{ lastUpdated: string; districts: District[] }>(url, { params });
   }
 }

@@ -1,0 +1,9 @@
+<div [class.isFirst]="isFirst" [ngStyle]="{ 'margin-top': marginTop }" class="card">
+  <img *ngIf="isFirst" src="assets/icons/medal.svg" alt="" />
+  <div class="card-header">
+    <span class="card-header__title">{{ district.name }}</span>
+    <span [ngStyle]="{ color: fontColor, backgroundColor: backgroundColor }" class="card-header__incidence">{{ district.incidence | round: 0 }}</span>
+  </div>
+
+  <div class="card-body mt-2">{{ district.type }} in {{ district.state }} mit {{ district.population! | thousandPoint }} Einwohnern</div>
+</div>

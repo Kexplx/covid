@@ -29,18 +29,24 @@
       <app-district-history [listOfDistrictHistories]="data.listOfDistrictHistories"></app-district-history>
     </section>
 
-    <!-- Joke of the Day -->
+    <!-- Top Districts -->
     <section *ngIf="tabIndex === 2">
+      <h1 class="mb-1">Bestenliste</h1>
+      <app-top-districts [topDistricts]="data.topDistricts"></app-top-districts>
+    </section>
+
+    <!-- Joke of the Day -->
+    <section *ngIf="tabIndex === 3">
       <app-joke-of-the-day [jokeOfTheDay]="data.jokeOfTheDay"></app-joke-of-the-day>
     </section>
 
     <!-- Contact -->
-    <section *ngIf="tabIndex === 3">
+    <section *ngIf="tabIndex === 4">
       <app-contact-form></app-contact-form>
     </section>
 
     <!-- Settings -->
-    <section *ngIf="tabIndex === 4">
+    <section *ngIf="tabIndex === 5">
       <app-settings [listOfDistrictHistories]="data.listOfDistrictHistories"></app-settings>
     </section>
   </ng-container>

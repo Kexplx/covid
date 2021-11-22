@@ -19,8 +19,10 @@ const statesRouter = require('./routes/states');
 const vaccinationRouter = require('./routes/vaccination');
 const feedbackRouter = require('./routes/feedback');
 const jokeOfTheDayRouter = require('./routes/joke-of-the-day');
+const topDistrictsRouter = require('./routes/top-districts');
 
 app.use('/collect', collectRouter);
+app.use('/top-districts', topDistrictsRouter);
 app.use('/joke-of-the-day', jokeOfTheDayRouter);
 app.use('/germany', germanyRouter);
 app.use('/feedback', feedbackRouter);

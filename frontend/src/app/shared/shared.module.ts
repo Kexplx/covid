@@ -33,6 +33,7 @@ import { AlertComponent } from './alert/alert.component';
     AlertComponent,
     DistrictNamePipe,
     ThousandPointPipe,
+    RoundPipe,
     SpinnerComponent,
     IncidenceTagComponent,
   ],

@@ -8,9 +8,30 @@ const COLLECTION_STATES = 'states';
 const COLLECTION_DISTRICTS = 'districts';
 const COLLECTION_JOKES = 'jokes';
 const COLLECTION_FEEDBACK = 'feedback';
+const COLLECTION_TOP_Districts = 'districts-top';
 const COLLECTION_JOKE_OF_THE_DAY_COUNT = 'joke-day-count';
 
 class MongoDB {
+  async insertTopDistricts(districts) {
+    const [collection, close] = await this._connect(COLLECTION_TOP_Districts);
+    const document = {
+      lastUpdated: new Date().toISOString(),
+      districts,
+    };
+
+    await collection.insertOne(document);
+    close();
+  }
+
+  async getTopDistrictsDocument() {
+    const [collection, close] = await this._connect(COLLECTION_TOP_Districts);
+    const topDistrictsDocument = await collection.find().sort({ _id: -1 }).limit(1).toArray();
+    console.log(topDistrictsDocument);
+    close();
+
+    return topDistrictsDocument;
+  }
+
   async insertGermany(germany) {
     const [collection, close] = await this._connect(COLLECTION_GERMANY);
 

@@ -1,0 +1,3 @@
+<p class="subheader">Top 10 Landkreise mit den höchsten 7-Tage Inzidenzen in Deutschland (Stand: {{ topDistricts.lastUpdated | germanDate }}).</p>
+
+<app-district-card marginTop="10px" [district]="district" [isFirst]="isFirst" *ngFor="let district of topDistricts.districts; let isFirst = first"></app-district-card>

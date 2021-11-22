@@ -5,8 +5,21 @@ const getGermany = require('../collect/germany');
 const getStates = require('../collect/states');
 const getDistricts = require('../collect/districts');
 const getVaccination = require('../collect/vaccination');
+const getTopDistricts = require('../collect/top-districts');
 
 const mongoDb = new MongoDB();
+
+router.get('/top-top', async (_, res) => {
+  res.end();
+
+  try {
+    const topDistricts = await getTopDistricts(50);
+    await mongoDb.insertTopDistricts(topDistricts);
+  } catch (error) {
+    console.log('Error while incrementing joke of the day count.');
+    console.log(error);
+  }
+});
 
 router.get('/joke-of-the-day', async (_, res) => {
   res.end();

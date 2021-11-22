@@ -14,6 +14,7 @@ export interface AppData {
   bavariaHistory: State[];
   listOfDistrictHistories: District[][];
   jokeOfTheDay: Joke;
+  topDistricts: { lastUpdated: string; districts: District[] };
 }
 
 @Injectable({
@@ -51,6 +52,7 @@ export class DataService {
       this.vaccinationService.getVaccination(),
       this.stateService.getStateHistory(StateNames.Bavaria),
       this.jokeService.getJokeOfTheDay(),
+      this.districtService.getTopDistricts(),
     ];
 
     forkJoin(responses).subscribe(data => {
@@ -60,6 +62,7 @@ export class DataService {
         vaccination: data[2] as Vaccination,
         bavariaHistory: data[3] as State[],
         jokeOfTheDay: data[4] as Joke,
+        topDistricts: data[5] as { lastUpdated: string; districts: District[] },
       });
     });
   }

@@ -16,6 +16,8 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SettingsComponent } from './settings/settings/settings.component';
 import { HospitalizationIncidenceHistoryComponent } from './history/hospitalization-incidence-history/hospitalization-incidence-history.component';
+import { TopDistrictsComponent } from './top-districts/top-districts/top-districts.component';
+import { DistrictCardComponent } from './top-districts/district-card/district-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { HospitalizationIncidenceHistoryComponent } from './history/hospitalizat
     ContactFormComponent,
     SettingsComponent,
     HospitalizationIncidenceHistoryComponent,
+    TopDistrictsComponent,
+    DistrictCardComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
   bootstrap: [AppComponent],

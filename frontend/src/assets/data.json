@@ -819,5 +819,81 @@
   ],
   "jokeOfTheDay": {
     "text": "An alle die sich Sorgen machen: Das Coronavirus hält bestimmt nicht lang. Schließlich ist es \"Made in China\"."
+  },
+  "topDistricts": {
+    "_id": "619b3cf471c946fc6b257ab7",
+    "lastUpdated": "2021-11-22T06:47:16.711Z",
+    "districts": [
+      {
+        "name": "Sächsische Schweiz-Osterzgebirge",
+        "population": 244722,
+        "incidence": 1612.44187281895,
+        "type": "Landkreis",
+        "state": "Sachsen"
+      },
+      {
+        "name": "Freyung-Grafenau",
+        "population": 78355,
+        "incidence": 1569.77857188437,
+        "type": "Landkreis",
+        "state": "Bayern"
+      },
+      {
+        "name": "Bautzen",
+        "population": 298010,
+        "incidence": 1474.44716620248,
+        "type": "Landkreis",
+        "state": "Sachsen"
+      },
+      {
+        "name": "Rottal-Inn",
+        "population": 121800,
+        "incidence": 1426.92939244663,
+        "type": "Landkreis",
+        "state": "Bayern"
+      },
+      {
+        "name": "Nordsachsen",
+        "population": 197444,
+        "incidence": 1321.89380279978,
+        "type": "Landkreis",
+        "state": "Sachsen"
+      },
+      {
+        "name": "Elbe-Elster",
+        "population": 101085,
+        "incidence": 1310.77805806994,
+        "type": "Landkreis",
+        "state": "Brandenburg"
+      },
+      {
+        "name": "Erzgebirgskreis",
+        "population": 331917,
+        "incidence": 1306.65196419587,
+        "type": "Landkreis",
+        "state": "Sachsen"
+      },
+      {
+        "name": "Oberspreewald-Lausitz",
+        "population": 108396,
+        "incidence": 1247.27849736153,
+        "type": "Landkreis",
+        "state": "Brandenburg"
+      },
+      {
+        "name": "Meißen",
+        "population": 240371,
+        "incidence": 1181.50692055198,
+        "type": "Landkreis",
+        "state": "Sachsen"
+      },
+      {
+        "name": "Landshut",
+        "population": 161191,
+        "incidence": 1157.63287032154,
+        "type": "Landkreis",
+        "state": "Bayern"
+      }
+    ]
   }
 }
