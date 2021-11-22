@@ -10,7 +10,7 @@ export class IncidenceTagComponent implements OnInit {
   @Input() incidence = 100;
   @Input() decimalPoints: number | undefined;
   @Input() hospitalization = false;
-  fontColor = '';
+  fontColor = 'rgb(253, 150, 68)';
   backgroundColor = '';
 
   constructor(private settingsService: SettingsService) {}
@@ -29,29 +29,25 @@ export class IncidenceTagComponent implements OnInit {
 
   getColorByIncidence(incidence: number): string {
     if (incidence < 100) {
-      return 'rgb(46, 204, 113)';
-    } else if (incidence < 200) {
-      return 'rgb(221 165 0)';
-    } else if (incidence < 300) {
-      return 'rgb(247, 159, 31)';
+      return 'rgb(39, 174, 96)';
     } else if (incidence < 400) {
-      return 'rgb(238, 90, 36)';
-    } else if (incidence < 500) {
-      return 'rgb(234, 32, 39)';
+      return 'rgb(243, 156, 18)';
+    } else if (incidence < 800) {
+      return 'rgb(231, 76, 60)';
     } else {
-      return 'rgb(212, 20, 27)';
+      return 'rgb(155, 89, 182)';
     }
   }
 
   getColorByHospitalizationIncidence(incidence: number): string {
     if (incidence < 3) {
-      return 'rgb(46, 204, 113)';
+      return 'rgb(39, 174, 96)';
     } else if (incidence < 6) {
-      return 'rgb(221, 165, 0)';
-    } else if (incidence < 9) {
-      return 'rgb(247, 159, 31)';
+      return 'rgb(243, 156, 18)';
+    } else if (incidence < 8) {
+      return 'rgb(231, 76, 60)';
     } else {
-      return 'rgb(212, 20, 27)';
+      return 'rgb(155, 89, 182)';
     }
   }
 }

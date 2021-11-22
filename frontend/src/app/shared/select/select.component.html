@@ -2,8 +2,8 @@
   <button [class.open]="isOpen" (click)="isOpen = !isOpen">
     <div class="btn-content">
       <span>{{ selected.name }}</span>
-      <img *ngIf="isOpen" src="assets/icons/caret-down-solid.svg" alt="" />
-      <img [ngStyle]="{ transform: 'rotate(-270deg)' }" *ngIf="!isOpen" src="assets/icons/caret-down-solid.svg" alt="" />
+      <img *ngIf="isOpen" src="assets/icons/caret-down.svg" alt="" />
+      <img [ngStyle]="{ transform: 'rotate(-270deg)' }" *ngIf="!isOpen" src="assets/icons/caret-down.svg" alt="" />
     </div>
   </button>
 

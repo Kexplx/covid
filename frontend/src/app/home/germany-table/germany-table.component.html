@@ -12,8 +12,8 @@
   <tr>
     <td class="hospitalization-desc" (click)="isHospitalizationIncidenceDescriptionVisible = !isHospitalizationIncidenceDescriptionVisible" style="position: relative">
       <span>
-        <img *ngIf="!isHospitalizationIncidenceDescriptionVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-solid.svg" alt="" />
-        <img *ngIf="isHospitalizationIncidenceDescriptionVisible" src="assets/icons/caret-down-solid.svg" alt="" />
+        <img *ngIf="!isHospitalizationIncidenceDescriptionVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
+        <img *ngIf="isHospitalizationIncidenceDescriptionVisible" src="assets/icons/caret-down-gray.svg" alt="" />
       </span>
       7T Hospitalisierungsinzidenz
       <p *ngIf="isHospitalizationIncidenceDescriptionVisible" class="mt-1">Der Wert kann aufgrund des großen Meldeverzugs der Krankenhäuser stark von der tatsächlichen Zahl abweichen.</p>
