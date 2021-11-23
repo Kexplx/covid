@@ -1,4 +1,4 @@
-<div class="container">
+<div (leftToRightSwipe)="onLeftToRightSwipe()" (rightToLeftSwipe)="onRightToLeftSwipe()" appDetectSwipe class="container">
   <app-tab-set [index]="tabIndex" (tabChange)="onTabChange($event)"></app-tab-set>
   <div class="mt-2 ta-right">
     <app-button [disabled]="isLoading" (appClick)="onUpdateClick()" icon="sync-solid" [shadow]="true" text="Aktualisieren"></app-button>

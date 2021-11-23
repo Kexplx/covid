@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
 
   onTabChange(tabIndex: number): void {
     this.tabIndex = tabIndex;
-    this.updateCurrentTabIndexInUrl(tabIndex);
+    this.updateCurrentTabIndexInUrl();
   }
 
   onUpdateClick() {
@@ -39,8 +39,30 @@ export class AppComponent implements OnInit {
     this.dataService.loadData();
   }
 
-  updateCurrentTabIndexInUrl(tabIndex: number) {
-    const newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?t=${tabIndex}`;
+  updateCurrentTabIndexInUrl() {
+    const newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?t=${this.tabIndex}`;
     window.history.pushState({ path: newurl }, '', newurl);
+  }
+
+  onLeftToRightSwipe() {
+    if (this.tabIndex === 0) {
+      // We're already at the first
+      // index to we ignore the swipe.
+      return;
+    }
+
+    this.tabIndex--;
+    this.updateCurrentTabIndexInUrl();
+  }
+
+  onRightToLeftSwipe() {
+    if (this.tabIndex === 5) {
+      // We're already at the last
+      // index to we ignore the swipe.
+      return;
+    }
+
+    this.tabIndex++;
+    this.updateCurrentTabIndexInUrl();
   }
 }
