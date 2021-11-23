@@ -18,7 +18,6 @@ import { SettingsComponent } from './settings/settings/settings.component';
 import { HospitalizationIncidenceHistoryComponent } from './history/hospitalization-incidence-history/hospitalization-incidence-history.component';
 import { TopDistrictsComponent } from './top-districts/top-districts/top-districts.component';
 import { DistrictCardComponent } from './top-districts/district-card/district-card.component';
-import { DetectSwipeDirective } from './detect-swipe.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,6 @@ import { DetectSwipeDirective } from './detect-swipe.directive';
     HospitalizationIncidenceHistoryComponent,
     TopDistrictsComponent,
     DistrictCardComponent,
-    DetectSwipeDirective,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
   bootstrap: [AppComponent],

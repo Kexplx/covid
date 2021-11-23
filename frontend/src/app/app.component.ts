@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { DataService } from './data.service';
+import { SwipeService } from './swipe.service';
 
 @Component({
   selector: 'app-root',
@@ -20,13 +21,16 @@ export class AppComponent implements OnInit {
 
   isLoading = true;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private swipeService: SwipeService) {}
 
   ngOnInit() {
     const queryParams = new URLSearchParams(window.location.search);
     if (queryParams.has('t')) {
       this.tabIndex = Number(queryParams.get('t'));
     }
+
+    this.swipeService.swipeRight$.subscribe(() => this.onLeftSwipe());
+    this.swipeService.swipeLeft$.subscribe(() => this.onRightSwipe());
   }
 
   onTabChange(tabIndex: number): void {
@@ -44,18 +48,7 @@ export class AppComponent implements OnInit {
     window.history.pushState({ path: newurl }, '', newurl);
   }
 
-  onLeftToRightSwipe() {
-    if (this.tabIndex === 0) {
-      // We're already at the first
-      // index to we ignore the swipe.
-      return;
-    }
-
-    this.tabIndex--;
-    this.updateCurrentTabIndexInUrl();
-  }
-
-  onRightToLeftSwipe() {
+  onLeftSwipe() {
     if (this.tabIndex === 5) {
       // We're already at the last
       // index to we ignore the swipe.
@@ -63,6 +56,17 @@ export class AppComponent implements OnInit {
     }
 
     this.tabIndex++;
+    this.updateCurrentTabIndexInUrl();
+  }
+
+  onRightSwipe() {
+    if (this.tabIndex === 0) {
+      // We're already at the first
+      // index to we ignore the swipe.
+      return;
+    }
+
+    this.tabIndex--;
     this.updateCurrentTabIndexInUrl();
   }
 }
