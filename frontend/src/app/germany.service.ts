@@ -9,6 +9,7 @@ export interface Germany {
   totalCases: number;
   totalDeaths: number;
   hospitalizationIncidence: number;
+  newCases: number;
 }
 
 @Injectable({

@@ -1,5 +1,8 @@
 const getHospitalization = require('./hospitalization');
 const getStates = require('./states');
+const MongoDB = require('../mongodb');
+
+const mongodb = new MongoDB();
 
 async function getGermany() {
   const states = await getStates();
@@ -19,8 +22,13 @@ async function getGermany() {
   // Add hospitalization
   const [germanyHospitalizationIncidence] = await getHospitalization();
 
+  // Get last germany to calculate new cases.
+  const [lastGermany] = await mongodb.getGermanyHistory(1);
+  const newCases = totalCases - lastGermany.totalCases;
+
   return {
     lastUpdated: new Date(states[0].lastUpdated),
+    newCases,
     incidence,
     hospitalizationIncidence: germanyHospitalizationIncidence,
     totalCases,

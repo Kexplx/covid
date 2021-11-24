@@ -13,7 +13,7 @@ router.get('/top-districts', async (_, res) => {
   res.end();
 
   try {
-    const topDistricts = await getTopDistricts(50);
+    const topDistricts = await getTopDistricts(10);
     await mongoDb.insertTopDistricts(topDistricts);
   } catch (error) {
     console.log('Error while incrementing joke of the day count.');
