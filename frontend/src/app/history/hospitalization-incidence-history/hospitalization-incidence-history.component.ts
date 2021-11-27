@@ -18,22 +18,22 @@ export class HospitalizationIncidenceHistoryComponent implements OnInit {
   datasets: Dataset[] = [];
 
   ngOnInit(): void {
-    const entriesWithIncidence = this.germanyHistory.filter(g => g.hospitalizationIncidence !== undefined).length;
+    const entriesWithIncidenceLength = this.germanyHistory.filter(g => g.hospitalizationIncidence !== undefined).length;
 
     const germanyValuesRaw = this.germanyHistory
-      .slice(0, entriesWithIncidence)
+      .slice(0, entriesWithIncidenceLength)
       .map(g => g.hospitalizationIncidence)
       .reverse();
     this.datasets.push({ data: germanyValuesRaw, color: CHART_COLORS.blue, label: 'Deutschland' });
 
     const bavariaValuesRaw = this.bavariaHistory
-      .slice(0, entriesWithIncidence)
+      .slice(0, entriesWithIncidenceLength)
       .map(b => b.hospitalizationIncidence)
       .reverse();
     this.datasets.push({ data: bavariaValuesRaw, color: CHART_COLORS.purple, label: 'Bayern' });
 
     this.labels = this.germanyHistory
-      .slice(0, entriesWithIncidence)
+      .slice(0, entriesWithIncidenceLength)
       .map(germany => {
         const date = new Date(germany.lastUpdated);
 

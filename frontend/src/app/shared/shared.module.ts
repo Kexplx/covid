@@ -37,6 +37,6 @@ import { AlertComponent } from './alert/alert.component';
     SpinnerComponent,
     IncidenceTagComponent,
   ],
-  providers: [DistrictNamePipe, GermanDatePipe],
+  providers: [DistrictNamePipe, ThousandPointPipe, GermanDatePipe],
 })
 export class SharedModule {}

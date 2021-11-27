@@ -12,28 +12,31 @@ td {
 tr td:nth-child(1) {
   padding-left: 20px;
   background-color: rgb(250, 250, 250);
+  width: 60%;
 }
 
 tr td:nth-child(2) {
   text-align: center;
+  width: 40%;
 }
 
-.hospitalization-desc {
+.td-desc {
+  cursor: pointer;
   position: relative;
 }
 
-.hospitalization-desc span {
+.td-desc span {
   position: absolute;
   left: 7px;
 }
 
-.hospitalization-desc span img {
+.td-desc span img {
   width: 8px;
 }
 
-.hospitalization-desc p {
+.td-desc p {
   font-size: 0.78rem;
   color: rgb(102, 102, 102);
-  width: 170px;
   line-height: 0.8rem;
+  text-align: left;
 }

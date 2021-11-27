@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } fro
 
 import { Chart, ChartConfiguration, ChartData, registerables } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { ThousandPointPipe } from 'src/app/shared/thousand-point.pipe';
 
 export interface Dataset {
   label?: string;
@@ -27,6 +28,8 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
 
   chart?: Chart;
 
+  constructor(private thousandPointsPipe: ThousandPointPipe) {}
+
   ngOnChanges() {
     if (this.chart) {
       this.chart.destroy();
@@ -44,7 +47,13 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
     const data: ChartData = {
       labels: this.labels,
       datasets: this.datasets.map(d => ({
-        datalabels: { color: 'black', align: 'top', padding: 3, font: { size: 11, weight: 500, family: 'Segoe UI' } },
+        datalabels: {
+          color: 'black',
+          formatter: d => this.thousandPointsPipe.transform(d),
+          align: 'top',
+          padding: 3,
+          font: { size: 11, weight: 500, family: 'Segoe UI' },
+        },
         borderWidth: 2,
         pointRadius: 3,
         pointBorderWidth: 2,

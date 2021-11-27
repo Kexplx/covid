@@ -688,7 +688,7 @@
       "incidence": 372.6737832615323,
       "hospitalizationIncidence": 5.37,
       "totalCases": 5354942,
-      "newCases": 291829,
+      "newCases": 4592,
       "totalDeaths": 99062
     },
     {
@@ -697,6 +697,8 @@
       "incidence": 362.1837384679707,
       "totalCases": 5312215,
       "totalDeaths": 98987,
+      "newCases": 70592,
+
       "hospitalizationIncidence": 5.5
     },
     {
@@ -705,6 +707,7 @@
       "incidence": 340.6612884312436,
       "totalCases": 5248291,
       "hospitalizationIncidence": 5.87,
+      "newCases": 65592,
 
       "totalDeaths": 98739
     },
@@ -714,6 +717,8 @@
       "incidence": 336.91407077943364,
       "totalCases": 5195321,
       "totalDeaths": 98538,
+      "newCases": 55592,
+
       "hospitalizationIncidence": 4.87
     },
     {
@@ -721,6 +726,8 @@
       "lastUpdated": "2021-11-16T23:00:00.000Z",
       "incidence": 319.46233054738445,
       "totalCases": 5129950,
+      "newCases": 43592,
+
       "hospitalizationIncidence": 6.87,
       "totalDeaths": 98274
     },

@@ -1,0 +1,5 @@
+<p class="table-label">Deutschland</p>
+
+<small class="subheader">Stand: {{ lastUpdated | germanDate }}</small>
+
+<app-line-chart [datasets]="[dataset]" [paddingTop]="20" [paddingBot]="10" [labels]="labels"></app-line-chart>

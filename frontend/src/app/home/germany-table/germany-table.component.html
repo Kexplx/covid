@@ -10,7 +10,7 @@
     </td>
   </tr>
   <tr>
-    <td class="hospitalization-desc" (click)="isHospitalizationIncidenceDescriptionVisible = !isHospitalizationIncidenceDescriptionVisible" style="position: relative">
+    <td class="td-desc" (click)="isHospitalizationIncidenceDescriptionVisible = !isHospitalizationIncidenceDescriptionVisible" style="position: relative">
       <span>
         <img *ngIf="!isHospitalizationIncidenceDescriptionVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
         <img *ngIf="isHospitalizationIncidenceDescriptionVisible" src="assets/icons/caret-down-gray.svg" alt="" />
@@ -30,14 +30,26 @@
   </tr>
   <tr>
     <td>Fälle insgesamt</td>
-    <td>
+    <td class="td-desc" (click)="isTotalCasesDescVisible = !isTotalCasesDescVisible">
+      <span>
+        <img *ngIf="!isTotalCasesDescVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
+        <img *ngIf="isTotalCasesDescVisible" src="assets/icons/caret-down-gray.svg" alt="" />
+      </span>
       {{ germany.totalCases | thousandPoint }}
+
+      <p *ngIf="isTotalCasesDescVisible" class="mt-1">Damit wurden {{ percentInfected | round: 1 }}% der deutschen mit COVID-19 infiziert.</p>
     </td>
   </tr>
   <tr>
     <td>Tote insgesamt</td>
-    <td>
+    <td class="td-desc" (click)="isTotalDeathsDescVisible = !isTotalDeathsDescVisible">
+      <span>
+        <img *ngIf="!isTotalDeathsDescVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
+        <img *ngIf="isTotalDeathsDescVisible" src="assets/icons/caret-down-gray.svg" alt="" />
+      </span>
       {{ germany.totalDeaths | thousandPoint }}
+
+      <p *ngIf="isTotalDeathsDescVisible" class="mt-1">Damit sind {{ percentDeaths | round: 1 }}% der COVID-19 Infizierten an der Krankheit gestorben.</p>
     </td>
   </tr>
   <tr>
