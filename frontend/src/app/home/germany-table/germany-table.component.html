@@ -37,7 +37,9 @@
       </span>
       {{ germany.totalCases | thousandPoint }}
 
-      <p *ngIf="isTotalCasesDescVisible" class="mt-1">Damit wurden {{ percentInfected | round: 1 }}% der deutschen mit COVID-19 infiziert.</p>
+      <p *ngIf="isTotalCasesDescVisible" class="mt-1">
+        Damit wurden <u>{{ percentInfected | round: 1 }}%</u> der Deutschen mit COVID-19 infiziert.
+      </p>
     </td>
   </tr>
   <tr>
@@ -49,7 +51,9 @@
       </span>
       {{ germany.totalDeaths | thousandPoint }}
 
-      <p *ngIf="isTotalDeathsDescVisible" class="mt-1">Damit sind {{ percentDeaths | round: 1 }}% der COVID-19 Infizierten an der Krankheit gestorben.</p>
+      <p *ngIf="isTotalDeathsDescVisible" class="mt-1">
+        Damit sind <u>{{ percentDeaths | round: 1 }}%</u> der COVID-19 Infizierten an der Krankheit gestorben.
+      </p>
     </td>
   </tr>
   <tr>
