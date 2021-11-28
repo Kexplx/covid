@@ -1,67 +1,92 @@
-<p class="table-label">
-  Deutschland
-  <span class="fw-4">(Stand: {{ germany.lastUpdated | germanDate }})</span>
+<p>
+  <span class="fw-5">Deutschland </span>
+  <span class="fg-secondary">(Stand: {{ germany.lastUpdated | germanDate }})</span>
 </p>
-<table class="mt-05">
-  <tr>
-    <td>7T Inzidenz</td>
-    <td>
-      <app-incidence-tag [incidence]="germany.incidence"></app-incidence-tag>
-    </td>
-  </tr>
-  <tr>
-    <td class="td-desc" (click)="isHospitalizationIncidenceDescriptionVisible = !isHospitalizationIncidenceDescriptionVisible" style="position: relative">
-      <span>
-        <img *ngIf="!isHospitalizationIncidenceDescriptionVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
-        <img *ngIf="isHospitalizationIncidenceDescriptionVisible" src="assets/icons/caret-down-gray.svg" alt="" />
-      </span>
-      7T Hospitalisierungsinzidenz
-      <p *ngIf="isHospitalizationIncidenceDescriptionVisible" class="mt-1">Der Wert kann aufgrund des großen Meldeverzugs der Krankenhäuser stark von der tatsächlichen Zahl abweichen.</p>
-    </td>
-    <td>
-      <app-incidence-tag [hospitalization]="true" [decimalPoints]="2" [incidence]="germany.hospitalizationIncidence"></app-incidence-tag>
-    </td>
-  </tr>
-  <tr>
-    <td>Neuinfektionen</td>
-    <td>
-      {{ germany.newCases | thousandPoint }}
-    </td>
-  </tr>
-  <tr>
-    <td>Fälle insgesamt</td>
-    <td class="td-desc" (click)="isTotalCasesDescVisible = !isTotalCasesDescVisible">
-      <span>
-        <img *ngIf="!isTotalCasesDescVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
-        <img *ngIf="isTotalCasesDescVisible" src="assets/icons/caret-down-gray.svg" alt="" />
-      </span>
-      {{ germany.totalCases | thousandPoint }}
 
-      <p *ngIf="isTotalCasesDescVisible" class="mt-1">
-        Damit wurden <u>{{ percentInfected | round: 1 }}%</u> der Deutschen mit COVID-19 infiziert.
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>Tote insgesamt</td>
-    <td class="td-desc" (click)="isTotalDeathsDescVisible = !isTotalDeathsDescVisible">
-      <span>
-        <img *ngIf="!isTotalDeathsDescVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
-        <img *ngIf="isTotalDeathsDescVisible" src="assets/icons/caret-down-gray.svg" alt="" />
-      </span>
-      {{ germany.totalDeaths | thousandPoint }}
+<div class="table mt-05">
+  <!-- 7T Incidence -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>7T Inzidenz</ng-template>
+      <ng-template #desc>COVID-19 Fälle in den letzten sieben Tagen (je 100T Einwohner)</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>
+        <app-incidence-tag [incidence]="germany.incidence"></app-incidence-tag>
+      </ng-template>
+    </app-col-content>
+  </div>
 
-      <p *ngIf="isTotalDeathsDescVisible" class="mt-1">
-        Damit sind <u>{{ percentDeaths | round: 1 }}%</u> der COVID-19 Infizierten an der Krankheit gestorben.
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>Erstgeimpfte</td>
-    <td>{{ vaccination.numberOfPeopleAtLeastOnceVaccinated | thousandPoint }} ({{ vaccination.percentAtLeastOnceVaccinated }}%)</td>
-  </tr>
-  <tr>
-    <td>Vollständig Geimpfte</td>
-    <td>{{ vaccination.numberOfPeopleFullyVaccinated | thousandPoint }} ({{ vaccination.percentFullyVaccinated }}%)</td>
-  </tr>
-</table>
+  <!-- Total Cases -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Fälle insgesamt</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>
+        {{ germany.totalCases | thousandPoint }}
+      </ng-template>
+      <ng-template #desc> Damit haben sich {{ percentInfected | round: 2 }}% der Deutschen mit COVID-19 infiziert. </ng-template>
+    </app-col-content>
+  </div>
+
+  <!-- Total Cases -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Tote insgesamt</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>
+        {{ germany.totalDeaths | thousandPoint }}
+      </ng-template>
+      <ng-template #desc> Damit sind {{ percentDeaths | round: 2 }}% der infizierten Deutschen an der Krankheit gestorben. </ng-template>
+    </app-col-content>
+  </div>
+
+  <!-- First Time Vaccinated -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Erstgeimpfte</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>{{ vaccination.percentAtLeastOnceVaccinated }}%</ng-template>
+      <ng-template #desc>
+        BioNTech - {{ firstVaccination_percentBiontech | round: 2 }}%
+        <br />
+        AstraZeneca - {{ firstVaccination_percentAstra | round: 2 }}%
+        <br />
+        Moderna - {{ firstVaccination_percentModerna | round: 2 }}%
+        <br />
+        Janssen - {{ firstVaccination_percentJanssen | round: 2 }}%
+      </ng-template>
+    </app-col-content>
+  </div>
+
+  <!-- Fully Vaccinated -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Vollständig Geimpfte</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>{{ vaccination.percentFullyVaccinated }}%</ng-template>
+
+      <ng-template #desc>
+        BioNTech - {{ secondVaccination_percentBiontech | round: 2 }}%
+        <br />
+        Moderna - {{ secondVaccination_percentModerna | round: 2 }}%
+        <br />
+        AstraZeneca - {{ secondVaccination_percentAstra | round: 2 }}%
+      </ng-template>
+    </app-col-content>
+  </div>
+</div>

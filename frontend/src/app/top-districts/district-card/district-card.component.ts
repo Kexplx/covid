@@ -8,8 +8,7 @@ import { District } from 'src/app/district.service';
 })
 export class DistrictCardComponent implements OnInit {
   @Input() district!: District;
-  @Input() marginTop = '0px';
-  @Input() isFirst = false;
+  @Input() index: number = -1;
 
   fontColor = 'rgb(253, 150, 68)';
   backgroundColor = '';

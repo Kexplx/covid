@@ -1,7 +1,7 @@
 <header>
   <div>
-    <p class="table-label">Städte & Landkreise</p>
-    <small class="subheader">Stand: {{ lastUpdated }}</small>
+    <p class="fw-5">Städte & Landkreise</p>
+    <p class="mt-05 fg-secondary">Stand: {{ lastUpdated }}</p>
   </div>
 
   <app-select width="175px" (appSelect)="onSelect($event)" [options]="options" [initialValue]="initialValue"></app-select>

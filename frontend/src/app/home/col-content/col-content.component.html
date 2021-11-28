@@ -1,0 +1,19 @@
+<div *ngIf="desc; else noDesc" class="content clickable" (click)="isExpanded = !isExpanded">
+  <img class="info-icon" [class.faded]="!isExpanded" src="assets/icons/info-black.svg" alt="Info" />
+
+  <p [class.fw-5]="isExpanded" class="title">
+    <ng-container [ngTemplateOutlet]="title"></ng-container>
+  </p>
+
+  <p class="desc" *ngIf="isExpanded">
+    <small class="fg-secondary">
+      <ng-container [ngTemplateOutlet]="desc"></ng-container>
+    </small>
+  </p>
+</div>
+
+<ng-template #noDesc>
+  <p class="title">
+    <ng-container [ngTemplateOutlet]="title"></ng-container>
+  </p>
+</ng-template>

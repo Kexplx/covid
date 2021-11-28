@@ -1,0 +1,26 @@
+.content {
+  position: relative;
+}
+
+.title {
+  padding: 10px;
+}
+
+.desc {
+  padding: 0 5px 5px 5px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.info-icon {
+  position: absolute;
+  width: 4px;
+  left: 13px;
+  top: 11px;
+}
+
+.faded {
+  opacity: 0.3;
+}

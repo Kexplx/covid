@@ -1,47 +1,91 @@
-<p class="table-label">
-  Bayern
-  <span class="fw-4">(Stand: {{ bavaria.lastUpdated | germanDate }})</span>
+<p>
+  <span class="fw-5">Bayern </span>
+  <span class="fg-secondary">(Stand: {{ bavaria.lastUpdated | germanDate }})</span>
 </p>
-<table class="mt-05">
-  <tr>
-    <td>7T Inzidenz</td>
-    <td>
-      <app-incidence-tag [incidence]="bavaria.incidence"></app-incidence-tag>
-    </td>
-  </tr>
-  <tr>
-    <td class="td-desc" (click)="isHospitalizationIncidenceDescriptionVisible = !isHospitalizationIncidenceDescriptionVisible">
-      <span>
-        <img *ngIf="!isHospitalizationIncidenceDescriptionVisible" style="transform: rotate(-90deg)" src="assets/icons/caret-down-gray.svg" alt="" />
-        <img *ngIf="isHospitalizationIncidenceDescriptionVisible" src="assets/icons/caret-down-gray.svg" alt="" />
-      </span>
-      7T Hospitalisierungsinzidenz
-      <p *ngIf="isHospitalizationIncidenceDescriptionVisible" class="mt-1">
-        Die Hospitalisierungsinzidenz liegt nur auf Bundeslandebene vor und nicht auf Kreisebene - dort gilt weiterhin die normale 7T Inzidenz.
-      </p>
-    </td>
-    <td>
-      <app-incidence-tag [hospitalization]="true" [decimalPoints]="2" [incidence]="bavaria.hospitalizationIncidence"></app-incidence-tag>
-    </td>
-  </tr>
-  <tr>
-    <td>Fälle insgesamt</td>
-    <td>
-      {{ bavaria.totalCases | thousandPoint }}
-    </td>
-  </tr>
-  <tr>
-    <td>Tote insgesamt</td>
-    <td>
-      {{ bavaria.totalDeaths | thousandPoint }}
-    </td>
-  </tr>
-  <tr>
-    <td>Erstgeimpfte</td>
-    <td>{{ vaccination.bavaria_numberOfPeopleAtLeastOnceVaccinated | thousandPoint }} ({{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%)</td>
-  </tr>
-  <tr>
-    <td>Vollständig Geimpfte</td>
-    <td>{{ vaccination.bavaria_numberOfPeopleFullyVaccinated | thousandPoint }} ({{ vaccination.bavaria_percentFullyVaccinated }}%)</td>
-  </tr>
-</table>
+
+<div class="table mt-05">
+  <!-- 7T Incidence -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title> 7T Inzidenz </ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>
+        <app-incidence-tag [incidence]="bavaria.incidence"></app-incidence-tag>
+      </ng-template>
+    </app-col-content>
+  </div>
+
+  <!-- Total Cases -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Fälle insgesamt</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>
+        {{ bavaria.totalCases | thousandPoint }}
+      </ng-template>
+      <ng-template #desc> Damit haben sich {{ percentInfected | round: 2 }}% der Bayern mit COVID-19 infiziert. </ng-template>
+    </app-col-content>
+  </div>
+
+  <!-- Total Cases -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Tote insgesamt</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>
+        {{ bavaria.totalDeaths | thousandPoint }}
+      </ng-template>
+      <ng-template #desc> Damit sind {{ percentDeaths | round: 2 }}% der infizierten Bayern an der Krankheit gestorben. </ng-template>
+    </app-col-content>
+  </div>
+
+  <!-- First Time Vaccinated -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Erstgeimpfte</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>{{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%</ng-template>
+      <ng-template #desc>
+        BioNTech - {{ firstVaccination_percentBiontech | round: 2 }}%
+        <br />
+        AstraZeneca - {{ firstVaccination_percentAstra | round: 2 }}%
+        <br />
+        Moderna - {{ firstVaccination_percentModerna | round: 2 }}%
+        <br />
+        Janssen - {{ firstVaccination_percentJanssen | round: 2 }}%
+      </ng-template>
+    </app-col-content>
+  </div>
+
+  <!-- Fully Vaccinated -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Vollständig Geimpfte</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>{{ vaccination.bavaria_percentFullyVaccinated }}%</ng-template>
+
+      <ng-template #desc>
+        BioNTech - {{ secondVaccination_percentBiontech | round: 2 }}%
+        <br />
+        Moderna - {{ secondVaccination_percentModerna | round: 2 }}%
+        <br />
+        AstraZeneca - {{ secondVaccination_percentAstra | round: 2 }}%
+      </ng-template>
+    </app-col-content>
+  </div>
+</div>

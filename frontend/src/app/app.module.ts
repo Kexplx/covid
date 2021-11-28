@@ -15,10 +15,10 @@ import { DistrictHistoryComponent } from './history/district-history/district-hi
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SettingsComponent } from './settings/settings/settings.component';
-import { HospitalizationIncidenceHistoryComponent } from './history/hospitalization-incidence-history/hospitalization-incidence-history.component';
 import { TopDistrictsComponent } from './top-districts/top-districts/top-districts.component';
 import { DistrictCardComponent } from './top-districts/district-card/district-card.component';
 import { GermanyNewInfectionsComponent } from './history/germany-new-infections/germany-new-infections.component';
+import { ColContentComponent } from './home/col-content/col-content.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +33,10 @@ import { GermanyNewInfectionsComponent } from './history/germany-new-infections/
     DistrictHistoryComponent,
     ContactFormComponent,
     SettingsComponent,
-    HospitalizationIncidenceHistoryComponent,
     TopDistrictsComponent,
     DistrictCardComponent,
     GermanyNewInfectionsComponent,
+    ColContentComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
   bootstrap: [AppComponent],

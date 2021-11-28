@@ -7,6 +7,22 @@
   --dark: #34495e;
   --gray: rgb(170, 170, 170);
   --lightGray: rgb(240, 240, 240);
+
+  --fg-primary: rgb(50, 50, 50);
+  --fg-secondary: rgb(120, 120, 120);
+  --fg-error: rgb(231, 76, 60);
+}
+
+.fg-primary {
+  color: var(--fg-primary);
+}
+
+.fg-secondary {
+  color: var(--fg-secondary);
+}
+
+.fg-error {
+  color: var(--fg-error);
 }
 
 .container {
@@ -47,6 +63,10 @@
   margin-right: 5px;
 }
 
+.mb-05 {
+  margin-bottom: 5px;
+}
+
 .mb-1 {
   margin-bottom: 10px;
 }
@@ -71,23 +91,6 @@
   font-weight: 500;
 }
 
-.table-label {
-  font-weight: 500;
-  font-size: 0.85rem;
-  margin-bottom: 3px;
-}
-
-.subheader {
-  color: rgb(150, 150, 150);
-  size: 0.8rem;
-}
-
-.hint {
-  color: rgb(150, 150, 150);
-  size: 0.8rem;
-}
-
-.error {
-  font-size: 0.8rem;
-  color: var(--red);
+.small {
+  font-size: 0.78rem;
 }

@@ -10,7 +10,7 @@ import { CHART_COLORS } from '../chart-colors';
 export class GermanyNewInfectionsComponent implements OnInit {
   @Input() germanyHistory!: Germany[];
 
-  dataset: { data: number[]; color: string } = { data: [], color: CHART_COLORS.orange };
+  dataset: { data: number[]; color: string } = { data: [], color: CHART_COLORS.purple };
   labels: string[] = [];
   lastUpdated = '';
 

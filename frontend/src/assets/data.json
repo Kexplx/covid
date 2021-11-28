@@ -751,7 +751,21 @@
     "bavaria_numberOfPeopleAtLeastOnceVaccinated": 8900689,
     "bavaria_numberOfPeopleFullyVaccinated": 8660120,
     "bavaria_percentAtLeastOnceVaccinated": 67.7,
-    "bavaria_percentFullyVaccinated": 65.9
+    "bavaria_percentFullyVaccinated": 65.9,
+    "vaccinesUsed_firstVaccination": {
+      "biontech": 41840419,
+      "moderne": 4510108,
+      "astrazeneca": 9248924,
+      "janssen": 3418812
+    },
+    "vaccinesUsed_secondVaccination": { "biontech": 44659796, "moderne": 5253647, "astrazeneca": 3462887 },
+    "bavaria_vaccinesUsed_firstVaccination": {
+      "biontech": 6509996,
+      "moderne": 680368,
+      "astrazeneca": 1332407,
+      "janssen": 479516
+    },
+    "bavaria_vaccinesUsed_secondVaccination": { "biontech": 6857537, "moderne": 841956, "astrazeneca": 556422 }
   },
   "bavariaHistory": [
     {

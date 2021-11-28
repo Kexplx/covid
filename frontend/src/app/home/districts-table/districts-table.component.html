@@ -1,23 +1,60 @@
-<p class="table-label">
-  Städte & Landkreise
-  <span class="fw-4">(Stand: {{ districts[0].lastUpdated.replace(', 00:00 Uhr', '') }})</span>
+<p>
+  <span class="fw-5">Städte & Landkreise </span>
+  <span class="fg-secondary">(Stand: {{ districts[0].lastUpdated.replace(', 00:00 Uhr', '') }})</span>
 </p>
-<table class="mt-05">
-  <tr class="col-header">
-    <td>Name</td>
-    <td>7T Inzidenz</td>
-    <td>Fälle insges.</td>
-    <td>Tote insges.</td>
-  </tr>
-  <tr *ngFor="let district of districts">
-    <td style="position: relative">
-      <div *ngIf="district.code === favoriteDistrictCode" class="hightlight-div"></div>
-      {{ district | districtName }}
-    </td>
-    <td>
-      <app-incidence-tag [incidence]="district.incidence"></app-incidence-tag>
-    </td>
-    <td>{{ district.totalCases | thousandPoint }}</td>
-    <td>{{ district.totalDeaths | thousandPoint }}</td>
-  </tr>
-</table>
+
+<div class="table mt-05">
+  <div class="col">
+    <app-col-content>
+      <ng-template #title> Name </ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title> 7T Inzidenz </ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title> Fälle insges. </ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title> Tote insges. </ng-template>
+    </app-col-content>
+  </div>
+
+  <ng-container *ngFor="let district of districts">
+    <div class="col">
+      <app-col-content>
+        <ng-template #title>
+          {{ district | districtName }}
+        </ng-template>
+      </app-col-content>
+    </div>
+    <div class="col">
+      <app-col-content>
+        <ng-template #title>
+          <app-incidence-tag [incidence]="district.incidence"></app-incidence-tag>
+        </ng-template>
+      </app-col-content>
+    </div>
+
+    <div class="col">
+      <app-col-content>
+        <ng-template #title>
+          {{ district.totalCases | thousandPoint }}
+        </ng-template>
+      </app-col-content>
+    </div>
+
+    <div class="col">
+      <app-col-content>
+        <ng-template #title>
+          {{ district.totalDeaths | thousandPoint }}
+        </ng-template>
+      </app-col-content>
+    </div>
+  </ng-container>
+</div>

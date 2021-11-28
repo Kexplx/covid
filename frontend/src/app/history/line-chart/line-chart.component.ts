@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnDestroy, ViewChild } from '@angular/core';
 
 import { Chart, ChartConfiguration, ChartData, registerables } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
@@ -15,7 +15,7 @@ export interface Dataset {
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.css'],
 })
-export class LineChartComponent implements OnChanges, AfterViewInit {
+export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
   @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;
 
   @Input() rawData!: number[];
@@ -39,6 +39,12 @@ export class LineChartComponent implements OnChanges, AfterViewInit {
 
   ngAfterViewInit() {
     this.drawChart();
+  }
+
+  ngOnDestroy() {
+    // Important!
+    // Otherwise memory leak.
+    this.chart?.destroy();
   }
 
   private drawChart() {

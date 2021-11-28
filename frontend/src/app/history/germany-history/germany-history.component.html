@@ -1,5 +1,3 @@
-<p class="table-label">Deutschland</p>
-
-<small class="subheader">Stand: {{ lastUpdated | germanDate }}</small>
-
+<p class="fw-5">Deutschland</p>
+<p class="mt-05 fg-secondary">Stand: {{ lastUpdated | germanDate }}</p>
 <app-line-chart [datasets]="[dataset]" [paddingTop]="20" [paddingBot]="10" [labels]="labels"></app-line-chart>

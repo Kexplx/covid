@@ -19,6 +19,8 @@
 
     <!-- History & Charts -->
     <section *ngIf="tabIndex === 1">
+      <h1 class="mb-1">Historie</h1>
+
       <h2 class="mb-1">7T Inzidenz</h2>
       <app-germany-history [germanyHistory]="data.germanyHistory"></app-germany-history>
 
@@ -27,14 +29,10 @@
 
       <h2 class="mb-1 mt-2">Neuinfektionen</h2>
       <app-germany-new-infections [germanyHistory]="data.germanyHistory"></app-germany-new-infections>
-
-      <div class="mt-2"></div>
-      <app-hospitalization-incidence-history [germanyHistory]="data.germanyHistory" [bavariaHistory]="data.bavariaHistory"></app-hospitalization-incidence-history>
     </section>
 
     <!-- Top Districts -->
     <section *ngIf="tabIndex === 2">
-      <h1 class="mb-1">Bestenliste</h1>
       <app-top-districts [topDistricts]="data.topDistricts"></app-top-districts>
     </section>
 
