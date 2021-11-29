@@ -2,7 +2,7 @@
 
 <div class="mt-2">
   <label>
-    Nachkommastellen:
+    <small>Nachkommastellen:</small>
 
     <div class="input-container mt-05">
       <input (focus)="$any($event.target).select()" [formControl]="decimalPointsControl" type="number" />
@@ -11,15 +11,17 @@
         <app-incidence-tag [decimalPoints]="decimalPointsControl.value" [incidence]="78.29198"></app-incidence-tag>
       </span>
     </div>
-    <div *ngIf="decimalPointsControl.errors?.['required']" class="error mt-05">Bitte Wert eingeben.</div>
-    <div *ngIf="decimalPointsControl.errors?.['max'] || decimalPointsControl.errors?.['min']" class="error mt-05">Wert muss zwischen 0 - 10 liegen.</div>
+    <p *ngIf="decimalPointsControl.errors?.['required']" class="mt-05"><small class="fg-error">Bitte Wert eingeben.</small></p>
+    <div *ngIf="decimalPointsControl.errors?.['max'] || decimalPointsControl.errors?.['min']" class="mt-05"><small class="fg-error">Wert muss zwischen 0 - 10 liegen.</small></div>
   </label>
 </div>
 
 <div class="mt-2">
-  <label> Mein Landkreis: </label>
+  <label>
+    <small>Mein Landkreis:</small>
+  </label>
   <div class="mt-05">
-    <app-select width="190px" [initialValue]="selectedDistrictCode" (appSelect)="onSelect($event)" [options]="options"></app-select>
+    <app-select #select width="190px" [initialValue]="selectedDistrictCode" (appSelect)="onSelect($event)" [options]="options"></app-select>
   </div>
 </div>
 
