@@ -19,6 +19,20 @@
     </app-col-content>
   </div>
 
+  <!-- New Cases -->
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>Neuinfektionen</ng-template>
+    </app-col-content>
+  </div>
+  <div class="col">
+    <app-col-content>
+      <ng-template #title>
+        {{ germany.newCases | thousandPoint }}
+      </ng-template>
+    </app-col-content>
+  </div>
+
   <!-- Total Cases -->
   <div class="col">
     <app-col-content>
