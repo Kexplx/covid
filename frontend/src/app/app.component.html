@@ -1,6 +1,12 @@
 <div class="container">
   <app-tab-set [index]="tabIndex" (tabChange)="onTabChange($event)"></app-tab-set>
-  <div class="mt-2 ta-right">
+
+  <div *ngIf="tabIndex === 0" class="header-home mt-2 mb-1">
+    <app-button [disabled]="isLoading" (appClick)="isDailyStatsVisible = !isDailyStatsVisible" text="COVID Daily"></app-button>
+    <app-button [disabled]="isLoading" (appClick)="onUpdateClick()" icon="sync-solid" [shadow]="true" text="Aktualisieren"></app-button>
+  </div>
+
+  <div *ngIf="tabIndex !== 0" class="mt-2 mb-1 ta-right">
     <app-button [disabled]="isLoading" (appClick)="onUpdateClick()" icon="sync-solid" [shadow]="true" text="Aktualisieren"></app-button>
   </div>
   <ng-container *ngIf="data$ | async as data; else noData">
@@ -21,7 +27,7 @@
     <section *ngIf="tabIndex === 1">
       <h1 class="mb-1">Historie</h1>
 
-      <h2 class="mb-1">7T Inzidenz</h2>
+      <h2 class="mb-1">7-Tage-Inzidenz</h2>
       <app-germany-history [germanyHistory]="data.germanyHistory"></app-germany-history>
 
       <div class="mt-1"></div>
@@ -50,6 +56,7 @@
     <section *ngIf="tabIndex === 5">
       <app-settings [listOfDistrictHistories]="data.listOfDistrictHistories"></app-settings>
     </section>
+    <app-daily-stats-dialog [data]="data" (close)="isDailyStatsVisible = false" *ngIf="isDailyStatsVisible"></app-daily-stats-dialog>
   </ng-container>
 
   <ng-template #noData>
