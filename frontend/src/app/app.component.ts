@@ -10,7 +10,7 @@ import { SwipeService } from './swipe.service';
 })
 export class AppComponent implements OnInit {
   tabIndex = 0;
-  isDailyStatsVisible = true;
+  isDailyStatsVisible = false;
 
   data$ = this.dataService.data$.pipe(
     tap(d => {
