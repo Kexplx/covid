@@ -1,14 +1,14 @@
-<div [ngStyle]="{ width: width }" style="position: relative">
-  <button [class.open]="isOpen" (click)="isOpen = !isOpen">
+<div [ngStyle]="{ width }" style="position: relative">
+  <button (blur)="onBlur()" [class.open]="isOpen" (click)="onClick()">
     <div class="btn-content">
-      <span>{{ selected.name }}</span>
-      <img *ngIf="isOpen" src="assets/icons/caret-down.svg" alt="" />
-      <img [ngStyle]="{ transform: 'rotate(-270deg)' }" *ngIf="!isOpen" src="assets/icons/caret-down.svg" alt="" />
+      <span>{{ selectedOption.name }}</span>
+      <img *ngIf="isOpen" src="assets/icons/caret-down.svg" alt="Caret Down" />
+      <img [ngStyle]="{ transform: 'rotate(-270deg)' }" *ngIf="!isOpen" src="assets/icons/caret-down.svg" alt="Caret Right" />
     </div>
   </button>
 
   <ul *ngIf="isOpen">
-    <li (click)="onSelect(option)" *ngFor="let option of optionsToDisplay">
+    <li (click)="onOptionClick(option)" *ngFor="let option of optionsToDisplay">
       {{ option.name }}
     </li>
   </ul>

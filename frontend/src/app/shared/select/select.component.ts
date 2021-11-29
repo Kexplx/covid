@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { timer } from 'rxjs';
 
 export interface SelectOption {
   value: any;
@@ -19,28 +20,47 @@ export class SelectComponent implements OnInit {
 
   optionsToDisplay: SelectOption[] = [];
 
-  selected: SelectOption = { name: '', value: '' };
+  selectedOption: SelectOption = { name: '', value: '' };
+  hasChanges = false;
+
   isOpen = false;
 
   ngOnInit(): void {
     this.optionsToDisplay = [...this.options];
     if (this.initialValue) {
-      this.selected = this.options.find(o => o.value === this.initialValue)!;
+      this.selectedOption = this.options.find(o => o.value === this.initialValue)!;
       this.removeSelectedFromOptions();
     }
   }
 
-  onSelect(option: SelectOption) {
-    this.selected = option;
+  private removeSelectedFromOptions() {
+    this.optionsToDisplay = [...this.options];
+    const indexOf = this.optionsToDisplay.indexOf(this.selectedOption);
+    this.optionsToDisplay.splice(indexOf, 1);
+  }
+
+  onOptionClick(option: SelectOption) {
+    this.hasChanges = true;
+    this.selectedOption = option;
     this.removeSelectedFromOptions();
     this.isOpen = false;
 
     this.appSelect.emit(option);
   }
 
-  removeSelectedFromOptions() {
-    this.optionsToDisplay = [...this.options];
-    const indexOf = this.optionsToDisplay.indexOf(this.selected);
-    this.optionsToDisplay.splice(indexOf, 1);
+  onClick() {
+    this.isOpen = !this.isOpen;
+    this.hasChanges = false;
+  }
+
+  onBlur() {
+    // This is the blur event of the button.
+    // We delay this event to make the `onOptionClick` handler run before.
+    timer(0).subscribe(() => {
+      if (!this.hasChanges) {
+        // User clicked outside of the button or the ul so we close the ul.
+        this.isOpen = false;
+      }
+    });
   }
 }
