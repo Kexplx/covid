@@ -46,12 +46,3 @@
 .col:nth-last-child(4) {
   border-end-start-radius: var(--border-radius);
 }
-
-.hightlight-div {
-  position: absolute;
-  width: 6px;
-  top: 0;
-  left: 0px;
-  height: 100%;
-  background-color: #1abc9c;
-}

@@ -26,7 +26,7 @@
   </div>
 
   <ng-container *ngFor="let district of districts">
-    <div class="col">
+    <div [ngClass]="{ 'fw-5': district.code === favoriteDistrictCode }" class="col">
       <app-col-content>
         <ng-template #title>
           {{ district | districtName }}
