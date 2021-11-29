@@ -1,14 +1,14 @@
 :root {
   --red: #e74c3c;
   --blue: #3498db;
-  --green: #2ecc71;
+  --green: #27ae60;
   --orange: #f39c12;
   --turkise: #1abc9c;
   --dark: #34495e;
   --gray: rgb(170, 170, 170);
   --lightGray: rgb(240, 240, 240);
 
-  --fg-primary: rgb(50, 50, 50);
+  --fg-primary: #323232;
   --fg-secondary: rgb(120, 120, 120);
   --fg-error: rgb(231, 76, 60);
 }

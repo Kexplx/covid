@@ -12,6 +12,7 @@ import { DistrictNamePipe } from './district-name.pipe';
 import { AlertComponent } from './alert/alert.component';
 import { DailyStatsDialogComponent } from './dialogs/daily-stats-dialog/daily-stats-dialog.component';
 import { AbsPipe } from './abs.pipe';
+import { DiffComponent } from './dialogs/diff/diff.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AbsPipe } from './abs.pipe';
     AlertComponent,
     DailyStatsDialogComponent,
     AbsPipe,
+    DiffComponent,
   ],
   imports: [CommonModule],
   exports: [

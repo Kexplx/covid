@@ -1,0 +1,35 @@
+.positive {
+  color: var(--red);
+}
+
+.positive img {
+  width: 12px;
+  transform: rotate(45deg);
+}
+
+.negative {
+  color: var(--green);
+}
+
+.negative img {
+  transform: rotate(-145deg);
+  margin-right: 5px;
+}
+
+.zero {
+  color: grey;
+}
+
+.zero img {
+  transform: rotate(90deg);
+  margin-right: 5px;
+}
+
+span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+img {
+  width: 10px;
+}

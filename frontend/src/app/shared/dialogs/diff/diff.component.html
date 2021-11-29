@@ -1,0 +1,3 @@
+<span class="positive" *ngIf="isPositive"><img src="assets/icons/arrow-up-solid-red.svg" alt="Arrow Up Right" /> {{ value | round: 0 }}</span>
+<span class="negative" *ngIf="isNegative"><img src="assets/icons/arrow-up-solid-green.svg" alt="Arrow Down Left" />{{ value | abs | round: 0 }}</span>
+<span class="zero" *ngIf="isZero"><img src="assets/icons/arrow-up-solid-grey.svg" alt="Arrow Right" />{{ value }}</span>

@@ -12,6 +12,7 @@ export class DailyStatsDialogComponent implements OnInit {
   @Output() close = new EventEmitter();
 
   newCases = 391293;
+
   incidenceGermany = 420;
   incidenceGermanyDiffToYesterday = 23;
 
