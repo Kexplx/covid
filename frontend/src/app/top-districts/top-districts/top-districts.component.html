@@ -1,6 +1,5 @@
 <h1>Bestenliste</h1>
 <p class="fw-5 mt-1">Top 10 Landkreise mit den höchsten 7-Tage Inzidenzen in Deutschland.</p>
-<p class="mt-1 mb-05 fg-secondary">Stand: {{ topDistricts.lastUpdated | germanDate }}</p>
 
 <div class="mt-1" *ngFor="let district of topDistricts.districts; let i = index">
   <app-district-card [district]="district" [index]="i"></app-district-card>

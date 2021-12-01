@@ -10,9 +10,8 @@ import { ThousandPointPipe } from './thousand-point.pipe';
 import { SelectComponent } from './select/select.component';
 import { DistrictNamePipe } from './district-name.pipe';
 import { AlertComponent } from './alert/alert.component';
-import { DailyStatsDialogComponent } from './dialogs/daily-stats-dialog/daily-stats-dialog.component';
 import { AbsPipe } from './abs.pipe';
-import { DiffComponent } from './dialogs/diff/diff.component';
+import { DividerComponent } from './divider/divider.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +25,8 @@ import { DiffComponent } from './dialogs/diff/diff.component';
     SelectComponent,
     DistrictNamePipe,
     AlertComponent,
-    DailyStatsDialogComponent,
     AbsPipe,
-    DiffComponent,
+    DividerComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -38,7 +36,7 @@ import { DiffComponent } from './dialogs/diff/diff.component';
     GermanDatePipe,
     TabSetComponent,
     AlertComponent,
-    DailyStatsDialogComponent,
+    DividerComponent,
     DistrictNamePipe,
     ThousandPointPipe,
     RoundPipe,

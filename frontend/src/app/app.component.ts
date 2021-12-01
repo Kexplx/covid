@@ -10,12 +10,16 @@ import { SwipeService } from './swipe.service';
 })
 export class AppComponent implements OnInit {
   tabIndex = 0;
-  isDailyStatsVisible = false;
+  isCovidDailyVisible = false;
+  lastUpdated = '';
 
   data$ = this.dataService.data$.pipe(
     tap(d => {
       if (d) {
         this.isLoading = false;
+        this.lastUpdated = d.lastUpdated;
+      } else {
+        this.lastUpdated = '';
       }
     }),
   );

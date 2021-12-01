@@ -3,21 +3,21 @@ import { AppData } from 'src/app/data.service';
 import { SettingsService } from 'src/app/settings.service';
 
 @Component({
-  selector: 'app-daily-stats-dialog',
-  templateUrl: './daily-stats-dialog.component.html',
-  styleUrls: ['./daily-stats-dialog.component.css'],
+  selector: 'app-covid-daily',
+  templateUrl: './covid-daily.component.html',
+  styleUrls: ['./covid-daily.component.css'],
 })
-export class DailyStatsDialogComponent implements OnInit {
+export class CovidDailyComponent implements OnInit {
   @Input() data!: AppData;
   @Output() close = new EventEmitter();
 
-  newCases = 391293;
+  newCases = 0;
 
-  incidenceGermany = 420;
-  incidenceGermanyDiffToYesterday = 23;
+  incidenceGermany = 0;
+  incidenceGermanyDiffToYesterday = 0;
 
-  incidenceDistrict = 892;
-  incidenceDistrictDiffToYesterday = -70;
+  incidenceDistrict = 0;
+  incidenceDistrictDiffToYesterday = 0;
   districtName = '';
 
   constructor(private settingsService: SettingsService) {}

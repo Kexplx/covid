@@ -4,6 +4,7 @@ import { SettingsService } from 'src/app/settings.service';
 import { DistrictNamePipe } from 'src/app/shared/district-name.pipe';
 import { SelectOption } from 'src/app/shared/select/select.component';
 import { CHART_COLORS } from '../chart-colors';
+import { Dataset } from '../line-chart/line-chart.component';
 
 @Component({
   selector: 'app-district-history',
@@ -14,11 +15,9 @@ export class DistrictHistoryComponent implements OnInit {
   @Input() listOfDistrictHistories!: District[][];
   options: SelectOption[] = [];
 
-  lastUpdated = '';
-
   initialValue = this.settingsService.settings.favoriteDistrictCode;
 
-  dataset: { data: number[]; color: string } = { data: [], color: CHART_COLORS.red };
+  dataset: Dataset = { data: [], color: CHART_COLORS.red };
   labels: string[] = [];
 
   constructor(private districtNamePipe: DistrictNamePipe, private settingsService: SettingsService) {}
@@ -49,7 +48,5 @@ export class DistrictHistoryComponent implements OnInit {
         return pattern.exec(district.lastUpdated)![1];
       })
       .reverse();
-
-    this.lastUpdated = historyToDisplay[0].lastUpdated.replace(/, 00:00 Uhr/, '');
   }
 }

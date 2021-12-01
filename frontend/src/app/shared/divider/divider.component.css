@@ -1,0 +1,11 @@
+.box {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0 10px;
+  align-items: center;
+}
+
+.left,
+.right {
+  border-bottom: 1px dashed rgb(200, 200, 200);
+}

@@ -13,7 +13,6 @@ export class GermanyHistoryComponent {
 
   dataset: Dataset = { data: [], color: CHART_COLORS.red };
   labels: string[] = [];
-  lastUpdated = '';
 
   ngOnInit(): void {
     this.dataset.data = this.germanyHistory.map(germany => Math.round(germany.incidence)).reverse();
@@ -25,7 +24,5 @@ export class GermanyHistoryComponent {
         return `${date.getDate()}.${date.getMonth() + 1}`;
       })
       .reverse();
-
-    this.lastUpdated = this.germanyHistory[0].lastUpdated;
   }
 }

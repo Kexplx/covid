@@ -5,6 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GermanDatePipe implements PipeTransform {
   transform(dateString: string | number | Date, addTime: boolean = false): string {
+    if (!dateString) {
+      return '';
+    }
+
     const date = new Date(dateString);
 
     return this.parseDate(date, addTime);

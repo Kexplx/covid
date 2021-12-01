@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Germany } from 'src/app/germany.service';
 import { CHART_COLORS } from '../chart-colors';
+import { Dataset } from '../line-chart/line-chart.component';
 
 @Component({
   selector: 'app-germany-new-infections',
@@ -10,9 +11,8 @@ import { CHART_COLORS } from '../chart-colors';
 export class GermanyNewInfectionsComponent implements OnInit {
   @Input() germanyHistory!: Germany[];
 
-  dataset: { data: number[]; color: string } = { data: [], color: CHART_COLORS.purple };
+  dataset: Dataset = { data: [], color: CHART_COLORS.purple };
   labels: string[] = [];
-  lastUpdated = '';
 
   constructor() {}
 
@@ -33,7 +33,5 @@ export class GermanyNewInfectionsComponent implements OnInit {
         return `${date.getDate()}.${date.getMonth() + 1}`;
       })
       .reverse();
-
-    this.lastUpdated = this.germanyHistory[0].lastUpdated;
   }
 }

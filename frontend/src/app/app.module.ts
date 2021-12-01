@@ -19,6 +19,8 @@ import { TopDistrictsComponent } from './top-districts/top-districts/top-distric
 import { DistrictCardComponent } from './top-districts/district-card/district-card.component';
 import { GermanyNewInfectionsComponent } from './history/germany-new-infections/germany-new-infections.component';
 import { ColContentComponent } from './home/col-content/col-content.component';
+import { CovidDailyComponent } from './home/covid-daily/covid-daily.component';
+import { DiffComponent } from './home/covid-daily/diff/diff.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ColContentComponent } from './home/col-content/col-content.component';
     JokeOfTheDayComponent,
     DistrictsPipe,
     GermanyHistoryComponent,
+    CovidDailyComponent,
+    DiffComponent,
     LineChartComponent,
     DistrictHistoryComponent,
     ContactFormComponent,
@@ -37,6 +41,7 @@ import { ColContentComponent } from './home/col-content/col-content.component';
     DistrictCardComponent,
     GermanyNewInfectionsComponent,
     ColContentComponent,
+    CovidDailyComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
   bootstrap: [AppComponent],

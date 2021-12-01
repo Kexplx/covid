@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 export interface AppData {
+  lastUpdated: string;
   vaccination: Vaccination;
   germanyHistory: Germany[];
   bavariaHistory: State[];
@@ -55,16 +56,17 @@ export class DataService {
       this.districtService.getTopDistricts(),
     ];
 
-    forkJoin(responses).subscribe(data => {
+    forkJoin(responses).subscribe(data =>
       this.dataSubject.next({
+        lastUpdated: (data[1] as Germany[])[0].lastUpdated,
         listOfDistrictHistories: data[0] as District[][],
         germanyHistory: data[1] as Germany[],
         vaccination: data[2] as Vaccination,
         bavariaHistory: data[3] as State[],
         jokeOfTheDay: data[4] as Joke,
         topDistricts: data[5] as { lastUpdated: string; districts: District[] },
-      });
-    });
+      }),
+    );
   }
 
   private loadDummyData() {
@@ -72,6 +74,6 @@ export class DataService {
     this.http
       .get<AppData>('/assets/data.json')
       .pipe(delay(500))
-      .subscribe(d => this.dataSubject.next(d));
+      .subscribe(d => this.dataSubject.next({ ...d, lastUpdated: new Date().toISOString() }));
   }
 }
