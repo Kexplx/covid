@@ -56,7 +56,7 @@ export class SelectComponent implements OnInit {
   onBlur() {
     // This is the blur event of the button.
     // We delay this event to make the `onOptionClick` handler run before.
-    timer(0).subscribe(() => {
+    timer(130).subscribe(() => {
       if (!this.hasChanges) {
         // User clicked outside of the button or the ul so we close the ul.
         this.isOpen = false;
