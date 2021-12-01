@@ -1,49 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import { GermanyTableComponent } from './home/germany-table/germany-table.component';
-import { BavariaTableComponent } from './home/bavaria-table/bavaria-table.component';
-import { DistrictsTableComponent } from './home/districts-table/districts-table.component';
-import { JokeOfTheDayComponent } from './joke/joke-of-the-day/joke-of-the-day.component';
-import { DistrictsPipe } from './home/districts-table/districts.pipe';
-import { GermanyHistoryComponent } from './history/germany-history/germany-history.component';
-import { LineChartComponent } from './history/line-chart/line-chart.component';
-import { DistrictHistoryComponent } from './history/district-history/district-history.component';
-import { ContactFormComponent } from './contact/contact-form/contact-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SettingsComponent } from './settings/settings/settings.component';
-import { TopDistrictsComponent } from './top-districts/top-districts/top-districts.component';
-import { DistrictCardComponent } from './top-districts/district-card/district-card.component';
-import { GermanyNewInfectionsComponent } from './history/germany-new-infections/germany-new-infections.component';
-import { ColContentComponent } from './home/col-content/col-content.component';
-import { CovidDailyComponent } from './home/covid-daily/covid-daily.component';
-import { DiffComponent } from './home/covid-daily/diff/diff.component';
+import { RouterModule, Routes } from '@angular/router';
+import { CovidDailyComponent } from './covid-daily/covid-daily.component';
+import { DiffComponent } from './covid-daily/diff/diff.component';
+
+export const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: 'history', loadChildren: () => import('./history/history.module').then(m => m.HistoryModule) },
+  {
+    path: 'top-districts',
+    loadChildren: () => import('./top-districts/top-districts.module').then(m => m.TopDistrictsModule),
+  },
+  { path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
+  { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) },
+  {
+    path: 'joke-of-the-day',
+    loadChildren: () => import('./joke-of-the-day/joke-of-the-day.module').then(m => m.JokeOfTheDayModule),
+  },
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    GermanyTableComponent,
-    BavariaTableComponent,
-    DistrictsTableComponent,
-    JokeOfTheDayComponent,
-    DistrictsPipe,
-    GermanyHistoryComponent,
-    CovidDailyComponent,
-    DiffComponent,
-    LineChartComponent,
-    DistrictHistoryComponent,
-    ContactFormComponent,
-    SettingsComponent,
-    TopDistrictsComponent,
-    DistrictCardComponent,
-    GermanyNewInfectionsComponent,
-    ColContentComponent,
-    CovidDailyComponent,
-  ],
-  imports: [BrowserModule, ReactiveFormsModule, FormsModule, SharedModule, HttpClientModule],
+  declarations: [AppComponent, CovidDailyComponent, DiffComponent],
+  imports: [BrowserModule, RouterModule.forRoot(routes), SharedModule, HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

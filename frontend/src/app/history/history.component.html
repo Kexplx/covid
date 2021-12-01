@@ -1,0 +1,17 @@
+<section *ngIf="data$ | async as data" class="mt-1">
+  <h1 class="mb-1">Historie</h1>
+
+  <h2 class="mb-1">7-Tage-Inzidenz</h2>
+  <app-germany-history [germanyHistory]="data.germanyHistory"></app-germany-history>
+
+  <div class="mt-1">
+    <app-district-history [listOfDistrictHistories]="data.listOfDistrictHistories"></app-district-history>
+  </div>
+
+  <h2 class="mb-1 mt-2">Neuinfektionen</h2>
+  <app-germany-new-infections [germanyHistory]="data.germanyHistory"></app-germany-new-infections>
+</section>
+
+<ng-template #noData>
+  <app-spinner></app-spinner>
+</ng-template>

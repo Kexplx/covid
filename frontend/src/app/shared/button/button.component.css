@@ -1,5 +1,5 @@
 button {
-  padding: 8px 17px;
+  padding: 7px 15px;
   font-size: 0.8rem;
   border: 1px solid rgb(230, 230, 230);
   background-color: rgb(250, 250, 250);
@@ -37,6 +37,7 @@ ul {
 
 .btn-content img {
   width: 10px;
+  height: 10px;
 }
 
 button.shadow {
@@ -47,6 +48,7 @@ button.shadow {
 small {
   position: absolute;
   width: 120px;
-  top: 29px;
+  top: 27px;
   left: -14px;
+  font-size: 0.75rem;
 }

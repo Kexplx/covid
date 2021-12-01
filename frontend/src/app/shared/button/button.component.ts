@@ -11,6 +11,7 @@ export class ButtonComponent {
   @Input() disabled = false;
   @Input() shadow = false;
   @Input() bottomText = '';
+  @Input() small = false;
 
   @Output() appClick = new EventEmitter();
 

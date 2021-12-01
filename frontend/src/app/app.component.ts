@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { tap } from 'rxjs';
 import { DataService } from './data.service';
 import { SwipeService } from './swipe.service';
+
+// Has to match the routes in `app.module.ts`
+const routes = ['home', 'history', 'top-districts', 'joke-of-the-day', 'contact', 'settings'];
 
 @Component({
   selector: 'app-root',
@@ -9,7 +13,6 @@ import { SwipeService } from './swipe.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  tabIndex = 0;
   isCovidDailyVisible = false;
   lastUpdated = '';
 
@@ -26,21 +29,11 @@ export class AppComponent implements OnInit {
 
   isLoading = true;
 
-  constructor(private dataService: DataService, private swipeService: SwipeService) {}
+  constructor(private dataService: DataService, private swipeService: SwipeService, private router: Router) {}
 
   ngOnInit() {
-    const queryParams = new URLSearchParams(window.location.search);
-    if (queryParams.has('t')) {
-      this.tabIndex = Number(queryParams.get('t'));
-    }
-
     this.swipeService.swipeRight$.subscribe(() => this.onLeftSwipe());
     this.swipeService.swipeLeft$.subscribe(() => this.onRightSwipe());
-  }
-
-  onTabChange(tabIndex: number): void {
-    this.tabIndex = tabIndex;
-    this.updateCurrentTabIndexInUrl();
   }
 
   onUpdateClick() {
@@ -48,30 +41,46 @@ export class AppComponent implements OnInit {
     this.dataService.loadData();
   }
 
-  updateCurrentTabIndexInUrl() {
-    const newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?t=${this.tabIndex}`;
-    window.history.pushState({ path: newurl }, '', newurl);
-  }
-
   onLeftSwipe() {
-    if (this.tabIndex === 5) {
-      // We're already at the last
-      // index to we ignore the swipe.
-      return;
-    }
+    const nextRoute = this.getNextRoute();
 
-    this.tabIndex++;
-    this.updateCurrentTabIndexInUrl();
+    if (nextRoute) {
+      this.router.navigateByUrl(`/${nextRoute}`);
+    }
   }
 
   onRightSwipe() {
-    if (this.tabIndex === 0) {
-      // We're already at the first
-      // index to we ignore the swipe.
-      return;
+    const prevRoute = this.getPrevRoute();
+
+    if (prevRoute) {
+      this.router.navigateByUrl(`/${prevRoute}`);
+    }
+  }
+
+  private getPrevRoute(): string {
+    const currentRouteIndex = this.getCurrentRouteIndex();
+
+    if (currentRouteIndex > 0) {
+      return routes[currentRouteIndex - 1];
     }
 
-    this.tabIndex--;
-    this.updateCurrentTabIndexInUrl();
+    return '';
+  }
+
+  private getNextRoute(): string {
+    const currentRouteIndex = this.getCurrentRouteIndex();
+
+    if (currentRouteIndex + 1 < routes.length) {
+      return routes[currentRouteIndex + 1];
+    }
+
+    return '';
+  }
+
+  private getCurrentRouteIndex() {
+    const currentRoute = /\/([^\/]*)$/.exec(window.location.pathname)![1];
+    const currentRouteIndex = routes.indexOf(currentRoute);
+
+    return currentRouteIndex;
   }
 }

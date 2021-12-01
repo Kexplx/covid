@@ -1,0 +1,19 @@
+<section *ngIf="data$ | async as data" class="mt-1">
+  <h1>Home</h1>
+
+  <div class="mt-1">
+    <app-germany-table [germany]="data.germanyHistory[0]" [vaccination]="data.vaccination"></app-germany-table>
+  </div>
+
+  <div class="mt-2">
+    <app-bavaria-table [bavaria]="data.bavariaHistory[0]" [vaccination]="data.vaccination"></app-bavaria-table>
+  </div>
+
+  <div class="mt-2">
+    <app-districts-table [districts]="data.listOfDistrictHistories | districts"></app-districts-table>
+  </div>
+</section>
+
+<ng-template #noData>
+  <app-spinner></app-spinner>
+</ng-template>

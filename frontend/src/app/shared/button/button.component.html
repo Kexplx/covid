@@ -1,4 +1,4 @@
-<button [class.shadow]="shadow" (click)="onClick()" [class.disabled]="disabled" *ngIf="icon; else noIcon">
+<button [class.small]="small" [class.shadow]="shadow" (click)="onClick()" [class.disabled]="disabled" *ngIf="icon; else noIcon">
   <div class="btn-content">
     <img [src]="'assets/icons/' + icon + '.svg'" />
     {{ text }}
@@ -7,10 +7,9 @@
 </button>
 
 <ng-template #noIcon>
-  <button (click)="onClick()" [class.shadow]="shadow" [class.disabled]="disabled">
-    <div class="btn-content">
+  <button [class.small]="small" (click)="onClick()" [class.shadow]="shadow" [class.disabled]="disabled">
+    <div>
       {{ text }}
-      <small *ngIf="bottomText" class="fg-secondary fw-4">{{ bottomText }}</small>
     </div>
   </button>
 </ng-template>

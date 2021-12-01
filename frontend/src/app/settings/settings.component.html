@@ -1,0 +1,8 @@
+<section class="mt-1" *ngIf="data$ | async as data; else noData">
+  <h1>Einstellungen</h1>
+  <app-settings-form [listOfDistrictHistories]="data.listOfDistrictHistories"></app-settings-form>
+</section>
+
+<ng-template #noData>
+  <app-spinner></app-spinner>
+</ng-template>

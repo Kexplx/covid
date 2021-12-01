@@ -27,6 +27,7 @@
 .img-close {
   position: absolute;
   width: 10px;
+  height: 10px;
   top: 5px;
   cursor: pointer;
   right: 5px;

@@ -1,0 +1,7 @@
+<section *ngIf="data$ | async as data" class="mt-1">
+  <app-top-districts-list [topDistricts]="data.topDistricts"></app-top-districts-list>
+</section>
+
+<ng-template #noData>
+  <app-spinner></app-spinner>
+</ng-template>

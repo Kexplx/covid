@@ -6,11 +6,11 @@ import { DistrictNamePipe } from 'src/app/shared/district-name.pipe';
 import { SelectOption } from 'src/app/shared/select/select.component';
 
 @Component({
-  selector: 'app-settings',
-  templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css'],
+  selector: 'app-settings-form',
+  templateUrl: './settings-form.component.html',
+  styleUrls: ['./settings-form.component.css'],
 })
-export class SettingsComponent implements OnInit {
+export class SettingsFormComponent implements OnInit {
   @Input() listOfDistrictHistories!: District[][];
 
   decimalPointsControl = new FormControl(this.settingsService.settings.decimalPoints, [

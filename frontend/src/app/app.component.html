@@ -1,8 +1,8 @@
 <div class="container">
-  <app-tab-set [index]="tabIndex" (tabChange)="onTabChange($event)"></app-tab-set>
+  <app-tab-set></app-tab-set>
 
-  <div [ngClass]="{ 'header-home': tabIndex === 0, 'ta-right': tabIndex !== 0 }" class="mt-2 mb-1">
-    <app-button *ngIf="tabIndex === 0" [disabled]="isLoading" (appClick)="isCovidDailyVisible = true" text="COVID Daily"></app-button>
+  <header class="mt-2 mb-1">
+    <app-button [disabled]="isLoading" (appClick)="isCovidDailyVisible = true" text="COVID Daily"></app-button>
     <app-button
       [bottomText]="lastUpdated ? 'Stand: ' + (lastUpdated | germanDate) : ''"
       [disabled]="isLoading"
@@ -11,56 +11,10 @@
       [shadow]="true"
       text="Aktualisieren"
     ></app-button>
-  </div>
+  </header>
   <ng-container *ngIf="data$ | async as data; else noData">
-    <!-- Home -->
-    <section class="mt-3" *ngIf="tabIndex === 0">
-      <app-germany-table [germany]="data.germanyHistory[0]" [vaccination]="data.vaccination"></app-germany-table>
+    <router-outlet></router-outlet>
 
-      <div class="mt-2"></div>
-
-      <app-bavaria-table [bavaria]="data.bavariaHistory[0]" [vaccination]="data.vaccination"></app-bavaria-table>
-
-      <div class="mt-2"></div>
-
-      <app-districts-table [districts]="data.listOfDistrictHistories | districts"></app-districts-table>
-    </section>
-
-    <!-- History & Charts -->
-    <section *ngIf="tabIndex === 1">
-      <h1 class="mb-1">Historie</h1>
-
-      <h2 class="mb-1">7-Tage-Inzidenz</h2>
-      <app-germany-history [germanyHistory]="data.germanyHistory"></app-germany-history>
-
-      <div class="mt-1"></div>
-      <app-district-history [listOfDistrictHistories]="data.listOfDistrictHistories"></app-district-history>
-
-      <h2 class="mb-1 mt-2">Neuinfektionen</h2>
-      <app-germany-new-infections [germanyHistory]="data.germanyHistory"></app-germany-new-infections>
-    </section>
-
-    <!-- Top Districts -->
-    <section *ngIf="tabIndex === 2">
-      <app-top-districts [topDistricts]="data.topDistricts"></app-top-districts>
-    </section>
-
-    <!-- Joke of the Day -->
-    <section *ngIf="tabIndex === 3">
-      <app-joke-of-the-day [jokeOfTheDay]="data.jokeOfTheDay"></app-joke-of-the-day>
-    </section>
-
-    <!-- Contact -->
-    <section *ngIf="tabIndex === 4">
-      <app-contact-form></app-contact-form>
-    </section>
-
-    <!-- Settings -->
-    <section *ngIf="tabIndex === 5">
-      <app-settings [listOfDistrictHistories]="data.listOfDistrictHistories"></app-settings>
-    </section>
-
-    <!-- COVID Daily -->
     <app-covid-daily [data]="data" (close)="isCovidDailyVisible = false" *ngIf="isCovidDailyVisible"></app-covid-daily>
   </ng-container>
 

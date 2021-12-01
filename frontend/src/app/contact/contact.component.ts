@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { FeedbackService } from 'src/app/feedback.service';
+import { FeedbackService } from '../feedback.service';
 
 @Component({
-  selector: 'app-contact-form',
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css'],
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css'],
 })
-export class ContactFormComponent {
+export class ContactComponent {
   feedback = '';
   showSuccess = false;
 

@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { District } from 'src/app/district.service';
+import { Component } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-top-districts',
@@ -7,5 +7,7 @@ import { District } from 'src/app/district.service';
   styleUrls: ['./top-districts.component.css'],
 })
 export class TopDistrictsComponent {
-  @Input() topDistricts!: { lastUpdated: string; districts: District[] };
+  data$ = this.dataService.data$;
+
+  constructor(private dataService: DataService) {}
 }
