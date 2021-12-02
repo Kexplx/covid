@@ -25,7 +25,9 @@ export class UpdateService {
   private listenToVisibilityChanges() {
     this.visibilitySubscription = fromEvent(this.document, 'visibilitychange').subscribe(() => {
       if (!this.document.hidden) {
-        // User tabbed into the app.
+        // App received focus (e.g. from the user clicking on the tab).
+        // The event doesn't emit when the app is first loaded, hence the
+        // explicit call to `compareLocalShaWithServerSha` in the contructor.
         this.compareLocalShaWithServerSha();
       }
     });
@@ -34,18 +36,18 @@ export class UpdateService {
   private compareLocalShaWithServerSha() {
     const responseType = 'text' as any;
 
-    this.http
-      .get<string>('https://kexplx.github.io/covid/assets/commit-sha.txt', { responseType })
-      .subscribe(serverSha => {
-        if (serverSha !== environment.localSha) {
-          // The local app is outdated.
-          // There's a new version available on the server.
-          this.hasUpdateSubject.next(true);
+    const url = `https://europe-west3-crimeview.cloudfunctions.net/handleGet?url=https://kexplx.github.io/covid/assets/commit-sha.txt`;
 
-          // We can unsubscribe from the event because we have
-          // already notified our subject that there are changes.
-          this.visibilitySubscription?.unsubscribe();
-        }
-      });
+    this.http.get<string>(url, { responseType }).subscribe(serverSha => {
+      if (serverSha !== environment.localSha) {
+        // The local app is outdated.
+        // There's a new version available on the server.
+        this.hasUpdateSubject.next(true);
+
+        // We can unsubscribe from the event because we have
+        // already notified our subject that there are changes.
+        this.visibilitySubscription?.unsubscribe();
+      }
+    });
   }
 }
