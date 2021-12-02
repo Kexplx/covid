@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { DataService } from './data.service';
 import { SwipeService } from './swipe.service';
+import { UpdateService } from './update.service';
 
 // Has to match the routes in `app.module.ts`
 const routes = ['home', 'history', 'top-districts', 'joke-of-the-day', 'contact', 'settings'];
@@ -13,7 +15,9 @@ const routes = ['home', 'history', 'top-districts', 'joke-of-the-day', 'contact'
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  hasUpdate$ = this.updateService.hasUpdate$;
   isCovidDailyVisible = false;
+  isUpdateDialogVisible = false;
   lastUpdated = '';
 
   data$ = this.dataService.data$.pipe(
@@ -29,7 +33,12 @@ export class AppComponent implements OnInit {
 
   isLoading = true;
 
-  constructor(private dataService: DataService, private swipeService: SwipeService, private router: Router) {}
+  constructor(
+    private dataService: DataService,
+    private updateService: UpdateService,
+    private swipeService: SwipeService,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
     this.swipeService.swipeRight$.subscribe(() => this.onLeftSwipe());

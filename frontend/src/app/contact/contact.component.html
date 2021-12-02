@@ -13,7 +13,7 @@
   </div>
 
   <div class="mt-1 ta-right mb-2">
-    <app-button (appClick)="onSend()" [disabled]="!!!feedback" icon="paper-plane-regular" text="Senden"></app-button>
+    <app-button (appClick)="onSend()" [disabled]="!feedback" text="Senden"></app-button>
   </div>
 
   <app-alert *ngIf="showSuccess" text="Anmerkungen wurden erfolgreich gesendet"></app-alert>

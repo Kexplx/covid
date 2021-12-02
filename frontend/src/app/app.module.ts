@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { CovidDailyComponent } from './covid-daily/covid-daily.component';
 import { DiffComponent } from './covid-daily/diff/diff.component';
+import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -39,7 +40,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, CovidDailyComponent, DiffComponent],
+  declarations: [AppComponent, CovidDailyComponent, DiffComponent, UpdateDialogComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes), SharedModule, HttpClientModule],
   bootstrap: [AppComponent],
 })

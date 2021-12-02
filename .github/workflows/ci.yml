@@ -13,7 +13,13 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "12"
+          node-version: '12'
+
+      - name: Write commit sha to .env
+        run: |
+          sed -i 's/$REPLACE/'"$GITHUB_SHA"'/' src/assets/commit-sha.txt
+          sed -i 's/$REPLACE/'"$GITHUB_SHA"'/' src/environments/environment.prod.ts
+        working-directory: ./frontend
 
       - name: Install npm packages
         run: npm i

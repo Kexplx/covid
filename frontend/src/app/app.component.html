@@ -2,20 +2,17 @@
   <app-tab-set></app-tab-set>
 
   <header class="mt-2 mb-1">
-    <app-button [disabled]="isLoading" (appClick)="isCovidDailyVisible = true" text="COVID Daily"></app-button>
-    <app-button
-      [bottomText]="lastUpdated ? 'Stand: ' + (lastUpdated | germanDate) : ''"
-      [disabled]="isLoading"
-      (appClick)="onUpdateClick()"
-      icon="sync-solid"
-      [shadow]="true"
-      text="Aktualisieren"
-    ></app-button>
+    <div>
+      <app-button [disabled]="isLoading" (appClick)="isCovidDailyVisible = true" text="COVID Daily"></app-button>
+      <app-button *ngIf="hasUpdate$ | async" (appClick)="isUpdateDialogVisible = true" [success]="true" [shadow]="true" ml="5px" [disabled]="isLoading" icon="download-solid"></app-button>
+    </div>
+    <app-button [bottomText]="lastUpdated ? 'Stand: ' + (lastUpdated | germanDate) : ''" [disabled]="isLoading" (appClick)="onUpdateClick()" [shadow]="true" text="Aktualisieren"></app-button>
   </header>
   <ng-container *ngIf="data$ | async as data; else noData">
     <router-outlet></router-outlet>
 
     <app-covid-daily [data]="data" (close)="isCovidDailyVisible = false" *ngIf="isCovidDailyVisible"></app-covid-daily>
+    <app-update-dialog *ngIf="isUpdateDialogVisible" (close)="isUpdateDialogVisible = false"></app-update-dialog>
   </ng-container>
 
   <ng-template #noData>

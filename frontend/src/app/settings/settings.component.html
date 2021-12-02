@@ -1,8 +1,6 @@
-<section class="mt-1" *ngIf="data$ | async as data; else noData">
+<section class="mt-1" *ngIf="data$ | async as data">
   <h1>Einstellungen</h1>
   <app-settings-form [listOfDistrictHistories]="data.listOfDistrictHistories"></app-settings-form>
-</section>
 
-<ng-template #noData>
-  <app-spinner></app-spinner>
-</ng-template>
+  <p class="fg-secondary ta-center sha mt-2">App Version: {{ localSha }}</p>
+</section>
