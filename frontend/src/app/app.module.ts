@@ -10,17 +10,31 @@ import { DiffComponent } from './covid-daily/diff/diff.component';
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
 
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
-  { path: 'history', loadChildren: () => import('./history/history.module').then(m => m.HistoryModule) },
+  {
+    path: 'home',
+    loadChildren: () => import(/* webpackPrefetch: true */ './home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: 'history',
+    loadChildren: () => import(/* webpackPrefetch: true */ './history/history.module').then(m => m.HistoryModule),
+  },
   {
     path: 'top-districts',
-    loadChildren: () => import('./top-districts/top-districts.module').then(m => m.TopDistrictsModule),
+    loadChildren: () =>
+      import(/* webpackPrefetch: true */ './top-districts/top-districts.module').then(m => m.TopDistrictsModule),
   },
-  { path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
-  { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) },
+  {
+    path: 'contact',
+    loadChildren: () => import(/* webpackPrefetch: true */ './contact/contact.module').then(m => m.ContactModule),
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import(/* webpackPrefetch: true */ './settings/settings.module').then(m => m.SettingsModule),
+  },
   {
     path: 'joke-of-the-day',
-    loadChildren: () => import('./joke-of-the-day/joke-of-the-day.module').then(m => m.JokeOfTheDayModule),
+    loadChildren: () =>
+      import(/* webpackPrefetch: true */ './joke-of-the-day/joke-of-the-day.module').then(m => m.JokeOfTheDayModule),
   },
 ];
 
