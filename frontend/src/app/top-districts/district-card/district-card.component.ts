@@ -10,6 +10,7 @@ export class DistrictCardComponent implements OnInit {
   @Input() district!: District;
   @Input() index = -1;
 
+  incidence = 0;
   percentInfected = 0;
   totalInfected = 0;
 
@@ -20,8 +21,10 @@ export class DistrictCardComponent implements OnInit {
     this.fontColor = this.getColorByIncidence(this.district.incidence);
     this.backgroundColor = this.fontColor.replace(')', ',0.1)').replace('rgb', 'rgba');
 
-    this.totalInfected = Math.round((Math.round(this.district.incidence) / 100000) * this.district.population!);
-    this.percentInfected = (this.totalInfected / this.district.population!) * 100;
+    this.incidence = Math.round(this.district.incidence);
+
+    this.totalInfected = Math.round((this.incidence / 100000) * this.district.population!);
+    this.percentInfected = this.incidence / 1000;
   }
 
   getColorByIncidence(incidence: number): string {

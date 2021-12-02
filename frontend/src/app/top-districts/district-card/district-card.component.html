@@ -3,7 +3,7 @@
 
   <div class="card-header">
     <span class="card-header__title">{{ district.name }}</span>
-    <span [ngStyle]="{ color: fontColor, backgroundColor: this.backgroundColor }" class="card-header__incidence">{{ district.incidence | round: 0 }}</span>
+    <span [ngStyle]="{ color: fontColor, backgroundColor: this.backgroundColor }" class="card-header__incidence">{{ incidence }}</span>
   </div>
 
   <div class="card-body mt-2">
