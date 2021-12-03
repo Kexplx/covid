@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; URL='/covid'" />
-    <meta name="description" content="COVID-19 Kennzahlen für Deutschland und Bayern im Überblick" />
-    <title>404 - redirect</title>
-  </head>
+<script>
+  const baseUrl = 'https://kexplx.github.io/covid/';
 
-  <body></body>
-</html>
+  const frontendRoute = window.location.toString().slice(baseUrl.length);
+
+  window.location = `${baseUrl}?route=${frontendRoute}`;
+</script>

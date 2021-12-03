@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { DataService } from './data.service';
 import { SwipeService } from './swipe.service';
 import { UpdateService } from './update.service';

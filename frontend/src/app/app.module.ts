@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { CovidDailyComponent } from './covid-daily/covid-daily.component';
 import { DiffComponent } from './covid-daily/diff/diff.component';
 import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
@@ -45,4 +45,12 @@ export const routes: Routes = [
   imports: [BrowserModule, RouterModule.forRoot(routes), SharedModule, HttpClientModule],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(router: Router) {
+    const route = new URLSearchParams(window.location.search).get('route');
+
+    if (route) {
+      router.navigateByUrl(`/${route}`);
+    }
+  }
+}
