@@ -4,11 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { SettingsComponent } from './settings.component';
 import { SharedModule } from '../shared/shared.module';
 import { SettingsFormComponent } from './settings-form/settings-form.component';
+import { UsersBarChartComponent } from './users-bar-chart/users-bar-chart.component';
 
 const routes: Routes = [{ path: '', component: SettingsComponent }];
 
 @NgModule({
-  declarations: [SettingsComponent, SettingsFormComponent],
+  declarations: [SettingsComponent, SettingsFormComponent, UsersBarChartComponent],
   imports: [SharedModule, RouterModule.forChild(routes)],
 })
 export class SettingsModule {}

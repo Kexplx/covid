@@ -95,7 +95,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
           },
         },
         layout: {
-          padding: { top: 0, bottom: 0 },
+          padding: { top: 0, bottom: 0, right: 10 },
         },
         animation: false,
       },

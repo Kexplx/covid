@@ -1,6 +1,4 @@
-// Make sure requests to "/collect"
-// are coming from App Engine.
-function collectAuth(req, res, next) {
+function verifyRequestComesFromAppEngine(req, res, next) {
   const comesFromAppEngine = req.get('X-Appengine-Cron') === 'true';
 
   if (!comesFromAppEngine) {
@@ -11,4 +9,4 @@ function collectAuth(req, res, next) {
   next();
 }
 
-module.exports = collectAuth;
+module.exports = verifyRequestComesFromAppEngine;

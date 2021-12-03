@@ -1,13 +1,13 @@
 const MongoDB = require('../mongodb');
-const hashObject = require('object-hash');
+const createHash = require('crypto-js/sha256');
 
 const mongoDb = new MongoDB();
 
-async function captureFingerprint(req, res, next) {
+async function takeFingerprint(req, _, next) {
   next();
 
-  delete req.headers['cache-control'];
-  const fingerprint = hashObject(req.headers);
+  const text = `${req.header('user-agent')}${req.header('accept-language')}${req.header('accept-encoding')}`;
+  const fingerprint = createHash(text).toString();
 
   const [latestFingerprintDocument] = await mongoDb.getFingerprintDocuments(1);
 
@@ -17,4 +17,4 @@ async function captureFingerprint(req, res, next) {
   }
 }
 
-module.exports = captureFingerprint;
+module.exports = takeFingerprint;

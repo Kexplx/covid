@@ -7,6 +7,7 @@ import { State, StateNames, StateService } from './state.service';
 import { Vaccination, VaccinationService } from './vaccination.service';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { FingerprintDocument, FingerprintService } from './fingerprint.service';
 
 export interface AppData {
   lastUpdated: string;
@@ -16,6 +17,7 @@ export interface AppData {
   listOfDistrictHistories: District[][];
   jokeOfTheDay: Joke;
   topDistricts: { lastUpdated: string; districts: District[] };
+  fingerprintDocuments: FingerprintDocument[];
 }
 
 @Injectable({
@@ -32,6 +34,7 @@ export class DataService {
     private vaccinationService: VaccinationService,
     private germanyService: GermanyService,
     private jokeService: JokeService,
+    private fingerprintService: FingerprintService,
   ) {
     this.loadData();
   }
@@ -54,6 +57,7 @@ export class DataService {
       this.stateService.getStateHistory(StateNames.Bavaria),
       this.jokeService.getJokeOfTheDay(),
       this.districtService.getTopDistricts(),
+      this.fingerprintService.getFingerprintDocuments(),
     ];
 
     forkJoin(responses).subscribe(data =>
@@ -65,15 +69,15 @@ export class DataService {
         bavariaHistory: data[3] as State[],
         jokeOfTheDay: data[4] as Joke,
         topDistricts: data[5] as { lastUpdated: string; districts: District[] },
+        fingerprintDocuments: data[6] as FingerprintDocument[],
       }),
     );
   }
 
   private loadDummyData() {
-    // Wait 500ms to simulate network.
     this.http
       .get<AppData>('/assets/data.json')
-      .pipe(delay(500))
+      .pipe(delay(500)) // Wait 500ms to simulate network.
       .subscribe(d => this.dataSubject.next({ ...d, lastUpdated: new Date().toISOString() }));
   }
 }

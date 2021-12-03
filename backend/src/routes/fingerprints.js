@@ -5,14 +5,12 @@ const MongoDB = require('../mongodb');
 
 const mongoDb = new MongoDB();
 
-router.post('/', async (req, res) => {
-  res.end();
-
+router.get('/', async (req, res) => {
   const { limit } = req.query;
 
   const fingerprintDocuments = await mongoDb.getFingerprintDocuments(limit);
 
-  return fingerprintDocuments;
+  res.send(fingerprintDocuments);
 });
 
 module.exports = router;
