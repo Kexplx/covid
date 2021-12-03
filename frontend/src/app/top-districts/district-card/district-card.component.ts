@@ -8,16 +8,23 @@ import { District } from 'src/app/district.service';
 })
 export class DistrictCardComponent implements OnInit {
   @Input() district!: District;
-  @Input() index: number = -1;
+  @Input() index = -1;
+
+  incidence = 0;
+  percentInfected = 0;
+  totalInfected = 0;
 
   fontColor = 'rgb(253, 150, 68)';
   backgroundColor = '';
 
-  constructor() {}
-
   ngOnInit(): void {
     this.fontColor = this.getColorByIncidence(this.district.incidence);
     this.backgroundColor = this.fontColor.replace(')', ',0.1)').replace('rgb', 'rgba');
+
+    this.incidence = Math.round(this.district.incidence);
+
+    this.totalInfected = Math.round((this.incidence / 100000) * this.district.population!);
+    this.percentInfected = this.incidence / 1000;
   }
 
   getColorByIncidence(incidence: number): string {

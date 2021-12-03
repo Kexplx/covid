@@ -7,7 +7,7 @@ import { SwipeService } from './swipe.service';
 import { UpdateService } from './update.service';
 
 // Has to match the routes in `app.module.ts`
-const routes = ['home', 'history', 'top-districts', 'joke-of-the-day', 'contact', 'settings'];
+const routes = ['home', 'history', 'top-districts', 'news', 'joke-of-the-day', 'contact', 'settings'];
 
 @Component({
   selector: 'app-root',
