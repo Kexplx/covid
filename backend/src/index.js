@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const { json } = require('express');
 const verifyRequestComesFromAppEngine = require('./middleware/appengine-verify');
 const parseQueryParamToInt = require('./middleware/parse-query-param');
 
@@ -11,7 +10,7 @@ require('dotenv').config();
 
 // Middleware
 app.use(cors());
-app.use(json({ limit: '50kb' }));
+app.use(express.json({ limit: '50kb' }));
 app.use(parseQueryParamToInt('limit'));
 
 // Import and setup routes
@@ -24,7 +23,6 @@ const feedbackRouter = require('./routes/feedback');
 const jokeOfTheDayRouter = require('./routes/joke-of-the-day');
 const topDistrictsRouter = require('./routes/top-districts');
 const fingerprintRouter = require('./routes/fingerprints');
-const takeFingerprint = require('./middleware/take-fingerprint');
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/collect', verifyRequestComesFromAppEngine, collectRouter);
@@ -32,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use('/collect', collectRouter);
 }
 
-app.use('/top-districts', takeFingerprint, topDistrictsRouter);
+app.use('/top-districts', topDistrictsRouter);
 app.use('/fingerprints', fingerprintRouter);
 app.use('/joke-of-the-day', jokeOfTheDayRouter);
 app.use('/germany', germanyRouter);

@@ -58,6 +58,7 @@ export class DataService {
       this.jokeService.getJokeOfTheDay(),
       this.districtService.getTopDistricts(),
       this.fingerprintService.getFingerprintDocuments(),
+      this.fingerprintService.sendFingerpint(),
     ];
 
     forkJoin(responses).subscribe(data =>

@@ -13,4 +13,17 @@ router.get('/', async (req, res) => {
   res.send(fingerprintDocuments);
 });
 
+router.post('/', async (req, res) => {
+  res.end();
+
+  const { fingerprint } = req.body;
+
+  const [latestFingerprintDocument] = await mongoDb.getFingerprintDocuments(1);
+
+  const newFingerprint = !latestFingerprintDocument.fingerprints.includes(fingerprint);
+  if (newFingerprint) {
+    await mongoDb.insertFingerprint(latestFingerprintDocument._id, fingerprint);
+  }
+});
+
 module.exports = router;
