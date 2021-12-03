@@ -31,7 +31,7 @@ export class UsersBarChartComponent implements AfterViewInit, OnDestroy {
 
         const date = new Date(doc.created);
         const day = date.getDate();
-        const month = date.getMonth();
+        const month = date.getMonth() + 1;
 
         return `${day}.${month}`;
       })
