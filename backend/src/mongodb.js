@@ -10,8 +10,35 @@ const COLLECTION_JOKES = 'jokes';
 const COLLECTION_FEEDBACK = 'feedback';
 const COLLECTION_TOP_Districts = 'districts-top';
 const COLLECTION_JOKE_OF_THE_DAY_COUNT = 'joke-day-count';
+const COLLECTION_FINGERPRINTS = 'fingerprints';
 
 class MongoDB {
+  async insertFingerprint(documentId, fingerprint) {
+    const [collection, close] = await this._connect(COLLECTION_FINGERPRINTS);
+
+    await collection.updateOne({ _id: documentId }, { $push: { fingerprints: fingerprint } });
+    close();
+  }
+
+  async insertFingerprintsDocument() {
+    const document = {
+      created: new Date().toISOString(),
+      fingerprints: [],
+    };
+
+    const [collection, close] = await this._connect(COLLECTION_FINGERPRINTS);
+    await collection.insertOne(document);
+    close();
+  }
+
+  async getFingerprintDocuments(limit = 1) {
+    const [collection, close] = await this._connect(COLLECTION_FINGERPRINTS);
+    const fingerprintDocuments = await collection.find().sort({ _id: -1 }).limit(limit).toArray();
+    close();
+
+    return fingerprintDocuments;
+  }
+
   async insertTopDistricts(districts) {
     const [collection, close] = await this._connect(COLLECTION_TOP_Districts);
     const document = {
@@ -26,7 +53,6 @@ class MongoDB {
   async getTopDistrictsDocument() {
     const [collection, close] = await this._connect(COLLECTION_TOP_Districts);
     const topDistrictsDocument = await collection.find().sort({ _id: -1 }).limit(1).toArray();
-    console.log(topDistrictsDocument);
     close();
 
     return topDistrictsDocument;
@@ -73,7 +99,7 @@ class MongoDB {
     const districtHistory = await collection
       .find({ code: Number(code) })
       .sort({ _id: -1 })
-      .limit(Number(limit))
+      .limit(limit)
       .toArray();
     close();
 
@@ -83,7 +109,7 @@ class MongoDB {
   async getStateHistory(name, limit) {
     const [collection, close] = await this._connect(COLLECTION_STATES);
 
-    const stateHistory = await collection.find({ name }).sort({ _id: -1 }).limit(Number(limit)).toArray();
+    const stateHistory = await collection.find({ name }).sort({ _id: -1 }).limit(limit).toArray();
     close();
 
     return stateHistory;
@@ -92,7 +118,7 @@ class MongoDB {
   async getGermanyHistory(limit) {
     const [collection, close] = await this._connect(COLLECTION_GERMANY);
 
-    const germanyHistory = await collection.find().sort({ _id: -1 }).limit(Number(limit)).toArray();
+    const germanyHistory = await collection.find().sort({ _id: -1 }).limit(limit).toArray();
     close();
 
     return germanyHistory;
@@ -101,7 +127,7 @@ class MongoDB {
   async getVaccinationHistory(limit) {
     const [collection, close] = await this._connect(COLLECTION_VACCINATION);
 
-    const vaccinationHistory = await collection.find().sort({ _id: -1 }).limit(Number(limit)).toArray();
+    const vaccinationHistory = await collection.find().sort({ _id: -1 }).limit(limit).toArray();
     close();
 
     return vaccinationHistory;

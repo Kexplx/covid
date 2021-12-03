@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "mongodb": "^4.1.4",
     "nodemailer": "^6.7.1",
+    "object-hash": "^2.2.0",
     "xlsx": "^0.17.4"
   }
 }

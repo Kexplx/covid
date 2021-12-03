@@ -22,3 +22,7 @@ cron:
   - url: /collect/vaccination
     schedule: every day 13:00
     timezone: Europe/Berlin
+
+  - url: /collect/fingerprints
+    schedule: every day 0:00
+    timezone: Europe/Berlin

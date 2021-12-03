@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { json } = require('express');
 const collectAuth = require('./middleware/collect-auth');
+const parseQueryParamToInt = require('./middleware/parse-query-param');
 
 const app = express();
 
@@ -11,6 +12,7 @@ require('dotenv').config();
 // Middleware
 app.use(cors());
 app.use(json({ limit: '50kb' }));
+app.use(parseQueryParamToInt('limit'));
 
 // Import and setup routes
 const collectRouter = require('./routes/collect');
@@ -21,13 +23,17 @@ const vaccinationRouter = require('./routes/vaccination');
 const feedbackRouter = require('./routes/feedback');
 const jokeOfTheDayRouter = require('./routes/joke-of-the-day');
 const topDistrictsRouter = require('./routes/top-districts');
+const fingerprintRouter = require('./routes/fingerprints');
+const fingerprintCapturer = require('./middleware/capture-fingerprint');
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/collect', collectAuth, collectRouter);
 } else {
   app.use('/collect', collectRouter);
 }
-app.use('/top-districts', topDistrictsRouter);
+
+app.use('/top-districts', fingerprintCapturer, topDistrictsRouter);
+app.use('/fingerprints', fingerprintRouter);
 app.use('/joke-of-the-day', jokeOfTheDayRouter);
 app.use('/germany', germanyRouter);
 app.use('/feedback', feedbackRouter);

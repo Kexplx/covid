@@ -9,6 +9,12 @@ const getTopDistricts = require('../collect/top-districts');
 
 const mongoDb = new MongoDB();
 
+router.get('/fingerprints', async (_, res) => {
+  res.end();
+
+  await mongoDb.insertFingerprintsDocument();
+});
+
 router.get('/top-districts', async (_, res) => {
   res.end();
 
