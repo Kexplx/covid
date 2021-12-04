@@ -5,9 +5,9 @@ import { Germany, GermanyService } from './germany.service';
 import { Joke, JokeService } from './joke.service';
 import { State, StateNames, StateService } from './state.service';
 import { Vaccination, VaccinationService } from './vaccination.service';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { FingerprintDocument, FingerprintService } from './fingerprint.service';
+import { environment } from 'src/environments/environment';
 
 export interface AppData {
   lastUpdated: string;
@@ -61,18 +61,20 @@ export class DataService {
       this.fingerprintService.sendFingerpint(),
     ];
 
-    forkJoin(responses).subscribe(data =>
-      this.dataSubject.next({
-        lastUpdated: (data[1] as Germany[])[0].lastUpdated,
-        listOfDistrictHistories: data[0] as District[][],
-        germanyHistory: data[1] as Germany[],
-        vaccination: data[2] as Vaccination,
-        bavariaHistory: data[3] as State[],
-        jokeOfTheDay: data[4] as Joke,
-        topDistricts: data[5] as { lastUpdated: string; districts: District[] },
-        fingerprintDocuments: data[6] as FingerprintDocument[],
-      }),
-    );
+    forkJoin(responses).subscribe(res => {
+      const appData: AppData = {
+        lastUpdated: (res[1] as Germany[])[0].lastUpdated,
+        listOfDistrictHistories: res[0] as District[][],
+        germanyHistory: res[1] as Germany[],
+        vaccination: res[2] as Vaccination,
+        bavariaHistory: res[3] as State[],
+        jokeOfTheDay: res[4] as Joke,
+        topDistricts: res[5] as { lastUpdated: string; districts: District[] },
+        fingerprintDocuments: res[6] as FingerprintDocument[],
+      };
+
+      this.dataSubject.next(appData);
+    });
   }
 
   private loadDummyData() {

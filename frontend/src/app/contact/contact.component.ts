@@ -25,4 +25,11 @@ export class ContactComponent {
       },
     });
   }
+
+  onShare() {
+    // Share mechanism only works on HTTPS page.
+    const shareData = { url: 'https://kexplx.github.io/covid' };
+
+    navigator.share(shareData);
+  }
 }
