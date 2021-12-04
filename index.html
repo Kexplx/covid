@@ -8,10 +8,37 @@
     <link rel="apple-touch-icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#000000">
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
   <style>html,body{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}:root{--red:#e74c3c;--blue:#3498db;--green:#27ae60;--orange:#f39c12;--turkise:#1abc9c;--dark:#34495e;--gray:rgb(170, 170, 170);--lightGray:rgb(240, 240, 240);--fg-primary:#323232;--fg-secondary:rgb(120, 120, 120);--fg-error:rgb(231, 76, 60)}body *{font-family:"Segoe UI",sans-serif;font-size:.8rem;color:var(--fg-primary)}</style><link rel="stylesheet" href="styles.eea59e57f9448aea.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.eea59e57f9448aea.css"></noscript></head>
   <body>
     <app-root></app-root>
     <noscript>Please enable JavaScript to continue using this application.</noscript>
-  <script src="runtime.3697324dc8b5a8b3.js" type="module"></script><script src="polyfills.77ef9af6bfc52ccf.js" type="module"></script><script src="main.301cba997abca9b2.js" type="module"></script>
+  <script src="runtime.031119bb9cb56e6a.js" type="module"></script><script src="polyfills.77ef9af6bfc52ccf.js" type="module"></script><script src="main.01da14b71d2af542.js" type="module"></script>
 
 </body></html>
