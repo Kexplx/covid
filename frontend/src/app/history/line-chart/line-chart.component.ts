@@ -65,7 +65,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
         pointBorderWidth: 2,
         tension: 0.4,
         borderColor: d.color,
-        pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 1 ? 'white' : d.color),
+        pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 0 ? 'white' : d.color),
         data: d.data,
         label: d.label,
       })),
