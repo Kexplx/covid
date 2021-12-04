@@ -66,6 +66,7 @@ export class UsersBarChartComponent implements AfterViewInit, OnDestroy {
       options: {
         plugins: {
           legend: { display: false },
+          tooltip: { enabled: false },
         },
         scales: {
           y: {

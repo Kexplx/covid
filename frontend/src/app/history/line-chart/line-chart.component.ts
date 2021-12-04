@@ -82,6 +82,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
             position: 'bottom',
             labels: { pointStyle: 'circle', boxHeight: 5, boxWidth: 5, usePointStyle: true },
           },
+          tooltip: { enabled: false },
         },
         scales: {
           y: {
