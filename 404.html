@@ -1,6 +1,7 @@
 <script>
-  const suffix = /https:\/\/kexplx\.github\.io\/covid\/(.*)/.exec(window.location.toString())[1];
-  const newurl = `https://kexplx.github.io/covid?q=${suffix}`;
+  const baseUrl = 'https://kexplx.github.io/covid/';
 
-  window.location = newurl;
+  const frontendRoute = window.location.toString().slice(baseUrl.length);
+
+  window.location = `${baseUrl}?route=${frontendRoute}`;
 </script>
