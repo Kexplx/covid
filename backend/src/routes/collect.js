@@ -5,6 +5,7 @@ const getGermany = require('../collect/germany');
 const getStates = require('../collect/states');
 const getDistricts = require('../collect/districts');
 const getVaccination = require('../collect/vaccination');
+const parseDate = require('../utils/parseDate');
 const getTopDistricts = require('../collect/top-districts');
 
 const mongoDb = new MongoDB();
@@ -18,71 +19,78 @@ router.get('/fingerprints', async (_, res) => {
 router.get('/top-districts', async (_, res) => {
   res.end();
 
-  try {
-    const topDistricts = await getTopDistricts(10);
+  const topDistricts = await getTopDistricts(10);
+  const [lastStoredTopDistrictDoc] = await mongoDb.getTopDistrictsDocument();
+
+  if (parseDate(topDistricts[0].lastUpdated) > parseDate(lastStoredTopDistrictDoc.districts[0].lastUpdated)) {
+    console.log('Top Districts: New data (importing)');
     await mongoDb.insertTopDistricts(topDistricts);
-  } catch (error) {
-    console.log('Error while incrementing joke of the day count.');
-    console.log(error);
+  } else {
+    throw new Error('Top Districts: Old data (skipping import)');
   }
 });
 
 router.get('/joke-of-the-day', async (_, res) => {
   res.end();
 
-  try {
-    await mongoDb.incrementJokeOfTheDayCount();
-  } catch (error) {
-    console.log('Error while incrementing joke of the day count.');
-    console.log(error);
-  }
+  await mongoDb.incrementJokeOfTheDayCount();
 });
 
 router.get('/germany', async (_, res) => {
   res.end();
 
-  try {
-    const germany = await getGermany();
+  const germany = await getGermany();
+
+  const [lastStoredGermany] = await mongoDb.getGermanyHistory(1);
+
+  if (new Date(germany.lastUpdated) > new Date(lastStoredGermany.lastUpdated)) {
+    // Data is new.
+    console.log('Germany: New data (importing)');
     await mongoDb.insertGermany(germany);
-  } catch (error) {
-    console.log('Error while collecting: Germany.');
-    console.log(error);
+  } else {
+    throw new Error('Germany: Old data (skipping import)');
   }
 });
 
 router.get('/states', async (_, res) => {
   res.end();
 
-  try {
-    const states = await getStates();
+  const states = await getStates();
+  const [lastStoredBavaria] = await mongoDb.getStateHistory('Bayern', 1);
+
+  if (new Date(states[0]) > new Date(lastStoredBavaria)) {
+    console.log('States: New data (importing)');
     await mongoDb.insertStates(states);
-  } catch (error) {
-    console.log('Error while collecting: States.');
-    console.log(error);
+  } else {
+    throw new Error('States: Old data (skipping import)');
   }
 });
 
 router.get('/districts', async (_, res) => {
   res.end();
 
-  try {
-    const districts = await getDistricts();
+  const districts = await getDistricts();
+  const [lastStoredDistrict] = await mongoDb.getDistrictHistory(9362, 1);
+
+  if (parseDate(districts[0].lastUpdated) > parseDate(lastStoredDistrict.lastUpdated)) {
+    console.log('Districts: New data (importing)');
     await mongoDb.insertDistricts(districts);
-  } catch (error) {
-    console.log('Error while collecting: Districts.');
-    console.log(error);
+  } else {
+    throw new Error('Districts: Old data (skipping import)');
   }
 });
 
 router.get('/vaccination', async (_, res) => {
   res.end();
 
-  try {
-    const vaccination = await getVaccination();
+  const vaccination = await getVaccination();
+  const [lastStoredVaccination] = await mongoDb.getVaccinationHistory(1);
+
+  if (parseDate(vaccination.lastUpdated) > parseDate(lastStoredVaccination.lastUpdated)) {
+    console.log('Vaccination: New data (importing)');
     await mongoDb.insertVaccination(vaccination);
-  } catch (error) {
-    console.log('Error while collecting: Vaccination.');
-    console.log(error);
+  } else {
+    throw new Error('Vaccination: Old data (skipping import)');
   }
 });
 

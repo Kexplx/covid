@@ -1,26 +1,36 @@
 cron:
   - url: /collect/top-districts
-    schedule: every day 6:00
-    timezone: Europe/Berlin
-
-  - url: /collect/joke-of-the-day
-    schedule: every day 0:00
+    schedule: every day 5:00
+    retry_parameters:
+      min_backoff_seconds: 1800 # 30 Minutes
     timezone: Europe/Berlin
 
   - url: /collect/germany
-    schedule: every day 6:00
+    schedule: every day 5:00
+    retry_parameters:
+      min_backoff_seconds: 1800 # 30 Minutes
     timezone: Europe/Berlin
 
   - url: /collect/states
-    schedule: every day 6:00
+    schedule: every day 5:00
+    retry_parameters:
+      min_backoff_seconds: 1800 # 30 Minutes
     timezone: Europe/Berlin
 
   - url: /collect/districts
-    schedule: every day 6:00
+    schedule: every day 5:00
+    retry_parameters:
+      min_backoff_seconds: 1800 # 30 Minutes
     timezone: Europe/Berlin
 
   - url: /collect/vaccination
     schedule: every day 13:00
+    retry_parameters:
+      job_retry_limit: 0
+    timezone: Europe/Berlin
+
+  - url: /collect/joke-of-the-day
+    schedule: every day 0:00
     timezone: Europe/Berlin
 
   - url: /collect/fingerprints
