@@ -26,7 +26,7 @@ router.get('/top-districts', async (_, res) => {
     console.log('Top Districts: New data (importing)');
     await mongoDb.insertTopDistricts(topDistricts);
   } else {
-    throw new Error('Top Districts: Old data (skipping import)');
+    console.log('Top Districts: Old data (skipping import)');
   }
 });
 
@@ -48,7 +48,7 @@ router.get('/germany', async (_, res) => {
     console.log('Germany: New data (importing)');
     await mongoDb.insertGermany(germany);
   } else {
-    throw new Error('Germany: Old data (skipping import)');
+    console.log('Germany: Old data (skipping import)');
   }
 });
 
@@ -62,7 +62,7 @@ router.get('/states', async (_, res) => {
     console.log('States: New data (importing)');
     await mongoDb.insertStates(states);
   } else {
-    throw new Error('States: Old data (skipping import)');
+    console.log('States: Old data (skipping import)');
   }
 });
 
@@ -76,7 +76,7 @@ router.get('/districts', async (_, res) => {
     console.log('Districts: New data (importing)');
     await mongoDb.insertDistricts(districts);
   } else {
-    throw new Error('Districts: Old data (skipping import)');
+    console.log('Districts: Old data (skipping import)');
   }
 });
 
@@ -90,7 +90,7 @@ router.get('/vaccination', async (_, res) => {
     console.log('Vaccination: New data (importing)');
     await mongoDb.insertVaccination(vaccination);
   } else {
-    throw new Error('Vaccination: Old data (skipping import)');
+    console.log('Vaccination: Old data (skipping import)');
   }
 });
 

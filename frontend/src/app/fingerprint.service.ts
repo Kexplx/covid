@@ -20,7 +20,7 @@ export class FingerprintService {
   getFingerprintDocuments(): Observable<FingerprintDocument[]> {
     const url = `${environment.api}/fingerprints`;
 
-    const params = new HttpParams({ fromObject: { limit: 7 } });
+    const params = new HttpParams({ fromObject: { limit: 8 } });
 
     return this.http.get<FingerprintDocument[]>(url, { params }).pipe(
       map(docs => {

@@ -37,7 +37,6 @@ export const routes: Routes = [
     loadChildren: () =>
       import(/* webpackPrefetch: true */ './joke-of-the-day/joke-of-the-day.module').then(m => m.JokeOfTheDayModule),
   },
-  { path: 'news', loadChildren: () => import('./news/news.module').then(m => m.NewsModule) },
 ];
 
 @NgModule({
