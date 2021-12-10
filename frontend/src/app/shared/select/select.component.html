@@ -1,5 +1,5 @@
 <div [ngStyle]="{ width }" style="position: relative">
-  <button (blur)="onBlur()" [class.open]="isOpen" (click)="onClick()">
+  <button [class.open]="isOpen" (click)="onClick(); $event.stopImmediatePropagation()">
     <div class="btn-content">
       <span>{{ selectedOption.name }}</span>
       <img *ngIf="isOpen" src="assets/icons/caret-down.svg" alt="Caret Down" />

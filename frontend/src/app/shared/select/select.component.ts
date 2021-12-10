@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { timer } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
+import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { fromEvent } from 'rxjs';
+import { SubSink } from 'subsink';
 
 export interface SelectOption {
   value: any;
@@ -11,7 +13,7 @@ export interface SelectOption {
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.css'],
 })
-export class SelectComponent implements OnInit {
+export class SelectComponent implements OnInit, OnDestroy {
   @Input() options!: SelectOption[];
   @Input() initialValue: any;
   @Input() width = '190px';
@@ -19,11 +21,12 @@ export class SelectComponent implements OnInit {
   @Output() appSelect = new EventEmitter<SelectOption>();
 
   optionsToDisplay: SelectOption[] = [];
-
   selectedOption: SelectOption = { name: '', value: '' };
-  hasChanges = false;
-
   isOpen = false;
+
+  private subsink = new SubSink();
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
     this.optionsToDisplay = [...this.options];
@@ -31,6 +34,13 @@ export class SelectComponent implements OnInit {
       this.selectedOption = this.options.find(o => o.value === this.initialValue)!;
       this.removeSelectedFromOptions();
     }
+
+    document.addEventListener('click', () => (this.isOpen = false));
+    this.subsink.sink = fromEvent(this.document, 'click').subscribe(() => (this.isOpen = false));
+  }
+
+  ngOnDestroy(): void {
+    this.subsink.unsubscribe();
   }
 
   private removeSelectedFromOptions() {
@@ -40,7 +50,6 @@ export class SelectComponent implements OnInit {
   }
 
   onOptionClick(option: SelectOption) {
-    this.hasChanges = true;
     this.selectedOption = option;
     this.removeSelectedFromOptions();
     this.isOpen = false;
@@ -50,17 +59,5 @@ export class SelectComponent implements OnInit {
 
   onClick() {
     this.isOpen = !this.isOpen;
-    this.hasChanges = false;
-  }
-
-  onBlur() {
-    // This is the blur event of the button.
-    // We delay this event to make the `onOptionClick` handler run before.
-    timer(130).subscribe(() => {
-      if (!this.hasChanges) {
-        // User clicked outside of the button or the ul so we close the ul.
-        this.isOpen = false;
-      }
-    });
   }
 }
