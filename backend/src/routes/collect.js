@@ -58,7 +58,7 @@ router.get('/states', async (_, res) => {
   const states = await getStates();
   const [lastStoredBavaria] = await mongoDb.getStateHistory('Bayern', 1);
 
-  if (new Date(states[0]) > new Date(lastStoredBavaria)) {
+  if (new Date(states[0].lastUpdated) > new Date(lastStoredBavaria.lastUpdated)) {
     console.log('States: New data (importing)');
     await mongoDb.insertStates(states);
   } else {
