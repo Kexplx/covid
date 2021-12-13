@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { DataService } from '../data.service';
+import { UpdateService } from '../update.service';
 
 @Component({
   selector: 'app-settings',
@@ -11,5 +12,7 @@ export class SettingsComponent {
   data$ = this.dataService.data$;
   localSha = environment.localSha;
 
-  constructor(private dataService: DataService) {}
+  hasUpdate$ = this.updateService.hasUpdate$;
+
+  constructor(private dataService: DataService, private updateService: UpdateService) {}
 }

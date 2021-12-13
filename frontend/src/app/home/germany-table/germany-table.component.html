@@ -5,7 +5,10 @@
   <div class="col">
     <app-col-content>
       <ng-template #title>7-Tage-Inzidenz</ng-template>
-      <ng-template #desc>COVID-19 Fälle in den letzten sieben Tagen (je 100T Einwohner)</ng-template>
+      <ng-template #desc
+        >COVID-19 Fälle in den letzten sieben Tagen (je 100T Einwohner). <br /><br />
+        Die kurzzeitig gehypte Hospitalisierungsinzidenz hat sich aufgrund des großen Meldeverzugs der Krankenhäuser als unzuverlässige Metrik erwiesen.
+      </ng-template>
     </app-col-content>
   </div>
   <div class="col">
@@ -63,41 +66,19 @@
   <!-- First Time Vaccinated -->
   <div class="col">
     <app-col-content>
-      <ng-template #title>Erstgeimpfte</ng-template>
+      <ng-template #title>Mind. einmal Geimpfte</ng-template>
+      <ng-template #desc
+        >Die bisherige Unterscheidung zwischen Erstgeimpften und vollständig Geimpften ist aufgrund der nachlassenden Wirkung der Impfstoffe nicht mehr zeitgemäß.
+        <br />
+        <br />
+        Wir halten es für naheliegend, dass sich eine Person, die mind. einmal geimpft wurde auch regelmäßig boostern lassen wird. Die tatsächliche Zahl der vollständig immunisierten Personen wird
+        sich also in kurzer Zeit der Zahl der mind. einmal Geimpften angleichen.</ng-template
+      >
     </app-col-content>
   </div>
   <div class="col">
     <app-col-content>
       <ng-template #title>{{ vaccination.percentAtLeastOnceVaccinated }}%</ng-template>
-      <ng-template #desc>
-        BioNTech - {{ firstVaccination_percentBiontech | round: 2 }}%
-        <br />
-        AstraZeneca - {{ firstVaccination_percentAstra | round: 2 }}%
-        <br />
-        Moderna - {{ firstVaccination_percentModerna | round: 2 }}%
-        <br />
-        Janssen - {{ firstVaccination_percentJanssen | round: 2 }}%
-      </ng-template>
-    </app-col-content>
-  </div>
-
-  <!-- Fully Vaccinated -->
-  <div class="col">
-    <app-col-content>
-      <ng-template #title>Vollständig Geimpfte</ng-template>
-    </app-col-content>
-  </div>
-  <div class="col">
-    <app-col-content>
-      <ng-template #title>{{ vaccination.percentFullyVaccinated }}%</ng-template>
-
-      <ng-template #desc>
-        BioNTech - {{ secondVaccination_percentBiontech | round: 2 }}%
-        <br />
-        Moderna - {{ secondVaccination_percentModerna | round: 2 }}%
-        <br />
-        AstraZeneca - {{ secondVaccination_percentAstra | round: 2 }}%
-      </ng-template>
     </app-col-content>
   </div>
 </div>

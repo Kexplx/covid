@@ -6,28 +6,10 @@ import { environment } from 'src/environments/environment';
 export interface Vaccination {
   lastUpdated: string;
   numberOfPeopleAtLeastOnceVaccinated: number;
-  numberOfPeopleFullyVaccinated: number;
   percentAtLeastOnceVaccinated: number;
-  percentFullyVaccinated: number;
   totalNumberOfVaccinations: number;
   bavaria_numberOfPeopleAtLeastOnceVaccinated: number;
-  bavaria_numberOfPeopleFullyVaccinated: number;
   bavaria_percentAtLeastOnceVaccinated: number;
-  bavaria_percentFullyVaccinated: number;
-  vaccinesUsed_firstVaccination: {
-    biontech: number;
-    moderne: number;
-    astrazeneca: number;
-    janssen: number;
-  };
-  vaccinesUsed_secondVaccination: { biontech: number; moderne: number; astrazeneca: number };
-  bavaria_vaccinesUsed_firstVaccination: {
-    biontech: number;
-    moderne: number;
-    astrazeneca: number;
-    janssen: number;
-  };
-  bavaria_vaccinesUsed_secondVaccination: { biontech: number; moderne: number; astrazeneca: number };
 }
 
 @Injectable({
@@ -39,8 +21,7 @@ export class VaccinationService {
   getVaccination(): Observable<Vaccination> {
     const url = `${environment.api}/vaccination`;
 
-    let params = new HttpParams();
-    params = params.set('limit', 1);
+    const params = new HttpParams({ fromObject: { limit: 1 } });
 
     return this.http.get<Vaccination[]>(url, { params }).pipe(map(vaccinationHistory => vaccinationHistory[0]));
   }

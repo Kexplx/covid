@@ -48,41 +48,12 @@
   <!-- First Time Vaccinated -->
   <div class="col">
     <app-col-content>
-      <ng-template #title>Erstgeimpfte</ng-template>
+      <ng-template #title>Mind. einmal Geimpfte</ng-template>
     </app-col-content>
   </div>
   <div class="col">
     <app-col-content>
       <ng-template #title>{{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%</ng-template>
-      <ng-template #desc>
-        BioNTech - {{ firstVaccination_percentBiontech | round: 2 }}%
-        <br />
-        AstraZeneca - {{ firstVaccination_percentAstra | round: 2 }}%
-        <br />
-        Moderna - {{ firstVaccination_percentModerna | round: 2 }}%
-        <br />
-        Janssen - {{ firstVaccination_percentJanssen | round: 2 }}%
-      </ng-template>
-    </app-col-content>
-  </div>
-
-  <!-- Fully Vaccinated -->
-  <div class="col">
-    <app-col-content>
-      <ng-template #title>Vollständig Geimpfte</ng-template>
-    </app-col-content>
-  </div>
-  <div class="col">
-    <app-col-content>
-      <ng-template #title>{{ vaccination.bavaria_percentFullyVaccinated }}%</ng-template>
-
-      <ng-template #desc>
-        BioNTech - {{ secondVaccination_percentBiontech | round: 2 }}%
-        <br />
-        Moderna - {{ secondVaccination_percentModerna | round: 2 }}%
-        <br />
-        AstraZeneca - {{ secondVaccination_percentAstra | round: 2 }}%
-      </ng-template>
     </app-col-content>
   </div>
 </div>
