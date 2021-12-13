@@ -12,6 +12,8 @@
 
   <p class="mt-1 mb-05">{{ localSha }}</p>
 
-  <small *ngIf="hasUpdate$ | async; noUpdates">Ihre Version ist veraltet &#10008;</small>
-  <small #noUpdates>Sie verwenden die neueste Version &#10004;</small>
+  <small *ngIf="hasUpdate$ | async; else noUpdates">Ihre Version ist veraltet &#10008;</small>
+  <ng-template #noUpdates>
+    <small>Sie verwenden die neueste Version &#10004;</small>
+  </ng-template>
 </section>
