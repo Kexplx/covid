@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { CacheService } from '../cache.service';
 import { FeedbackService } from '../feedback.service';
 
 @Component({
@@ -6,11 +7,15 @@ import { FeedbackService } from '../feedback.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent {
-  feedback = '';
+export class ContactComponent implements OnDestroy {
+  feedback = this.cache.get<string>('feedback') ?? '';
   showSuccess = false;
 
-  constructor(private feedbackService: FeedbackService) {}
+  constructor(private feedbackService: FeedbackService, private cache: CacheService) {}
+
+  ngOnDestroy(): void {
+    this.cache.set('feedback', this.feedback);
+  }
 
   onSend() {
     this.showSuccess = false;
@@ -22,6 +27,7 @@ export class ContactComponent {
       complete: () => {
         this.showSuccess = true;
         this.feedback = '';
+        this.cache.delete('feedback');
       },
     });
   }
