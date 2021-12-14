@@ -5,7 +5,6 @@ const getGermany = require('../collect/germany');
 const getStates = require('../collect/states');
 const getDistricts = require('../collect/districts');
 const getVaccination = require('../collect/vaccination');
-const parseDate = require('../utils/parseDate');
 const getTopDistricts = require('../collect/top-districts');
 
 const mongoDb = new MongoDB();
@@ -22,7 +21,7 @@ router.get('/top-districts', async (_, res) => {
   const topDistricts = await getTopDistricts(10);
   const [lastStoredTopDistrictDoc] = await mongoDb.getTopDistrictsDocument();
 
-  if (parseDate(topDistricts[0].lastUpdated) > parseDate(lastStoredTopDistrictDoc.districts[0].lastUpdated)) {
+  if (new Date(topDistricts[0].lastUpdated) > new Date(lastStoredTopDistrictDoc.districts[0].lastUpdated)) {
     console.log('Top Districts: New data (importing)');
     await mongoDb.insertTopDistricts(topDistricts);
   } else {
@@ -72,7 +71,7 @@ router.get('/districts', async (_, res) => {
   const districts = await getDistricts();
   const [lastStoredDistrict] = await mongoDb.getDistrictHistory(9362, 1);
 
-  if (parseDate(districts[0].lastUpdated) > parseDate(lastStoredDistrict.lastUpdated)) {
+  if (new Date(districts[0].lastUpdated) > new Date(lastStoredDistrict.lastUpdated)) {
     console.log('Districts: New data (importing)');
     await mongoDb.insertDistricts(districts);
   } else {
@@ -86,7 +85,7 @@ router.get('/vaccination', async (_, res) => {
   const vaccination = await getVaccination();
   const [lastStoredVaccination] = await mongoDb.getVaccinationHistory(1);
 
-  if (parseDate(vaccination.lastUpdated) > parseDate(lastStoredVaccination.lastUpdated)) {
+  if (new Date(vaccination.lastUpdated) > new Date(lastStoredVaccination.lastUpdated)) {
     console.log('Vaccination: New data (importing)');
     await mongoDb.insertVaccination(vaccination);
   } else {

@@ -20,8 +20,10 @@ export class GermanyHistoryComponent {
     this.labels = this.germanyHistory
       .map(germany => {
         const date = new Date(germany.lastUpdated);
+        const month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
+        const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
 
-        return `${date.getDate()}.${date.getMonth() + 1}`;
+        return `${day}.${month}`;
       })
       .reverse();
   }

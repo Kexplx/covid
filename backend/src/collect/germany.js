@@ -27,7 +27,7 @@ async function getGermany() {
   const newCases = totalCases - lastGermany.totalCases;
 
   return {
-    lastUpdated: new Date(states[0].lastUpdated),
+    lastUpdated: states[0].lastUpdated,
     newCases,
     incidence,
     hospitalizationIncidence: germanyHospitalizationIncidence,

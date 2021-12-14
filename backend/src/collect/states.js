@@ -10,7 +10,7 @@ async function getStates() {
     name: attributes['LAN_ew_GEN'],
     population: attributes['LAN_ew_EWZ'],
     totalCases: attributes['Fallzahl'],
-    lastUpdated: attributes['Aktualisierung'],
+    lastUpdated: new Date(attributes['Aktualisierung']).toISOString(),
     casesInLast7Days: attributes['cases7_bl'],
     totalDeaths: attributes['Death'],
     incidence: attributes['cases7_bl_per_100k'],

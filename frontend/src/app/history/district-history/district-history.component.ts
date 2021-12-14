@@ -43,9 +43,11 @@ export class DistrictHistoryComponent implements OnInit {
 
     this.labels = historyToDisplay
       .map(district => {
-        const pattern = /(\d+\.\d+).*/;
+        const date = new Date(district.lastUpdated);
+        const month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
+        const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
 
-        return pattern.exec(district.lastUpdated)![1];
+        return `${day}.${month}`;
       })
       .reverse();
   }

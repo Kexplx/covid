@@ -1,4 +1,5 @@
 const axios = require('axios').default;
+const { parseGermanStringDateToISOString } = require('../utils/date');
 
 async function getDistricts() {
   const districtCodes = [
@@ -22,7 +23,7 @@ async function getDistricts() {
   const districts = data.features.map(({ attributes }) => ({
     code: attributes['AdmUnitId'],
     name: attributes['GEN'],
-    lastUpdated: attributes['last_update'],
+    lastUpdated: parseGermanStringDateToISOString(attributes['last_update']),
     incidence: attributes['cases7_per_100k'],
     type: attributes['BEZ'],
     state: attributes['BL'],
