@@ -8,12 +8,22 @@
 
   <app-users-bar-chart [fingerprintDocuments]="data.fingerprintDocuments"></app-users-bar-chart>
 
-  <h3 class="mt-1">App Version</h3>
+  <p class="mt-1">
+    <small>
+      Am {{ data.fingerPrintDocumentWithMaxFingerprints.created | germanDate }} verwendeten
+      <span style="font-size: 0.78rem" class="fw-5">{{ data.fingerPrintDocumentWithMaxFingerprints.fingerprintCount }}</span> verschiedene Nutzer die App. Das war die bisher höchste Zahl von täglichen
+      Nutzern die seit Beginn der Aufzeichnungen vor {{ daysWithUserCounting }} Tagen gemessen wurde 🚀.
+    </small>
+  </p>
 
-  <p class="mt-1 mb-05">{{ localSha }}</p>
+  <h3 class="mt-2 mb-1">App Version</h3>
 
-  <small *ngIf="hasUpdate$ | async; else noUpdates">Ihre Version ist veraltet &#10008;</small>
+  <p *ngIf="hasUpdate$ | async; else noUpdates">Ihre Version ist veraltet &#10008;</p>
   <ng-template #noUpdates>
-    <small>Sie verwenden die neueste Version &#10004;</small>
+    <p>Sie verwenden die neueste Version &#10004;</p>
   </ng-template>
+
+  <p class="mt-1 mb-05">
+    <small>{{ localSha }} </small>
+  </p>
 </section>

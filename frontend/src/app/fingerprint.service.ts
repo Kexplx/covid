@@ -1,12 +1,13 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { nanoid } from 'nanoid';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 export interface FingerprintDocument {
   created: string;
-  fingerprints: string[];
+  fingerprints?: string[];
+  fingerprintCount: number;
 }
 
 const FINGERPRINT_KEY = 'inzidenz-app-fingerprint';
@@ -25,18 +26,23 @@ export class FingerprintService {
     return this.http.get<FingerprintDocument[]>(url, { params }).pipe(
       map(docs => {
         // If this was the first request of the user (for the current day),
-        // his fingerprint will not be included in the results yet.
+        // the server will not have counted their visit yet.
         // We therefore add it to the result here.
-        const ownFingerprint = this.getFingerprintFromLocalStorage();
         const todaysDoc = docs[0];
 
-        if (!todaysDoc.fingerprints.includes(ownFingerprint)) {
-          todaysDoc.fingerprints.push(ownFingerprint);
+        if (todaysDoc.fingerprintCount === 0) {
+          todaysDoc.fingerprintCount++;
         }
 
         return docs;
       }),
     );
+  }
+
+  getFingerPrintDocumentWithMaxFingerprints(): Observable<FingerprintDocument> {
+    const url = `${environment.api}/fingerprints/max`;
+
+    return this.http.get<FingerprintDocument>(url);
   }
 
   sendFingerpint(): Observable<void> {

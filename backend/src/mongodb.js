@@ -16,14 +16,18 @@ class MongoDB {
   async insertFingerprint(documentId, fingerprint) {
     const [collection, close] = await this._connect(COLLECTION_FINGERPRINTS);
 
-    await collection.updateOne({ _id: documentId }, { $push: { fingerprints: fingerprint } });
+    await collection.updateOne(
+      { _id: documentId },
+      { $push: { fingerprints: fingerprint }, $inc: { fingerprintCount: 1 } },
+    );
     close();
   }
 
-  async insertFingerprintsDocument() {
+  async insertFingerprintDocument() {
     const document = {
       created: new Date().toISOString(),
       fingerprints: [],
+      fingerprintCount: 0,
     };
 
     const [collection, close] = await this._connect(COLLECTION_FINGERPRINTS);
@@ -145,7 +149,7 @@ class MongoDB {
     const [collection, close] = await this._connect(COLLECTION_JOKE_OF_THE_DAY_COUNT);
 
     const { count } = await collection.findOne();
-    await close();
+    close();
 
     return count;
   }
@@ -153,9 +157,9 @@ class MongoDB {
   async incrementJokeOfTheDayCount() {
     const [collection, close] = await this._connect(COLLECTION_JOKE_OF_THE_DAY_COUNT);
 
-    const counter = await collection.findOne();
-
-    await collection.updateOne({ _id: counter._id }, { $set: { count: counter.count + 1 } });
+    // Specifying an empty document with `{ }` will
+    // return the first document in the collection.
+    await collection.updateOne({}, { $inc: { count: 1 } });
     close();
   }
 

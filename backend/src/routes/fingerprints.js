@@ -10,7 +10,27 @@ router.get('/', async (req, res) => {
 
   const fingerprintDocuments = await mongoDb.getFingerprintDocuments(limit);
 
-  res.send(fingerprintDocuments);
+  const documentsWithoutFingerprints = fingerprintDocuments.map(d => ({
+    created: d.created,
+    fingerprintCount: d.fingerprintCount,
+  }));
+
+  res.send(documentsWithoutFingerprints);
+});
+
+router.get('/max', async (_, res) => {
+  // All fingerprint documents (using limit(0) is equal to no limit).
+  const fingerprintDocuments = await mongoDb.getFingerprintDocuments(0);
+
+  const documentWithMaxUsers = fingerprintDocuments.reduce((currMax, curr) => {
+    if (curr.fingerprintCount > currMax.fingerprintCount) {
+      return curr;
+    }
+
+    return currMax;
+  });
+
+  res.send(documentWithMaxUsers);
 });
 
 router.post('/', async (req, res) => {

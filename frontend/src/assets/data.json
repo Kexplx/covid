@@ -1,1226 +1,1243 @@
 {
-  "lastUpdated": "2021-12-03T23:00:00.000Z",
+  "lastUpdated": "2021-12-13T23:00:00.000Z",
   "listOfDistrictHistories": [
     [
       {
-        "_id": "61aaf5d1f51caac342220e36",
+        "_id": "61b816c2ff8f795f5348a6e8",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 492.54613515466,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 360.543770933211,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 13352,
+        "totalCases": 14050,
         "totalDeaths": 123
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b141",
+        "_id": "61b6c542d1ad6b123e8e0ce2",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 503.053786037959,
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 371.05142181651,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 13237,
+        "totalCases": 14030,
         "totalDeaths": 123
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b125",
+        "_id": "61b573c2d1ad6b123e8e0cc4",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 518.815262362908,
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 382.215800880016,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 13066,
+        "totalCases": 13981,
         "totalDeaths": 123
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b107",
+        "_id": "61b422424d69d4ca068eb923",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 510.277796020227,
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 381.55907269981,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 12957,
+        "totalCases": 13928,
         "totalDeaths": 123
       },
       {
-        "_id": "61a5afd0ce4f40ffb4f6b0eb",
+        "_id": "61b2d0c14d69d4ca068eb914",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 500.426873317134,
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 397.977277204965,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 12844,
+        "totalCases": 13844,
         "totalDeaths": 123
       },
       {
-        "_id": "61a45e51ce4f40ffb4f6b0ce",
+        "_id": "61b1f827707ba1a938838eb4",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 507.650883299402,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 426.216588953832,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 12798,
-        "totalDeaths": 122
+        "totalCases": 13709,
+        "totalDeaths": 123
       },
       {
-        "_id": "61a30cd2d0bdcb0d61247a6b",
+        "_id": "61b02dc2df928500c338e9af",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 501.740329677546,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 424.246404413213,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 12706,
-        "totalDeaths": 122
+        "totalCases": 13594,
+        "totalDeaths": 123
       },
       {
-        "_id": "61a1bb51d0bdcb0d61247a4d",
+        "_id": "61aefc857bc1351cd3977a6c",
         "code": 9362,
         "name": "Regensburg",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 508.964339659815,
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 434.097327116307,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 12616,
-        "totalDeaths": 122
+        "totalCases": 13500,
+        "totalDeaths": 123
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e38",
+        "_id": "61b816c2ff8f795f5348a6ea",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 356.809182720114,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 220.670018240868,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6506,
-        "totalDeaths": 107
+        "totalCases": 6897,
+        "totalDeaths": 111
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b143",
+        "_id": "61b6c542d1ad6b123e8e0ce4",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 368.376562708546,
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 229.568002847355,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6443,
-        "totalDeaths": 107
+        "totalCases": 6884,
+        "totalDeaths": 111
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b127",
+        "_id": "61b573c2d1ad6b123e8e0cc6",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 371.935756551141,
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 255.372158206166,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6361,
-        "totalDeaths": 107
+        "totalCases": 6862,
+        "totalDeaths": 111
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b109",
+        "_id": "61b422424d69d4ca068eb925",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 357.698981180763,
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 272.278328958491,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6288,
-        "totalDeaths": 106
+        "totalCases": 6828,
+        "totalDeaths": 111
       },
       {
-        "_id": "61a5afd0ce4f40ffb4f6b0ed",
+        "_id": "61b2d0c14d69d4ca068eb916",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 359.47857810206,
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 300.751879699248,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6235,
-        "totalDeaths": 106
+        "totalCases": 6784,
+        "totalDeaths": 110
       },
       {
-        "_id": "61a45e51ce4f40ffb4f6b0d0",
+        "_id": "61b1f827707ba1a938838eb6",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 380.833741157628,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 335.454019664546,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6206,
-        "totalDeaths": 105
+        "totalCases": 6744,
+        "totalDeaths": 109
       },
       {
-        "_id": "61a30cd2d0bdcb0d61247a6d",
+        "_id": "61b02dc2df928500c338e9b1",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 379.943942696979,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 352.360190416871,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6165,
-        "totalDeaths": 105
+        "totalCases": 6693,
+        "totalDeaths": 109
       },
       {
-        "_id": "61a1bb51d0bdcb0d61247a4f",
+        "_id": "61aefc857bc1351cd3977a6e",
         "code": 9562,
         "name": "Erlangen",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
         "incidence": 364.817368865952,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 6091,
-        "totalDeaths": 105
+        "totalCases": 6649,
+        "totalDeaths": 108
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e33",
+        "_id": "61b816c2ff8f795f5348a6e5",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 431.997806749353,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 269.721449104355,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 129727,
-        "totalDeaths": 1501
+        "totalCases": 135578,
+        "totalDeaths": 1550
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b13e",
+        "_id": "61b6c542d1ad6b123e8e0cdf",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 422.859262385079,
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 276.172186302666,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 128803,
-        "totalDeaths": 1495
+        "totalCases": 135352,
+        "totalDeaths": 1542
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b122",
+        "_id": "61b573c2d1ad6b123e8e0cc1",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 419.432308248477,
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 288.670489624392,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 127395,
-        "totalDeaths": 1492
+        "totalCases": 134931,
+        "totalDeaths": 1541
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b104",
+        "_id": "61b422424d69d4ca068eb920",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 433.140124794887,
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 304.730137441019,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 125999,
-        "totalDeaths": 1491
+        "totalCases": 134614,
+        "totalDeaths": 1539
       },
       {
-        "_id": "61a5afd0ce4f40ffb4f6b0e8",
+        "_id": "61b2d0c14d69d4ca068eb911",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 472.247719059644,
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 330.264305517665,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 125121,
-        "totalDeaths": 1481
+        "totalCases": 134080,
+        "totalDeaths": 1529
       },
       {
-        "_id": "61a45e51ce4f40ffb4f6b0cb",
+        "_id": "61b1f827707ba1a938838eb1",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 466.804909548569,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 354.252984473882,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 124348,
-        "totalDeaths": 1468
+        "totalCases": 133325,
+        "totalDeaths": 1518
       },
       {
-        "_id": "61a30cd2d0bdcb0d61247a68",
+        "_id": "61b02dc2df928500c338e9ac",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 476.14503945029,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 394.906067859067,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 123490,
-        "totalDeaths": 1463
+        "totalCases": 132433,
+        "totalDeaths": 1507
       },
       {
-        "_id": "61a1bb51d0bdcb0d61247a4a",
+        "_id": "61aefc857bc1351cd3977a69",
         "code": 9162,
         "name": "München",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 479.773579124339,
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 393.427773917788,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 122852,
-        "totalDeaths": 1462
+        "totalCases": 131297,
+        "totalDeaths": 1505
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e39",
+        "_id": "61b816c2ff8f795f5348a6eb",
         "code": 9564,
         "name": "Nürnberg",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 529.926698645894,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 422.467185084464,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 54433,
+        "totalCases": 57407,
+        "totalDeaths": 1058
+      },
+      {
+        "_id": "61b6c542d1ad6b123e8e0ce5",
+        "code": 9564,
+        "name": "Nürnberg",
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 420.915423155779,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern",
+        "totalCases": 57322,
+        "totalDeaths": 1055
+      },
+      {
+        "_id": "61b573c2d1ad6b123e8e0cc7",
+        "code": 9564,
+        "name": "Nürnberg",
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 392.401797716194,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern",
+        "totalCases": 57003,
+        "totalDeaths": 1055
+      },
+      {
+        "_id": "61b422424d69d4ca068eb926",
+        "code": 9564,
+        "name": "Nürnberg",
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 448.653167631022,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern",
+        "totalCases": 56839,
+        "totalDeaths": 1055
+      },
+      {
+        "_id": "61b2d0c14d69d4ca068eb917",
+        "code": 9564,
+        "name": "Nürnberg",
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 466.110489328727,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern",
+        "totalCases": 56511,
+        "totalDeaths": 1046
+      },
+      {
+        "_id": "61b1f827707ba1a938838eb7",
+        "code": 9564,
+        "name": "Nürnberg",
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 477.748703793864,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern",
+        "totalCases": 56086,
+        "totalDeaths": 1032
+      },
+      {
+        "_id": "61b02dc2df928500c338e9b2",
+        "code": 9564,
+        "name": "Nürnberg",
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 486.089424160545,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern",
+        "totalCases": 55617,
+        "totalDeaths": 1031
+      },
+      {
+        "_id": "61aefc857bc1351cd3977a6f",
+        "code": 9564,
+        "name": "Nürnberg",
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 515.378930564473,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern",
+        "totalCases": 55220,
         "totalDeaths": 1020
-      },
-      {
-        "_id": "61a9a452ce4f40ffb4f6b144",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 539.237270218003,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 54052,
-        "totalDeaths": 1020
-      },
-      {
-        "_id": "61a852d1ce4f40ffb4f6b128",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 544.086526245143,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 53509,
-        "totalDeaths": 1020
-      },
-      {
-        "_id": "61a70152ce4f40ffb4f6b10a",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 563.095609871534,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 53013,
-        "totalDeaths": 1014
-      },
-      {
-        "_id": "61a5afd0ce4f40ffb4f6b0ee",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 563.483550353705,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 52527,
-        "totalDeaths": 1014
-      },
-      {
-        "_id": "61a45e51ce4f40ffb4f6b0d1",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 504.90453754585,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 52072,
-        "totalDeaths": 1014
-      },
-      {
-        "_id": "61a30cd2d0bdcb0d61247a6e",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 596.84643182043,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 51819,
-        "totalDeaths": 1014
-      },
-      {
-        "_id": "61a1bb51d0bdcb0d61247a50",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 551.069454924226,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 51582,
-        "totalDeaths": 1013
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e34",
+        "_id": "61b816c2ff8f795f5348a6e6",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 404.589924110816,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 247.325592027064,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 16377,
-        "totalDeaths": 180
+        "totalCases": 17189,
+        "totalDeaths": 188
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b13f",
+        "_id": "61b6c542d1ad6b123e8e0ce0",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 442.534515863582,
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 262.869159733016,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 16307,
-        "totalDeaths": 180
+        "totalCases": 17163,
+        "totalDeaths": 186
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b123",
+        "_id": "61b573c2d1ad6b123e8e0cc2",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 456.249428545305,
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 280.698546219256,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 16167,
-        "totalDeaths": 179
+        "totalCases": 17141,
+        "totalDeaths": 186
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b105",
+        "_id": "61b422424d69d4ca068eb921",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 449.391972204444,
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 312.242845387218,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 15978,
-        "totalDeaths": 179
+        "totalCases": 17062,
+        "totalDeaths": 186
       },
       {
-        "_id": "61a5afd0ce4f40ffb4f6b0e9",
+        "_id": "61b2d0c14d69d4ca068eb912",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 440.705860839353,
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 316.357319191734,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 15826,
-        "totalDeaths": 176
+        "totalCases": 17001,
+        "totalDeaths": 186
       },
       {
-        "_id": "61a45e51ce4f40ffb4f6b0cc",
+        "_id": "61b1f827707ba1a938838eb2",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 465.849867422511,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 306.299716558471,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 15779,
-        "totalDeaths": 175
+        "totalCases": 16842,
+        "totalDeaths": 186
       },
       {
-        "_id": "61a30cd2d0bdcb0d61247a69",
+        "_id": "61b02dc2df928500c338e9ad",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 440.248697083295,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 318.185974215964,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 15598,
-        "totalDeaths": 175
+        "totalCases": 16682,
+        "totalDeaths": 186
       },
       {
-        "_id": "61a1bb51d0bdcb0d61247a4b",
+        "_id": "61aefc857bc1351cd3977a6a",
         "code": 9179,
         "name": "Fürstenfeldbruck",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 455.33510103319,
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 361.616531041419,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 15482,
-        "totalDeaths": 175
+        "totalCases": 16643,
+        "totalDeaths": 185
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e37",
+        "_id": "61b816c2ff8f795f5348a6e9",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 655.768420066514,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 445.766390307118,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12844,
-        "totalDeaths": 226
+        "totalCases": 13612,
+        "totalDeaths": 232
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b142",
+        "_id": "61b6c542d1ad6b123e8e0ce3",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 645.619623089294,
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 479.335488000999,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12737,
-        "totalDeaths": 222
+        "totalCases": 13598,
+        "totalDeaths": 231
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b126",
+        "_id": "61b573c2d1ad6b123e8e0cc5",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 698.705638047059,
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 541.789623245429,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12616,
-        "totalDeaths": 221
+        "totalCases": 13582,
+        "totalDeaths": 229
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b108",
+        "_id": "61b422424d69d4ca068eb924",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 688.556841069839,
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 521.492029290989,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12357,
-        "totalDeaths": 221
+        "totalCases": 13507,
+        "totalDeaths": 228
       },
       {
-        "_id": "61a5afd0ce4f40ffb4f6b0ec",
+        "_id": "61b2d0c14d69d4ca068eb915",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 733.055412431496,
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 533.982856339875,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12285,
-        "totalDeaths": 220
+        "totalCases": 13416,
+        "totalDeaths": 228
       },
       {
-        "_id": "61a45e51ce4f40ffb4f6b0cf",
+        "_id": "61b1f827707ba1a938838eb5",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 699.486314737615,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 561.306540509313,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12240,
-        "totalDeaths": 219
+        "totalCases": 13329,
+        "totalDeaths": 228
       },
       {
-        "_id": "61a30cd2d0bdcb0d61247a6c",
+        "_id": "61b02dc2df928500c338e9b0",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 760.379096600934,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 562.087217199869,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12185,
-        "totalDeaths": 219
+        "totalCases": 13165,
+        "totalDeaths": 228
       },
       {
-        "_id": "61a1bb51d0bdcb0d61247a4e",
+        "_id": "61aefc857bc1351cd3977a6d",
         "code": 9372,
         "name": "Cham",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 741.642856027605,
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 597.217668274861,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 12006,
-        "totalDeaths": 219
+        "totalCases": 13048,
+        "totalDeaths": 227
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e35",
+        "_id": "61b816c2ff8f795f5348a6e7",
         "code": 9278,
         "name": "Straubing-Bogen",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 549.412747555162,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 389.208314904909,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 10648,
+        "totalCases": 11221,
+        "totalDeaths": 164
+      },
+      {
+        "_id": "61b6c542d1ad6b123e8e0ce1",
+        "code": 9278,
+        "name": "Straubing-Bogen",
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 403.951054105853,
+        "type": "Landkreis",
+        "state": "Bayern",
+        "totalCases": 11205,
+        "totalDeaths": 162
+      },
+      {
+        "_id": "61b573c2d1ad6b123e8e0cc3",
+        "code": 9278,
+        "name": "Straubing-Bogen",
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 442.282176028306,
+        "type": "Landkreis",
+        "state": "Bayern",
+        "totalCases": 11193,
+        "totalDeaths": 162
+      },
+      {
+        "_id": "61b422424d69d4ca068eb922",
+        "code": 9278,
+        "name": "Straubing-Bogen",
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 481.596147230822,
+        "type": "Landkreis",
+        "state": "Bayern",
+        "totalCases": 11138,
+        "totalDeaths": 162
+      },
+      {
+        "_id": "61b2d0c14d69d4ca068eb913",
+        "code": 9278,
+        "name": "Straubing-Bogen",
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 470.78480515013,
+        "type": "Landkreis",
+        "state": "Bayern",
+        "totalCases": 11081,
         "totalDeaths": 161
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b140",
+        "_id": "61b1f827707ba1a938838eb3",
         "code": 9278,
         "name": "Straubing-Bogen",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 599.53806083837,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 458.007764509312,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 10602,
+        "totalCases": 11023,
         "totalDeaths": 161
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b124",
+        "_id": "61b02dc2df928500c338e9ae",
         "code": 9278,
         "name": "Straubing-Bogen",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 676.200304683277,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 468.819106590004,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 10535,
-        "totalDeaths": 160
+        "totalCases": 10899,
+        "totalDeaths": 161
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b106",
+        "_id": "61aefc857bc1351cd3977a6b",
         "code": 9278,
         "name": "Straubing-Bogen",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 680.131701803528,
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 508.133077792521,
         "type": "Landkreis",
         "state": "Bayern",
-        "totalCases": 10393,
-        "totalDeaths": 159
-      },
-      {
-        "_id": "61a5afd0ce4f40ffb4f6b0ea",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 711.582878765541,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 10314,
-        "totalDeaths": 159
-      },
-      {
-        "_id": "61a45e51ce4f40ffb4f6b0cd",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 740.085507887365,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 10287,
-        "totalDeaths": 158
-      },
-      {
-        "_id": "61a30cd2d0bdcb0d61247a6a",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 780.382328369945,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 10224,
-        "totalDeaths": 158
-      },
-      {
-        "_id": "61a1bb51d0bdcb0d61247a4c",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 751.87969924812,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 10100,
-        "totalDeaths": 158
+        "totalCases": 10827,
+        "totalDeaths": 161
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e3a",
+        "_id": "61b816c2ff8f795f5348a6ec",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 345.006852875845,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 267.025851883359,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7983,
-        "totalDeaths": 136
+        "totalCases": 8478,
+        "totalDeaths": 139
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b145",
+        "_id": "61b6c542d1ad6b123e8e0ce6",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 387.541944326291,
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 278.053468185327,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7944,
-        "totalDeaths": 134
+        "totalCases": 8442,
+        "totalDeaths": 139
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b129",
+        "_id": "61b573c2d1ad6b123e8e0cc8",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 409.597176930227,
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 286.718023851159,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7879,
-        "totalDeaths": 134
+        "totalCases": 8410,
+        "totalDeaths": 139
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b10b",
+        "_id": "61b422424d69d4ca068eb927",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 407.234116294091,
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 298.533327031838,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7799,
-        "totalDeaths": 134
+        "totalCases": 8363,
+        "totalDeaths": 139
       },
       {
-        "_id": "61a5afd0ce4f40ffb4f6b0ef",
+        "_id": "61b2d0c14d69d4ca068eb918",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 421.412480110906,
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 286.718023851159,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7726,
-        "totalDeaths": 134
+        "totalCases": 8319,
+        "totalDeaths": 137
       },
       {
-        "_id": "61a45e51ce4f40ffb4f6b0d2",
+        "_id": "61b1f827707ba1a938838eb8",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 437.953904563858,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 298.533327031838,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7663,
-        "totalDeaths": 134
+        "totalCases": 8254,
+        "totalDeaths": 137
       },
       {
-        "_id": "61a30cd2d0bdcb0d61247a6f",
+        "_id": "61b02dc2df928500c338e9b3",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 410.384863808939,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 304.047135182822,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7584,
-        "totalDeaths": 134
+        "totalCases": 8190,
+        "totalDeaths": 137
       },
       {
-        "_id": "61a1bb51d0bdcb0d61247a51",
+        "_id": "61aefc857bc1351cd3977a70",
         "code": 9663,
         "name": "Würzburg",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 440.316965199994,
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 323.739307150621,
         "type": "Kreisfreie Stadt",
         "state": "Bayern",
-        "totalCases": 7544,
-        "totalDeaths": 134
+        "totalCases": 8138,
+        "totalDeaths": 137
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e3c",
+        "_id": "61b816c2ff8f795f5348a6ee",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 338.415920491304,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 299.153813698373,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 27330,
+        "totalCases": 28708,
         "totalDeaths": 492
       },
       {
-        "_id": "61a9a452ce4f40ffb4f6b147",
+        "_id": "61b6c542d1ad6b123e8e0ce8",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 361.269982654353,
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 325.230884628006,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 27152,
+        "totalCases": 28454,
         "totalDeaths": 492
       },
       {
-        "_id": "61a852d1ce4f40ffb4f6b12b",
+        "_id": "61b573c2d1ad6b123e8e0cca",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 374.162017720688,
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 325.230884628006,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 26930,
+        "totalCases": 28454,
         "totalDeaths": 492
       },
       {
-        "_id": "61a70152ce4f40ffb4f6b10d",
+        "_id": "61b422424d69d4ca068eb929",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 395.844076695889,
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 325.230884628006,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 26726,
+        "totalCases": 28454,
         "totalDeaths": 492
       },
       {
-        "_id": "61a5afd0ce4f40ffb4f6b0f1",
+        "_id": "61b2d0c14d69d4ca068eb91a",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 389.984060756645,
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 331.383901364212,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 26382,
-        "totalDeaths": 491
+        "totalCases": 28318,
+        "totalDeaths": 492
       },
       {
-        "_id": "61a45e51ce4f40ffb4f6b0d4",
+        "_id": "61b1f827707ba1a938838eba",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 431.883174722235,
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 359.804978669542,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 26149,
-        "totalDeaths": 489
+        "totalCases": 28156,
+        "totalDeaths": 492
       },
       {
-        "_id": "61a30cd2d0bdcb0d61247a71",
+        "_id": "61b02dc2df928500c338e9b5",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 433.055177910084,
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 336.364914912569,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 26149,
-        "totalDeaths": 489
+        "totalCases": 27912,
+        "totalDeaths": 492
       },
       {
-        "_id": "61a1bb51d0bdcb0d61247a53",
+        "_id": "61aefc857bc1351cd3977a72",
         "code": 11007,
         "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 433.641179504008,
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 371.232009751067,
         "type": "Bezirk",
         "state": "Berlin",
-        "totalCases": 26149,
-        "totalDeaths": 489
+        "totalCases": 27675,
+        "totalDeaths": 492
       }
     ],
     [
       {
-        "_id": "61aaf5d1f51caac342220e3b",
+        "_id": "61b816c2ff8f795f5348a6ed",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "04.12.2021, 00:00 Uhr",
-        "incidence": 688.543631473507,
+        "lastUpdated": "2021-12-13T23:00:00.000Z",
+        "incidence": 552.977189690925,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 43169,
+        "totalCases": 47735,
+        "totalDeaths": 604
+      },
+      {
+        "_id": "61b6c542d1ad6b123e8e0ce7",
+        "code": 14713,
+        "name": "Leipzig",
+        "lastUpdated": "2021-12-12T23:00:00.000Z",
+        "incidence": 568.040127666768,
+        "type": "Kreisfreie Stadt",
+        "state": "Sachsen",
+        "totalCases": 47596,
+        "totalDeaths": 604
+      },
+      {
+        "_id": "61b573c2d1ad6b123e8e0cc9",
+        "code": 14713,
+        "name": "Leipzig",
+        "lastUpdated": "2021-12-11T23:00:00.000Z",
+        "incidence": 580.42521000246,
+        "type": "Kreisfreie Stadt",
+        "state": "Sachsen",
+        "totalCases": 47358,
+        "totalDeaths": 604
+      },
+      {
+        "_id": "61b422424d69d4ca068eb928",
+        "code": 14713,
+        "name": "Leipzig",
+        "lastUpdated": "2021-12-10T23:00:00.000Z",
+        "incidence": 595.655513955812,
+        "type": "Kreisfreie Stadt",
+        "state": "Sachsen",
+        "totalCases": 47032,
+        "totalDeaths": 604
+      },
+      {
+        "_id": "61b2d0c14d69d4ca068eb919",
+        "code": 14713,
+        "name": "Leipzig",
+        "lastUpdated": "2021-12-09T23:00:00.000Z",
+        "incidence": 623.103534267347,
+        "type": "Kreisfreie Stadt",
+        "state": "Sachsen",
+        "totalCases": 46465,
+        "totalDeaths": 588
+      },
+      {
+        "_id": "61b1f827707ba1a938838eb9",
+        "code": 14713,
+        "name": "Leipzig",
+        "lastUpdated": "2021-12-08T23:00:00.000Z",
+        "incidence": 618.919384829613,
+        "type": "Kreisfreie Stadt",
+        "state": "Sachsen",
+        "totalCases": 45809,
+        "totalDeaths": 588
+      },
+      {
+        "_id": "61b02dc2df928500c338e9b4",
+        "code": 14713,
+        "name": "Leipzig",
+        "lastUpdated": "2021-12-07T23:00:00.000Z",
+        "incidence": 655.070435971635,
+        "type": "Kreisfreie Stadt",
+        "state": "Sachsen",
+        "totalCases": 45194,
+        "totalDeaths": 587
+      },
+      {
+        "_id": "61aefc857bc1351cd3977a71",
+        "code": 14713,
+        "name": "Leipzig",
+        "lastUpdated": "2021-12-06T23:00:00.000Z",
+        "incidence": 627.45504968259,
+        "type": "Kreisfreie Stadt",
+        "state": "Sachsen",
+        "totalCases": 43954,
         "totalDeaths": 581
-      },
-      {
-        "_id": "61a9a452ce4f40ffb4f6b146",
-        "code": 14713,
-        "name": "Leipzig",
-        "lastUpdated": "03.12.2021, 00:00 Uhr",
-        "incidence": 696.911930348975,
-        "type": "Kreisfreie Stadt",
-        "state": "Sachsen",
-        "totalCases": 42514,
-        "totalDeaths": 581
-      },
-      {
-        "_id": "61a852d1ce4f40ffb4f6b12a",
-        "code": 14713,
-        "name": "Leipzig",
-        "lastUpdated": "02.12.2021, 00:00 Uhr",
-        "incidence": 689.547827338563,
-        "type": "Kreisfreie Stadt",
-        "state": "Sachsen",
-        "totalCases": 41785,
-        "totalDeaths": 579
-      },
-      {
-        "_id": "61a70152ce4f40ffb4f6b10c",
-        "code": 14713,
-        "name": "Leipzig",
-        "lastUpdated": "01.12.2021, 00:00 Uhr",
-        "incidence": 717.163213627607,
-        "type": "Kreisfreie Stadt",
-        "state": "Sachsen",
-        "totalCases": 40684,
-        "totalDeaths": 579
-      },
-      {
-        "_id": "61a5afd0ce4f40ffb4f6b0f0",
-        "code": 14713,
-        "name": "Leipzig",
-        "lastUpdated": "30.11.2021, 00:00 Uhr",
-        "incidence": 752.97953281461,
-        "type": "Kreisfreie Stadt",
-        "state": "Sachsen",
-        "totalCases": 39931,
-        "totalDeaths": 574
-      },
-      {
-        "_id": "61a45e51ce4f40ffb4f6b0d3",
-        "code": 14713,
-        "name": "Leipzig",
-        "lastUpdated": "29.11.2021, 00:00 Uhr",
-        "incidence": 725.866244458094,
-        "type": "Kreisfreie Stadt",
-        "state": "Sachsen",
-        "totalCases": 39608,
-        "totalDeaths": 568
-      },
-      {
-        "_id": "61a30cd2d0bdcb0d61247a70",
-        "code": 14713,
-        "name": "Leipzig",
-        "lastUpdated": "28.11.2021, 00:00 Uhr",
-        "incidence": 717.832677537645,
-        "type": "Kreisfreie Stadt",
-        "state": "Sachsen",
-        "totalCases": 39119,
-        "totalDeaths": 568
-      },
-      {
-        "_id": "61a1bb51d0bdcb0d61247a52",
-        "code": 14713,
-        "name": "Leipzig",
-        "lastUpdated": "27.11.2021, 00:00 Uhr",
-        "incidence": 788.628486024104,
-        "type": "Kreisfreie Stadt",
-        "state": "Sachsen",
-        "totalCases": 38879,
-        "totalDeaths": 568
       }
     ]
   ],
   "germanyHistory": [
     {
-      "_id": "61aaf5d2f51caac342220e4e",
-      "lastUpdated": "2021-12-03T23:00:00.000Z",
-      "newCases": 64510,
-      "incidence": 442.6948021942293,
-      "hospitalizationIncidence": 5.63,
-      "totalCases": 6116070,
-      "totalDeaths": 102946
+      "_id": "61b816c3ff8f795f5348a700",
+      "lastUpdated": "2021-12-13T23:00:00.000Z",
+      "newCases": 30823,
+      "incidence": 374.9562669274936,
+      "hospitalizationIncidence": 5.17,
+      "totalCases": 6562429,
+      "totalDeaths": 106227
     },
     {
-      "_id": "61a9a452ce4f40ffb4f6b159",
-      "lastUpdated": "2021-12-02T23:00:00.000Z",
-      "newCases": 74352,
-      "incidence": 442.062248765201,
-      "hospitalizationIncidence": 5.47,
-      "totalCases": 6051560,
-      "totalDeaths": 102568
+      "_id": "61b6c543d1ad6b123e8e0cf9",
+      "lastUpdated": "2021-12-12T23:00:00.000Z",
+      "newCases": 21743,
+      "incidence": 389.1550470349774,
+      "hospitalizationIncidence": 5.17,
+      "totalCases": 6531606,
+      "totalDeaths": 105754
     },
     {
-      "_id": "61a852d2ce4f40ffb4f6b13c",
-      "lastUpdated": "2021-12-01T23:00:00.000Z",
-      "newCases": 73209,
-      "incidence": 439.206137750102,
-      "hospitalizationIncidence": 5.62,
-      "totalCases": 5977208,
-      "totalDeaths": 102178
-    },
-    {
-      "_id": "61a70152ce4f40ffb4f6b11f",
-      "lastUpdated": "2021-11-30T23:00:00.000Z",
-      "newCases": 67186,
-      "incidence": 442.8751881530776,
-      "hospitalizationIncidence": 5.62,
-      "totalCases": 5903999,
-      "totalDeaths": 101790
-    },
-    {
-      "_id": "61a5afd3ce4f40ffb4f6b102",
-      "lastUpdated": "2021-11-29T23:00:00.000Z",
-      "newCases": 45753,
-      "incidence": 452.22278854059954,
+      "_id": "61b573c3d1ad6b123e8e0cdc",
+      "lastUpdated": "2021-12-11T23:00:00.000Z",
+      "newCases": 32646,
+      "incidence": 390.9120062741604,
       "hospitalizationIncidence": 5.73,
-      "totalCases": 5836813,
-      "totalDeaths": 101344
+      "totalCases": 6509863,
+      "totalDeaths": 105638
     },
     {
-      "_id": "61a45e53ce4f40ffb4f6b0e5",
-      "lastUpdated": "2021-11-28T23:00:00.000Z",
-      "newCases": 29364,
-      "incidence": 452.40076935332996,
-      "hospitalizationIncidence": 5.52,
-      "totalCases": 5791060,
-      "totalDeaths": 100956
+      "_id": "61b422434d69d4ca068eb92a",
+      "lastUpdated": "2021-12-10T23:00:00.000Z",
+      "newCases": 53697,
+      "incidence": 402.940142010169,
+      "hospitalizationIncidence": 5.73,
+      "totalCases": 6477217,
+      "totalDeaths": 105506
     },
     {
-      "_id": "61a30cd2d0bdcb0d61247a82",
-      "lastUpdated": "2021-11-27T23:00:00.000Z",
-      "newCases": 44401,
-      "incidence": 446.671711300306,
-      "hospitalizationIncidence": 5.8,
-      "totalCases": 5761696,
-      "totalDeaths": 100883
+      "_id": "61b2d0c44d69d4ca068eb91c",
+      "lastUpdated": "2021-12-09T23:00:00.000Z",
+      "newCases": 61288,
+      "incidence": 413.703170888121,
+      "hospitalizationIncidence": 5.71,
+      "totalCases": 6423520,
+      "totalDeaths": 104996
     },
     {
-      "_id": "61a1bb52d0bdcb0d61247a65",
-      "lastUpdated": "2021-11-26T23:00:00.000Z",
-      "newCases": 67125,
-      "incidence": 444.26416003620994,
-      "hospitalizationIncidence": 6.01,
-      "totalCases": 5717295,
-      "totalDeaths": 100779
+      "_id": "61b1f82f707ba1a938838ebb",
+      "lastUpdated": "2021-12-08T23:00:00.000Z",
+      "newCases": 70611,
+      "incidence": 422.28112451788996,
+      "hospitalizationIncidence": 5.75,
+      "totalCases": 6362232,
+      "totalDeaths": 104512
+    },
+    {
+      "_id": "61b02dc3df928500c338e9b7",
+      "lastUpdated": "2021-12-07T23:00:00.000Z",
+      "newCases": 69601,
+      "incidence": 426.9579311442984,
+      "hospitalizationIncidence": 5.45,
+      "totalCases": 6291621,
+      "totalDeaths": 104047
+    },
+    {
+      "_id": "61af0338cbbd1af9e19804f1",
+      "lastUpdated": "2021-12-06T23:00:00.000Z",
+      "newCases": 36059,
+      "incidence": 432.2396320193784,
+      "hospitalizationIncidence": 5.45,
+      "totalCases": 6222020,
+      "totalDeaths": 103520
     }
   ],
   "vaccination": {
-    "_id": "61aa06c3ce4f40ffb4f6b15a",
-    "lastUpdated": "03.12.21, 08:00 Uhr",
-    "numberOfPeopleAtLeastOnceVaccinated": 59611429,
-    "numberOfPeopleFullyVaccinated": 57195032,
-    "percentAtLeastOnceVaccinated": 71.7,
-    "percentFullyVaccinated": 68.8,
-    "totalNumberOfVaccinations": 125515042,
+    "_id": "61b88744ff8f795f5348a701",
+    "lastUpdated": "2021-12-13T23:00:00.000Z",
+    "numberOfPeopleAtLeastOnceVaccinated": 60462369,
+    "numberOfPeopleFullyVaccinated": 57939197,
+    "percentAtLeastOnceVaccinated": 72.7,
+    "percentFullyVaccinated": 69.7,
+    "totalNumberOfVaccinations": 135406073,
     "vaccinesUsed_firstVaccination": {
-      "biontech": 42319839,
-      "moderne": 4574842,
-      "astrazeneca": 9238117,
-      "janssen": 3478631
+      "biontech": 42911866,
+      "moderne": 4756603,
+      "astrazeneca": 9256964,
+      "janssen": 3536936
     },
     "vaccinesUsed_secondVaccination": {
-      "biontech": 44971599,
-      "moderne": 5284949,
-      "astrazeneca": 3459853
+      "biontech": 45519939,
+      "moderne": 5413965,
+      "astrazeneca": 3468357
     },
-    "bavaria_numberOfPeopleAtLeastOnceVaccinated": 9110173,
-    "bavaria_numberOfPeopleFullyVaccinated": 8817486,
-    "bavaria_percentAtLeastOnceVaccinated": 69.3,
-    "bavaria_percentFullyVaccinated": 67.1,
+    "bavaria_numberOfPeopleAtLeastOnceVaccinated": 9238741,
+    "bavaria_numberOfPeopleFullyVaccinated": 8953990,
+    "bavaria_percentAtLeastOnceVaccinated": 70.3,
+    "bavaria_percentFullyVaccinated": 68.1,
     "bavaria_vaccinesUsed_firstVaccination": {
-      "biontech": 6598024,
-      "moderne": 691084,
-      "astrazeneca": 1332505,
-      "janssen": 488560
+      "biontech": 6694034,
+      "moderne": 715501,
+      "astrazeneca": 1332561,
+      "janssen": 496645
     },
     "bavaria_vaccinesUsed_secondVaccination": {
-      "biontech": 6924468,
-      "moderne": 847516,
-      "astrazeneca": 556942
+      "biontech": 7036797,
+      "moderne": 863520,
+      "astrazeneca": 557028
     }
   },
   "bavariaHistory": [
+    {
+      "_id": "61b816c3ff8f795f5348a6f8",
+      "name": "Bayern",
+      "population": 13140183,
+      "totalCases": 1249113,
+      "lastUpdated": "2021-12-13T23:00:00.000Z",
+      "casesInLast7Days": 50270,
+      "totalDeaths": 18691,
+      "incidence": 382.566970338237,
+      "hospitalizationIncidence": 5.49
+    },
+    {
+      "_id": "61b6c543d1ad6b123e8e0cf1",
+      "name": "Bayern",
+      "population": 13140183,
+      "totalCases": 1246136,
+      "lastUpdated": "2021-12-12T23:00:00.000Z",
+      "casesInLast7Days": 52447,
+      "totalDeaths": 18583,
+      "incidence": 399.134471719306,
+      "hospitalizationIncidence": 5.49
+    },
+    {
+      "_id": "61b573c2d1ad6b123e8e0cd4",
+      "name": "Bayern",
+      "population": 13140183,
+      "totalCases": 1242331,
+      "lastUpdated": "2021-12-11T23:00:00.000Z",
+      "casesInLast7Days": 53694,
+      "totalDeaths": 18565,
+      "incidence": 408.624446097897,
+      "hospitalizationIncidence": 6.42
+    },
+    {
+      "_id": "61b4ca1cd1ad6b123e8e0cb8",
+      "name": "Bayern",
+      "population": 13140183,
+      "totalCases": 1236138,
+      "lastUpdated": "2021-12-10T23:00:00.000Z",
+      "casesInLast7Days": 56178,
+      "totalDeaths": 18533,
+      "incidence": 427.528292414192,
+      "hospitalizationIncidence": 6.42
+    },
+    {
+      "_id": "61aefdd07bc1351cd3977a7c",
+      "name": "Bayern",
+      "population": 13140183,
+      "totalCases": 1196951,
+      "lastUpdated": "2021-12-06T23:00:00.000Z",
+      "casesInLast7Days": 68414,
+      "totalDeaths": 18060,
+      "incidence": 520.647239083352,
+      "hospitalizationIncidence": 7.18
+    },
+    {
+      "_id": "61ad98d27bc1351cd3977a41",
+      "name": "Bayern",
+      "population": 13140183,
+      "totalCases": 1191561,
+      "lastUpdated": "2021-12-05T23:00:00.000Z",
+      "casesInLast7Days": 69172,
+      "totalDeaths": 17954,
+      "incidence": 526.415804102576,
+      "hospitalizationIncidence": 7.02
+    },
+    {
+      "_id": "61ac4753f51caac342220e64",
+      "name": "Bayern",
+      "population": 13140183,
+      "totalCases": 1185393,
+      "lastUpdated": "2021-12-04T23:00:00.000Z",
+      "casesInLast7Days": 69590,
+      "totalDeaths": 17929,
+      "incidence": 529.596886131647,
+      "hospitalizationIncidence": 7.4
+    },
     {
       "_id": "61aaf5d2f51caac342220e46",
       "name": "Bayern",
       "population": 13140183,
       "totalCases": 1177379,
-      "lastUpdated": 1638572400000,
+      "lastUpdated": "2021-12-03T23:00:00.000Z",
       "casesInLast7Days": 71441,
       "totalDeaths": 17907,
       "incidence": 543.683447939804,
       "hospitalizationIncidence": 7.9
-    },
-    {
-      "_id": "61a9a452ce4f40ffb4f6b151",
-      "name": "Bayern",
-      "population": 13140183,
-      "totalCases": 1167598,
-      "lastUpdated": 1638486000000,
-      "casesInLast7Days": 73782,
-      "totalDeaths": 17817,
-      "incidence": 561.499029351418,
-      "hospitalizationIncidence": 7.73
-    },
-    {
-      "_id": "61a852d1ce4f40ffb4f6b134",
-      "name": "Bayern",
-      "population": 13140183,
-      "totalCases": 1153632,
-      "lastUpdated": 1638399600000,
-      "casesInLast7Days": 75109,
-      "totalDeaths": 17739,
-      "incidence": 571.597823257104,
-      "hospitalizationIncidence": 8.1
-    },
-    {
-      "_id": "61a70152ce4f40ffb4f6b117",
-      "name": "Bayern",
-      "population": 13140183,
-      "totalCases": 1138713,
-      "lastUpdated": 1638313200000,
-      "casesInLast7Days": 77435,
-      "totalDeaths": 17652,
-      "incidence": 589.299251007387,
-      "hospitalizationIncidence": 8.1
-    },
-    {
-      "_id": "61a5afd2ce4f40ffb4f6b0fa",
-      "name": "Bayern",
-      "population": 13140183,
-      "totalCases": 1126304,
-      "lastUpdated": 1638226800000,
-      "casesInLast7Days": 81236,
-      "totalDeaths": 17531,
-      "incidence": 618.225788788482,
-      "hospitalizationIncidence": 8.64
-    },
-    {
-      "_id": "61a45e52ce4f40ffb4f6b0dd",
-      "name": "Bayern",
-      "population": 13140183,
-      "totalCases": 1119516,
-      "lastUpdated": 1638140400000,
-      "casesInLast7Days": 82471,
-      "totalDeaths": 17432,
-      "incidence": 627.624440238009,
-      "hospitalizationIncidence": 8.24
-    },
-    {
-      "_id": "61a30cd2d0bdcb0d61247a7a",
-      "name": "Bayern",
-      "population": 13140183,
-      "totalCases": 1112337,
-      "lastUpdated": 1638054000000,
-      "casesInLast7Days": 83069,
-      "totalDeaths": 17403,
-      "incidence": 632.175366203043,
-      "hospitalizationIncidence": 9.01
-    },
-    {
-      "_id": "61a1bb52d0bdcb0d61247a5d",
-      "name": "Bayern",
-      "population": 13140183,
-      "totalCases": 1102641,
-      "lastUpdated": 1637967600000,
-      "casesInLast7Days": 83373,
-      "totalDeaths": 17376,
-      "incidence": 634.488880406003,
-      "hospitalizationIncidence": 9.33
     }
   ],
   "jokeOfTheDay": {
-    "text": "So many coronavirus jokes out there, it’s a pundemic!"
+    "text": "I’m not talking to myself, I’m having a parent-teacher conference!"
   },
   "topDistricts": {
-    "_id": "61aaf5d1f51caac342220e3d",
-    "lastUpdated": "2021-12-04T05:00:01.776Z",
+    "_id": "61b816c2ff8f795f5348a6ef",
+    "lastUpdated": "2021-12-14T04:00:02.868Z",
     "districts": [
       {
-        "name": "Mittelsachsen",
-        "population": 301474,
-        "incidence": 2143.80012870098,
+        "name": "Hildburghausen",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
+        "population": 62656,
+        "incidence": 1615.16853932584,
         "type": "Landkreis",
-        "state": "Sachsen"
+        "state": "Thüringen"
       },
       {
-        "name": "Sächsische Schweiz-Osterzgebirge",
-        "population": 244722,
-        "incidence": 2010.85313130818,
+        "name": "Börde",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
+        "population": 170567,
+        "incidence": 1472.14877438191,
         "type": "Landkreis",
-        "state": "Sachsen"
-      },
-      {
-        "name": "Meißen",
-        "population": 240371,
-        "incidence": 1756.86750897571,
-        "type": "Landkreis",
-        "state": "Sachsen"
+        "state": "Sachsen-Anhalt"
       },
       {
         "name": "Saalfeld-Rudolstadt",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
         "population": 102139,
-        "incidence": 1737.82786203115,
+        "incidence": 1442.15236099825,
         "type": "Landkreis",
         "state": "Thüringen"
       },
       {
-        "name": "Hildburghausen",
-        "population": 62656,
-        "incidence": 1631.12870275792,
+        "name": "Vogtlandkreis",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
+        "population": 223905,
+        "incidence": 1343.42689980126,
+        "type": "Landkreis",
+        "state": "Sachsen"
+      },
+      {
+        "name": "Sonneberg",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
+        "population": 57044,
+        "incidence": 1311.26849449548,
         "type": "Landkreis",
         "state": "Thüringen"
       },
       {
-        "name": "Erzgebirgskreis",
-        "population": 331917,
-        "incidence": 1513.63141990317,
+        "name": "Ilm-Kreis",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
+        "population": 105606,
+        "incidence": 1306.74393500369,
         "type": "Landkreis",
-        "state": "Sachsen"
-      },
-      {
-        "name": "Elbe-Elster",
-        "population": 101085,
-        "incidence": 1492.80308651135,
-        "type": "Landkreis",
-        "state": "Brandenburg"
-      },
-      {
-        "name": "Bautzen",
-        "population": 298010,
-        "incidence": 1454.31361363713,
-        "type": "Landkreis",
-        "state": "Sachsen"
+        "state": "Thüringen"
       },
       {
         "name": "Saale-Orla-Kreis",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
         "population": 79632,
-        "incidence": 1427.81796262809,
+        "incidence": 1304.75185854933,
         "type": "Landkreis",
         "state": "Thüringen"
       },
       {
         "name": "Gotha",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
         "population": 134563,
-        "incidence": 1378.5364476119,
+        "incidence": 1258.1467416749,
         "type": "Landkreis",
         "state": "Thüringen"
+      },
+      {
+        "name": "Cottbus",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
+        "population": 98693,
+        "incidence": 1237.16980940898,
+        "type": "Kreisfreie Stadt",
+        "state": "Brandenburg"
+      },
+      {
+        "name": "Sächsische Schweiz-Osterzgebirge",
+        "lastUpdated": "14.12.2021, 00:00 Uhr",
+        "population": 244722,
+        "incidence": 1221.38589910184,
+        "type": "Landkreis",
+        "state": "Sachsen"
       }
     ]
   },
   "fingerprintDocuments": [
     {
-      "_id": "61aaa1702fc4e7876d68860e",
-      "created": "2021-12-03T23:00:00.040Z",
-      "fingerprints": [
-        "mbIYsJ403fXYWqMbnMjrM",
-        "yKxOTvbikJjuEOsHSuwtI",
-        "etXuD9InmHC0-m5ymOJsv",
-        "0NBTAi-a-2wiPhzlYEuLH"
-      ]
+      "created": "2021-12-14T23:00:00.134Z",
+      "fingerprintCount": 1
     },
     {
-      "_id": "61aa9946902e4206ec634db2",
-      "created": "2021-12-03T16:34:51.245Z",
-      "fingerprints": [
-        "8fc0a99c83ee469db701d3577d65feeccc76d4fca4d28f8792428a8d5d428816",
-        "965f824c26403c7acf307b14b0357122f4c561319e627d515d2b4b7182468963",
-        "8ff339c91137cf3529db77924ebd185a958aa3a79ff04bc5379db5dcaf6fd540",
-        "0cafb54a098b7e5efa2b9254ed17e1b3d7b843a5b378fd35201c23f0e804623e",
-        "0cafb54a098b7e5efa2b9254ed17e1b3d7b843a5b378fd35201c23f0e804623e",
-        "0cafb54a098b7e5efa2b9254ed17e1b3d7b843a5b378fd35201c23f0e804623e",
-        "41695b9a80c328fd1eaff9c9311cae3ac3ecd0d27f43d2975a0029cc0fb46564"
-      ]
+      "created": "2021-12-13T23:00:00.126Z",
+      "fingerprintCount": 9
     },
     {
-      "_id": "61aa9939902e4206ec634db1",
-      "created": "2021-12-02T16:34:51.245Z",
-      "fingerprints": [
-        "8ff339c91137cf3529db77924ebd185a958aa3a79ff04bc5379db5dcaf6fd540",
-        "0cafb54a098b7e5efa2b9254ed17e1b3d7b843a5b378fd35201c23f0e804623e"
-      ]
+      "created": "2021-12-12T23:00:00.118Z",
+      "fingerprintCount": 5
     },
     {
-      "_id": "61aa472bef8bdd19af330445",
-      "created": "2021-12-01T16:34:51.245Z",
-      "fingerprints": [
-        "8fc0a99c83ee469db701d3577d65feeccc76d4fca4d28f8792428a8d5d428816",
-        "965f824c26403c7acf307b14b0357122f4c561319e627d515d2b4b7182468963",
-        "8ff339c91137cf3529db77924ebd185a958aa3a79ff04bc5379db5dcaf6fd540",
-        "0cafb54a098b7e5efa2b9254ed17e1b3d7b843a5b378fd35201c23f0e804623e"
-      ]
+      "created": "2021-12-11T23:00:00.109Z",
+      "fingerprintCount": 5
+    },
+    {
+      "created": "2021-12-10T23:00:00.101Z",
+      "fingerprintCount": 6
+    },
+    {
+      "created": "2021-12-09T23:00:00.091Z",
+      "fingerprintCount": 8
+    },
+    {
+      "created": "2021-12-08T23:00:00.083Z",
+      "fingerprintCount": 4
+    },
+    {
+      "created": "2021-12-07T23:00:00.075Z",
+      "fingerprintCount": 6
     }
-  ]
+  ],
+  "fingerPrintDocumentWithMaxFingerprints": {
+    "_id": "61b7d0703fce9d8ec8de75ac",
+    "created": "2021-12-13T23:00:00.126Z",
+    "fingerprints": [
+      "mbIYsJ403fXYWqMbnMjrM",
+      "yKxOTvbikJjuEOsHSuwtI",
+      "0_ehByOkLtp83fw5bnRr0",
+      "zU_k6XmovEg8vqEcmzo67",
+      "QUqpfeTYwWphk92P2UxMQ",
+      "cZN24TiICHPICHHSzS6yi",
+      "0NBTAi-a-2wiPhzlYEuLH",
+      "etXuD9InmHC0-m5ymOJsv",
+      "mY36m4Ir1ZTE-iVhXNKkQ"
+    ],
+    "fingerprintCount": 9
+  }
 }

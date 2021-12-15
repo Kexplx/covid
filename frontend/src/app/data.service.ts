@@ -18,6 +18,7 @@ export interface AppData {
   jokeOfTheDay: Joke;
   topDistricts: { lastUpdated: string; districts: District[] };
   fingerprintDocuments: FingerprintDocument[];
+  fingerPrintDocumentWithMaxFingerprints: FingerprintDocument;
 }
 
 @Injectable({
@@ -58,6 +59,10 @@ export class DataService {
       this.jokeService.getJokeOfTheDay(),
       this.districtService.getTopDistricts(),
       this.fingerprintService.getFingerprintDocuments(),
+      this.fingerprintService.getFingerPrintDocumentWithMaxFingerprints(),
+
+      // This observable emits `void` and will show up
+      // as `null` in the forkJoin response below.
       this.fingerprintService.sendFingerpint(),
     ];
 
@@ -71,6 +76,7 @@ export class DataService {
         jokeOfTheDay: res[4] as Joke,
         topDistricts: res[5] as { lastUpdated: string; districts: District[] },
         fingerprintDocuments: res[6] as FingerprintDocument[],
+        fingerPrintDocumentWithMaxFingerprints: res[7] as FingerprintDocument,
       };
 
       this.dataSubject.next(appData);

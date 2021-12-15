@@ -42,7 +42,7 @@ export class UsersBarChartComponent implements AfterViewInit, OnDestroy {
 
       datasets: [
         {
-          data: this.fingerprintDocuments.map(doc => doc.fingerprints.length).reverse(),
+          data: this.fingerprintDocuments.map(doc => doc.fingerprintCount).reverse(),
           datalabels: {
             color: 'rgb(50, 50, 50)',
             align: 'center',
