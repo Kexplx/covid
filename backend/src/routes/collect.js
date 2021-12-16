@@ -12,7 +12,7 @@ const mongoDb = new MongoDB();
 router.get('/fingerprints', async (_, res) => {
   res.end();
 
-  await mongoDb.insertFingerprintsDocument();
+  await mongoDb.insertFingerprintDocument();
 });
 
 router.get('/top-districts', async (_, res) => {
