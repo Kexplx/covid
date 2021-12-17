@@ -9,11 +9,7 @@
   <app-users-bar-chart [fingerprintDocuments]="data.fingerprintDocuments"></app-users-bar-chart>
 
   <p class="mt-1">
-    <small>
-      Am {{ data.fingerPrintDocumentWithMaxFingerprints.created | germanDate }} verwendeten
-      <span style="font-size: 0.78rem" class="fw-5">{{ data.fingerPrintDocumentWithMaxFingerprints.fingerprintCount }}</span> verschiedene Nutzer die App. Das war die bisher höchste Zahl von täglichen
-      Nutzern die seit Beginn der Aufzeichnungen vor {{ daysWithUserCounting }} Tagen gemessen wurde 🚀.
-    </small>
+    <small>Bisheriger Rekord: {{ data.fingerPrintDocumentWithMaxFingerprints.fingerprintCount }} Nutzer am {{ data.fingerPrintDocumentWithMaxFingerprints.created | germanDate }} </small>
   </p>
 
   <h3 class="mt-2 mb-1">App Version</h3>
