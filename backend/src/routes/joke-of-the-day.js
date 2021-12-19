@@ -38,6 +38,7 @@ const jokes = [
   'What’s the best way to avoid touching your face? A glass of wine in each hand!',
   'Where do sick boats go to get healthy? The dock!',
   'What should you do if you don’t understand a coronavirus joke? Be patient!',
+  'Übrigens, ich hatte heute Nacht wieder keine Risikobegegnung (- T).',
   'You know what they say: feed a cold, starve a fever, drink a corona!',
   'Why did the chicken cross the road? Because the chicken behind it didn’t know how to socially distance properly!',
   'The World Health Organisation announced that dogs cannot contract Covid-19. Dogs previously held in quarantine can now be released. To be clear, WHO let the dogs out”',
