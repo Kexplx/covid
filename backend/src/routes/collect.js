@@ -21,7 +21,7 @@ router.get('/top-districts', async (_, res) => {
   const topDistricts = await getTopDistricts(10);
   const [lastStoredTopDistrictDoc] = await mongoDb.getTopDistrictsDocument();
 
-  if (new Date(topDistricts[0].lastUpdated) > new Date(lastStoredTopDistrictDoc.districts[0].lastUpdated)) {
+  if (new Date(topDistricts[0].lastUpdated) > new Date(lastStoredTopDistrictDoc.lastUpdated)) {
     console.log('Top Districts: New data (importing)');
     await mongoDb.insertTopDistricts(topDistricts);
   } else {
