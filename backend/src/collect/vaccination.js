@@ -15,10 +15,10 @@ async function getVaccination() {
   return {
     lastUpdated: parseGermanStringDateToISOString(/(\d+.\d+.\d+, \d+:\d+ Uhr)/.exec(sheet2['A3'].v)[1]),
     numberOfPeopleAtLeastOnceVaccinated: cell_sheet1('D21'),
-    percentAtLeastOnceVaccinated: cell_sheet1('G21'),
+    percentAtLeastOnceVaccinated: cell_sheet1('H21'),
     totalNumberOfVaccinations: cell_sheet1('C21'),
     bavaria_numberOfPeopleAtLeastOnceVaccinated: cell_sheet1('D5'),
-    bavaria_percentAtLeastOnceVaccinated: cell_sheet1('G5'),
+    bavaria_percentAtLeastOnceVaccinated: cell_sheet1('H5'),
   };
 }
 
