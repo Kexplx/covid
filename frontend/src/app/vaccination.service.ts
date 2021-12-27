@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export interface Vaccination {
   lastUpdated: string;
@@ -16,10 +16,10 @@ export interface Vaccination {
   providedIn: 'root',
 })
 export class VaccinationService {
-  constructor(private http: HttpClient) {}
+  constructor(@Inject(ENVIRONMENT_TOKEN) private environment: Environment, private http: HttpClient) {}
 
   getVaccination(): Observable<Vaccination> {
-    const url = `${environment.api}/vaccination`;
+    const url = `${this.environment.api}/vaccination`;
 
     const params = new HttpParams({ fromObject: { limit: 1 } });
 

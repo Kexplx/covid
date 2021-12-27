@@ -7,6 +7,8 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { CovidDailyComponent } from './covid-daily/covid-daily.component';
 import { DiffComponent } from './covid-daily/diff/diff.component';
 import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
+import { environmentProvider } from './environment-provider';
+import { environment } from 'src/environments/environment';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -43,6 +45,7 @@ export const routes: Routes = [
   declarations: [AppComponent, CovidDailyComponent, DiffComponent, UpdateDialogComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes), SharedModule, HttpClientModule],
   bootstrap: [AppComponent],
+  providers: [environmentProvider],
 })
 export class AppModule {
   constructor(router: Router) {

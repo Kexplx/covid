@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Inject, Injectable } from '@angular/core';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export interface Feedback {
   text: string;
@@ -11,12 +11,12 @@ export interface Feedback {
   providedIn: 'root',
 })
 export class FeedbackService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, @Inject(ENVIRONMENT_TOKEN) private environment: Environment) {}
 
   sendFeedback(text: string) {
     const feedback: Feedback = { text, submittedDate: new Date().toISOString() };
 
-    const url = `${environment.api}/feedback`;
+    const url = `${this.environment.api}/feedback`;
 
     return this.http.post<void>(url, feedback);
   }

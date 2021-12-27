@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Component, Inject } from '@angular/core';
 import { DataService } from '../data.service';
+import { ENVIRONMENT_TOKEN, Environment } from '../environment-provider';
 import { UpdateService } from '../update.service';
 
 @Component({
@@ -10,9 +10,13 @@ import { UpdateService } from '../update.service';
 })
 export class SettingsComponent {
   data$ = this.dataService.data$;
-  localSha = environment.localSha;
+  localSha = this.environment.localSha;
 
   hasUpdate$ = this.updateService.hasUpdate$;
 
-  constructor(private dataService: DataService, private updateService: UpdateService) {}
+  constructor(
+    @Inject(ENVIRONMENT_TOKEN) private environment: Environment,
+    private dataService: DataService,
+    private updateService: UpdateService,
+  ) {}
 }

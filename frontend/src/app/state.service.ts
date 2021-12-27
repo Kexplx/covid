@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export enum StateNames {
   Bavaria = 'Bayern',
@@ -22,10 +22,10 @@ export interface State {
   providedIn: 'root',
 })
 export class StateService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, @Inject(ENVIRONMENT_TOKEN) private environment: Environment) {}
 
   getStateHistory(name: StateNames): Observable<State[]> {
-    const url = `${environment.api}/states`;
+    const url = `${this.environment.api}/states`;
 
     let params = new HttpParams();
     params = params.set('name', name);

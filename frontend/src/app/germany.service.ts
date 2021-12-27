@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export interface Germany {
   lastUpdated: string;
@@ -16,10 +16,10 @@ export interface Germany {
   providedIn: 'root',
 })
 export class GermanyService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, @Inject(ENVIRONMENT_TOKEN) private environment: Environment) {}
 
   getGermanyHistory(): Observable<Germany[]> {
-    const url = `${environment.api}/germany`;
+    const url = `${this.environment.api}/germany`;
 
     let params = new HttpParams();
     params = params.set('limit', 8);

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject, delay, forkJoin } from 'rxjs';
 import { District, DistrictService } from './district.service';
 import { Germany, GermanyService } from './germany.service';
@@ -7,7 +7,7 @@ import { State, StateNames, StateService } from './state.service';
 import { Vaccination, VaccinationService } from './vaccination.service';
 import { HttpClient } from '@angular/common/http';
 import { FingerprintDocument, FingerprintService } from './fingerprint.service';
-import { environment } from 'src/environments/environment';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export interface AppData {
   lastUpdated: string;
@@ -29,6 +29,7 @@ export class DataService {
   data$ = this.dataSubject.asObservable();
 
   constructor(
+    @Inject(ENVIRONMENT_TOKEN) private environment: Environment,
     private http: HttpClient,
     private districtService: DistrictService,
     private stateService: StateService,
@@ -43,7 +44,7 @@ export class DataService {
   loadData() {
     this.dataSubject.next(null);
 
-    if (environment.production) {
+    if (this.environment.production) {
       this.loadProductionData();
     } else {
       this.loadDummyData();

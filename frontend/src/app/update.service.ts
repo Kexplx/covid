@@ -2,8 +2,8 @@ import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject, fromEvent } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { SubSink } from 'subsink';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +14,11 @@ export class UpdateService {
   private hasUpdateSubject = new BehaviorSubject<boolean>(false);
   hasUpdate$ = this.hasUpdateSubject.asObservable();
 
-  constructor(private http: HttpClient, @Inject(DOCUMENT) private document: Document) {
+  constructor(
+    @Inject(ENVIRONMENT_TOKEN) private environment: Environment,
+    private http: HttpClient,
+    @Inject(DOCUMENT) private document: Document,
+  ) {
     if (environment.production) {
       this.compareLocalShaWithServerSha();
       this.listenToVisibilityChanges();
@@ -38,7 +42,7 @@ export class UpdateService {
     const url = `https://europe-west3-crimeview.cloudfunctions.net/handleGet?url=https://kexplx.github.io/covid/assets/commit-sha.txt`;
 
     this.http.get<string>(url, { responseType }).subscribe(serverSha => {
-      if (serverSha !== environment.localSha) {
+      if (serverSha !== this.environment.localSha) {
         // The local app is outdated.
         // There's a new version available on the server.
         this.hasUpdateSubject.next(true);

@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export interface District {
   code: number;
@@ -34,10 +34,10 @@ const districtCodesQuery = districtCodes.reduce((acc, curr) => (acc += curr.toSt
   providedIn: 'root',
 })
 export class DistrictService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, @Inject(ENVIRONMENT_TOKEN) private environment: Environment) {}
 
   getListOfDistrictHistories(): Observable<District[][]> {
-    const url = `${environment.api}/districts`;
+    const url = `${this.environment.api}/districts`;
 
     let params = new HttpParams();
     params = params.set('limit', 8);
@@ -47,7 +47,7 @@ export class DistrictService {
   }
 
   getTopDistricts(): Observable<{ lastUpdated: string; districts: District[] }> {
-    const url = `${environment.api}/top-districts`;
+    const url = `${this.environment.api}/top-districts`;
 
     const params = new HttpParams({ fromObject: { limit: 10 } });
 

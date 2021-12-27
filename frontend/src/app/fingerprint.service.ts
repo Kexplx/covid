@@ -1,8 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { nanoid } from 'nanoid';
 import { map, Observable, tap } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export interface FingerprintDocument {
   created: string;
@@ -16,10 +16,10 @@ const FINGERPRINT_KEY = 'inzidenz-app-fingerprint';
   providedIn: 'root',
 })
 export class FingerprintService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, @Inject(ENVIRONMENT_TOKEN) private environment: Environment) {}
 
   getFingerprintDocuments(): Observable<FingerprintDocument[]> {
-    const url = `${environment.api}/fingerprints`;
+    const url = `${this.environment.api}/fingerprints`;
 
     const params = new HttpParams({ fromObject: { limit: 8 } });
 
@@ -40,13 +40,13 @@ export class FingerprintService {
   }
 
   getFingerPrintDocumentWithMaxFingerprints(): Observable<FingerprintDocument> {
-    const url = `${environment.api}/fingerprints/max`;
+    const url = `${this.environment.api}/fingerprints/max`;
 
     return this.http.get<FingerprintDocument>(url);
   }
 
   sendFingerpint(): Observable<void> {
-    const url = `${environment.api}/fingerprints`;
+    const url = `${this.environment.api}/fingerprints`;
 
     const fingerprint = this.getFingerprintFromLocalStorage();
 
