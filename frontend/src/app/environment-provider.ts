@@ -1,7 +1,8 @@
 import { InjectionToken, Provider } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
-// For components and services to use as type.
+// For components and services to use as
+// the type of the environment config.
 export type Environment = typeof environment;
 
 // For components and services to inject.

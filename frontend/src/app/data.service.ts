@@ -37,9 +37,7 @@ export class DataService {
     private germanyService: GermanyService,
     private jokeService: JokeService,
     private fingerprintService: FingerprintService,
-  ) {
-    this.loadData();
-  }
+  ) {}
 
   loadData() {
     this.dataSubject.next(null);

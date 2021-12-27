@@ -40,6 +40,10 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // Start loading the app
+    // data automatically on load.
+    this.dataService.loadData();
+
     this.swipeService.swipeRight$.subscribe(() => this.onLeftSwipe());
     this.swipeService.swipeLeft$.subscribe(() => this.onRightSwipe());
   }

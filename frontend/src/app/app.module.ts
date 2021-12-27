@@ -8,7 +8,6 @@ import { CovidDailyComponent } from './covid-daily/covid-daily.component';
 import { DiffComponent } from './covid-daily/diff/diff.component';
 import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
 import { environmentProvider } from './environment-provider';
-import { environment } from 'src/environments/environment';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
