@@ -13,6 +13,10 @@
   --fg-error: rgb(231, 76, 60);
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .fg-primary {
   color: var(--fg-primary);
 }
@@ -73,6 +77,14 @@
 
 .mb-2 {
   margin-bottom: 20px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.mr-2 {
+  margin-right: 20px;
 }
 
 .ta-center {

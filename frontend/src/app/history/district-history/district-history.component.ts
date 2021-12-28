@@ -15,10 +15,10 @@ export class DistrictHistoryComponent implements OnInit {
   @Input() listOfDistrictHistories!: District[][];
   options: SelectOption[] = [];
 
-  initialValue = this.settingsService.settings.favoriteDistrictCode;
-
   dataset: Dataset = { data: [], color: CHART_COLORS.red };
   labels: string[] = [];
+
+  initalDistrictCode = 0;
 
   constructor(private districtNamePipe: DistrictNamePipe, private settingsService: SettingsService) {}
 
@@ -29,7 +29,11 @@ export class DistrictHistoryComponent implements OnInit {
       return { name: this.districtNamePipe.transform(district), value: district.code };
     });
 
-    this.prepareChartData(this.initialValue);
+    // If possible use the code of the favorite district.
+    // If it's null, use the code of the first distrct.
+    this.initalDistrictCode = this.settingsService.settings.favoriteDistrictCode || this.options[0].value;
+
+    this.prepareChartData(this.initalDistrictCode);
   }
 
   onSelect(option: SelectOption) {

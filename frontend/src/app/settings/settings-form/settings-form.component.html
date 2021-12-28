@@ -16,15 +16,29 @@
 
 <div class="mt-2">
   <label>
-    <small>Mein Landkreis:</small>
+    <small>Stadt oder Landkreis hinzufügen ({{ selectedDistricts.length }}/411):</small>
   </label>
-  <div class="mt-05">
-    <app-select #select width="190px" [initialValue]="selectedDistrictCode" (appSelect)="onSelect($event)" [options]="options"></app-select>
-  </div>
+
+  <app-district-auto-complete (districtSelect)="onDistrictSelect($event)"></app-district-auto-complete>
+
+  <ul class="mt-1">
+    <li *ngFor="let district of selectedDistricts">
+      <div class="district-list-item-container" [class.highlight]="lastAddedDistrictPreview === district">
+        <span>{{ $any(district) | districtName }}</span>
+        <div>
+          <img *ngIf="favoriteDistrictCode === district.code" src="assets/icons/star-filled.svg" alt="Star filled" class="mr-2" />
+          <img *ngIf="favoriteDistrictCode !== district.code" (click)="onMakeFavorite(district)" src="assets/icons/star-outlined.svg" alt="Star outlined" class="mr-2" />
+          <img (click)="onDistrictRemove(district)" src="assets/icons/minus-solid.svg" alt="Remove" />
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <app-alert *ngIf="isErrorAlertVisible" [error]="true" text="Es muss mind. ein Landkreis gewählt werden"></app-alert>
 </div>
 
 <div class="mt-2 mb-1">
   <app-button [disabled]="decimalPointsControl.invalid" (appClick)="onSave()" text="Speichern"></app-button>
 </div>
 
-<app-alert *ngIf="isSuccessAlertVisible" text="Einstellungen gespeichert"></app-alert>
+<app-alert *ngIf="isSuccessAlertVisible" text="Einstellungen gespeichert, bitte aktualisieren."></app-alert>

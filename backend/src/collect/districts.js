@@ -2,21 +2,7 @@ const axios = require('axios').default;
 const { parseGermanStringDateToISOString } = require('../utils/date');
 
 async function getDistricts() {
-  const districtCodes = [
-    9362, // Regensburg
-    9562, // Erlangen
-    9162, // München
-    9564, // Nürnberg
-    9179, // Fürstenfeldbruck (LK)
-    9372, // Cham (LK)
-    9278, // Straubing-Bogen (LK)
-    9663, // Würzburg
-    11007, // Berlin Tempelhof-Schöneberg (Bezirk)
-    14713, // Leipzig
-  ];
-  const filter = districtCodes.reduce((acc, curr) => (acc += `admunitid=${curr} OR `), '').replace(/ OR $/, ''); // Strip off trailing ' OR '
-
-  const url = `https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=${filter}&outFields=GEN,BEZ,cases,deaths,last_update,cases7_per_100k,bl,AdmUnitId&returnGeometry=false&f=json`;
+  const url = `https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=GEN,BEZ,cases,deaths,last_update,cases7_per_100k,bl,AdmUnitId&returnGeometry=false&f=json`;
 
   const { data } = await axios(url);
 

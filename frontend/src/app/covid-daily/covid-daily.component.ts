@@ -29,7 +29,7 @@ export class CovidDailyComponent implements OnInit {
     this.incidenceGermanyDiffToYesterday = this.incidenceGermany - this.data.germanyHistory[1].incidence;
 
     const districtHistory = this.data.listOfDistrictHistories.find(
-      h => h[0].code === this.settingsService.settings.favoriteDistrictCode,
+      h => h[0].code === this.settingsService.settings.districts[0].code,
     );
     this.incidenceDistrict = districtHistory![0].incidence;
     this.incidenceDistrictDiffToYesterday = this.incidenceDistrict - districtHistory![1].incidence;

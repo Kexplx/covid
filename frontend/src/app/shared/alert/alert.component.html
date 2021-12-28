@@ -1,4 +1,6 @@
-<div class="success">
-  <span class="mr-05">&#10004;</span>
+<div [class.success]="!error" [class.error]="error">
+  <span *ngIf="!error" class="mr-05">&#10004;</span>
+  <span *ngIf="error" class="mr-05">&#10008;</span>
+
   {{ text }}
 </div>

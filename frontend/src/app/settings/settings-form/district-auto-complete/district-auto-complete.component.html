@@ -1,0 +1,22 @@
+<div class="mt-05">
+  <input placeholder="z.B. Rosenheim" [(ngModel)]="filter" (input)="onInput()" (click)="onInputClick(); $event.stopPropagation()" type="text" [class.open]="isOpen && filter.trim()" />
+
+  <ul *ngIf="isOpen && filter.trim()">
+    <ng-container *ngIf="filteredDistrictPreviews.length">
+      <li class="clickable" (click)="onDistrictSelect(district)" *ngFor="let district of filteredDistrictPreviews">
+        <!-- Highlighted part of name that starts with the filter value -->
+        <span *ngIf="filter" class="fw-5"> {{ district.name.slice(0, filter.length) }}</span>
+
+        <span>{{ district.name.slice(filter.length) }} </span>
+
+        {{ district.type | districtType }}
+      </li>
+    </ng-container>
+
+    <ng-container *ngIf="!filteredDistrictPreviews.length">
+      <li>
+        Keine Ergebnisse für <span class="fw-5">"{{ filter }}"</span>
+      </li>
+    </ng-container>
+  </ul>
+</div>

@@ -1,16 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { District } from 'src/app/district.service';
 import { Settings, SettingsService } from 'src/app/settings.service';
-import { DistrictNamePipe } from 'src/app/shared/district-name.pipe';
-import { SelectOption } from 'src/app/shared/select/select.component';
+import { DistrictPreview } from './district-auto-complete/district-auto-complete.component';
 
 @Component({
   selector: 'app-settings-form',
   templateUrl: './settings-form.component.html',
   styleUrls: ['./settings-form.component.css'],
 })
-export class SettingsFormComponent implements OnInit {
+export class SettingsFormComponent {
   @Input() listOfDistrictHistories!: District[][];
 
   decimalPointsControl = new FormControl(this.settingsService.settings.decimalPoints, [
@@ -19,34 +18,59 @@ export class SettingsFormComponent implements OnInit {
     Validators.max(10),
   ]);
 
+  selectedDistricts = [...this.settingsService.settings.districts];
+  favoriteDistrictCode? = this.settingsService.settings.favoriteDistrictCode;
+
   isSuccessAlertVisible = false;
+  isErrorAlertVisible = false;
 
-  selectedDistrictCode: number = 0;
-  options: SelectOption[] = [];
+  lastAddedDistrictPreview?: DistrictPreview;
 
-  constructor(private settingsService: SettingsService, private districtNamePipe: DistrictNamePipe) {}
-
-  ngOnInit() {
-    this.options = this.listOfDistrictHistories.map(history => {
-      const district = history[0];
-
-      return { name: this.districtNamePipe.transform(district), value: district.code };
-    });
-
-    this.selectedDistrictCode = this.settingsService.settings.favoriteDistrictCode;
-  }
+  constructor(private settingsService: SettingsService) {}
 
   onSave() {
     const settings: Settings = {
       decimalPoints: this.decimalPointsControl.value,
-      favoriteDistrictCode: this.selectedDistrictCode,
+      districts: this.selectedDistricts,
+      favoriteDistrictCode: this.favoriteDistrictCode,
     };
 
     this.settingsService.setSettings(settings);
     this.isSuccessAlertVisible = true;
+    this.isErrorAlertVisible = false;
   }
 
-  onSelect(option: SelectOption) {
-    this.selectedDistrictCode = option.value;
+  onDistrictSelect(districtPreview: DistrictPreview) {
+    const isAlreadySelected = this.selectedDistricts.find(d => d.code === districtPreview.code) !== undefined;
+
+    if (isAlreadySelected) {
+      return;
+    }
+
+    this.selectedDistricts.push(districtPreview);
+    this.isErrorAlertVisible = false;
+    this.lastAddedDistrictPreview = districtPreview;
+  }
+
+  onDistrictRemove(districtPreview: DistrictPreview) {
+    this.lastAddedDistrictPreview = undefined;
+
+    if (this.selectedDistricts.length === 1) {
+      // We must at least have one district remaining.
+      this.isErrorAlertVisible = true;
+      return;
+    }
+
+    const indexOf = this.selectedDistricts.findIndex(d => d.code === districtPreview.code);
+    this.selectedDistricts.splice(indexOf, 1);
+
+    if (districtPreview.code === this.favoriteDistrictCode) {
+      // District was the current favorite.
+      this.favoriteDistrictCode = undefined;
+    }
+  }
+
+  onMakeFavorite(districtPreview: DistrictPreview) {
+    this.favoriteDistrictCode = districtPreview.code;
   }
 }

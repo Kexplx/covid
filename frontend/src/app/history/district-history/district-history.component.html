@@ -1,7 +1,7 @@
 <header>
   <h3>Städte und Landkreise</h3>
 
-  <app-select width="175px" (appSelect)="onSelect($event)" [options]="options" [initialValue]="initialValue"></app-select>
+  <app-select width="175px" (appSelect)="onSelect($event)" [options]="options" [initialValue]="initalDistrictCode"></app-select>
 </header>
 
 <app-line-chart [datasets]="[dataset]" [paddingTop]="20" [paddingBot]="10" [labels]="labels"></app-line-chart>

@@ -14,6 +14,7 @@ import { AbsPipe } from './abs.pipe';
 import { DividerComponent } from './divider/divider.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { DistrictTypePipe } from './district-type.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RouterModule } from '@angular/router';
     AlertComponent,
     AbsPipe,
     DividerComponent,
+    DistrictTypePipe,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -40,6 +42,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    DistrictTypePipe,
     AlertComponent,
     DividerComponent,
     DistrictNamePipe,

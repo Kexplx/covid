@@ -26,13 +26,14 @@ async function connect(collectionName) {
 }
 
 async function migrate() {
-  const [collection, close] = await connect(COLLECTION_GERMANY);
+  const [collection, close] = await connect(COLLECTION_DISTRICTS);
   const items = await collection.find({}).toArray();
 
   for (const item of items) {
-    const fixed = new Date(item.lastUpdated).toISOString();
-
-    await collection.updateOne({ _id: item._id }, { $set: { lastUpdated: fixed } });
+    if (item.totalCases === null || item.totalDeaths === null) {
+      await collection.deleteOne({ _id: item._id });
+      console.log('deleted');
+    }
   }
 
   close();

@@ -1,15 +1,29 @@
 import { Injectable } from '@angular/core';
+import { DistrictPreview } from './settings/settings-form/district-auto-complete/district-auto-complete.component';
 
 const SETTINGS_KEY = 'inzidenz-app-settings';
 
 export interface Settings {
   decimalPoints: number;
-  favoriteDistrictCode: number;
+  districts: DistrictPreview[];
+  favoriteDistrictCode?: number;
 }
 
 const defaultSettings: Settings = {
   decimalPoints: 0,
-  favoriteDistrictCode: 9362, // Regensburg
+  districts: [
+    { code: 9362, name: 'Regensburg', type: 'Kreisfreihe Stadt' },
+    { code: 9562, name: 'Erlangen', type: 'Kreisfreihe Stadt' },
+    { code: 9162, name: 'München', type: 'Kreisfreihe Stadt' },
+    { code: 9564, name: 'Nürnberg', type: 'Kreisfreihe Stadt' },
+    { code: 9179, name: 'Fürstenfeldbruck', type: 'Landkreis' },
+    { code: 9372, name: 'Cham', type: 'Landkreis' },
+    { code: 9278, name: 'Straubing-Bogen', type: 'Landkreis' },
+    { code: 9663, name: 'Würzburg', type: 'Kreisfreihe Stadt' },
+    { code: 11007, name: 'Berlin Tempelhof-Schöneberg', type: 'Bezirk' },
+    { code: 14713, name: 'Leipzig', type: 'Kreisfreihe Stadt' },
+  ],
+  favoriteDistrictCode: 9362,
 };
 
 @Injectable({
@@ -19,7 +33,7 @@ export class SettingsService {
   settings: Settings = defaultSettings;
 
   constructor() {
-    this.loadSettings();
+    this.loadSettingsFromLocalStorage();
   }
 
   setSettings(settings: Settings) {
@@ -34,11 +48,15 @@ export class SettingsService {
     this.settings = defaultSettings;
   }
 
-  private loadSettings() {
+  private loadSettingsFromLocalStorage() {
     const settingsJson = localStorage.getItem(SETTINGS_KEY);
 
     if (settingsJson) {
       this.settings = JSON.parse(settingsJson);
+
+      if (!this.settings.districts) {
+        this.settings.districts = defaultSettings.districts;
+      }
     }
   }
 }
