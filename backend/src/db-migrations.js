@@ -26,15 +26,24 @@ async function connect(collectionName) {
 }
 
 async function migrate() {
+  await deleteOldDistricts();
+}
+
+async function deleteOldDistricts() {
   const [collection, close] = await connect(COLLECTION_DISTRICTS);
   const items = await collection.find({}).toArray();
 
+  const idsToDelete = [];
   for (const item of items) {
-    if (item.totalCases === null || item.totalDeaths === null) {
-      await collection.deleteOne({ _id: item._id });
-      console.log('deleted');
+    const today10DaysAgo = new Date(Date.now() - 15 * 24 * 60 * 60 * 1000);
+    if (new Date(item.lastUpdated) < today10DaysAgo) {
+      // District is older than 15 days.
+      idsToDelete.push(item._id);
     }
   }
+
+  await collection.deleteMany({ _id: { $in: idsToDelete } });
+  console.log(`Deleted ${idsToDelete.length} old districts.`);
 
   close();
 }
