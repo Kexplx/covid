@@ -20,17 +20,20 @@ export class CovidDailyComponent implements OnInit {
   incidenceDistrictDiffToYesterday = 0;
   districtName = '';
 
+  lastUpdated = '';
+
   constructor(private settingsService: SettingsService) {}
 
   ngOnInit(): void {
+    this.lastUpdated = this.data.lastUpdated;
     this.newCases = this.data.germanyHistory[0].newCases;
 
     this.incidenceGermany = this.data.germanyHistory[0].incidence;
     this.incidenceGermanyDiffToYesterday = this.incidenceGermany - this.data.germanyHistory[1].incidence;
 
-    const districtHistory = this.data.listOfDistrictHistories.find(
-      h => h[0].code === this.settingsService.settings.districts[0].code,
-    );
+    const districtCode =
+      this.settingsService.settings.favoriteDistrictCode || this.settingsService.settings.districts[0].code;
+    const districtHistory = this.data.listOfDistrictHistories.find(h => h[0].code === districtCode);
     this.incidenceDistrict = districtHistory![0].incidence;
     this.incidenceDistrictDiffToYesterday = this.incidenceDistrict - districtHistory![1].incidence;
     this.districtName = districtHistory![0].name;

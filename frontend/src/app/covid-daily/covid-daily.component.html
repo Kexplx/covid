@@ -2,7 +2,12 @@
   <div (click)="$event.stopPropagation()" class="content">
     <img class="img-close" (click)="onClose()" src="assets/icons/close.svg" alt="Close" />
 
-    <div class="stat-container">
+    <!-- Header -->
+    <div>
+      Tagesbericht | <span class="fw-5">{{ lastUpdated | germanDate }}</span>
+    </div>
+
+    <div class="stat-container mt-2">
       <p class="stat">
         {{ newCases | thousandPoint }}
       </p>

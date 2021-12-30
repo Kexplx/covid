@@ -15,6 +15,7 @@ import { DividerComponent } from './divider/divider.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { DistrictTypePipe } from './district-type.pipe';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DistrictTypePipe } from './district-type.pipe';
     AbsPipe,
     DividerComponent,
     DistrictTypePipe,
+    CheckboxComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -39,6 +41,7 @@ import { DistrictTypePipe } from './district-type.pipe';
     AbsPipe,
     GermanDatePipe,
     TabSetComponent,
+    CheckboxComponent,
     CommonModule,
     ReactiveFormsModule,
     FormsModule,

@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { DataService } from 'src/app/data.service';
 import { District } from 'src/app/district.service';
 import { Settings, SettingsService } from 'src/app/settings.service';
 import { DistrictPreview } from './district-auto-complete/district-auto-complete.component';
@@ -9,7 +10,7 @@ import { DistrictPreview } from './district-auto-complete/district-auto-complete
   templateUrl: './settings-form.component.html',
   styleUrls: ['./settings-form.component.css'],
 })
-export class SettingsFormComponent {
+export class SettingsFormComponent implements OnDestroy {
   @Input() listOfDistrictHistories!: District[][];
 
   decimalPointsControl = new FormControl(this.settingsService.settings.decimalPoints, [
@@ -26,7 +27,15 @@ export class SettingsFormComponent {
 
   lastAddedDistrictPreview?: DistrictPreview;
 
-  constructor(private settingsService: SettingsService) {}
+  dataOutOfSync = false;
+
+  constructor(private settingsService: SettingsService, private dataService: DataService) {}
+
+  ngOnDestroy(): void {
+    if (this.dataOutOfSync) {
+      this.dataService.loadData();
+    }
+  }
 
   onSave() {
     const settings: Settings = {
@@ -47,9 +56,10 @@ export class SettingsFormComponent {
       return;
     }
 
-    this.selectedDistricts.push(districtPreview);
+    this.selectedDistricts = [districtPreview, ...this.selectedDistricts];
     this.isErrorAlertVisible = false;
     this.lastAddedDistrictPreview = districtPreview;
+    this.dataOutOfSync = true;
   }
 
   onDistrictRemove(districtPreview: DistrictPreview) {
@@ -68,6 +78,8 @@ export class SettingsFormComponent {
       // District was the current favorite.
       this.favoriteDistrictCode = undefined;
     }
+
+    this.dataOutOfSync = true;
   }
 
   onMakeFavorite(districtPreview: DistrictPreview) {

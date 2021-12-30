@@ -3,7 +3,7 @@
 
   <header class="mt-2 mb-1">
     <div>
-      <app-button [disabled]="isLoading" (appClick)="isCovidDailyVisible = true" text="COVID Daily"></app-button>
+      <app-button [disabled]="isLoading" (appClick)="isCovidDailyVisible = true" text="Tagesbericht"></app-button>
       <app-button *ngIf="hasUpdate$ | async" (appClick)="isUpdateDialogVisible = true" [success]="true" [shadow]="true" ml="5px" icon="download-solid"></app-button>
     </div>
     <app-button [bottomText]="lastUpdated ? 'Stand: ' + (lastUpdated | germanDate) : ''" [disabled]="isLoading" (appClick)="onUpdateClick()" [shadow]="true" text="Aktualisieren"></app-button>
