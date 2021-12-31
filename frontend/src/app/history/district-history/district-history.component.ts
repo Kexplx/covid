@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { District } from 'src/app/district.service';
 import { SettingsService } from 'src/app/settings.service';
-import { DistrictNamePipe } from 'src/app/shared/district-name.pipe';
+import { DistrictTypePipe } from 'src/app/shared/district-type.pipe';
 import { SelectOption } from 'src/app/shared/select/select.component';
 import { CHART_COLORS } from '../chart-colors';
 import { Dataset } from '../line-chart/line-chart.component';
@@ -20,13 +20,13 @@ export class DistrictHistoryComponent implements OnInit {
 
   initalDistrictCode = 0;
 
-  constructor(private districtNamePipe: DistrictNamePipe, private settingsService: SettingsService) {}
+  constructor(private districtTypePipe: DistrictTypePipe, private settingsService: SettingsService) {}
 
   ngOnInit(): void {
     this.options = this.listOfDistrictHistories.map(history => {
       const district = history[0];
 
-      return { name: this.districtNamePipe.transform(district), value: district.code };
+      return { name: `${district.name} ${this.districtTypePipe.transform(district.type)}`, value: district.code };
     });
 
     // If possible use the code of the favorite district.

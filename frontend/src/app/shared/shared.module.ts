@@ -8,7 +8,6 @@ import { IncidenceTagComponent } from './incidence-tag/incidence-tag.component';
 import { RoundPipe } from './round.pipe';
 import { ThousandPointPipe } from './thousand-point.pipe';
 import { SelectComponent } from './select/select.component';
-import { DistrictNamePipe } from './district-name.pipe';
 import { AlertComponent } from './alert/alert.component';
 import { AbsPipe } from './abs.pipe';
 import { DividerComponent } from './divider/divider.component';
@@ -27,7 +26,6 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     RoundPipe,
     ThousandPointPipe,
     SelectComponent,
-    DistrictNamePipe,
     AlertComponent,
     AbsPipe,
     DividerComponent,
@@ -48,12 +46,11 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     DistrictTypePipe,
     AlertComponent,
     DividerComponent,
-    DistrictNamePipe,
     ThousandPointPipe,
     RoundPipe,
     SpinnerComponent,
     IncidenceTagComponent,
   ],
-  providers: [DistrictNamePipe, ThousandPointPipe, GermanDatePipe],
+  providers: [DistrictTypePipe, ThousandPointPipe, GermanDatePipe],
 })
 export class SharedModule {}

@@ -24,7 +24,7 @@
   <ul class="mt-1">
     <li *ngFor="let district of selectedDistricts">
       <div class="district-list-item-container" [class.highlight]="lastAddedDistrictPreview === district">
-        <span>{{ $any(district) | districtName }}</span>
+        <span>{{ district.name }} {{ district.type | districtType }}</span>
         <div>
           <img *ngIf="favoriteDistrictCode === district.code" src="assets/icons/star-filled.svg" alt="Star filled" class="mr-2" />
           <img *ngIf="favoriteDistrictCode !== district.code" (click)="onMakeFavorite(district)" src="assets/icons/star-outlined.svg" alt="Star outlined" class="mr-2" />
