@@ -5,10 +5,7 @@
   <div class="col">
     <app-col-content>
       <ng-template #title>7-Tage-Inzidenz</ng-template>
-      <ng-template #desc
-        >COVID-19 Fälle in den letzten sieben Tagen (je 100T Einwohner). <br /><br />
-        Die kurzzeitig gehypte Hospitalisierungsinzidenz hat sich aufgrund des großen Meldeverzugs der Krankenhäuser als unzuverlässige Metrik erwiesen.
-      </ng-template>
+      <ng-template #desc>COVID-19 Fälle in den letzten sieben Tagen (je 100T Einwohner).</ng-template>
     </app-col-content>
   </div>
   <div class="col">
@@ -67,15 +64,12 @@
   <div class="col">
     <app-col-content>
       <ng-template #title>Impfquote</ng-template>
-      <ng-template #desc>
-        Die Impfquote ist die Zahl der mindestens einmal geimpften Personen. Wir halten es für naheliegend, dass sich eine Person, die mind. einmal geimpft wurde auch regelmäßig boostern lassen wird.
-        Die tatsächliche Zahl der vollständig immunisierten Personen wird sich also in kurzer Zeit der Zahl der mind. einmal Geimpften angleichen.</ng-template
-      >
+      <ng-template #desc> Die Impfquote ist die Zahl der mindestens einmal geimpften Personen in der Gesamtbevölkerung.</ng-template>
     </app-col-content>
   </div>
   <div class="col">
     <app-col-content>
-      <ng-template #title>{{ vaccination.percentAtLeastOnceVaccinated }}% der Gesamtbevölkerung</ng-template>
+      <ng-template #title>{{ vaccination.percentAtLeastOnceVaccinated }}%</ng-template>
     </app-col-content>
   </div>
 </div>

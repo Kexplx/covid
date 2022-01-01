@@ -22,3 +22,7 @@ h1 img {
   width: 20px;
   height: 20px;
 }
+
+p {
+  line-height: 0.9rem;
+}
