@@ -27,17 +27,19 @@ export class SettingsFormComponent implements OnDestroy {
 
   lastAddedDistrictPreview?: DistrictPreview;
 
-  dataOutOfSync = false;
+  districtDataOutOfSync = false;
 
   constructor(private settingsService: SettingsService, private dataService: DataService) {}
 
   ngOnDestroy(): void {
-    if (this.dataOutOfSync) {
+    if (this.districtDataOutOfSync) {
       this.dataService.loadData();
     }
   }
 
   onSave() {
+    this.districtDataOutOfSync = this.isDistrictDataOutOfSync();
+
     const settings: Settings = {
       decimalPoints: this.decimalPointsControl.value,
       districts: this.selectedDistricts,
@@ -47,6 +49,19 @@ export class SettingsFormComponent implements OnDestroy {
     this.settingsService.setSettings(settings);
     this.isSuccessAlertVisible = true;
     this.isErrorAlertVisible = false;
+  }
+
+  private isDistrictDataOutOfSync() {
+    const oldDistricts = this.settingsService.settings.districts;
+    const newDistricts = this.selectedDistricts;
+
+    if (newDistricts.length != oldDistricts.length) {
+      return true;
+    } else if (!oldDistricts.every(sD => newDistricts.find(oD => oD.code === sD.code))) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   onDistrictSelect(districtPreview: DistrictPreview) {
@@ -59,7 +74,6 @@ export class SettingsFormComponent implements OnDestroy {
     this.selectedDistricts = [districtPreview, ...this.selectedDistricts];
     this.isErrorAlertVisible = false;
     this.lastAddedDistrictPreview = districtPreview;
-    this.dataOutOfSync = true;
   }
 
   onDistrictRemove(districtPreview: DistrictPreview) {
@@ -78,8 +92,6 @@ export class SettingsFormComponent implements OnDestroy {
       // District was the current favorite.
       this.favoriteDistrictCode = undefined;
     }
-
-    this.dataOutOfSync = true;
   }
 
   onMakeFavorite(districtPreview: DistrictPreview) {
