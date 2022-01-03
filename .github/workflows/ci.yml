@@ -31,9 +31,9 @@ jobs:
         run: npm run build:ci
         working-directory: ${{env.working-directory}}
 
-      - name: Run unit tests
-        run: npm run test
-        working-directory: ${{env.working-directory}}
+      # - name: Run unit tests
+      #   run: npm run test
+      #   working-directory: ${{env.working-directory}}
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.4.9
