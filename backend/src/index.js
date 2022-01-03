@@ -11,7 +11,7 @@ require('dotenv').config();
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: '50kb' }));
-app.use(parseQueryParamToInt('limit'));
+app.use(parseQueryParamToInt('limit', 'lat', 'lon'));
 
 // Import and setup routes
 const collectRouter = require('./routes/collect');
@@ -23,6 +23,7 @@ const feedbackRouter = require('./routes/feedback');
 const jokeOfTheDayRouter = require('./routes/joke-of-the-day');
 const topDistrictsRouter = require('./routes/top-districts');
 const fingerprintRouter = require('./routes/fingerprints');
+const locationRouter = require('./routes/location');
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/collect', verifyRequestComesFromAppEngine, collectRouter);
@@ -38,6 +39,7 @@ app.use('/feedback', feedbackRouter);
 app.use('/districts', districtsRouter);
 app.use('/states', statesRouter);
 app.use('/vaccination', vaccinationRouter);
+app.use('/location', locationRouter);
 
 // Start the server.
 const PORT = process.env.PORT || 3000;

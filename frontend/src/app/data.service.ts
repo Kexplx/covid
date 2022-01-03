@@ -45,7 +45,9 @@ export class DataService {
     if (this.environment.production) {
       this.loadProductionData();
     } else {
-      this.loadDummyData();
+      this.loadProductionData();
+
+      // this.loadDummyData();
     }
   }
 

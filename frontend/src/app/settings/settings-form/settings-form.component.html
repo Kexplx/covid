@@ -15,13 +15,30 @@
 </div>
 
 <div class="mt-2">
-  <label>
-    <small>Stadt oder Landkreis hinzufügen ({{ selectedDistricts.length }}/411):</small>
-  </label>
+  <div class="search-action-container">
+    <div>
+      <label>
+        <small>Stadt oder Landkreis hinzufügen ({{ selectedDistricts.length }}/411):</small>
+      </label>
 
-  <app-district-auto-complete (districtSelect)="onDistrictSelect($event)"></app-district-auto-complete>
+      <app-district-auto-complete (districtSelect)="onDistrictSelect($event)"></app-district-auto-complete>
+    </div>
 
-  <ul class="mt-1">
+    <app-button (appClick)="onGetLocation()" height="29px" text="Wo bin Ich?"></app-button>
+  </div>
+
+  <!-- Current user location -->
+  <p class="ta-center mt-1" *ngIf="currentUserLocation">
+    <small class="fg-secondary"
+      >Sie sind in <small class="fw-5">{{ currentUserLocation }}</small></small
+    >
+  </p>
+
+  <p class="ta-center mt-1" *ngIf="currentUserLocationHasError">
+    <small class="fg-secondary fg-error fw-5">Uns fehlt die Berechtigung um auf Ihren Standort zuzugreifen.</small>
+  </p>
+
+  <ul class="mt-05">
     <li *ngFor="let district of selectedDistricts">
       <div class="district-list-item-container" [class.highlight]="lastAddedDistrictPreview === district">
         <span>{{ district.name }} {{ district.type | districtType }}</span>

@@ -1,6 +1,10 @@
-function parseQueryParamToInt(paramName) {
+function parseQueryParamToInt(...paramNames) {
   return (req, _, next) => {
-    req.query[paramName] = Number(req.query[paramName]);
+    for (const paramName of paramNames) {
+      if (paramName in req.query) {
+        req.query[paramName] = Number(req.query[paramName]);
+      }
+    }
 
     next();
   };

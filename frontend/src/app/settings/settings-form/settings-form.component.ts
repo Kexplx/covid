@@ -1,7 +1,9 @@
 import { Component, Input, OnDestroy } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { from } from 'rxjs';
 import { DataService } from 'src/app/data.service';
 import { District } from 'src/app/district.service';
+import { LocationService } from 'src/app/location.service';
 import { Settings, SettingsService } from 'src/app/settings.service';
 import { DistrictPreview } from './district-auto-complete/district-auto-complete.component';
 
@@ -22,6 +24,9 @@ export class SettingsFormComponent implements OnDestroy {
   selectedDistricts = [...this.settingsService.settings.districts];
   favoriteDistrictCode? = this.settingsService.settings.favoriteDistrictCode;
 
+  currentUserLocation = '';
+  currentUserLocationHasError = false;
+
   isSuccessAlertVisible = false;
   isErrorAlertVisible = false;
 
@@ -29,7 +34,11 @@ export class SettingsFormComponent implements OnDestroy {
 
   districtDataOutOfSync = false;
 
-  constructor(private settingsService: SettingsService, private dataService: DataService) {}
+  constructor(
+    private settingsService: SettingsService,
+    private dataService: DataService,
+    private locationService: LocationService,
+  ) {}
 
   ngOnDestroy(): void {
     if (this.districtDataOutOfSync) {
@@ -96,5 +105,17 @@ export class SettingsFormComponent implements OnDestroy {
 
   onMakeFavorite(districtPreview: DistrictPreview) {
     this.favoriteDistrictCode = districtPreview.code;
+  }
+
+  onGetLocation() {
+    this.currentUserLocationHasError = false;
+    this.currentUserLocation = '';
+
+    this.locationService.getLocation().subscribe({
+      next: loc => {
+        this.currentUserLocation = `${loc.districtName}, ${loc.stateName}`;
+      },
+      error: err => (this.currentUserLocationHasError = true),
+    });
   }
 }
