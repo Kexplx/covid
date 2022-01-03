@@ -115,7 +115,7 @@ export class SettingsFormComponent implements OnDestroy {
       next: loc => {
         this.currentUserLocation = `${loc.districtName}, ${loc.stateName}`;
       },
-      error: err => (this.currentUserLocationHasError = true),
+      error: () => (this.currentUserLocationHasError = true),
     });
   }
 }
