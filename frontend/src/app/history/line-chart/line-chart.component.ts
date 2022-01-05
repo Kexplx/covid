@@ -23,8 +23,6 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
 
   @Input() showLegend = false;
   @Input() datasets!: Dataset[];
-  @Input() paddingTop = 0;
-  @Input() paddingBot = 0;
 
   chart?: Chart;
 
@@ -87,8 +85,6 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
         scales: {
           y: {
             display: false,
-            suggestedMax: Math.max(...this.datasets.map(d => d.data).flat()) + this.paddingTop,
-            suggestedMin: Math.min(...this.datasets.map(d => d.data).flat()) - this.paddingBot,
           },
           x: {
             display: true,
@@ -96,7 +92,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
           },
         },
         layout: {
-          padding: { top: 0, bottom: 0, right: 20, left: 20 },
+          padding: { top: 15, bottom: 0, right: 20, left: 20 },
         },
         animation: false,
       },
