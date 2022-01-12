@@ -1,6 +1,5 @@
 import { Component, Input, OnDestroy } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { from } from 'rxjs';
 import { DataService } from 'src/app/data.service';
 import { District } from 'src/app/district.service';
 import { LocationService } from 'src/app/location.service';
