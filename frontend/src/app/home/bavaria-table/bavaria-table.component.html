@@ -54,6 +54,10 @@
   <div class="col">
     <app-col-content>
       <ng-template #title>{{ vaccination.bavaria_percentAtLeastOnceVaccinated }}%</ng-template>
+      <ng-template #desc
+        >Das Bundesland mit der höchsten Impfquote ist {{ vaccination.stateWithHighestVaccination.name }} mit {{ vaccination.stateWithHighestVaccination.percentAtLeastOnceVaccinated }}% und
+        {{ vaccination.stateWithLowestVaccination.name }} bildet das Schlusslicht mit nur {{ vaccination.stateWithLowestVaccination.percentAtLeastOnceVaccinated }}%.</ng-template
+      >
     </app-col-content>
   </div>
 </div>

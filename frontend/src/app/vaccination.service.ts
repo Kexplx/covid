@@ -10,6 +10,14 @@ export interface Vaccination {
   totalNumberOfVaccinations: number;
   bavaria_numberOfPeopleAtLeastOnceVaccinated: number;
   bavaria_percentAtLeastOnceVaccinated: number;
+  stateWithHighestVaccination: {
+    name: string;
+    percentAtLeastOnceVaccinated: number;
+  };
+  stateWithLowestVaccination: {
+    name: string;
+    percentAtLeastOnceVaccinated: number;
+  };
 }
 
 @Injectable({
