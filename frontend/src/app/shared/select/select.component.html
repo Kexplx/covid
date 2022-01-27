@@ -1,7 +1,11 @@
 <div [ngStyle]="{ width }" style="position: relative">
   <button [class.open]="isOpen" (click)="onClick(); $event.stopImmediatePropagation()">
     <div class="btn-content">
-      <span>{{ selectedOption.name }}</span>
+      <img class="mr-1" *ngIf="selectedOption.icon" [src]="'assets/icons/' + selectedOption.icon + '.svg'" alt="" />
+      <span *ngIf="!selectedOption.icon"></span>
+      <span>
+        {{ selectedOption.name }}
+      </span>
       <img *ngIf="isOpen" src="assets/icons/caret-down.svg" alt="Caret Down" />
       <img [ngStyle]="{ transform: 'rotate(-270deg)' }" *ngIf="!isOpen" src="assets/icons/caret-down.svg" alt="Caret Right" />
     </div>
@@ -9,6 +13,7 @@
 
   <ul *ngIf="isOpen">
     <li (click)="onOptionClick(option)" *ngFor="let option of optionsToDisplay">
+      <img class="mr-1" *ngIf="option.icon" [src]="'assets/icons/' + option.icon + '.svg'" alt="" />
       {{ option.name }}
     </li>
   </ul>

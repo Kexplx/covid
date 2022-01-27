@@ -17,11 +17,11 @@ button.open {
 
 .btn-content {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
-.btn-content img {
+img {
   width: 17px;
   height: 17px;
 }
@@ -42,6 +42,9 @@ li {
   font-size: 0.8rem;
   background-color: rgb(250, 250, 250);
   cursor: pointer;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
 }
 
 li:hover {

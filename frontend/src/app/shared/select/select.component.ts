@@ -6,6 +6,7 @@ import { SubSink } from 'subsink';
 export interface SelectOption {
   value: any;
   name: string;
+  icon?: string;
 }
 
 @Component({

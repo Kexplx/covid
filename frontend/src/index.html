@@ -12,6 +12,23 @@
     <meta name="theme-color" content="#000000" />
   </head>
   <body>
+    <script>
+      var browserType;
+      if ((navigator.userAgent.indexOf('Opera') || navigator.userAgent.indexOf('OPR')) != -1) {
+        browserType = 'opera';
+      } else if (navigator.userAgent.indexOf('Edg') != -1) {
+        browserType = 'edge';
+      } else if (navigator.userAgent.indexOf('Chrome') != -1) {
+        browserType = 'chrome';
+      } else if (navigator.userAgent.indexOf('Safari') != -1) {
+        browserType = 'safari';
+      } else if (navigator.userAgent.indexOf('Firefox') != -1) {
+        browserType = 'firefox';
+      } else {
+        browserType = 'unknown';
+      }
+    </script>
+
     <app-root></app-root>
     <noscript>Please enable JavaScript to continue using this application.</noscript>
   </body>
