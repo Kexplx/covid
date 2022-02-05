@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-install-tutorial',
   templateUrl: './install-tutorial.component.html',
+  styleUrls: ['./install-tutorial.component.css'],
 })
 export class InstallTutorialComponent implements OnInit {
   browserType = browserType;
