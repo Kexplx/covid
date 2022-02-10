@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { districtPreviews } from './district-previews';
 import { DistrictPreview } from './settings/settings-form/district-auto-complete/district-auto-complete.component';
 
 const SETTINGS_KEY = 'inzidenz-app-settings';
@@ -26,7 +27,31 @@ export class SettingsService {
   settings: Settings = defaultSettings;
 
   constructor() {
-    this.loadSettingsFromLocalStorage();
+    const query = new URLSearchParams(location.search);
+    const codesQuery = query.get('codes');
+
+    if (codesQuery) {
+      // The visitor's URL contains district codes in its query param "codes".
+      // We add these districts to the users settings and reload the page,
+      // this time without any query params.
+
+      const codes = codesQuery.split(',').map(codeAsString => Number(codeAsString));
+
+      const settings: Settings = {
+        ...defaultSettings,
+        districts: districtPreviews.filter(dp => codes.includes(dp.code)),
+        favoriteDistrictCode: codes[0],
+      };
+
+      this.setSettings(settings);
+
+      // Reload current URL without any query params.
+      // After the reload, the user's districts will be
+      // in his settings and we enter the "else" block.
+      location.href = location.href.split('?')[0];
+    } else {
+      this.loadSettingsFromLocalStorage();
+    }
   }
 
   setSettings(settings: Settings) {

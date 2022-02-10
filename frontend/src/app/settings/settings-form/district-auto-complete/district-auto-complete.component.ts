@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, EventEmitter, Inject, OnDestroy, OnInit, Output } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { SubSink } from 'subsink';
-import { districtPreviews } from './district-previews';
+import { districtPreviews } from '../../../district-previews';
 
 export interface DistrictPreview {
   code: number;

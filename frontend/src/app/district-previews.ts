@@ -1,4 +1,4 @@
-import { DistrictPreview } from './district-auto-complete.component';
+import { DistrictPreview } from './settings/settings-form/district-auto-complete/district-auto-complete.component';
 
 export const districtPreviews: DistrictPreview[] = [
   { code: 1001, name: 'Flensburg', type: 'Kreisfreie Stadt' },
