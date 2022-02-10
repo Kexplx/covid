@@ -12,18 +12,11 @@ export interface Settings {
 const defaultSettings: Settings = {
   decimalPoints: 0,
   districts: [
-    { code: 9362, name: 'Regensburg', type: 'Kreisfreihe Stadt' },
+    { code: 9563, name: 'Fürth', type: 'Kreisfreihe Stadt' },
     { code: 9562, name: 'Erlangen', type: 'Kreisfreihe Stadt' },
-    { code: 9162, name: 'München', type: 'Kreisfreihe Stadt' },
     { code: 9564, name: 'Nürnberg', type: 'Kreisfreihe Stadt' },
-    { code: 9179, name: 'Fürstenfeldbruck', type: 'Landkreis' },
-    { code: 9372, name: 'Cham', type: 'Landkreis' },
-    { code: 9278, name: 'Straubing-Bogen', type: 'Landkreis' },
-    { code: 9663, name: 'Würzburg', type: 'Kreisfreihe Stadt' },
-    { code: 11007, name: 'Berlin Tempelhof-Schöneberg', type: 'Bezirk' },
-    { code: 14713, name: 'Leipzig', type: 'Kreisfreihe Stadt' },
   ],
-  favoriteDistrictCode: 9362,
+  favoriteDistrictCode: 9562,
 };
 
 @Injectable({
