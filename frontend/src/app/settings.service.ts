@@ -35,6 +35,7 @@ export class SettingsService {
       // We add these districts to the users settings and reload the page,
       // this time without any query params.
 
+      // Map "?codes=1,2,3,4" into [1,2,3,4]
       const codes = codesQuery.split(',').map(codeAsString => Number(codeAsString));
 
       const settings: Settings = {
@@ -47,7 +48,7 @@ export class SettingsService {
 
       // Reload current URL without any query params.
       // After the reload, the user's districts will be
-      // in his settings and we enter the "else" block.
+      // retrieved from his local storage and we would enter the "else" block.
       location.href = location.href.split('?')[0];
     } else {
       this.loadSettingsFromLocalStorage();
