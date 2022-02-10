@@ -2,13 +2,14 @@
   const baseUrl = 'https://kexplx.github.io/covid/';
 
   // e.g. `home`
-  const frontendRoute = window.location.toString().slice(baseUrl.length);
+  const inAppRoute = window.location.toString().slice(baseUrl.length);
 
   /*
    * We redirect to https://kexplx.github.io/covid?route=home
+   * which is known to the GitHub Pages webserver.
    *
    * When the App is loaded, `src/app/app.module.ts` uses the `route` query
    * parameter to route to the destination using the angular router.
    */
-  window.location = `${baseUrl}?route=${frontendRoute}`;
+  window.location = `${baseUrl}?route=${inAppRoute}`;
 </script>
