@@ -14,6 +14,7 @@ export class ButtonComponent {
   @Input() color: 'default' | 'success' = 'default';
   @Input() ml = '0px';
   @Input() height = '35px';
+  @Input() icon = '';
 
   @Output() appClick = new EventEmitter();
 

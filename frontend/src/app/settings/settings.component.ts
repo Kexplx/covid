@@ -2,7 +2,6 @@ import { Component, Inject } from '@angular/core';
 import { DataService } from '../data.service';
 import { ENVIRONMENT_TOKEN, Environment } from '../environment-provider';
 import { UpdateService } from '../update.service';
-import { LocationService } from '../location.service';
 
 @Component({
   selector: 'app-settings',
@@ -19,6 +18,5 @@ export class SettingsComponent {
     @Inject(ENVIRONMENT_TOKEN) private environment: Environment,
     private dataService: DataService,
     private updateService: UpdateService,
-    private locationService: LocationService,
   ) {}
 }

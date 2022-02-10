@@ -1,5 +1,7 @@
-<button (click)="onClick()" [class.success]="success" [ngStyle]="{ 'margin-left': ml, height: this.height }" *ngIf="text" [class.shadow]="shadow" [class.disabled]="disabled">
+<button (click)="onClick()" [class.success]="success" [ngStyle]="{ 'margin-left': ml, height: this.height }" [class.shadow]="shadow" [class.disabled]="disabled">
   {{ text }}
+
+  <img [src]="'assets/icons/' + icon + '.svg'" *ngIf="icon" />
 
   <span *ngIf="bottomText" class="bottom-text fg-secondary fw-4">{{ bottomText }}</span>
 </button>
