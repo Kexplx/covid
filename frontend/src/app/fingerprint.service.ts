@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { nanoid } from 'nanoid';
-import { map, Observable, tap } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
 
 export interface FingerprintDocument {
@@ -16,6 +16,8 @@ const FINGERPRINT_KEY = 'inzidenz-app-fingerprint';
   providedIn: 'root',
 })
 export class FingerprintService {
+  private fingerprint = this.getFingerprintFromLocalStorage();
+
   constructor(private http: HttpClient, @Inject(ENVIRONMENT_TOKEN) private environment: Environment) {}
 
   getFingerprintDocuments(): Observable<FingerprintDocument[]> {
@@ -30,7 +32,8 @@ export class FingerprintService {
         // We therefore add it to the result here.
         const todaysDoc = docs[0];
 
-        if (todaysDoc.fingerprintCount === 0) {
+        const fingerprintNotCounted = todaysDoc.fingerprints?.indexOf(this.fingerprint) === -1;
+        if (fingerprintNotCounted) {
           todaysDoc.fingerprintCount++;
         }
 
@@ -48,9 +51,7 @@ export class FingerprintService {
   sendFingerpint(): Observable<void> {
     const url = `${this.environment.api}/fingerprints`;
 
-    const fingerprint = this.getFingerprintFromLocalStorage();
-
-    return this.http.post<void>(url, { fingerprint });
+    return this.http.post<void>(url, { fingerprint: this.fingerprint });
   }
 
   private getFingerprintFromLocalStorage(): string {

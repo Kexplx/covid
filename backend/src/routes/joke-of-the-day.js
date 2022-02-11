@@ -4,7 +4,16 @@ const MongoDB = require('../mongodb');
 
 const mongoDb = new MongoDB();
 
-const jokes = [
+function removeDuplicates(strings) {
+  const m = {};
+  for (const s of strings) {
+    m[s] = 1;
+  }
+
+  return Object.keys(m);
+}
+
+const jokes = removeDuplicates([
   'Zwei Freunde unterhalten sich. Fragt der eine: "Wie schützt du dich gegen das Coronavirus?" Antwortet der andere: "Mit Pfefferspray! Wenn Du dir damit die Hände einreibst, fässt du dir garantiert nicht ins Gesicht!"',
   'Im Fernsehen hieß es gerade, dass der gesunde Menschenverstand die beste Waffe gegen das Virus sei. Ich glaube wir sind alle verloren!',
   'An alle Kinder, die mein Haus letztes Halloween mit Klopapierrollen beworfen haben: "Wer zuletzt lacht, lacht am besten!"',
@@ -45,6 +54,8 @@ const jokes = [
   'I never thought the comment “I wouldn’t touch them with a six-foot pole” would become a national policy, but here we are!',
   'My husband purchased a world map and then gave me a dart and said, “Throw this and wherever it lands – that’s where I’m taking you when this pandemic ends.” Turns out, we’re ',
   'spending two weeks behind the fridge!',
+  'What’s the worst part of homeschooling? You can’t transfer students out of your class.',
+  'What do you call grabbing your packages from the front porch? The day’s outdoor activities.',
   'If I keep stress-eating at this level, the buttons on my shirt will start socially distancing from each other!',
   'Back in my day, you would cough to cover up a fart. Now, with Covid-19, you fart to cover up a cough.',
   'Ran out of toilet paper and started using lettuce leaves. Today was just the tip of the iceberg, tomorrow romaines to be seen!',
@@ -93,6 +104,23 @@ const jokes = [
   'Finland just closed its borders. You know what that means. No one will be crossing the finish line.',
   'What do you tell yourself when you wake up late for work and realize you have a fever? Self, I so late.',
   'Still no toilet paper in the stores. They’re wiped out and you’re shit out of luck.',
+  'Knock-Knock! Who’s there? Etch! Ech Who? Bless You!',
+  'What’s the difference between the Alpha and Delta variant? I don’t know; it’s all Greek to me.',
+  'Have scientists determined why cats can catch COVID? It’s still a meow-stery.',
+  'Did you hear that vaccinations are controversial in some communities? It’s a real sticking point.',
+  'What did the virologist say to the public? Probably the opposite of what he’ll tell them next week.',
+  'One horse asks the other if he’s tried Ivermectin. “I haven’t,” he says, “but my neigh-bor has.”',
+  'What are some unexpected consequences of over-the-counter efforts to treat COVID-19? Dirty fish tanks.',
+  'Joe Rogan caught COVID but made a near-complete recovery. Unfortunately, he’s still not able to smell jiu-jitsu.',
+  'What do all virus jokes have in common? They’re catchy.',
+  'What do you call a coffee filter mask? A coughy filter.',
+  'Going to ask my mom if the offer to slap me into next year still stands.',
+  'Knock-Knock! Go home, you’re supposed to be social distancing.',
+  'As a result of the World Health Organization recommending lockdowns, people around the U.S. began adopting shelter dogs. WHO let the dogs out.',
+  'What’s the difference between working from home and working in an office? COVID.',
+  'They said you had to wear a mask at the grocery store. They should have mentioned clothes, too.',
+  'What do you call grabbing your packages from the front porch? The day’s outdoor activities.',
+  'What’s the worst part of homeschooling? You can’t transfer students out of your class.',
   'So many coronavirus jokes out there, it’s a pundemic.',
   'What did the man say to the bartender? I’ll have a corona, hold the virus.',
   'If there’s a baby boom nine months from now, what will happen in 2033? There will be a whole bunch of quaranteens.',
@@ -115,7 +143,7 @@ const jokes = [
   'What goes great with Corona? Lyme disease.',
   'What do all virus jokes have in common? They’re catchy.',
   'What do you call a coffee filter mask? A coughy filter.',
-];
+]);
 
 router.get('/', async (_, res) => {
   const jokeOfTheDayCount = await mongoDb.getJokeOfTheDayCount();

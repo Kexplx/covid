@@ -3,3 +3,12 @@ img {
   height: 15px;
   vertical-align: middle;
 }
+
+p {
+  line-height: 0.9rem;
+  text-align: justify;
+}
+
+li {
+  line-height: 0.9rem;
+}
