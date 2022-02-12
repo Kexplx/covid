@@ -1,5 +1,4 @@
-![Covidat logo](frontend/src/assets/icons/logo.png)
-[https://kexplx.github.io/covid/](https://kexplx.github.io/covid/)
+<img src="frontend/src/assets/icons/logo.png" width="50%">
 
 # Covidat
 
