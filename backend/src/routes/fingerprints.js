@@ -6,16 +6,21 @@ const MongoDB = require('../mongodb');
 const mongoDb = new MongoDB();
 
 router.get('/', async (req, res) => {
-  const { limit } = req.query;
+  const { limit, fingerprint } = req.query;
 
   const fingerprintDocuments = await mongoDb.getFingerprintDocuments(limit);
 
-  const documentsWithoutFingerprints = fingerprintDocuments.map(d => ({
-    created: d.created,
-    fingerprintCount: d.fingerprintCount,
-  }));
+  // If this was the first request of the user (for the current day),
+  // the server will not have counted their visit yet.
+  // We therefore add it to the result here.
+  const todaysDoc = fingerprintDocuments[0];
+  const requestFingerprintNotCounted = todaysDoc.fingerprints.indexOf(fingerprint) === -1;
+  if (requestFingerprintNotCounted) {
+    todaysDoc.fingerprints.push(fingerprint);
+    todaysDoc.fingerprintCount++;
+  }
 
-  res.send(documentsWithoutFingerprints);
+  res.send(fingerprintDocuments);
 });
 
 router.get('/max', async (_, res) => {
