@@ -1,5 +1,7 @@
-import { Component, Input, OnDestroy } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { filter } from 'rxjs';
 import { DataService } from 'src/app/data.service';
 import { District } from 'src/app/district.service';
 import { LocationService } from 'src/app/location.service';
@@ -33,11 +35,18 @@ export class SettingsFormComponent implements OnDestroy {
 
   districtDataOutOfSync = false;
 
+  isDiscardChangesDialogVisible = false;
+
   constructor(
     private settingsService: SettingsService,
     private dataService: DataService,
     private locationService: LocationService,
+    private router: Router,
   ) {}
+
+  private isNavigationEnd(event: any): event is NavigationStart {
+    return event instanceof NavigationStart;
+  }
 
   ngOnDestroy(): void {
     if (this.districtDataOutOfSync) {
@@ -70,6 +79,12 @@ export class SettingsFormComponent implements OnDestroy {
     } else {
       return false;
     }
+  }
+
+  hasChanges() {
+    return (
+      this.isDistrictDataOutOfSync() || this.decimalPointsControl.value !== this.settingsService.settings.decimalPoints
+    );
   }
 
   onDistrictSelect(districtPreview: DistrictPreview) {
@@ -117,4 +132,6 @@ export class SettingsFormComponent implements OnDestroy {
       error: () => (this.currentUserLocationHasError = true),
     });
   }
+
+  onDiscardChanges() {}
 }
