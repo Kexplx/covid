@@ -55,7 +55,7 @@
 </div>
 
 <div class="mt-2 mb-1">
-  <app-button [disabled]="decimalPointsControl.invalid" (appClick)="onSave()" text="Speichern"></app-button>
+  <app-button [disabled]="decimalPointsControl.invalid || !hasChanges()" (appClick)="onSave()" text="Speichern"></app-button>
 </div>
 
 <app-alert *ngIf="isSuccessAlertVisible" text="Einstellungen gespeichert"></app-alert>

@@ -33,6 +33,8 @@ export class SettingsFormComponent implements OnDestroy {
 
   districtDataOutOfSync = false;
 
+  isDiscardChangesDialogVisible = false;
+
   constructor(
     private settingsService: SettingsService,
     private dataService: DataService,
@@ -70,6 +72,14 @@ export class SettingsFormComponent implements OnDestroy {
     } else {
       return false;
     }
+  }
+
+  hasChanges() {
+    return (
+      this.isDistrictDataOutOfSync() ||
+      this.decimalPointsControl.value !== this.settingsService.settings.decimalPoints ||
+      this.favoriteDistrictCode !== this.settingsService.settings.favoriteDistrictCode
+    );
   }
 
   onDistrictSelect(districtPreview: DistrictPreview) {
@@ -117,4 +127,6 @@ export class SettingsFormComponent implements OnDestroy {
       error: () => (this.currentUserLocationHasError = true),
     });
   }
+
+  onDiscardChanges() {}
 }
