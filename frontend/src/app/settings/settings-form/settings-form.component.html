@@ -55,7 +55,9 @@
 </div>
 
 <div class="mt-2 mb-1">
-  <app-button [disabled]="decimalPointsControl.invalid || !hasChanges()" (appClick)="onSave()" text="Speichern"></app-button>
+  <app-button [disabled]="decimalPointsControl.invalid || !hasUnsavedChanges()" (appClick)="onSave()" text="Speichern"></app-button>
 </div>
 
 <app-alert *ngIf="isSuccessAlertVisible" text="Einstellungen gespeichert"></app-alert>
+
+<app-discard-changed-dialog *ngIf="isDiscardChangesDialogVisible" (cancel)="isDiscardChangesDialogVisible = false" (discard)="onDiscardChanges()"></app-discard-changed-dialog>

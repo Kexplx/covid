@@ -1,13 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AppData } from 'src/app/data.service';
 import { SettingsService } from 'src/app/settings.service';
+import { BaseDialog } from '../shared/BaseDialog';
+import { SwipeService } from '../swipe.service';
 
 @Component({
   selector: 'app-covid-daily',
   templateUrl: './covid-daily.component.html',
   styleUrls: ['./covid-daily.component.css'],
 })
-export class CovidDailyComponent implements OnInit {
+export class CovidDailyComponent extends BaseDialog implements OnInit {
   @Input() data!: AppData;
   @Output() close = new EventEmitter();
 
@@ -22,7 +24,9 @@ export class CovidDailyComponent implements OnInit {
 
   lastUpdated = '';
 
-  constructor(private settingsService: SettingsService) {}
+  constructor(private settingsService: SettingsService, swipeService: SwipeService) {
+    super(swipeService);
+  }
 
   ngOnInit(): void {
     this.lastUpdated = this.data.lastUpdated;
@@ -41,5 +45,7 @@ export class CovidDailyComponent implements OnInit {
 
   onClose() {
     this.close.emit();
+
+    this.cleanup();
   }
 }

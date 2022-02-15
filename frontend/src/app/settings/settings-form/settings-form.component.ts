@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { ActivatedRouteSnapshot, Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 import { District } from 'src/app/district.service';
 import { LocationService } from 'src/app/location.service';
@@ -34,10 +35,13 @@ export class SettingsFormComponent implements OnDestroy {
   districtDataOutOfSync = false;
 
   isDiscardChangesDialogVisible = false;
+  isDiscardChangesConfirmed = false;
+  guardedRoute?: string;
 
   constructor(
     private settingsService: SettingsService,
     private dataService: DataService,
+    private router: Router,
     private locationService: LocationService,
   ) {}
 
@@ -74,7 +78,7 @@ export class SettingsFormComponent implements OnDestroy {
     }
   }
 
-  hasChanges() {
+  hasUnsavedChanges() {
     return (
       this.isDistrictDataOutOfSync() ||
       this.decimalPointsControl.value !== this.settingsService.settings.decimalPoints ||
@@ -128,5 +132,12 @@ export class SettingsFormComponent implements OnDestroy {
     });
   }
 
-  onDiscardChanges() {}
+  onDiscardChanges() {
+    // We had unsaved changes but the user wants to leave the route without saving them.
+    // Reset the changes and
+    this.isDiscardChangesConfirmed = true;
+    if (this.guardedRoute) {
+      this.router.navigateByUrl(this.guardedRoute);
+    }
+  }
 }

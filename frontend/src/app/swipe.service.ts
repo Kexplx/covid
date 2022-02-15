@@ -15,9 +15,24 @@ export class SwipeService {
   swipeLeft$ = this.swipeLeftSubject.asObservable();
   swipeRight$ = this.swipeRightSubject.asObservable();
 
+  disabled = false;
+
   constructor(@Inject(DOCUMENT) doc: Document) {
-    doc.addEventListener('touchstart', this.handleTouchStart.bind(this), false);
-    doc.addEventListener('touchmove', this.handleTouchMove.bind(this), false);
+    doc.addEventListener('touchstart', e => {
+      if (this.disabled) {
+        return;
+      }
+
+      this.handleTouchStart(e);
+    });
+
+    doc.addEventListener('touchmove', e => {
+      if (this.disabled) {
+        return;
+      }
+
+      this.handleTouchMove(e);
+    });
   }
 
   handleTouchStart(evt: TouchEvent) {

@@ -20,6 +20,11 @@
   width: 250px;
 }
 
+.action-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .img-close {
   position: absolute;
   width: 10px;

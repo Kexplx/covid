@@ -1,0 +1,14 @@
+<div (click)="onCancel()" class="backdrop">
+  <div class="content">
+    <img class="img-close" (click)="onCancel()" src="assets/icons/close.svg" alt="Close" />
+
+    <h2>Änderungen verwerfen?</h2>
+
+    <p class="mt-1 fg-secondary">Alle Änderungen werden verworfen. Weiter?</p>
+
+    <div class="mt-2 action-container">
+      <app-button (appClick)="onCancel()" text="Nein"></app-button>
+      <app-button (appClick)="onDiscard()" text="Ja"></app-button>
+    </div>
+  </div>
+</div>
