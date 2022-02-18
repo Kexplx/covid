@@ -8,8 +8,11 @@ const app = express();
 // Read environment variables from `.env`.
 require('dotenv').config();
 
+// True, if we're running on AppEngine.
+const isProduction = process.env.NODE_ENV === 'production';
+
 // Middleware
-app.use(cors());
+app.use(cors({ origin: isProduction ? 'https://kexplx.github.io' : '*' }));
 app.use(express.json({ limit: '50kb' }));
 app.use(parseQueryParamToInt('limit', 'lat', 'lon'));
 
@@ -25,7 +28,7 @@ const topDistrictsRouter = require('./routes/top-districts');
 const fingerprintRouter = require('./routes/fingerprints');
 const locationRouter = require('./routes/location');
 
-if (process.env.NODE_ENV === 'production') {
+if (isProduction) {
   app.use('/collect', verifyRequestComesFromAppEngine, collectRouter);
 } else {
   app.use('/collect', collectRouter);
