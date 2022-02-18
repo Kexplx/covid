@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const verifyRequestComesFromAppEngine = require('./middleware/appengine-verify');
+
 const parseQueryParamToInt = require('./middleware/parse-query-param');
 
 const app = express();
@@ -11,8 +12,7 @@ require('dotenv').config();
 // True, if we're running on AppEngine.
 const isProduction = process.env.NODE_ENV === 'production';
 
-// Middleware
-app.use(cors({ origin: isProduction ? 'https://kexplx.github.io' : '*' }));
+app.use(cors());
 app.use(express.json({ limit: '50kb' }));
 app.use(parseQueryParamToInt('limit', 'lat', 'lon'));
 
