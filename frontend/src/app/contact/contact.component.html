@@ -30,10 +30,18 @@
     <app-install-tutorial></app-install-tutorial>
 
     <h3 class="mt-1">Wann werden die Daten aktualisiert?</h3>
-    <p class="mt-05">Jeden Tag um 5:00 Uhr morgens.</p>
+    <p class="mt-05">
+      Jeden Tag <u>um 5:00 Uhr morgens</u>. Wenn Probleme mit den Datenquellen des RKI auftreten, werden die Daten erst im Laufe des Tages aktualisiert. Erfahrungsmemäß kommen solche Probleme ca.
+      einmal alle 2 - 3 Monate vor.
+    </p>
 
     <h3 class="mt-1">Woher stammen die Daten?</h3>
-    <p class="mt-05">Wir beziehen unsere Daten aus fünf offenen Datenquellen, bereitgestellt vom RKI in Form von APIs und CSV Dateien.</p>
+    <p class="mt-05">
+      Wir beziehen unsere Daten aus fünf offenen Datenquellen, bereitgestellt vom RKI in Form von APIs und CSV Dateien (<a
+        href="https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&outFields=GEN,BEZ,cases,deaths,last_update,cases7_per_100k,bl,AdmUnitId&returnGeometry=false&f=json"
+        >Beispiel: API für Städte und Landkreise</a
+      >.)
+    </p>
 
     <h3 class="mt-1">Wo ist die Hospitalisierungsinzidenz?</h3>
     <p class="mt-05">
