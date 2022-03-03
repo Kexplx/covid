@@ -27,6 +27,7 @@ const jokeOfTheDayRouter = require('./routes/joke-of-the-day');
 const topDistrictsRouter = require('./routes/top-districts');
 const fingerprintRouter = require('./routes/fingerprints');
 const locationRouter = require('./routes/location');
+const announcementsRouter = require('./routes/announcements/router');
 
 if (isProduction) {
   app.use('/collect', verifyRequestComesFromAppEngine, collectRouter);
@@ -43,6 +44,7 @@ app.use('/districts', districtsRouter);
 app.use('/states', statesRouter);
 app.use('/vaccination', vaccinationRouter);
 app.use('/location', locationRouter);
+app.use('/announcements', announcementsRouter);
 
 // Start the server.
 const PORT = process.env.PORT || 3000;
