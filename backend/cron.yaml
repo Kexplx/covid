@@ -1,18 +1,18 @@
 cron:
   - url: /collect/top-districts
-    schedule: every 30 minutes from 05:00 to 09:00
+    schedule: every 60 minutes from 05:00 to 11:00
     timezone: Europe/Berlin
 
   - url: /collect/germany
-    schedule: every 30 minutes from 05:00 to 09:00
+    schedule: every 60 minutes from 05:00 to 11:00
     timezone: Europe/Berlin
 
   - url: /collect/states
-    schedule: every 30 minutes from 05:00 to 09:00
+    schedule: every 60 minutes from 05:00 to 11:00
     timezone: Europe/Berlin
 
   - url: /collect/districts
-    schedule: every 30 minutes from 05:00 to 09:00
+    schedule: every 60 minutes from 05:00 to 11:00
     timezone: Europe/Berlin
 
   - url: /collect/vaccination
