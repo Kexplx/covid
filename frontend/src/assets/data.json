@@ -1,1413 +1,536 @@
 {
-  "lastUpdated": "2022-01-19T23:00:00.000Z",
+  "lastUpdated": "2022-03-02T23:00:00.000Z",
   "listOfDistrictHistories": [
     [
       {
-        "_id": "61e8de43c456c63ac9f7bc6c",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 1083.62960315858,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 187008,
-        "totalDeaths": 2057
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bace",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 994.613701215345,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 181437,
-        "totalDeaths": 2051
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7b90e",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 900.09166100758,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 177013,
-        "totalDeaths": 2049
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b760",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 805.839529538272,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 172959,
-        "totalDeaths": 2049
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b5b2",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 831.480859691721,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 172064,
-        "totalDeaths": 2049
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b414",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 737.714563951637,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 169149,
-        "totalDeaths": 2045
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b265",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 665.001149811226,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 165309,
-        "totalDeaths": 2038
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b0a6",
-        "code": 2000,
-        "name": "Hamburg",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 576.30913835414,
-        "type": "Kreisfreie Stadt",
-        "state": "Hamburg",
-        "totalCases": 161543,
-        "totalDeaths": 2036
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bcd2",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 1119.35024551632,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 87529,
-        "totalDeaths": 964
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bb34",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 1171.83001266843,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 86456,
-        "totalDeaths": 963
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7b974",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 1219.99099599007,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 85813,
-        "totalDeaths": 963
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b7c6",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 1060.06512202527,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 84133,
-        "totalDeaths": 962
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b618",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 965.051877754861,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 82926,
-        "totalDeaths": 962
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b47a",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 939.008302534734,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 81922,
-        "totalDeaths": 962
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b2cb",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 860.223215687917,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 80460,
-        "totalDeaths": 962
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b10c",
-        "code": 6412,
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 795.834074942678,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen",
-        "totalCases": 78918,
-        "totalDeaths": 962
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd5f",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 736.192290011164,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 17283,
-        "totalDeaths": 128
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bbc1",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 704.01260918106,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 16979,
-        "totalDeaths": 128
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7ba01",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 738.162474551783,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 16859,
-        "totalDeaths": 128
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b853",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 702.042424640441,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 16711,
-        "totalDeaths": 128
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b6a5",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 680.370394693636,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 16594,
-        "totalDeaths": 128
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b507",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 454.455900702699,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 16167,
-        "totalDeaths": 128
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b358",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 542.457476850332,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 16166,
-        "totalDeaths": 128
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b199",
-        "code": 9362,
-        "name": "Regensburg",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 600.906284888685,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 16166,
-        "totalDeaths": 128
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd76",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 625.52831783601,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 8756,
-        "totalDeaths": 117
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bbd8",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 636.205899363794,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 8595,
-        "totalDeaths": 117
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7ba18",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 689.593807002714,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 8524,
-        "totalDeaths": 117
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b86a",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 614.850736308226,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 8392,
-        "totalDeaths": 117
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b6bc",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 557.013836366063,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 8287,
-        "totalDeaths": 117
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b51e",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 567.691417893847,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 8241,
-        "totalDeaths": 117
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b36f",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 484.050362592873,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 8099,
-        "totalDeaths": 117
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b1b0",
-        "code": 9562,
-        "name": "Erlangen",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 436.891044178494,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 7985,
-        "totalDeaths": 117
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd3c",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 986.358034729156,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 174754,
-        "totalDeaths": 1667
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bb9e",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 948.930319943126,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 171804,
-        "totalDeaths": 1665
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7b9de",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 883.415020272786,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 168478,
-        "totalDeaths": 1660
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b830",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 859.695122033165,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 166375,
-        "totalDeaths": 1659
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b682",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 829.390096236936,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 164872,
-        "totalDeaths": 1659
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b4e4",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 761.858941192123,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 162772,
-        "totalDeaths": 1659
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b335",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 718.182074745229,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 160637,
-        "totalDeaths": 1657
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b176",
-        "code": 9162,
-        "name": "München",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 645.342500547641,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 158224,
-        "totalDeaths": 1654
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd78",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 548.547841790113,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 67481,
-        "totalDeaths": 1119
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bbda",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 544.280496486229,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 66878,
-        "totalDeaths": 1116
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7ba1a",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 526.629204547438,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 66130,
-        "totalDeaths": 1114
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b86c",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 429.450113763546,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 65517,
-        "totalDeaths": 1114
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b6be",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 478.330614517121,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 65450,
-        "totalDeaths": 1114
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b520",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 491.908531393114,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 65227,
-        "totalDeaths": 1114
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b371",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 511.305555501675,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 64911,
-        "totalDeaths": 1112
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b1b2",
-        "code": 9564,
-        "name": "Nürnberg",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 464.364757158957,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 64438,
-        "totalDeaths": 1111
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd46",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 939.928682454055,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 21571,
-        "totalDeaths": 196
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bba8",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 845.752948706227,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 21180,
-        "totalDeaths": 196
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7b9e8",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 714.08978696169,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 20707,
-        "totalDeaths": 196
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b83a",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 730.547682179757,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 20553,
-        "totalDeaths": 196
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b68c",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 521.166681905459,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 20077,
-        "totalDeaths": 196
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b4ee",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 583.798116485325,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 20077,
-        "totalDeaths": 196
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b33f",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 539.453232147755,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 19867,
-        "totalDeaths": 195
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b180",
-        "code": 9179,
-        "name": "Fürstenfeldbruck",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 342.415653287007,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 19321,
-        "totalDeaths": 195
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd62",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 452.792480522117,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 15443,
-        "totalDeaths": 245
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bbc4",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 448.88909706934,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 15326,
-        "totalDeaths": 245
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7ba04",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 412.197292613237,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 15188,
-        "totalDeaths": 245
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b856",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 397.364435492685,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 15141,
-        "totalDeaths": 245
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b6a8",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 393.461052039908,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 15122,
-        "totalDeaths": 245
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b50a",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 368.479397942136,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 15050,
-        "totalDeaths": 245
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b35b",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 329.445563414368,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 14948,
-        "totalDeaths": 245
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b19c",
-        "code": 9372,
-        "name": "Cham",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 298.218495792153,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 14866,
-        "totalDeaths": 245
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd5c",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 406.899601946042,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12466,
-        "totalDeaths": 172
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bbbe",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 402.96820482579,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12370,
-        "totalDeaths": 172
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7b9fe",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 409.84814978623,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12286,
-        "totalDeaths": 171
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b850",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 372.49987714384,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12216,
-        "totalDeaths": 170
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b6a2",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 371.517027863777,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12198,
-        "totalDeaths": 170
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b504",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 333.185905941324,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12136,
-        "totalDeaths": 170
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b355",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 282.077743378053,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12078,
-        "totalDeaths": 170
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b196",
-        "code": 9278,
-        "name": "Straubing-Bogen",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 277.163496977738,
-        "type": "Landkreis",
-        "state": "Bayern",
-        "totalCases": 12044,
-        "totalDeaths": 170
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bd83",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 923.169021850434,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 11504,
-        "totalDeaths": 147
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bbe5",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 675.835341934874,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 11081,
-        "totalDeaths": 147
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7ba25",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 699.465948296233,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 10976,
-        "totalDeaths": 147
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b877",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 690.801392630402,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 10797,
-        "totalDeaths": 147
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b6c9",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 658.506230603211,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 10692,
-        "totalDeaths": 147
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b52b",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 576.586795217165,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 10541,
-        "totalDeaths": 147
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b37c",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 540.353198796414,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 10433,
-        "totalDeaths": 146
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b1bd",
-        "code": 9663,
-        "name": "Würzburg",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 557.682310128078,
-        "type": "Kreisfreie Stadt",
-        "state": "Bayern",
-        "totalCases": 10331,
-        "totalDeaths": 146
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bdf7",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 667.162814682856,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 38509,
-        "totalDeaths": 492
-      },
-      {
-        "_id": "61e78cc4c456c63ac9f7bc59",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 604.16764333599,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 37694,
-        "totalDeaths": 492
-      },
-      {
-        "_id": "61e63b43c456c63ac9f7ba99",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 649.582766865126,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 37076,
-        "totalDeaths": 492
-      },
-      {
-        "_id": "61e4e9c3c456c63ac9f7b8eb",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 818.644226712297,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 36887,
-        "totalDeaths": 492
-      },
-      {
-        "_id": "61e39843c456c63ac9f7b73d",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 818.644226712297,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 36887,
-        "totalDeaths": 492
-      },
-      {
-        "_id": "61e246c3c456c63ac9f7b59f",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 813.370212366978,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 36849,
-        "totalDeaths": 492
-      },
-      {
-        "_id": "61e0f543c456c63ac9f7b3f0",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 955.182598096667,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 36565,
-        "totalDeaths": 492
-      },
-      {
-        "_id": "61dfa3c3c456c63ac9f7b231",
-        "code": 11007,
-        "name": "Berlin Tempelhof-Schöneberg",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 977.157657868829,
-        "type": "Bezirk",
-        "state": "Berlin",
-        "totalCases": 36139,
-        "totalDeaths": 492
-      }
-    ],
-    [
-      {
-        "_id": "61e8de43c456c63ac9f7bdc5",
+        "_id": "6220882c5a1c64cf44d43032",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "incidence": 513.646184976226,
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "incidence": 1348.96977872544,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 59958,
-        "totalDeaths": 710
+        "totalCases": 108340,
+        "totalDeaths": 737
       },
       {
-        "_id": "61e78cc4c456c63ac9f7bc27",
+        "_id": "621f24025a1c64cf44d42e81",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-19T00:00:00.000Z",
-        "incidence": 432.808417839205,
+        "lastUpdated": "2022-03-02T00:00:00.000Z",
+        "incidence": 1288.21592888954,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 59062,
-        "totalDeaths": 708
+        "totalCases": 106334,
+        "totalDeaths": 736
       },
       {
-        "_id": "61e63b43c456c63ac9f7ba67",
+        "_id": "621d9a432046c139344af33b",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-18T00:00:00.000Z",
-        "incidence": 372.724031913345,
+        "lastUpdated": "2022-03-01T00:00:00.000Z",
+        "incidence": 1325.53854187413,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 58164,
-        "totalDeaths": 708
+        "totalCases": 104571,
+        "totalDeaths": 735
       },
       {
-        "_id": "61e4e9c3c456c63ac9f7b8b9",
+        "_id": "621c48c2658470b39773fef8",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-17T00:00:00.000Z",
-        "incidence": 376.238717441041,
+        "lastUpdated": "2022-02-28T00:00:00.000Z",
+        "incidence": 1534.91337973834,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 57937,
-        "totalDeaths": 708
+        "totalCases": 104316,
+        "totalDeaths": 735
       },
       {
-        "_id": "61e39843c456c63ac9f7b70b",
+        "_id": "621af742658470b39773fd5a",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-16T00:00:00.000Z",
-        "incidence": 341.593960096604,
+        "lastUpdated": "2022-02-27T00:00:00.000Z",
+        "incidence": 1449.72409718608,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 57660,
-        "totalDeaths": 708
+        "totalCases": 103357,
+        "totalDeaths": 735
       },
       {
-        "_id": "61e246c3c456c63ac9f7b56d",
+        "_id": "6219a5c3658470b39773fbac",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-15T00:00:00.000Z",
-        "incidence": 341.928692051622,
+        "lastUpdated": "2022-02-26T00:00:00.000Z",
+        "incidence": 1413.74041202156,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 57429,
-        "totalDeaths": 706
+        "totalCases": 102644,
+        "totalDeaths": 735
       },
       {
-        "_id": "61e0f543c456c63ac9f7b3be",
+        "_id": "621854420523846ce0119c94",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-14T00:00:00.000Z",
-        "incidence": 323.518434525593,
+        "lastUpdated": "2022-02-25T00:00:00.000Z",
+        "incidence": 1430.64437575001,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 57014,
-        "totalDeaths": 706
+        "totalCases": 101264,
+        "totalDeaths": 735
       },
       {
-        "_id": "61dfa3c3c456c63ac9f7b1ff",
+        "_id": "621702c20523846ce0119ae4",
         "code": 14713,
         "name": "Leipzig",
-        "lastUpdated": "2022-01-13T00:00:00.000Z",
-        "incidence": 318.664821177821,
+        "lastUpdated": "2022-02-24T00:00:00.000Z",
+        "incidence": 1394.49332460799,
         "type": "Kreisfreie Stadt",
         "state": "Sachsen",
-        "totalCases": 56649,
-        "totalDeaths": 701
+        "totalCases": 99717,
+        "totalDeaths": 733
       }
     ]
   ],
   "germanyHistory": [
     {
-      "_id": "61e8de44c456c63ac9f7be09",
-      "lastUpdated": "2022-01-19T23:00:00.000Z",
-      "newCases": 133536,
-      "incidence": 638.7695291701593,
-      "hospitalizationIncidence": 3.34,
-      "totalCases": 8320386,
-      "totalDeaths": 116315
+      "_id": "622088285a1c64cf44d42ec8",
+      "lastUpdated": "2022-03-02T23:00:00.000Z",
+      "newCases": 210673,
+      "incidence": 1174.1394215823213,
+      "hospitalizationIncidence": 6.36,
+      "totalCases": 15264297,
+      "totalDeaths": 123505
     },
     {
-      "_id": "61e78cc4c456c63ac9f7bc5a",
-      "lastUpdated": "2022-01-18T23:00:00.000Z",
-      "newCases": 112323,
-      "incidence": 584.4444938033876,
-      "hospitalizationIncidence": 3.17,
-      "totalCases": 8186850,
-      "totalDeaths": 116081
+      "_id": "621f24035a1c64cf44d42eb5",
+      "lastUpdated": "2022-03-01T23:00:00.000Z",
+      "newCases": 186406,
+      "incidence": 1171.9314974460174,
+      "hospitalizationIncidence": 6.14,
+      "totalCases": 15053624,
+      "totalDeaths": 123238
     },
     {
-      "_id": "61e63b44c456c63ac9f7baab",
-      "lastUpdated": "2022-01-17T23:00:00.000Z",
-      "newCases": 74405,
-      "incidence": 553.2425332148575,
-      "hospitalizationIncidence": 3.14,
-      "totalCases": 8074527,
-      "totalDeaths": 115842
+      "_id": "621d9a432046c139344af36e",
+      "lastUpdated": "2022-02-28T23:00:00.000Z",
+      "newCases": 122111,
+      "incidence": 1213.0150008602607,
+      "hospitalizationIncidence": 6.08,
+      "totalCases": 14867218,
+      "totalDeaths": 122937
     },
     {
-      "_id": "61e4e9c4c456c63ac9f7b8fc",
-      "lastUpdated": "2022-01-16T23:00:00.000Z",
-      "newCases": 34145,
-      "incidence": 528.2217981495311,
-      "hospitalizationIncidence": 3.24,
-      "totalCases": 8000122,
-      "totalDeaths": 115649
+      "_id": "621c48c3658470b39773ff3c",
+      "lastUpdated": "2022-02-27T23:00:00.000Z",
+      "newCases": 62349,
+      "incidence": 1238.1932729963146,
+      "hospitalizationIncidence": 6.33,
+      "totalCases": 14745107,
+      "totalDeaths": 122702
     },
     {
-      "_id": "61e39844c456c63ac9f7b74e",
-      "lastUpdated": "2022-01-15T23:00:00.000Z",
-      "newCases": 52504,
-      "incidence": 515.7234563474578,
-      "hospitalizationIncidence": 3.32,
-      "totalCases": 7965977,
-      "totalDeaths": 115619
+      "_id": "621af743658470b39773fd8e",
+      "lastUpdated": "2022-02-26T23:00:00.000Z",
+      "newCases": 107913,
+      "incidence": 1240.3025861417814,
+      "hospitalizationIncidence": 6.52,
+      "totalCases": 14682758,
+      "totalDeaths": 122678
     },
     {
-      "_id": "61e246c4c456c63ac9f7b5a0",
-      "lastUpdated": "2022-01-14T23:00:00.000Z",
-      "newCases": 78022,
-      "incidence": 497.0835739331274,
-      "hospitalizationIncidence": 3.23,
-      "totalCases": 7913473,
-      "totalDeaths": 115572
+      "_id": "6219a5c3658470b39773fbe0",
+      "lastUpdated": "2022-02-25T23:00:00.000Z",
+      "newCases": 175833,
+      "incidence": 1253.3480986856946,
+      "hospitalizationIncidence": 6.28,
+      "totalCases": 14574845,
+      "totalDeaths": 122621
     },
     {
-      "_id": "61e0f544c456c63ac9f7b3f1",
-      "lastUpdated": "2022-01-13T23:00:00.000Z",
-      "newCases": 92223,
-      "incidence": 470.56082511712367,
-      "hospitalizationIncidence": 3.09,
-      "totalCases": 7835451,
-      "totalDeaths": 115337
+      "_id": "621854430523846ce0119cc7",
+      "lastUpdated": "2022-02-24T23:00:00.000Z",
+      "newCases": 210743,
+      "incidence": 1259.4860315787748,
+      "hospitalizationIncidence": 6.27,
+      "totalCases": 14399012,
+      "totalDeaths": 122371
     },
     {
-      "_id": "61dfa3c4c456c63ac9f7b242",
-      "lastUpdated": "2022-01-12T23:00:00.000Z",
-      "newCases": 81417,
-      "incidence": 427.659031237689,
-      "hospitalizationIncidence": 3.13,
-      "totalCases": 7743228,
-      "totalDeaths": 115051
+      "_id": "621702c30523846ce0119b18",
+      "lastUpdated": "2022-02-23T23:00:00.000Z",
+      "newCases": 216322,
+      "incidence": 1264.9541312779982,
+      "hospitalizationIncidence": 6.34,
+      "totalCases": 14188269,
+      "totalDeaths": 122145
     }
   ],
   "vaccination": {
-    "_id": "61e7fd45c456c63ac9f7bc5b",
-    "lastUpdated": "2022-01-19T00:00:00.000Z",
-    "numberOfPeopleAtLeastOnceVaccinated": 62530950,
-    "percentAtLeastOnceVaccinated": 75.3,
-    "totalNumberOfVaccinations": 159732231,
-    "bavaria_numberOfPeopleAtLeastOnceVaccinated": 9565620,
-    "bavaria_percentAtLeastOnceVaccinated": 72.9,
-    "stateWithHighestVaccination": {
-      "name": "Bremen",
-      "percentAtLeastOnceVaccinated": 88.7
-    },
+    "_id": "621f5c445a1c64cf44d42eb6",
+    "lastUpdated": "2022-03-02T00:00:00.000Z",
+    "numberOfPeopleAtLeastOnceVaccinated": 63465125,
+    "percentAtLeastOnceVaccinated": 76.3,
+    "totalNumberOfVaccinations": 170058529,
+    "bavaria_numberOfPeopleAtLeastOnceVaccinated": 9699321,
+    "bavaria_percentAtLeastOnceVaccinated": 73.8,
     "stateWithLowestVaccination": {
       "name": "Sachsen",
-      "percentAtLeastOnceVaccinated": 64.3
+      "percentAtLeastOnceVaccinated": 65.2
+    },
+    "stateWithHighestVaccination": {
+      "name": "Bremen",
+      "percentAtLeastOnceVaccinated": 90
     }
   },
   "bavariaHistory": [
     {
-      "_id": "61e8de44c456c63ac9f7be01",
+      "_id": "622088285a1c64cf44d42ec0",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1505055,
-      "lastUpdated": "2022-01-19T23:00:00.000Z",
-      "casesInLast7Days": 86878,
-      "totalDeaths": 20236,
-      "incidence": 661.162785936847,
-      "hospitalizationIncidence": 2.91
+      "totalCases": 2865297,
+      "lastUpdated": "2022-03-02T23:00:00.000Z",
+      "casesInLast7Days": 205918,
+      "totalDeaths": 21455,
+      "incidence": 1567.08624225401
     },
     {
-      "_id": "61e78cc3c456c63ac9f7bab7",
+      "_id": "621f24025a1c64cf44d42d11",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1483277,
-      "lastUpdated": "2022-01-18T23:00:00.000Z",
-      "casesInLast7Days": 79772,
-      "totalDeaths": 20214,
-      "incidence": 607.084391442646,
-      "hospitalizationIncidence": 2.85
+      "totalCases": 2822174,
+      "lastUpdated": "2022-03-01T23:00:00.000Z",
+      "casesInLast7Days": 206861,
+      "totalDeaths": 21410,
+      "incidence": 1574.26270242964
     },
     {
-      "_id": "61e63b43c456c63ac9f7baa3",
+      "_id": "621d9a422046c139344af1ca",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1465638,
-      "lastUpdated": "2022-01-17T23:00:00.000Z",
-      "casesInLast7Days": 75729,
-      "totalDeaths": 20190,
-      "incidence": 576.316174592089,
-      "hospitalizationIncidence": 2.68
+      "totalCases": 2792444,
+      "lastUpdated": "2022-02-28T23:00:00.000Z",
+      "casesInLast7Days": 221338,
+      "totalDeaths": 21371,
+      "incidence": 1684.43620610154
     },
     {
-      "_id": "61e4e9c3c456c63ac9f7b8f4",
+      "_id": "621c48c2658470b39773ff34",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1454911,
-      "lastUpdated": "2022-01-16T23:00:00.000Z",
-      "casesInLast7Days": 72464,
-      "totalDeaths": 20177,
-      "incidence": 551.46872764253,
-      "hospitalizationIncidence": 2.72
+      "totalCases": 2767775,
+      "lastUpdated": "2022-02-27T23:00:00.000Z",
+      "casesInLast7Days": 222852,
+      "totalDeaths": 21315,
+      "incidence": 1695.95811565181
     },
     {
-      "_id": "61e39843c456c63ac9f7b746",
+      "_id": "621af742658470b39773fbea",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1446706,
-      "lastUpdated": "2022-01-15T23:00:00.000Z",
-      "casesInLast7Days": 69295,
-      "totalDeaths": 20170,
-      "incidence": 527.351864125484,
-      "hospitalizationIncidence": 2.77
+      "totalCases": 2748972,
+      "lastUpdated": "2022-02-26T23:00:00.000Z",
+      "casesInLast7Days": 222767,
+      "totalDeaths": 21313,
+      "incidence": 1695.31124490428
     },
     {
-      "_id": "61e246c3c456c63ac9f7b3fd",
+      "_id": "6219a5c3658470b39773fa3c",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1436506,
-      "lastUpdated": "2022-01-14T23:00:00.000Z",
-      "casesInLast7Days": 65807,
-      "totalDeaths": 20166,
-      "incidence": 500.807332744148,
-      "hospitalizationIncidence": 2.66
+      "totalCases": 2722333,
+      "lastUpdated": "2022-02-25T23:00:00.000Z",
+      "casesInLast7Days": 224464,
+      "totalDeaths": 21307,
+      "incidence": 1708.22582912278
     },
     {
-      "_id": "61e0f543c456c63ac9f7b24e",
+      "_id": "621854410523846ce0119b23",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1426155,
-      "lastUpdated": "2022-01-13T23:00:00.000Z",
-      "casesInLast7Days": 62172,
-      "totalDeaths": 20133,
-      "incidence": 473.144095481775,
-      "hospitalizationIncidence": 2.52
+      "totalCases": 2687779,
+      "lastUpdated": "2022-02-24T23:00:00.000Z",
+      "casesInLast7Days": 225654,
+      "totalDeaths": 21266,
+      "incidence": 1717.28201958831
     },
     {
-      "_id": "61dfa3c3c456c63ac9f7b23a",
+      "_id": "621702c20523846ce0119974",
       "name": "Bayern",
       "population": 13140183,
-      "totalCases": 1413013,
-      "lastUpdated": "2022-01-12T23:00:00.000Z",
-      "casesInLast7Days": 55210,
-      "totalDeaths": 20090,
-      "incidence": 420.161576136345,
-      "hospitalizationIncidence": 2.47
+      "totalCases": 2648687,
+      "lastUpdated": "2022-02-23T23:00:00.000Z",
+      "casesInLast7Days": 237067,
+      "totalDeaths": 21227,
+      "incidence": 1804.13773537248
     }
   ],
   "jokeOfTheDay": {
-    "text": "I finished Netflix today."
+    "text": "Yeah, I have plans tonight. I’ll probably hit the living room around 8 or 9."
   },
   "topDistricts": {
-    "_id": "61e8de43c456c63ac9f7bdf8",
-    "lastUpdated": "2022-01-20T04:00:03.996Z",
+    "_id": "622088285a1c64cf44d42ec9",
+    "lastUpdated": "2022-03-03T09:19:36.684Z",
     "districts": [
       {
-        "name": "Berlin Mitte",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 374581,
-        "incidence": 2286.02091403461,
-        "type": "Bezirk",
-        "state": "Berlin"
+        "name": "Börde",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 170567,
+        "incidence": 2881.56560178698,
+        "type": "Landkreis",
+        "state": "Sachsen-Anhalt"
       },
       {
-        "name": "Berlin Neukölln",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 318509,
-        "incidence": 1621.93219029918,
-        "type": "Bezirk",
-        "state": "Berlin"
+        "name": "Freyung-Grafenau",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 78355,
+        "incidence": 2871.54616808117,
+        "type": "Landkreis",
+        "state": "Bayern"
       },
       {
-        "name": "Berlin Friedrichshain-Kreuzberg",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 279210,
-        "incidence": 1502.45335052469,
-        "type": "Bezirk",
-        "state": "Berlin"
+        "name": "Regensburg",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 194275,
+        "incidence": 2696.69283232531,
+        "type": "Landkreis",
+        "state": "Bayern"
       },
       {
-        "name": "Delmenhorst",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 77503,
-        "incidence": 1407.68744435699,
-        "type": "Kreisfreie Stadt",
-        "state": "Niedersachsen"
+        "name": "Regen",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 77313,
+        "incidence": 2633.45103669499,
+        "type": "Landkreis",
+        "state": "Bayern"
       },
       {
-        "name": "Berlin Spandau",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 239374,
-        "incidence": 1407.00326685438,
-        "type": "Bezirk",
-        "state": "Berlin"
-      },
-      {
-        "name": "Bremen",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 566573,
-        "incidence": 1359.75417113064,
-        "type": "Kreisfreie Stadt",
-        "state": "Bremen"
-      },
-      {
-        "name": "Potsdam",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 182112,
-        "incidence": 1233.85608856089,
+        "name": "Brandenburg an der Havel",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 72040,
+        "incidence": 2588.83953359245,
         "type": "Kreisfreie Stadt",
         "state": "Brandenburg"
       },
       {
-        "name": "Wiesbaden",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 278609,
-        "incidence": 1132.05244625981,
+        "name": "Cottbus",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 98693,
+        "incidence": 2464.20718794646,
         "type": "Kreisfreie Stadt",
-        "state": "Hessen"
+        "state": "Brandenburg"
       },
       {
-        "name": "Frankfurt am Main",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 764104,
-        "incidence": 1119.35024551632,
-        "type": "Kreisfreie Stadt",
-        "state": "Hessen"
+        "name": "Jerichower Land",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 89403,
+        "incidence": 2291.86940035569,
+        "type": "Landkreis",
+        "state": "Sachsen-Anhalt"
       },
       {
-        "name": "Segeberg",
-        "lastUpdated": "2022-01-20T00:00:00.000Z",
-        "population": 278007,
-        "incidence": 1114.72013294629,
-        "type": "Kreis",
-        "state": "Schleswig-Holstein"
+        "name": "Kelheim",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 123390,
+        "incidence": 2280.57379042062,
+        "type": "Landkreis",
+        "state": "Bayern"
+      },
+      {
+        "name": "Ansbach",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 41681,
+        "incidence": 2264.82090160985,
+        "type": "Kreisfreie Stadt",
+        "state": "Bayern"
+      },
+      {
+        "name": "Straubing-Bogen",
+        "lastUpdated": "2022-03-03T00:00:00.000Z",
+        "population": 101745,
+        "incidence": 2224.18792078235,
+        "type": "Landkreis",
+        "state": "Bayern"
       }
     ]
   },
   "fingerprintDocuments": [
     {
-      "created": "2022-01-19T23:00:00.379Z",
+      "_id": "621ff6f05a1c64cf44d42eb7",
+      "created": "2022-03-02T23:00:00.116Z",
+      "fingerprints": [
+        "i2EVDCD1OlRC3SxsPJIbC",
+        "JYJ6pjDEfaJB4NfnmNKsm",
+        "QJzKH1QlA92ZrDaAUyPWg",
+        "0EqmnD6d2iK7UkExkTm22",
+        "etXuD9InmHC0-m5ymOJsv",
+        "pL21-q26gyynHnN1RH5va",
+        "5OkpICOlYIp5FI7qxMTaZ"
+      ],
+      "fingerprintCount": 7
+    },
+    {
+      "_id": "621ea5705a1c64cf44d42d08",
+      "created": "2022-03-01T23:00:00.107Z",
+      "fingerprints": [
+        "mbIYsJ403fXYWqMbnMjrM",
+        "if0mWykxUI6OybhIZvotQ",
+        "JYJ6pjDEfaJB4NfnmNKsm",
+        "QJzKH1QlA92ZrDaAUyPWg",
+        "i2EVDCD1OlRC3SxsPJIbC",
+        "osg03o_eS4oD0mikOnPoN",
+        "zU_k6XmovEg8vqEcmzo67",
+        "etXuD9InmHC0-m5ymOJsv",
+        "0EqmnD6d2iK7UkExkTm22",
+        "RebJIIwRzlXkea8ahrBRc"
+      ],
+      "fingerprintCount": 10
+    },
+    {
+      "_id": "621d53f22046c139344af1c1",
+      "created": "2022-02-28T23:00:02.090Z",
+      "fingerprints": [
+        "i2EVDCD1OlRC3SxsPJIbC",
+        "JYJ6pjDEfaJB4NfnmNKsm",
+        "0EqmnD6d2iK7UkExkTm22",
+        "etXuD9InmHC0-m5ymOJsv",
+        "if0mWykxUI6OybhIZvotQ",
+        "RebJIIwRzlXkea8ahrBRc",
+        "L2ooojU6o0GlosacGdhXg",
+        "osg03o_eS4oD0mikOnPoN"
+      ],
+      "fingerprintCount": 8
+    },
+    {
+      "_id": "621c0271658470b39773fd8f",
+      "created": "2022-02-27T23:00:00.900Z",
+      "fingerprints": [
+        "zXKPZAbs9T24B7eb4PyL-",
+        "etXuD9InmHC0-m5ymOJsv",
+        "JYJ6pjDEfaJB4NfnmNKsm",
+        "TDb2Gk-6k-Yj8rzPOIaVP",
+        "k339P4TGwXkfNCwj6Cnsm",
+        "i2EVDCD1OlRC3SxsPJIbC",
+        "u0HdxjT-AnjqiSxH5T9LE",
+        "if0mWykxUI6OybhIZvotQ",
+        "aW3tpS7gdd8q_rXI6dSt0"
+      ],
+      "fingerprintCount": 9
+    },
+    {
+      "_id": "621ab0f1658470b39773fbe1",
+      "created": "2022-02-26T23:00:00.898Z",
+      "fingerprints": [
+        "i2EVDCD1OlRC3SxsPJIbC",
+        "JYJ6pjDEfaJB4NfnmNKsm",
+        "etXuD9InmHC0-m5ymOJsv",
+        "QJzKH1QlA92ZrDaAUyPWg",
+        "T-DKyov9B9yBNWKTfVRFz"
+      ],
       "fingerprintCount": 5
     },
     {
-      "created": "2022-01-18T23:00:00.371Z",
-      "fingerprintCount": 6
+      "_id": "62195f710523846ce0119cc9",
+      "created": "2022-02-25T23:00:00.892Z",
+      "fingerprints": ["i2EVDCD1OlRC3SxsPJIbC", "JYJ6pjDEfaJB4NfnmNKsm", "etXuD9InmHC0-m5ymOJsv"],
+      "fingerprintCount": 3
     },
     {
-      "created": "2022-01-17T23:00:00.364Z",
-      "fingerprintCount": 6
+      "_id": "62180df10523846ce0119b1a",
+      "created": "2022-02-24T23:00:00.885Z",
+      "fingerprints": [
+        "JYJ6pjDEfaJB4NfnmNKsm",
+        "QJzKH1QlA92ZrDaAUyPWg",
+        "0EqmnD6d2iK7UkExkTm22",
+        "i2EVDCD1OlRC3SxsPJIbC",
+        "ul8OvMfMSyyRrowblnh26",
+        "A_RUd9866NDBv4yI2PzdA",
+        "etXuD9InmHC0-m5ymOJsv",
+        "RebJIIwRzlXkea8ahrBRc",
+        "mbIYsJ403fXYWqMbnMjrM"
+      ],
+      "fingerprintCount": 9
     },
     {
-      "created": "2022-01-16T23:00:00.356Z",
-      "fingerprintCount": 7
-    },
-    {
-      "created": "2022-01-15T23:00:00.348Z",
-      "fingerprintCount": 6
-    },
-    {
-      "created": "2022-01-14T23:00:00.384Z",
-      "fingerprintCount": 7
-    },
-    {
-      "created": "2022-01-13T23:00:00.376Z",
-      "fingerprintCount": 6
-    },
-    {
-      "created": "2022-01-12T23:00:00.369Z",
-      "fingerprintCount": 10
+      "_id": "6216bc710523846ce011996b",
+      "created": "2022-02-23T23:00:00.879Z",
+      "fingerprints": [
+        "i2EVDCD1OlRC3SxsPJIbC",
+        "0EqmnD6d2iK7UkExkTm22",
+        "JYJ6pjDEfaJB4NfnmNKsm",
+        "MZR0PocLqQvpoVjsYcCmm",
+        "QJzKH1QlA92ZrDaAUyPWg",
+        "7nvGhGCj2HsNd4W7L4mbL",
+        "etXuD9InmHC0-m5ymOJsv",
+        "zd1Fh9ikDsazvHwF6aM0U",
+        "U6FA7IR1cODz3-T-8CR6p",
+        "RebJIIwRzlXkea8ahrBRc",
+        "1EQ9Schf9WM_VNMfWpv4P"
+      ],
+      "fingerprintCount": 11
     }
   ],
   "fingerPrintDocumentWithMaxFingerprints": {
-    "_id": "61db68f0fe955fb741a86d9d",
-    "created": "2022-01-09T23:00:00.303Z",
+    "_id": "61fdaff089ac14b67e766197",
+    "created": "2022-02-04T23:00:00.508Z",
     "fingerprints": [
       "mbIYsJ403fXYWqMbnMjrM",
-      "tz6m_8lG_Ms3yaeV8_MxX",
-      "QJzKH1QlA92ZrDaAUyPWg",
-      "kiGc4RGAmoUiYE2rKzK2T",
-      "alifOijPJc-lEv9EudxBa",
-      "-sngAPtoR8jF1cy59_4wJ",
-      "hka65cYOJ9ZTBGgGsNw3-",
-      "Ue3-a_QobNbFl1uYpcxUa",
-      "ir0FJJw8MH6V5apo2g-gX",
-      "qLO_ePhROhgR1J_rj3Xgm",
-      "kkgk4zuhvPlK8TfKrX7jw",
-      "wEUq37_jMGpyWhd21WwVy",
-      "NXVdtfHZ4R56R-OzYZGNW",
-      "hwTyzwl3a8aWHMr9IVUQQ",
+      "JYJ6pjDEfaJB4NfnmNKsm",
       "etXuD9InmHC0-m5ymOJsv",
-      "UR_Y4FTpMyxbNwg8YyciG",
-      "KfEYo_0Wa1f77oSa0Din7"
+      "QJzKH1QlA92ZrDaAUyPWg",
+      "UxbZMGYvDdd3CRd6Pt_9B",
+      "6XT_FbwQ2IAMeD0uDn23t",
+      "ykHAvHqMHz2jKOiWsb2XR",
+      "K8ThrtUE3JjATFLu_4cvz",
+      "BFJ0uaouvlUlxP1m94e_X",
+      "flrMa8MIqhWI5wLl0Zh7r",
+      "NcUkIfamBkmffneHQkC0I",
+      "Whf1jl8sQjzHvsp5MZ6CN",
+      "BX7yo1L-9xLAq0oazmNFI",
+      "5PGhs8c2zvSF79ENSdy1H",
+      "GJOMmgpLmefA_4adwM3Ff",
+      "gbpJWHBD9ePPsfpdOTKQ3",
+      "ufOIG-jXCz_M1PIx_P2TG",
+      "FXBQGq0IFYHhu5ZDqtxLR",
+      "NtYDHnk4ho-9S4gQwO_uT",
+      "Y-X_IeJVZrAy4oBAsi-EN",
+      "s4plDAUFl-7W2iIo4oAEC",
+      "xWbjaOTD_F84HNzem1OnD",
+      "yuK6425pDIYq5ijUWmaax",
+      "QUqpfeTYwWphk92P2UxMQ",
+      "ZBUka3iz-ZHXxduPZ4aAB",
+      "ceZahXLshERkNk3CSQXc_",
+      "luh-I0bUXhZfl9hgPO3-S",
+      "FfN0FUlOkDFdM4N-Q5-HL",
+      "cZN24TiICHPICHHSzS6yi",
+      "xSGcmwUkx7ekD0QUmXhxT",
+      "0r3YmHZrxorr_04SHy-dN",
+      "anwo8nS2FCMBCsPWPIn-8",
+      "T0zscyoyW5EfZDz9Af1HQ",
+      "kGRA9PdEyZAo53ySIEZX9",
+      "Psdjxd2tI-_7GK_z0-3GV",
+      "Kf4LZTdzl28UsAn4lIQO8",
+      "cwGylE9DLy0uEzPmIS-Iz",
+      "RebJIIwRzlXkea8ahrBRc",
+      "2ZAd2YWG_SdGdPBS2AnQv",
+      "kbmQUjgh91363vbIzqlDS",
+      "JfGJLxT_LhX8eiOjAGYGM",
+      "5qaR1l4L55XnNeSnt6AMP"
     ],
-    "fingerprintCount": 17
-  }
+    "fingerprintCount": 42
+  },
+  "announcements": [
+    {
+      "id": "news-0",
+      "relevantUntil": "2022-03-08T10:32:49.161Z",
+      "title": "Announcement 1",
+      "body": "Aufgrund von akuten technischen Problemen mit den Datenquellen des RKI, können die Daten vorübergehend erst während des Vormittags (ca. 10h) aktualisiert werden."
+    },
+    {
+      "id": "news-1",
+      "relevantUntil": "2022-03-08T10:32:49.161Z",
+      "title": "Announcement 2",
+      "body": "Aufgrund von akuten technischen Problemen mit den Datenquellen des RKI, können die Daten vorübergehend erst während des Vormittags (ca. 10h) aktualisiert werden."
+    }
+  ]
 }

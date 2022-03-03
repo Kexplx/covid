@@ -1,0 +1,21 @@
+.announcement {
+  background-color: rgba(52, 152, 219, 0.1);
+  border: 1px dashed rgba(52, 152, 219, 0.6);
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.img-close {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+}
+
+p {
+  line-height: 1rem;
+}

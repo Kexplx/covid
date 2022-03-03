@@ -9,6 +9,7 @@ import { DiffComponent } from './covid-daily/diff/diff.component';
 import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
 import { environmentProvider } from './environment-provider';
 import { filter } from 'rxjs';
+import { AnnouncementsComponent } from './annoucements/announcements.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -42,7 +43,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, CovidDailyComponent, DiffComponent, UpdateDialogComponent],
+  declarations: [AppComponent, CovidDailyComponent, DiffComponent, UpdateDialogComponent, AnnouncementsComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes), SharedModule, HttpClientModule],
   bootstrap: [AppComponent],
   providers: [environmentProvider],

@@ -8,6 +8,7 @@ import { Vaccination, VaccinationService } from './vaccination.service';
 import { HttpClient } from '@angular/common/http';
 import { FingerprintDocument, FingerprintService } from './fingerprint.service';
 import { ENVIRONMENT_TOKEN, Environment } from './environment-provider';
+import { Announcement, AnnouncementService } from './announcement.service';
 
 export interface AppData {
   lastUpdated: string;
@@ -19,6 +20,7 @@ export interface AppData {
   topDistricts: { lastUpdated: string; districts: District[] };
   fingerprintDocuments: FingerprintDocument[];
   fingerPrintDocumentWithMaxFingerprints: FingerprintDocument;
+  announcements: Announcement[];
 }
 
 @Injectable({
@@ -37,6 +39,7 @@ export class DataService {
     private germanyService: GermanyService,
     private jokeService: JokeService,
     private fingerprintService: FingerprintService,
+    private announcementService: AnnouncementService,
   ) {}
 
   loadData() {
@@ -61,6 +64,7 @@ export class DataService {
       this.districtService.getTopDistricts(),
       this.fingerprintService.getFingerprintDocuments(),
       this.fingerprintService.getFingerPrintDocumentWithMaxFingerprints(),
+      this.announcementService.getAnnouncements(),
 
       // This observable emits `void` and will show up
       // as `null` in the forkJoin response below.
@@ -78,6 +82,7 @@ export class DataService {
         topDistricts: res[5] as { lastUpdated: string; districts: District[] },
         fingerprintDocuments: res[6] as FingerprintDocument[],
         fingerPrintDocumentWithMaxFingerprints: res[7] as FingerprintDocument,
+        announcements: res[8] as Announcement[],
       };
 
       this.dataSubject.next(appData);

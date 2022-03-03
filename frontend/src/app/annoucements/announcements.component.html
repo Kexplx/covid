@@ -1,0 +1,8 @@
+<ng-container *ngIf="announcements.length">
+  <div [ngClass]="{ 'mt-1': !isFirst, 'mb-2': isLast }" class="announcement" *ngFor="let announcement of announcements; let isFirst = first; let isLast = last">
+    <p class="title fw-5">{{ announcement.title }}</p>
+    <p class="body mt-1">{{ announcement.body }}</p>
+
+    <img class="img-close" (click)="onClose(announcement)" src="assets/icons/close.svg" alt="Close" />
+  </div>
+</ng-container>
