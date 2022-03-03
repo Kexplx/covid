@@ -56,7 +56,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
           formatter: d => this.thousandPointsPipe.transform(d),
           align: 'top',
           padding: 3,
-          font: { size: 11 },
+          font: { size: 11, weight: 'bold' },
         },
         borderWidth: 2,
         pointRadius: 3,

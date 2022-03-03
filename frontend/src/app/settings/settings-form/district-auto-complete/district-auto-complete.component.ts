@@ -48,7 +48,7 @@ export class DistrictAutoCompleteComponent implements OnInit, OnDestroy {
     }
 
     this.filteredDistrictPreviews = this.districtPreviews.filter(d =>
-      d.name.toLocaleLowerCase().startsWith(this.filter.toLocaleLowerCase()),
+      d.name.toLocaleLowerCase().startsWith(this.filter.toLocaleLowerCase().trim()),
     );
   }
 
