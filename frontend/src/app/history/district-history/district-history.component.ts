@@ -42,7 +42,6 @@ export class DistrictHistoryComponent implements OnInit {
 
   private prepareChartData(districtCode: number) {
     const historyToDisplay = this.listOfDistrictHistories.find(h => h[0].code === districtCode) as District[];
-
     this.dataset.data = historyToDisplay!.map(germany => Math.round(germany.incidence)).reverse();
 
     this.labels = historyToDisplay

@@ -18,11 +18,11 @@ export interface Germany {
 export class GermanyService {
   constructor(private http: HttpClient, @Inject(ENVIRONMENT_TOKEN) private environment: Environment) {}
 
-  getGermanyHistory(): Observable<Germany[]> {
+  getGermanyHistory(limit = 8): Observable<Germany[]> {
     const url = `${this.environment.api}/germany`;
 
     let params = new HttpParams();
-    params = params.set('limit', 8);
+    params = params.set('limit', limit);
 
     return this.http.get<Germany[]>(url, { params });
   }

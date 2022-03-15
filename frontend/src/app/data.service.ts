@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { BehaviorSubject, delay, forkJoin } from 'rxjs';
+import { BehaviorSubject, combineLatest, delay, forkJoin } from 'rxjs';
 import { District, DistrictService } from './district.service';
 import { Germany, GermanyService } from './germany.service';
 import { Joke, JokeService } from './joke.service';
@@ -48,9 +48,9 @@ export class DataService {
     if (this.environment.production) {
       this.loadProductionData();
     } else {
-      // this.loadProductionData();
+      this.loadProductionData();
 
-      this.loadDummyData();
+      // this.loadDummyData();
     }
   }
 
@@ -94,5 +94,17 @@ export class DataService {
       .get<AppData>('/assets/data.json')
       .pipe(delay(500)) // Wait 500ms to simulate network.
       .subscribe(d => this.dataSubject.next({ ...d, lastUpdated: new Date().toISOString() }));
+  }
+
+  loadLaterHistories(n: number) {
+    const oldState = this.dataSubject.value!;
+    this.dataSubject.next(null);
+
+    combineLatest([
+      this.districtService.getListOfDistrictHistories(n),
+      this.germanyService.getGermanyHistory(n),
+    ]).subscribe(data => {
+      this.dataSubject.next({ ...oldState, listOfDistrictHistories: data[0], germanyHistory: data[1] });
+    });
   }
 }

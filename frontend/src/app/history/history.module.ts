@@ -7,6 +7,7 @@ import { DistrictHistoryComponent } from './district-history/district-history.co
 import { GermanyHistoryComponent } from './germany-history/germany-history.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { GermanyNewInfectionsComponent } from './germany-new-infections/germany-new-infections.component';
+import { DaysSelectorComponent } from './days-selector/days-selector.component';
 
 const routes: Routes = [{ path: '', component: HistoryComponent }];
 
@@ -17,6 +18,7 @@ const routes: Routes = [{ path: '', component: HistoryComponent }];
     GermanyHistoryComponent,
     LineChartComponent,
     GermanyNewInfectionsComponent,
+    DaysSelectorComponent,
   ],
   imports: [SharedModule, RouterModule.forChild(routes)],
 })

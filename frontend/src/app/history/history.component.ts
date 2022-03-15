@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -10,4 +10,8 @@ export class HistoryComponent {
   data$ = this.dataService.data$;
 
   constructor(private dataService: DataService) {}
+
+  onDaysSelect(days: number) {
+    this.dataService.loadLaterHistories(days);
+  }
 }

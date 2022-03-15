@@ -27,11 +27,11 @@ export class DistrictService {
     private settingsService: SettingsService,
   ) {}
 
-  getListOfDistrictHistories(): Observable<District[][]> {
+  getListOfDistrictHistories(limit = 8): Observable<District[][]> {
     const url = `${this.environment.api}/districts`;
 
     let params = new HttpParams();
-    params = params.set('limit', 8);
+    params = params.set('limit', limit);
     params = params.set('codes', this.createDistrictQuery(this.settingsService.settings.districts));
 
     return this.http.get<District[][]>(url, { params });

@@ -1,0 +1,34 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* gap: 0 10px; */
+}
+
+button {
+  border: 1px solid rgb(235, 235, 235);
+  background-color: white;
+  border-right: 0;
+  border-radius: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+button.selected {
+  background-color: rgb(235, 235, 235);
+  font-weight: 500;
+}
+
+button:first-child {
+  border-top-left-radius: 5px;
+  border-end-start-radius: 5px;
+}
+
+button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid rgb(235, 235, 235);
+}

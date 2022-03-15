@@ -1,4 +1,13 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnDestroy, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
 
 import { Chart, ChartConfiguration, ChartData, registerables } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
@@ -18,7 +27,6 @@ export interface Dataset {
 export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
   @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;
 
-  @Input() rawData!: number[];
   @Input() labels!: string[];
 
   @Input() showLegend = false;
@@ -49,7 +57,7 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
     Chart.register(...registerables);
 
     const data: ChartData = {
-      labels: this.labels,
+      labels: this.thinOut(this.labels),
       datasets: this.datasets.map(d => ({
         datalabels: {
           color: 'black',
@@ -63,8 +71,8 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
         pointBorderWidth: 2,
         tension: 0.4,
         borderColor: d.color,
-        pointBackgroundColor: (ctx: any) => (ctx.dataIndex === 0 ? 'white' : d.color),
-        data: d.data,
+        pointBackgroundColor: d.color,
+        data: this.thinOut(d.data),
         label: d.label,
       })),
     };
@@ -99,5 +107,23 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
     };
 
     this.chart = new Chart(this.canvas.nativeElement, config);
+  }
+
+  private thinOut(arr: any[]) {
+    if (arr.length === 8) {
+      return arr;
+    }
+
+    const nth = Math.floor((arr.length + 1) / 8);
+    if (nth === 0) {
+      return arr;
+    }
+
+    const result: any[] = [];
+    for (let i = 0; i < arr.length; i += nth) {
+      result.push(arr[i]);
+    }
+
+    return result;
   }
 }
