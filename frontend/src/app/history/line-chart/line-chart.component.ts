@@ -109,21 +109,18 @@ export class LineChartComponent implements OnChanges, AfterViewInit, OnDestroy {
     this.chart = new Chart(this.canvas.nativeElement, config);
   }
 
-  private thinOut(arr: any[]) {
-    if (arr.length === 8) {
-      return arr;
-    }
+  private thinOut<T>(arr: T[], max = 8) {
+    const step = Math.floor(arr.length / max);
 
-    const nth = Math.floor((arr.length + 1) / 8);
-    if (nth === 0) {
-      return arr;
-    }
-
-    const result: any[] = [];
-    for (let i = 0; i < arr.length; i += nth) {
+    const result: T[] = [];
+    for (let i = arr.length - 1; i >= 0; i -= step) {
       result.push(arr[i]);
+
+      if (result.length === max) {
+        break;
+      }
     }
 
-    return result;
+    return result.reverse();
   }
 }

@@ -12,6 +12,6 @@
   <app-germany-new-infections [germanyHistory]="data.germanyHistory"></app-germany-new-infections>
 
   <div class="mt-1">
-    <app-days-selector [daysSelected]="data.listOfDistrictHistories[0].length" (daysSelect)="onDaysSelect($event)"></app-days-selector>
+    <app-days-selector [selectedDays]="data.listOfDistrictHistories[0].length" (daysSelect)="onDaysSelect($event)"></app-days-selector>
   </div>
 </section>
