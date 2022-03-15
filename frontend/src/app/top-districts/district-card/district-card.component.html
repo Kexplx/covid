@@ -2,7 +2,7 @@
   <img *ngIf="index === 0" src="assets/icons/medal.svg" alt="" />
 
   <div class="card-header">
-    <span class="card-header__title">{{ district.name }}</span>
+    <span class="card-header__title">{{ district.name }} {{ district.type | districtType }}</span>
     <span [ngStyle]="{ color: fontColor, backgroundColor: this.backgroundColor }" class="card-header__incidence">{{ incidence }}</span>
   </div>
 
