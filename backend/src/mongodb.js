@@ -169,9 +169,9 @@ class MongoDB {
    * and the second item is a function to close the client.
    *
    * @example
-   * const [myCollection, close] = this.connect("my-collection");
+   * const [myCollection, close] = await this._connect("my-collection");
    *
-   * // execute queries...
+   * // execute queries on collection...
    *
    * close();
    */
