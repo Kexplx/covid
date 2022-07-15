@@ -97,6 +97,15 @@ class MongoDB {
     close();
   }
 
+  async getFeedbacks() {
+    const [collection, close] = await this._connect(COLLECTION_FEEDBACK);
+
+    const feedbacks = await collection.find().toArray();
+    close();
+
+    return feedbacks;
+  }
+
   async getDistrictHistory(code, limit) {
     const [collection, close] = await this._connect(COLLECTION_DISTRICTS);
 
