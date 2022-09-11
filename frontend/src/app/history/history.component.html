@@ -8,8 +8,9 @@
     <app-district-history [listOfDistrictHistories]="data.listOfDistrictHistories"></app-district-history>
   </div>
 
-  <h2 class="mb-1 mt-2">Neuinfektionen</h2>
-  <app-germany-new-infections [germanyHistory]="data.germanyHistory"></app-germany-new-infections>
+  
+  <!-- <h2 class="mb-1 mt-2">Neuinfektionen</h2>
+  <app-germany-new-infections [germanyHistory]="data.germanyHistory"></app-germany-new-infections> -->
 
   <div class="mt-1">
     <app-days-selector [selectedDays]="data.listOfDistrictHistories[0].length" (daysSelect)="onDaysSelect($event)"></app-days-selector>
